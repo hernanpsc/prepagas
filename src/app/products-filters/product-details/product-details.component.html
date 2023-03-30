@@ -1,0 +1,295 @@
+<div class="mt-32">
+  <div class="container">
+    <div class="grid grid-cols-12 gap-8">
+      <div class="col-span-12 md:col-span-7 xl:col-span-8 border p-5">
+        <a href="javascript:void(0)" class="category text-primary inline-block mb-5">Personal</a>
+        <h1 class="_title font-medium">Potential analysis - digitization for manufacturing companies</h1>
+        <ul class="product-meta flex flex-wrap items-center mt-8 mb-8">
+          <li class="mr-4">
+            <a class="flex items-center pr-4 py-1 hover:text-primary" href="javascript:void(0)"
+              ><mat-icon class="mr-2" color="warn">start</mat-icon> 4.5/5 (14 Feedback)</a
+            >
+          </li>
+          <li class="mr-4">
+            <a class="flex items-center pr-4 py-1 hover:text-primary" href="javascript:void(0)"
+              ><mat-icon class="mr-2">favorite</mat-icon> Save</a
+            >
+          </li>
+
+          <li class="mr-4">
+            <a class="flex items-center pr-4 py-1 hover:text-primary" href="javascript:void(0)"
+              ><mat-icon class="mr-2">share</mat-icon> Share</a
+            >
+          </li>
+          {{ product.detalle}}
+          <p>
+            <a class='btn btn-default' (click)="Volver()">Volver </a>
+        </p>
+         
+        </ul>
+        <img class="w-full" src="assets/images/products/details.jpg" alt="img not found" />
+
+        <div class="ll-content mt-8">
+
+                 <!-- <app-clinicas-list></app-clinicas-list> -->
+                  
+
+         
+
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-5 xl:col-span-4">
+        <div class="border">
+          <div class="border-b text-center pt-10 pb-10">
+            <div class="text-accent text-4xl font-semibold">€{{ product.price }}</div>
+            <div class="font-medium text-lg mt-3 text-gray-400 tracking-wider">Price</div>
+          </div>
+          <div class="border-b p-5">
+            <ul class="service-info">
+              <li class="py-2 mr-2">
+                <div class="flex items-center">
+                  <mat-icon class="text-primary border-2 rounded-full w-6 h-6 text-center leading-5 mr-2">check</mat-icon>
+                  <strong class="mr-2 font-black">96</strong> interested persons
+                </div>
+              </li>
+              <li class="py-2 mr-2">
+                <div class="flex items-center">
+                  <mat-icon class="text-primary border-2 rounded-full w-6 h-6 text-center leading-5 mr-2">check</mat-icon>
+                  <strong class="mr-2 font-black">1 hours</strong> reaction time
+                </div>
+              </li>
+              <li class="py-2 mr-2">
+                <div class="flex items-center">
+                  <mat-icon class="text-primary border-2 rounded-full w-6 h-6 text-center leading-5 mr-2">check</mat-icon>
+                  <strong class="mr-2 font-black">12 hours</strong> delivery time
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="border-b p-5">
+            <h5>Addons Services</h5>
+            <div class="flex mt-2">
+          
+                <!-- <mat-list>
+                  <mat-list-item>Item 1</mat-list-item>
+                  <mat-divider></mat-divider>
+                  <mat-list-item>Item 2</mat-list-item>
+                  <mat-divider></mat-divider>
+                  <mat-list-item>Item 3</mat-list-item>
+                </mat-list> -->
+            
+              
+            </div>
+            <div class="flex mt-4">
+              <div class="sm:pt-1 mr-3 sm:mr-6 md:mr-8">
+                <input type="checkbox" class="appearance-none border border-gray-300 checked:bg-gray-400 checked:border-transparent ..." />
+              </div>
+              <div class="flex-grow">
+                <div class="price sm:float-right font-bold">€200.00</div>
+                <h6 class="text-gray-800">Execution after work</h6>
+                <p class="mt-2">
+                  Thanks to our home office approach, we can serve you during the entire microservice even after work, if that suits you
+                  better. The following times are possible after close of business: sun - thu, 9 p.m. - 7 p.m.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="border-b px-5 pt-10 pb-12 text-center">
+            <p class="text-gray-400 mb-4">This price can increase due to additional bookings</p>
+            <button mat-flat-button class="py-3 px-20 text-xl font-bold" color="accent">Buy now</button>
+          </div>
+          <button class="relative group px-8 h-14 bg-red-500
+          before:absolute 
+          before:inset-0 
+          before:bg-red-700 
+          before:scale-x-0 
+          before:origin-right
+          before:transition
+          before:duration-300
+          hover:before:scale-x-100
+          hover:before:origin-left
+          ">
+<span class="relative uppercase text-base text-white">Shop now</span>
+</button>
+
+<button class="relative group overflow-hidden px-8 h-12 rounded-md bg-lime-500
+          before:absolute 
+          before:inset-0 
+          before:bg-lime-600 
+          before:scale-y-[0.1] 
+          before:origin-bottom
+          before:transition
+          before:duration-300
+          hover:before:scale-y-100
+          ">
+<span class="relative uppercase text-base text-white">Play now</span>
+</button>
+
+<button class="relative group overflow-hidden pl-6 h-14 flex space-x-6 items-center bg-blue-500">
+<span class="relative uppercase text-base text-white">Download</span>
+<div aria-hidden="true" class="w-14 bg-blue-600 transition duration-300 -translate-y-7 group-hover:translate-y-7">
+  <div class="h-14 flex">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 m-auto fill-white" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+    </svg>
+  </div>
+  <div class="h-14 flex">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 m-auto fill-white" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+    </svg>
+  </div>
+</div>
+</button>
+<svg role="status" class="mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+  <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+</svg>
+<button class="relative group overflow-hidden px-6 h-12 rounded-full flex space-x-2 items-center bg-gradient-to-r from-pink-500 to-purple-500 hover:to-purple-600">
+<span class="relative text-sm text-white">Get Started</span>
+<div class="flex items-center -space-x-3 translate-x-3">
+<div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
+<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+</svg>
+</div>
+</button>
+
+<button class="relative group overflow-hidden px-6 h-12 border border-purple-200 rounded-full">
+<div aria-hidden="true" class="transition duration-300 group-hover:-translate-y-12">
+  <div class="h-12 flex items-center justify-center">
+    <span class="text-purple-700">Share</span>
+  </div>
+  <div class="h-12 flex items-center justify-center">
+    <span class="text-purple-700">Partager</span>
+  </div>
+</div>
+</button>
+        </div>
+        <div class="border mt-5 px-5 py-10 text-center">
+          <p class="font-bold mb-3">Do you have any special requirements?</p>
+          <button mat-stroked-button class="py-2 px-12 text-lg font-bold text-gray-700">Send us</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="mt-32">
+  <div class="container">
+    <div class="grid grid-cols-12 gap-8">
+      <div class="col-span-12 md:col-span-7 xl:col-span-8 border p-5">
+        <a href="javascript:void(0)" class="category text-primary inline-block mb-5">Personal</a>
+        <h1 class="_title font-medium">Potential analysis - digitization for manufacturing companies</h1>
+        <ul class="product-meta flex flex-wrap items-center mt-8 mb-8">
+          <li class="mr-4">
+            <a class="flex items-center pr-4 py-1 hover:text-primary" href="javascript:void(0)"
+              ><mat-icon class="mr-2" color="warn">start</mat-icon> 4.5/5 (14 Feedback)</a
+            >
+          </li>
+          <li class="mr-4">
+            <a class="flex items-center pr-4 py-1 hover:text-primary" href="javascript:void(0)"
+              ><mat-icon class="mr-2">favorite</mat-icon> Save</a
+            >
+          </li>
+
+          <li class="mr-4">
+            <a class="flex items-center pr-4 py-1 hover:text-primary" href="javascript:void(0)"
+              ><mat-icon class="mr-2">share</mat-icon> Share</a
+            >
+          </li>
+        </ul>
+        <div class="ll-content mt-8"> -->
+         <!-- <app-clinicas-list></app-clinicas-list> -->
+         <!-- <p-tabView>
+          <p-tabPanel header="TabView Component">
+         
+            content1
+               
+                
+          </p-tabPanel>
+          <p-tabPanel header="TabView Component">
+            content2
+        
+          </p-tabPanel>
+          <p-tabPanel header="TabView Component">
+            content3
+          </p-tabPanel>
+        </p-tabView> -->
+        <!-- <p-table></p-table>
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-5 xl:col-span-4">
+        <div class="border">
+          <div class="border-b text-center pt-10 pb-10">
+            <div class="text-accent text-4xl font-semibold">€3,000.00</div>
+            <div class="font-medium text-lg mt-3 text-gray-400 tracking-wider">Price</div>
+          </div>
+          <div class="border-b p-5">
+            <ul class="service-info">
+              <li class="py-2 mr-2">
+                <div class="flex items-center">
+                  <mat-icon class="text-primary border-2 rounded-full w-6 h-6 text-center leading-5 mr-2">check</mat-icon>
+                  <strong class="mr-2 font-black">96</strong> interested persons
+                </div>
+              </li>
+              <li class="py-2 mr-2">
+                <div class="flex items-center">
+                  <mat-icon class="text-primary border-2 rounded-full w-6 h-6 text-center leading-5 mr-2">check</mat-icon>
+                  <strong class="mr-2 font-black">1 hours</strong> reaction time
+                </div>
+              </li>
+              <li class="py-2 mr-2">
+                <div class="flex items-center">
+                  <mat-icon class="text-primary border-2 rounded-full w-6 h-6 text-center leading-5 mr-2">check</mat-icon>
+                  <strong class="mr-2 font-black">12 hours</strong> delivery time
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="border-b p-5">
+            <h5>Addons Services</h5>
+            <div class="flex mt-2">
+              <div class="sm:pt-1 mr-3 sm:mr-6 md:mr-8">
+                <input type="checkbox" class="appearance-none border border-gray-300 checked:bg-gray-400 checked:border-transparent ..." />
+              </div>
+              <div class="flex-grow">
+                <div class="price sm:float-right font-bold">€200.00</div>
+                <h6 class="text-gray-800">Execution after work</h6>
+                <p class="mt-2">
+                  Thanks to our home office approach, we can serve you during the entire microservice even after work, if that suits you
+                  better. The following times are possible after close of business: sun - thu, 9 p.m. - 7 p.m.
+                </p>
+              </div>
+            </div>
+            <div class="flex mt-4">
+              <div class="sm:pt-1 mr-3 sm:mr-6 md:mr-8">
+                <input type="checkbox" class="appearance-none border border-gray-300 checked:bg-gray-400 checked:border-transparent ..." />
+              </div>
+              <div class="flex-grow">
+                <div class="price sm:float-right font-bold">€200.00</div>
+                <h6 class="text-gray-800">Execution after work</h6>
+                <p class="mt-2">
+                  Thanks to our home office approach, we can serve you during the entire microservice even after work, if that suits you
+                  better. The following times are possible after close of business: sun - thu, 9 p.m. - 7 p.m.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="border-b px-5 pt-10 pb-12 text-center">
+            <p class="text-gray-400 mb-4">This price can increase due to additional bookings</p>
+            <button mat-flat-button class="py-3 px-20 text-xl font-bold" color="accent">Buy now</button>
+          </div>
+        </div>
+        <div class="border mt-5 px-5 py-10 text-center">
+          <p class="font-bold mb-3">Do you have any special requirements?</p>
+          <button mat-stroked-button class="py-2 px-12 text-lg font-bold text-gray-700">Send us</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+
+
+
+

@@ -1,0 +1,20 @@
+{
+  "name": "akita-filters-plugin",
+  "author": "Emmanuel DE SAINT STEBAN",
+  "description": "Plug-in for manage multiple filters with akita easily",
+  "keywords": [
+    "angular", "ngx", "akita", "filters", "state management", "angular material", "matDatasource", "angular material data source"],
+  "version": "0.0.0-dev",
+  "peerDependencies": {
+    "@datorama/akita": ">=4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manudss/akita-filters-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manudss/akita-filters-plugin/issues"
+  },
+  "homepage": "https://manudss.github.io/akita-filters-plugin/",
+  "license": "Apache License 2.0"
+}

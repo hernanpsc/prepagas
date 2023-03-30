@@ -1,0 +1,25 @@
+<form [formGroup]="myForm">
+  <ng-multiselect-dropdown
+      name="city"
+      [placeholder]="'Select City'"
+      [data]="cities"
+      formControlName="city"
+      [disabled]="disabled"
+      [settings]="dropdownSettings"
+      (onSelect)="onItemSelect($event)">
+  </ng-multiselect-dropdown>
+  <ng-template #optionsTemplate let-item let-option="option" let-id="id" let-isSelected="isSelected">
+  <div style="padding:1px 10px;margin-right:10px;right:2px;top:-2px">
+    <img [src]="getItems[id].image" style="width: 18px; margin: 0 20px;" />
+    <label style="color: #333;min-width: 130px;" [ngStyle]="{ 'color': getItems[id].isDisabled? 'lightgrey':''}">
+      {{getItems[id].item_text}}
+    </label>
+  </div>
+ </ng-template>
+ <ng-template #optionSelectedTemplate let-option="option"  let-id="id">
+   <div>
+     <img [src]="getItems[id].image" style="width: 18px; margin-right: 2px;" />
+    {{option}}
+   </div>
+ </ng-template>
+</form>

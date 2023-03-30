@@ -1,0 +1,1001 @@
+[
+    {
+    "item_id":1,
+    "item_text":"Cemic",
+    "direccion":"Av. Coronel Diaz 2423",
+    "telefono":"11 - 52990750",
+    "barrio":"Recoleta",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":2,
+    "item_text":"Cemic",
+    "direccion":"Av. E. Galvan 4102",
+    "telefono":"11 - 52990750",
+    "barrio":"Villa Urquiza",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":3,
+    "item_text":"Clinica Adventista Belgrano",
+    "direccion":"Estomba 1710",
+    "telefono":"11 - 40141500",
+    "barrio":"Coghlan",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":4,
+    "item_text":"Clinica De La Esperanza",
+    "direccion":"Tres Arroyos 2060",
+    "telefono":"",
+    "barrio":"Villa Gral. Mitre",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":5,
+    "item_text":"Clinica Bazterrica",
+    "direccion":"Ayacucho 1781",
+    "telefono":"11 - 48211600",
+    "barrio":"Recoleta",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":6,
+    "item_text":"Clinica De Los Virreyes",
+    "direccion":"Ciudad De La Paz 1157",
+    "telefono":"11 - 48923300",
+    "barrio":"Belgrano",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":7,
+    "item_text":"Clinica Del Sol",
+    "direccion":"Av. Cnel. Diaz 2211",
+    "telefono":"",
+    "barrio":"Palermo",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":8,
+    "item_text":"Clinica San Camilo",
+    "direccion":"Av. Angel Gallardo 899",
+    "telefono":"11 - 48588100",
+    "barrio":"Caballito",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":9,
+    "item_text":"Clinica San Jeronimo",
+    "direccion":"Gallo 548",
+    "telefono":"",
+    "barrio":"Abasto",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":10,
+    "item_text":"Clinica Santa Isabel",
+    "direccion":"Av. Directorio 2037",
+    "telefono":"",
+    "barrio":"Caballito",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":11,
+    "item_text":"Fleni",
+    "direccion":"Montañeses 2325",
+    "telefono":"11 - 57773200",
+    "barrio":"Belgrano",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":12,
+    "item_text":"Fundacion Favaloro",
+    "direccion":"Belgrano 1746",
+    "telefono":"",
+    "barrio":"Congreso",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":13,
+    "item_text":"Fundacion Hospitalaria",
+    "direccion":"Av. Cramer 4601",
+    "telefono":"11 - 47042300",
+    "barrio":"Saavedra",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":14,
+    "item_text":"Hospital Aleman",
+    "direccion":"Av. Pueyrredon 1640",
+    "telefono":"",
+    "barrio":"Barrio Norte",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":15,
+    "item_text":"Hospital Britanico Bs. As.",
+    "direccion":"Perdriel 74",
+    "telefono":"",
+    "barrio":"Constitucion",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":16,
+    "item_text":"Hospital Italiano De Bs. As.",
+    "direccion":"Gascon 450",
+    "telefono":"",
+    "barrio":"Almagro",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":17,
+    "item_text":"Hospital Sirio Libanés",
+    "direccion":"Campana 4658",
+    "telefono":"",
+    "barrio":"Villa Devoto",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":18,
+    "item_text":"Instituto Arg. Diag. Y Tratamiento",
+    "direccion":"Marcelo T. De Alvear 2346",
+    "telefono":"",
+    "barrio":"Palermo",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":19,
+    "item_text":"Instituto Cardiovasc. De Bs. As.",
+    "direccion":"Av. Del Libertador 6302",
+    "telefono":"",
+    "barrio":"Belgrano",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":20,
+    "item_text":"Sanatorio De La Provitem_item_idencia",
+    "direccion":"Tucuman 1863",
+    "telefono":"",
+    "barrio":"Tribunales",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":21,
+    "item_text":"Sanatorio Colegiales",
+    "direccion":"Conde 851",
+    "telefono":"",
+    "barrio":"Colegiales",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":22,
+    "item_text":"Sanatorio Guemes",
+    "direccion":"Av. Cordoba 3933",
+    "telefono":"",
+    "barrio":"Recoleta",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":23,
+    "item_text":"Sanatorio Mater Dei",
+    "direccion":"San Martin De Tours 2952",
+    "telefono":"",
+    "barrio":"Palermo",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":24,
+    "item_text":"UAI Hospital Universitario",
+    "direccion":"PORTELA 2975",
+    "telefono":"",
+    "barrio":"Flores",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":25,
+    "item_text":"UAI Hospital Universitario",
+    "direccion":"VIAMONTE 1336 4 26",
+    "telefono":"",
+    "barrio":"Microcentro",
+    "provincia":"CABA",
+    "region":"CABA"
+ },
+    {
+    "item_id":26,
+    "item_text":"Ctro. Med. El Talar",
+    "direccion":"H. Yrigoyen 2717",
+    "telefono":"",
+    "barrio":"El Talar",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":27,
+    "item_text":"Centro Medico Nordelta",
+    "direccion":"Av. de los Lagos 6785",
+    "telefono":"",
+    "barrio":"Nordelta",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":28,
+    "item_text":"Clinica Aires De Pacheco",
+    "direccion":"Av. Hipolito Yrigoyen 2270",
+    "telefono":"",
+    "barrio":"El Talar",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":29,
+    "item_text":"Clinica Angelus",
+    "direccion":"Av. Fondo De La Legua 390",
+    "telefono":"",
+    "barrio":"San Isitem_item_idro",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":30,
+    "item_text":"Clinica Privada Ntra. Sra. De Fatima",
+    "direccion":"Victor Vergani 830",
+    "telefono":"",
+    "barrio":"Pilar",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":31,
+    "item_text":"Clinica Privada Fatima",
+    "direccion":"Spadaccini 1084",
+    "telefono":"",
+    "barrio":"Escobar",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":32,
+    "item_text":"Clinica Privada San Fernando",
+    "direccion":"Lavalle 1439 San Fernando",
+    "telefono":"",
+    "barrio":"San Fernando",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":33,
+    "item_text":"Clinica Privada San Marcos",
+    "direccion":"San Luis 425",
+    "telefono":"",
+    "barrio":"Pilar",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":34,
+    "item_text":"Clinica Sagrado Corazon",
+    "direccion":"Av. Alvear 650",
+    "telefono":"",
+    "barrio":"Don Torcuato",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":35,
+    "item_text":"Clinica Santa Maria",
+    "direccion":"Marengo 3908",
+    "telefono":"",
+    "barrio":"Villa Ballester",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":36,
+    "item_text":"Hospital Austral",
+    "direccion":"Juan Domingo Perón 1500",
+    "telefono":"",
+    "barrio":"Pilar",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":37,
+    "item_text":"Hospital Britanico Bs. As.",
+    "direccion":"Av. Maipu 1444",
+    "telefono":"",
+    "barrio":"Vicente Lopez",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":38,
+    "item_text":"Hospital Privado Modelo",
+    "direccion":"Gral. Roca 1811",
+    "telefono":"",
+    "barrio":"Floritem_item_ida",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":39,
+    "item_text":"Sanatorio Las Lomas",
+    "direccion":"Av. Diego Carman 555",
+    "telefono":"",
+    "barrio":"San Isitem_item_idro",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":40,
+    "item_text":"Sanatorio San Lucas",
+    "direccion":"Belgrano 369",
+    "telefono":"",
+    "barrio":"San Isitem_item_idro",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":41,
+    "item_text":"Sanatorio San Pablo",
+    "direccion":"Alvear 1444",
+    "telefono":"",
+    "barrio":"San Fernando",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":42,
+    "item_text":"Sanatorio Santa Sofia",
+    "direccion":"Paraná 6599",
+    "telefono":"",
+    "barrio":"Villa Adelina",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Norte"
+ },
+    {
+    "item_id":43,
+    "item_text":"Amta-Hospital 24 De Septiembre",
+    "direccion":"Santa Juana De Arco 3545",
+    "telefono":"",
+    "barrio":"Ciudadela",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":44,
+    "item_text":"Clinica Bessone",
+    "direccion":"Paunero 1668",
+    "telefono":"",
+    "barrio":"San Miguel",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":45,
+    "item_text":"Clinica Cruz Celeste",
+    "direccion":"Bermudez 2895",
+    "telefono":"",
+    "barrio":"Villa Luzuriaga",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":46,
+    "item_text":"Clinica Dim Rivadavia",
+    "direccion":"Av. Rivadavia 17624",
+    "telefono":"",
+    "barrio":"Ramos Mejia",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":47,
+    "item_text":"Clinica Mitre",
+    "direccion":"Bme. Mitre 164",
+    "telefono":"",
+    "barrio":"Ramos Mejia",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":48,
+    "item_text":"Clinica Modelo Moron",
+    "direccion":"R. O. Del Uruguay 224",
+    "telefono":"",
+    "barrio":"Moron",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":49,
+    "item_text":"Clinica Privada Alcorta",
+    "direccion":"Aristobulo Del Valle 2626",
+    "telefono":"",
+    "barrio":"Moreno",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":50,
+    "item_text":"Clinica Privada Catan",
+    "direccion":"",
+    "telefono":"",
+    "barrio":"Gonzalez Catan",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":51,
+    "item_text":"Clinica Privada Ciudad",
+    "direccion":"Reinalda Rodriguez 3784",
+    "telefono":"",
+    "barrio":"Ciudad Evita",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":52,
+    "item_text":"Clinica Privada Del Buen Pastor",
+    "direccion":"Av. Mosconi 1716",
+    "telefono":"",
+    "barrio":"Lomas Del Mirador",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":53,
+    "item_text":"Clinica Privada Provincial",
+    "direccion":"Garay 2260",
+    "telefono":"",
+    "barrio":"Merlo",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":54,
+    "item_text":"Clinica Privada Tachella",
+    "direccion":"Av. Segunda Rivadavia 15577",
+    "telefono":"",
+    "barrio":"Haedo",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":55,
+    "item_text":"Corp. Med. Gral. San Martin",
+    "direccion":"Matheu 4023",
+    "telefono":"",
+    "barrio":"San Martin",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":56,
+    "item_text":"Sanatorio Gral. Sarmiento Cl.Priv",
+    "direccion":"Av. Presitem_item_idente Peron 1796",
+    "telefono":"",
+    "barrio":"San Miguel",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":57,
+    "item_text":"Hospital Italiano - San Justo",
+    "direccion":"Av. Pte. Peron 2231",
+    "telefono":"",
+    "barrio":"San Justo",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":58,
+    "item_text":"Hospital Privada Mariano Moreno Sa",
+    "direccion":"Merlo 2630",
+    "telefono":"",
+    "barrio":"Moreno",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":59,
+    "item_text":"Hospital San Juan De Dios",
+    "direccion":"Gabriel Ardoino 714",
+    "telefono":"",
+    "barrio":"Ramos Mejia",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":60,
+    "item_text":"Instituto Medico Aguero",
+    "direccion":"Int. Aguero 1395",
+    "telefono":"",
+    "barrio":"Moron",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":61,
+    "item_text":"Instituto Medico Central",
+    "direccion":"",
+    "telefono":"",
+    "barrio":"Ituzaingo",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":62,
+    "item_text":"Sanatorio Del Oeste - Ituzaingo",
+    "direccion":"Olazabal 319",
+    "telefono":"",
+    "barrio":"Ituzaingo",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":63,
+    "item_text":"Sanatorio Del Oeste - Merlo",
+    "direccion":"Av Del Libertador 295",
+    "telefono":"",
+    "barrio":"Merlo",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":64,
+    "item_text":"Sanatorio Modelo De Caseros",
+    "direccion":"Lisandro Medina 2285 Caseros",
+    "telefono":"",
+    "barrio":"Pdo. 3 De Febrero)",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":65,
+    "item_text":"Sanatorio Nuestra Sra. Del Pilar",
+    "direccion":"Av. Gaona 3979",
+    "telefono":"",
+    "barrio":"Ciudadela",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":66,
+    "item_text":"Sanatorio Privada Figueroa Paredes",
+    "direccion":"",
+    "telefono":"",
+    "barrio":"Isitem_item_idro Casanova",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":67,
+    "item_text":"Sanatorio Privada Figueroa Paredes",
+    "direccion":"Av. Juan M. De Rosas 10841",
+    "telefono":"",
+    "barrio":"Gregorio De Laferrere",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":68,
+    "item_text":"Sanatorio Privada Figueroa Paredes",
+    "direccion":"Tres Sargentos 540",
+    "telefono":"",
+    "barrio":"Mariano Acosta",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":69,
+    "item_text":"Sanatorio Privada San Mauricio",
+    "direccion":"Av. Saenz 456",
+    "telefono":"",
+    "barrio":"Gonzalez Catan",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Oeste"
+ },
+    {
+    "item_id":70,
+    "item_text":"Clinica Boedo",
+    "direccion":"Boedo 549",
+    "telefono":"",
+    "barrio":"Lomas De Zamora",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":71,
+    "item_text":"Clinica Del Niño De Quilmes",
+    "direccion":"Av. Lamadritem_item_id 444",
+    "telefono":"",
+    "barrio":"Quilmes",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":72,
+    "item_text":"Clinica Espora",
+    "direccion":"Av. Espora 645",
+    "telefono":"",
+    "barrio":"Adrogue",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":73,
+    "item_text":"Clinica Mat. Infantil Privada Lomas",
+    "direccion":"Acevedo 253",
+    "telefono":"",
+    "barrio":"Lomas De Zamora",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":74,
+    "item_text":"Clinica Modelo De Lanus",
+    "direccion":"Av. Hipolito Irigoyen 4843",
+    "telefono":"",
+    "barrio":"Lanus Oeste",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":75,
+    "item_text":"Clinica Modelo de Quilmes",
+    "direccion":"",
+    "telefono":"",
+    "barrio":"",
+    "provincia":"",
+    "region":""
+ },
+    {
+    "item_id":76,
+    "item_text":"Clinica Privada Del Niño Y La Flia.",
+    "direccion":"Calle 843 2416",
+    "telefono":"",
+    "barrio":"San Francisco Solano",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":77,
+    "item_text":"Cl.Privada ntra.Sra. Dulce Espera",
+    "direccion":"Gral. Ferre 521",
+    "telefono":"",
+    "barrio":"Sarandi",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":78,
+    "item_text":"Clinica Privada Gral. Belgrano",
+    "direccion":"Gral. Belgrano 960",
+    "telefono":"",
+    "barrio":"Quilmes Oeste",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":79,
+    "item_text":"Clinica Privada Lujan",
+    "direccion":"Buenos Aires 50",
+    "telefono":"",
+    "barrio":"Florencio Varela",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":80,
+    "item_text":"Clinica Privada Monte Grande",
+    "direccion":"Gral. Rodriguez 158",
+    "telefono":"",
+    "barrio":"Monte Grande",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":81,
+    "item_text":"Clinica Privada Ranelagh",
+    "direccion":"Belgrano 4786",
+    "telefono":"",
+    "barrio":"Ranelagh",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":82,
+    "item_text":"Clinica Privada San Vicente",
+    "direccion":"Sarmiento 901",
+    "telefono":"",
+    "barrio":"San Vicente",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":83,
+    "item_text":"Hospital Britanico Bs. As.",
+    "direccion":"",
+    "telefono":"",
+    "barrio":"Lanus",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":84,
+    "item_text":"Hospital Britanico Bs. As.",
+    "direccion":"Pereyra Lucena 580",
+    "telefono":"",
+    "barrio":"Lomas De Zamora",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":85,
+    "item_text":"Instituto De Maternitem_item_idad Y Cirugia",
+    "direccion":"Av. Bruzzone 687",
+    "telefono":"",
+    "barrio":"Monte Grande",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":86,
+    "item_text":"Clinica IMA",
+    "direccion":"Segui 593",
+    "telefono":"",
+    "barrio":"Adrogue",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":87,
+    "item_text":"Policlinica Lomas",
+    "direccion":"Av. Hipolito Irigoyen 8439",
+    "telefono":"",
+    "barrio":"Lomas De Zamora",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":88,
+    "item_text":"Sanatorio Bernal",
+    "direccion":"San Martin 572",
+    "telefono":"",
+    "barrio":"Bernal",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":89,
+    "item_text":"Sanatorio Itoiz",
+    "direccion":"Alsina 174",
+    "telefono":"",
+    "barrio":"Avellaneda",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":90,
+    "item_text":"Sanatorio Juncal",
+    "direccion":"Alte. Brown 2779",
+    "telefono":"",
+    "barrio":"Temperley",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":91,
+    "item_text":"Sanatorio Privada Del Niño",
+    "direccion":"Av. Alsina 1519",
+    "telefono":"",
+    "barrio":"Lomas De Zamora",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":92,
+    "item_text":"Sanatorio San Juan",
+    "direccion":"",
+    "telefono":"",
+    "barrio":"Lanus Oeste",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":93,
+    "item_text":"Sanatorio Urquiza",
+    "direccion":"",
+    "telefono":"",
+    "barrio":"Quilmes",
+    "provincia":"BUENOS AIRES",
+    "region":"GBA-Sur"
+ },
+    {
+    "item_id":94,
+    "item_text":"Clinica City Bell S.A.",
+    "direccion":"Calle 13 B 344",
+    "telefono":"",
+    "barrio":"City Bell",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":95,
+    "item_text":"Clinica De La Comunitem_item_idad",
+    "direccion":"La Merced 383",
+    "telefono":"",
+    "barrio":"Ensenada",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":96,
+    "item_text":"Instituto Medico de la Ribera",
+    "direccion":"",
+    "telefono":"",
+    "barrio":"La Plata",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":97,
+    "item_text":"Clinica Privada De Ojos Santa Lucia",
+    "direccion":"Calle 56 N 625",
+    "telefono":"",
+    "barrio":"La Plata",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":98,
+    "item_text":"Clinica Privada Mosconi de Beriso",
+    "direccion":"",
+    "telefono":"",
+    "barrio":"Beriso",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":99,
+    "item_text":"Hospital Español",
+    "direccion":"Calle 9 175",
+    "telefono":"",
+    "barrio":"La Plata",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":100,
+    "item_text":"Hospital Italiano La Plata",
+    "direccion":"Av. 51 E 29 Y 30",
+    "telefono":"",
+    "barrio":"La Plata",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":101,
+    "item_text":"Hospital Privada Sudamericano",
+    "direccion":"Calle 2 432",
+    "telefono":"",
+    "barrio":"La Plata",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":102,
+    "item_text":"Instituto Central de Medicina",
+    "direccion":"",
+    "telefono":"",
+    "barrio":"La Plata",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":103,
+    "item_text":"Instituto de Diagnostico de La Plata",
+    "direccion":"",
+    "telefono":"",
+    "barrio":"La Plata",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":104,
+    "item_text":"Instituto Medico Argentino de Beriso",
+    "direccion":"",
+    "telefono":"",
+    "barrio":"Beriso",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":105,
+    "item_text":"Instituto Med. Platense",
+    "direccion":"Av. 51 315",
+    "telefono":"",
+    "barrio":"La Plata",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":106,
+    "item_text":"Instituto Prieto Diaz",
+    "direccion":"",
+    "telefono":"",
+    "barrio":"La Plata",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":107,
+    "item_text":"Ipensa",
+    "direccion":"Calle 59 434",
+    "telefono":"",
+    "barrio":"La Plata",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":108,
+    "item_text":"Nueva Clinica Del Niño",
+    "direccion":"Calle 63 763",
+    "telefono":"",
+    "barrio":"La Plata",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":109,
+    "item_text":"Sanatorio Argentino Del Plata S.A",
+    "direccion":"Calle 56 N 874",
+    "telefono":"",
+    "barrio":"La Plata",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":110,
+    "item_text":"Sanatorio Med. Los Tilos",
+    "direccion":"Calle 41 N 347",
+    "telefono":"",
+    "barrio":"La Plata",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ },
+    {
+    "item_id":111,
+    "item_text":"Sanatorio San Jose De Villa Elisa",
+    "direccion":"Calle 15",
+    "telefono":"",
+    "barrio":"Villa Elisa",
+    "provincia":"BUENOS AIRES",
+    "region":"La Plata"
+ }
+]

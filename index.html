@@ -1,0 +1,884 @@
+
+
+
+<html lang="en" id="page-wrapper">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+				<link href="scss/style.css" rel="stylesheet">
+					<!-- <link href="scss/style.min.css" rel="stylesheet"> -->
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+						<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+						<link rel="stylesheet" href="scss/styleRange.css">
+							<script type="text/javascript" src="js/jquery.js"></script>
+							<script type="text/javascript" src="js/funciones.js"></script>
+			
+							<script type="text/javascript" src="js/scriptRange.js"></script>
+							<!-- <script type="text/javascript" src="assets/js/main.js"></script> -->
+							<!-- <script type="text/javascript" src="assets/js/main-2.js"></script> -->
+							<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+							<script>
+    $(document).ready(function() {
+      $("button").click(function() {
+        $("#uno").animate({
+          width: "toggle",
+        }, {
+          duration: 100,
+         queue: false
+        });
+      });
+    });
+  </script>
+  <script>
+
+// function grupo () {
+// 	var age1 = $('#edad_2').val();
+// 	var numHijos = $('#numkids').val();
+// 	var num_adultos = 1;
+//     if( age1 > 0 ) {
+//        num_adultos = 2;
+//   }  grupoFam = parseInt(num_adultos) + parseInt(numHijos);
+// 	 return grupoFam;
+
+// }
+    
+
+// function validate_form ( )
+// {   var grupoF = grupo ();
+// 	var aport = $('#cantAport').val();
+// 	if ( aport == grupoF ) {
+		  
+    
+//     } else if ( aport > grupoF )
+//     {
+//         alert ( "El número de aportantes no puede ser mayor a los integrantes del grupo familiar");
+// 		window.onload;
+// }
+// }
+  </script>
+							<!-- <script>
+ function ()
+ {
+console.log(document.getElementById('filter_left').style.height);
+console.log(document.getElementById('_results_table').style.height);
+let height_1 = document.getElementById('filter_left').style.height;
+let height_2 = document.getElementById('_results_table').style.height;
+let div1 = '';
+let div2 = '';
+  div1 = _results_table;
+  div2 = filter_left;
+}
+alto = document.getElementById('div1').offsetHeight;
+document.getElementById('div2').style.height = alto + 'px';
+console.log(height_1);
+console.log(height_2);
+}
+$("#demo").css("background-color");     // returns CSS value
+$("#demo").css("color", "blue");        // sets CSS rule
+$("#demo").css({"color": "blue", "font-size": "20px"}); // sets multiple CSS properties
+</script>   -->
+							<style>
+
+    html {
+
+min-height: 3000px;
+
+    /*Do 'height' only (remove 'min-') and you'll see the gradient background repeat rather than extend. */
+
+}
+
+
+
+body {
+
+    /*Solution 1*/
+
+    /*If you want the gradient to extend the height of the CONTENT, use the syntax below: */
+
+background: #96D9EC;
+
+background: -moz-linear-gradient(top, #96D9EC 0%, #FFFFFF 44%, #96D9EC 100%);
+
+background: -webkit-linear-gradient(top, #96D9EC 0%, #FFFFFF 44%, #96D9EC 100%);
+
+background: linear-gradient(to bottom, #96D9EC 0%, #FFFFFF 44%, #96D9EC 100%);
+
+    
+
+    /*Solution 2*/
+
+    /*If you want the gradient to extend the height of the VIEWPORT, just add the value "fixed", see below: */
+
+    
+
+    /* background: linear-gradient(#b5e48c, #457b9d) fixed; */
+
+}
+
+
+.btn-box-movil {
+
+/*-webkit-box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.35); 
+
+box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.35);*/
+
+width: 90%;
+
+height: 50px;
+
+}
+
+
+/* .p {
+
+if ( height_1 >= height_2 ) {
+
+  div1 = filter_left;
+  div2 = _results_table;
+
+}
+} */
+
+.transformed{
+
+  /* idéntico a rotateZ(45deg); */
+
+  transform: rotate(45deg);
+
+  background-color: blue;
+
+   width: 90px;
+
+  height: 40px;
+
+  margin-right: -23px;
+
+   margin-top: 0px;
+
+}
+table { 
+ width: 100%; 
+ display: flex;
+ justify-content: center;
+}
+
+
+
+
+
+
+
+.wrapper {
+ text-align: center;
+}
+
+.button-filter {
+  display: table;
+  margin: 0 auto;
+  position:fixed;
+  width:220px;
+  height:40px;
+  bottom:20px;
+  background-color:#184ee7;
+  color:#FFF;
+  border-radius:5px;
+  /* border-bottom-left-radius: */
+  z-index: 20;
+}
+table td, table th
+{
+  text-align: center; /* 'cellpadding' equivalent */
+}
+
+html, body{
+  margin:0 !important;
+  padding:0 !important;
+};
+
+/*html {
+
+    min-height: 100%;*/
+
+    /*Do 'height' only (remove 'min-') and you'll see the gradient background repeat rather than extend. */
+
+/*}*/
+
+
+
+/*body {*/
+
+    /*Solution 1*/
+
+    /*If you want the gradient to extend the height of the CONTENT, use the syntax below: */
+
+/*    background: linear-gradient(#b5e48c, #457b9d);
+
+*/    
+
+    /*Solution 2*/
+
+    /*If you want the gradient to extend the height of the VIEWPORT, just add the value "fixed", see below: */
+
+    
+
+    /* background: linear-gradient(#b5e48c, #457b9d) fixed; */
+
+/*}*/
+/* Not needed for demo */
+/*body {
+    margin: 1em;
+    line-height: 1.5;
+    font: 400 21px/1.5 Barlow, sans-serif;
+}*/
+</style>
+							<style type="text/css">
+.my-float{
+  width: 80%;
+  height:50px;
+  bottom:20px;
+  background-color:#0d18b1;
+  color:#FFF;
+  border-radius:5px;
+}
+
+#uno {
+position:fixed;
+left: 0;
+background:#dfdfdf;
+height:100%;
+width:80%;
+font-size:24px;
+color: #1f801f;
+z-index: 5;
+display:none;
+}
+
+#dos {
+position:absolute;
+background:#ffffff;
+height:100%;
+width:100%;
+font-size:24px;
+/* float:flex;
+z-index: -1;*/
+display:block;
+}
+
+#cont-2 {
+ /*margin:0 !important;*/
+  padding:0 !important;
+}
+
+#cont-3 {
+  margin:0 !important;
+  padding:0 !important;
+}
+
+.row-1 {
+  margin-left:0px !important;
+  margin-right: 0px !important;
+  margin-top:0px !important;
+  padding:0 !important;
+}
+
+#great {
+  margin:0 !important;
+  padding:0 !important;
+}
+
+#row-2 {
+  margin:0;
+  padding:0;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:column;
+  border-style: none;
+  border-width: 1px;
+  border-color: gray;
+  -webkit-box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.35); 
+  box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.35);
+  height: 341px;
+}
+
+.box div {
+  border-style: none;
+  border-width: 1px;
+  border-color: gray;
+}
+
+.box div img {
+  border-style: none;
+  border-width: 1px;
+  border-color: gray;
+  object-fit: contain;
+/*  width:25%;*/
+}
+
+@supports(object-fit: cover){
+ .box{
+   object-fit: contain;
+   object-position: center center;
+  }
+}
+
+
+
+
+
+ </style>
+						</head>
+						<body >
+							<div class="modal fade" id="cotizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">Grupo Familiar</h5>
+											<div type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></div>
+										</div>
+										<div class="modal-body">
+											<label for="">Elegir Prepaga</label>
+											<select class="form-select" id="empresa_prepaga" name="empresa_prepaga">
+												<option selected value= 0 >Todas</option>
+												<option value= 1 >SanCor Salud</option>
+												<option value= 2 >Galeno</option>
+												<option value= 3 >Premedic</option>
+												<option value= 4 >Omint</option>
+												<!-- <option value="omint">Omint</option>
+												
+												<option value="avalian">Avalian</option>
+												<option value="prevencion">Prevencion Salud</option>
+												<option value="ospoce">Ospoce Integral</option>
+												<option value="medife">Medife</option>
+												<option value="swiss">Swiss Medical</option> -->
+											  </select>
+                      <div class="row ">
+											<div class="col-4">
+												<label for="">Edad del Titular</label>
+												<select class="form-control" id="edad_1" name="edad_1">
+													<option value="18">18</option>
+													<option value="19">19</option>
+													<option value="20">20</option>
+													<option value="21">21</option>
+													<option value="22">22</option>
+													<option value="23">23</option>
+													<option value="24">24</option>
+													<option value="25">25</option>
+													<option value="26">26</option>
+													<option value="27">27</option>
+													<option value="28">28</option>
+													<option value="29">29</option>
+													<option value="30">30</option>
+													<option value="31">31</option>
+													<option value="32">32</option>
+													<option value="33">33</option>
+													<option value="34">34</option>
+													<option value="35">35</option>
+													<option value="36">36</option>
+													<option value="37">37</option>
+													<option value="38">38</option>
+													<option value="39">39</option>
+													<option value="40">40</option>
+													<option value="41">41</option>
+													<option value="42">42</option>
+													<option value="43">43</option>
+													<option value="44">44</option>
+													<option value="45">45</option>
+													<option value="46">46</option>
+													<option value="47">47</option>
+													<option value="48">48</option>
+													<option value="49">49</option>
+													<option value="50">50</option>
+													<option value="51">51</option>
+													<option value="52">52</option>
+													<option value="53">53</option>
+													<option value="54">54</option>
+													<option value="55">55</option>
+													<option value="56">56</option>
+													<option value="57">57</option>
+													<option value="58">58</option>
+													<option value="59">59</option>
+												</select>
+											</div>
+               
+										
+                        <div class="col-4">
+												<label for="">Edad del Conyuge</label>
+												<select class="form-control" id="edad_2" name="edad_2">
+													<option value="0">0</option>
+													<option value="18">18</option>
+													<option value="19">19</option>
+													<option value="20">20</option>
+													<option value="21">21</option>
+													<option value="22">22</option>
+													<option value="23">23</option>
+													<option value="24">24</option>
+													<option value="25">25</option>
+													<option value="26">26</option>
+													<option value="27">27</option>
+													<option value="28">28</option>
+													<option value="29">29</option>
+													<option value="30">30</option>
+													<option value="31">31</option>
+													<option value="32">32</option>
+													<option value="33">33</option>
+													<option value="34">34</option>
+													<option value="35">35</option>
+													<option value="36">36</option>
+													<option value="37">37</option>
+													<option value="38">38</option>
+													<option value="39">39</option>
+													<option value="40">40</option>
+													<option value="41">41</option>
+													<option value="42">42</option>
+													<option value="43">43</option>
+													<option value="44">44</option>
+													<option value="45">45</option>
+													<option value="46">46</option>
+													<option value="47">47</option>
+													<option value="48">48</option>
+													<option value="49">49</option>
+													<option value="50">50</option>
+													<option value="51">51</option>
+													<option value="52">52</option>
+													<option value="53">53</option>
+													<option value="54">54</option>
+													<option value="55">55</option>
+													<option value="56">56</option>
+													<option value="57">57</option>
+													<option value="58">58</option>
+													<option value="59">59</option>
+												</select>
+											</div>
+                    
+											<div class="col-4">
+												<label for="">Hijos</label>
+												<select class="form-control" id="numkids" name="numkids">
+													<option value=0>0</option>
+													<option value=1>1</option>
+													<option value=2>2</option>
+													<option value=3>3</option>
+													<option value=4>4</option>
+													<option value=5>5</option>
+												</select>
+											</div>
+                    </div>
+					<br>
+											<div class="form-group">
+												<label for="">Tipo de asociado</label>
+												<select class="form-control" id="tipo" name="tipo">
+													<option value="P">Particular</option>
+													<option value="M">Monotributo</option>
+													<option value="D">Relacion de dependencia</option>
+													<option value="I">Responsable Inscripto</option>
+												</select>
+											</div>
+											  
+											<div class="form-group" id="desreguladoDiv">
+												<div class="form-check">
+											
+												  </div>
+												  <div class="form-check">
+													
+												  </div>
+												  <div class="form-check">
+													<input class="form-check-input" type="radio" onchange="displayRadioValue()" name="aporteOS" value="Sueldo Bruto"  id="flexRadioDefault3">
+													<label class="form-check-label" >
+													  Sueldo Bruto
+													</label>
+												  </div>
+												  <div class="form-check">
+													<input class="form-check-input" type="radio" onchange="displayRadioValue()" name="aporteOS" value="Aporte Obra Social"  id="flexRadioDefault4" checked>
+													<label class="form-check-label">
+													  Aporte Obra Social
+													</label>
+												  </div>
+												
+												  <div class="input-group mb-3" id="sueldoyaportesDiv">
+													
+													<span class="input-group-text" id="result"></span>
+													<span class="input-group-text">$</span>
+													<input type="text" class="form-control" id="sueldo" name="sueldo" >
+												  </div>
+												  <div id="calculosueldo"></div>
+												
+											
+												
+												</div>
+												
+												<div class="form-check form-check-inline" id="monoadicDiv">
+													<br>
+													<label class="form-check-label" for="monoadic">check si adem&aacute;s hay Aportes a Monotributo ?</label>
+													<input class="form-check-input"  type="checkbox"  id="monoadic" value="monoadic">
+												    <br>
+												  </div>
+												
+												<div class="form-group" id="monotributoDiv">
+													
+													<label for="">Cantidad de Aportantes al Monotributo</label>
+													<select class="form-control" id="cantAport" name="cantAport">
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+													</select>
+												</div>
+												<br>
+												<div class="form-check form-check-inline" >
+													<br>
+													<label class="form-check-label" for="afinidadCheck">check si es con bonificaciones ?</label>
+													<input class="form-check-input"  type="checkbox"  id="afinidadCheck" value="monoadic">
+												    <br>
+												  </div>
+												<div class="form-group" id="bonAfinidadDiv">
+													<label for="" >Afinidad Porcentaje de descuento</label>
+													<select class="form-control" id="bonAfinidad" name="bonAfinidad" placeholder="Selecciona el Porcentaje correspondiente">
+														<option value=0 >Selecciona el Porcentaje correspondiente</option>
+														<option value=0.05>5%</option>
+														<option value=0.10>10%</option>
+														<option value=0.15>15%</option>
+														<option value=0.20>20%</option>
+														<option value=0.25>25%</option>
+														<option value=0.30>30%</option>
+														<option value=0.40>40%</option>
+													</select>
+												</div>
+												<br>
+												<div class="form-check form-check-inline" id="agregarSuprasDiv" >
+													<br>
+													<label class="form-check-label" for="supras">Agregar Supras</label>
+													<input class="form-check-input"  type="checkbox"  id="supras" value="supras">
+												    <br>
+												  </div>
+												<br>
+												<br>
+												<div id="segurosVidaDiv">
+												<text>Seguro de Vida : </text>
+												<div class="form-check form-check-inline" >
+													
+													<input class="form-check-input"  type="checkbox" id="segVidaTitular" value="segvida" checked>
+													<label class="form-check-label" for="segVidaTitular">Titular</label>
+												  </div>
+												  <div class="form-check form-check-inline" id="segvida1">
+													<input class="form-check-input" name="segurovidaconyuge" type="checkbox" id="segVidaConyuge" value="segvida1"  disabled >
+													<label class="form-check-label" for="segVidaConyuge">Conyuge</label>
+												  </div>
+												</div>
+<br>
+
+												<div>
+ 
+											</div>
+											<!-- <div class="price-input">
+												<div class="field">
+												  <span>Min</span>
+												  <input type="number" class="input-min" value="0" id="input-min">
+												</div>
+												<div class="separator">-</div>
+												<div class="field">
+												  <span>Max</span>
+												  <input type="number" class="input-max" value="200000" id="input-max">
+												</div>
+											  </div>
+											  <div class="slider">
+												<div class="progress"></div>
+											  </div>
+											  <div class="range-input">
+												<input type="range" class="range-min" min="0" max="200000" value="0" step="500" id="range-min">
+												<input type="range" class="range-max" min="0" max="200000" value="200000" step="500" id="range-max">
+											   </div>  -->
+											
+												<br>
+												<div class="form-group" id="residenciaDiv">
+												<label class="form-check-label" for="">Zona de residencia</label>
+												<select class="form-select" aria-label="Default select example" id="residencia">
+													<option selected>Ciudad Autonoma de Buenos Aires</option>
+													<option value="1">Gran Buenos Aires Norte</option>
+													<option value="2">Gran Buenos Aires Oeste</option>
+													<option value="3">Gran Buenos Aires Sur</option>
+													<option value="3">Buenos Aires</option>
+												  </select>
+												</div>
+
+												
+
+												  
+												 
+												<form method="post" action="ajax.php" >
+												 <div class="form-group">
+														<label for="">Nombre</label>
+														<input class-->
+													 <div class="form-group">
+															<label for="">Telefono</label>
+															<input class="form-control" type="text" id="telefono" name="telefono">
+														 <div class="form-group">
+																<label for="">Email</label>
+																<input class="form-control" type="email" id="email" name="email">
+																</div>
+															</div>
+															<div class="modal-footer">
+																<input  type="submit" class="btn btn-primary"  onclick="finalizar();" value="Consultar" class="button btn btn-primary" data-bs-dismiss="modal" aria-label="Close">
+																</form>
+															</div>
+														</div>
+													</div>
+												</div></div></div>
+												<div id="dos" hidden></div>
+												<div class="header header-logos"  style="z-index: 4">
+													<div class="row" style="margin:25px">
+														<!-- <div class="container">    -->
+														<div class="brand" >
+															<!-- <a href="index.html"> -->
+															<!-- <img class="logo-header" src="" alt="" style="width : 330px;"></a> -->
+														</div>
+														<div id="top_right">
+															<!-- <a onclick="document.getElementById('id01').style.display='block'"><img class="img_ayuda hright" src="assets/img/imagenes/contacto/callmeback.png"><img class="icn_consultor" src="assets/img/imagenes/contacto/icn_consultor.gif" height="38" width="38"></a> -->
+														</div>
+													</div>
+													<!-- </div> -->
+												</div>
+												<div class="justify-content-center d-md-none" style="display: flex;">
+													<button class="my-float button-filter" data-bs-target="#uno" style="z-index: 50;font-size: 20px">
+														<strong>FILTROS Y PERFIL</strong>
+													</button>
+												</div>
+												<aside>
+													<div class="responsive-banner" style="background-color: transparent;position: inherit; "></div>
+													
+														
+
+													</aside>
+													<!-- ---------------------------------------------------------------------------------------- -->
+													<div class="device-alias-1 visible-custom-1" >
+														<div class="wrapper" style="height: 70px;margin-bottom: 10px;margin-left: 10px;margin-right: 10px;"  ></div><div  class="wrapper" style="background:transparent;">
+															<div class="wrapper" id="selectHTML_compararM" ></div>
+															<!-- 
+<div class="wrapper" style="height: 70px;margin-bottom: 10px;"\><div class="filter-top" style="border-style:solid;border-width: 1px;border-color: gray;margin-bottom: 10px;margin-left: 5px;margin-right: 5px;height: 70px;";><div class="filter-left" style="border-style:solid;border-width: 1px;border-color: gray;width: 60px;height:40px;margin: 5px;"><div class="filter-right" style="border-style:solid;border-width: 1px;border-color: gray;width: 60px;height:40px;margin: 5px;";></div> -->
+															<!-- <div id="_head_table"  class="col-md-9 col-xs-12 " style="margin: 0;padding: 0"><div id="_headDetails_QuoteResults_classic"></div><div class="spacer" style="height:20px"></div> -->
+															<div id="results_mobile" style="padding: 10px;"></div>
+															<!-- <div class="box " style="margin: 5px;padding: 5px;font-size: 12px";><div class="filter-top" style="height: 27%"><div style="width:50%">A</div><div style="width:50%">B</div></div><div style="height: 12%">dos</div><div style="height: 33%"><div class="container container-fluid"><table><div class="caption center block">hola</div><tr><td>a</td><td>a</td></tr><tr><td>a</td><td>a</td></tr><tr><td>a</td><td>a</td></tr></table></div></div><div style="height: 18%">cuatro</div><div style="height: 10%">cinco</div></div><div class="box " style="margin: 5px;padding: 5px;font-size: 12px";><div class="filter-top" style="height: 27%"><div style="width:50%">A</div><div style="width:50%">B</div></div><div style="height: 12%">dos</div><div style="height: 33%"><div class="container container-fluid"><table><div class="caption center block">hola</div><tr><td>a</td><td>a</td></tr><tr><td>a</td><td>a</td></tr><tr><td>a</td><td>a</td></tr></table></div></div><div style="height: 18%">cuatro</div><div style="height: 10%">cinco</div></div><div class="box " style="margin: 5px;padding: 5px;font-size: 12px";><div class="filter-top" style="height: 27%"><div style="width:50%">A</div><div style="width:50%">B</div></div><div style="height: 12%">dos</div><div style="height: 33%"><div class="container container-fluid"><table><div class="caption center block">hola</div><tr><td>a</td><td>a</td></tr><tr><td>a</td><td>a</td></tr><tr><td>a</td><td>a</td></tr></table></div></div><div style="height: 18%;color: #606060">cuatro</div><div style="height: 10%">cinco</div></div> -->
+														</div></div>
+													</div>
+													<div id="uno" class="container container-fluid d-md-none modal" style="z-index: 10"></div>
+												</div>
+											</div>
+											<div class="device-alias-3 visible-custom-3">
+												<div clas="container-fluid " style="justify-content: center;display:flex;height: 70px;padding-left: 10px;padding-right: 10px;margin-top: 0px">
+													<div class="row col-lg-11 col-md-12 col-sm-12 col-xs-12" style="border-style:solid;border-width: 1px;border-color: gray;margin-bottom: 10px"\></div>
+												</div>
+												<div clas="container-fluid d-none" style="justify-content: center;display:flex;padding-left: 10px;padding-right: 10px" >
+													<div class="row col-lg-11 col-md-12 col-sm-12 col-xs-12" \>
+														<div class="col-md-3 d-md-block d-sm-none" >
+															<div id="filter_left"  style="margin: 0;padding: 0"></div>
+															<div style="margin: 0;padding: 0"></div>
+														
+														</div>
+
+
+														
+<div id="_head_table"  class="col-md-9 col-xs-12 " style="margin: 0;padding: 0">
+	<div  id="cotizar_grupo_familiar"></div>
+	<div class="spacer" style="height:20px"></div>
+<div id="_headDetails_QuoteResults_classic" ></div>
+<div class="spacer" style="height:20px"></div>
+
+<div id="_results_table">
+<div class="tab-pane active row"   style="margin: 0;padding: 0" id="_resultDetails_QuoteResults_classic">
+</div>
+</div>
+</div>
+
+
+
+<!-- <script src="./node_modules/dist/bootstrap-toolkit.min.js"></script> -->
+<!-- <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script> -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js" ></script>
+
+<script>
+$("#empresa_prepaga").change(function() {
+  if ($(this).val() == 3) {
+    
+	$('#agregarSuprasDiv').hide();
+	$('#segurosVidaDiv').hide();
+} else if ($(this).val() == 2){
+
+	$('#agregarSuprasDiv').hide();
+	$('#segurosVidaDiv').hide();
+} else if ($(this).val() == 1){
+	
+	$('#agregarSuprasDiv').show();
+	$('#segurosVidaDiv').show();
+}else if ($(this).val() == 0){
+	document.getElementById("segVidaTitular").checked = false;
+	$('#agregarSuprasDiv').hide();
+	$('#segurosVidaDiv').hide();
+  }
+});
+$("#empresa_prepaga").trigger("change");
+</script>
+<script>
+
+$("#tipo").change(function() {
+  if ($(this).val() == "M") {
+    $('#monotributoDiv').show();
+
+    $('#cantAport').attr('required', '');
+    $('#cantAport').attr('data-error', 'This field is required.');
+    $('#desreguladoDiv').hide();
+    $('#sueldo').removeAttr('required');
+    $('#sueldo').removeAttr('data-error');
+	$('#monoadicDiv').hide();
+	document.getElementById("afinidadCheck").checked = false;
+	document.getElementById("monoadic").checked = false;
+  } else if ($(this).val() == "D"){
+    $('#desreguladoDiv').show();
+	displayRadioValue();
+    $('#sueldo').removeAttr('required', '')
+    $('#sueldo').removeAttr('data-error', 'Este espacio no pude quedar vacío. Ingres seu seuldo bruto');
+    $('#monotributoDiv').hide();
+    $('#cantAport').removeAttr('required');
+    $('#cantAport').removeAttr('data-error');
+    $('#monoadicDiv').show();
+  } else {
+    $('#monotributoDiv').hide();
+    document.getElementById("afinidadCheck").checked = false;
+	document.getElementById("monoadic").checked = false;
+    $('#cantAport').removeAttr('required');
+    $('#cantAport').removeAttr('data-error');
+    $('#desreguladoDiv').hide();
+    $('#sueldo').removeAttr('required');
+    $('#sueldo').removeAttr('data-error');
+    $('#monoadicDiv').hide();
+  }
+});
+$("#tipo").trigger("change");
+</script>
+
+<script>
+	$("#edad_2").change(function() {
+	  if ($(this).val() !== "0") {
+		$('#segVidaConyuge').removeAttr('disabled');
+	  } else {
+		$('#segVidaConyuge').attr('disabled', '');
+		uncheckSeg();
+
+	  }
+	});
+	$("#tipo").trigger("change");
+	</script>
+<script>
+	$("#monoadic").change(function() {
+	  if (document.getElementById("monoadic").checked == true) {
+		$('#monotributoDiv').show();
+	  } else if (document.getElementById("monoadic").checked == false && document.getElementById("tipo").value == "D" )
+	   {
+		$('#monotributoDiv').hide();	
+	  }
+	});
+	$("#monoadic").trigger("change");
+	</script>	
+	<script>
+	$("#afinidadCheck").change(function() {
+	  if (document.getElementById("afinidadCheck").checked == true) {
+		$('#bonAfinidadDiv').show();
+	  } else if (document.getElementById("afinidadCheck").checked == false)
+	   {
+		$('#bonAfinidadDiv').hide();	
+	  }
+	});
+	$("#afinidadCheck").trigger("change");
+	</script>	
+	<script>
+function uncheckSeg() { if ( document.getElementById("segVidaConyuge").checked == true )
+  document.getElementById("segVidaConyuge").checked = false;
+} 
+
+	</script>
+<script>
+$(document).on('change',"input[name='miComparacionMobile']" , function(){
+comparitionM()
+}
+);
+
+$(document).on('change',"input[name='miComparacion']" , function(){
+
+comparition()
+}
+);
+
+
+
+
+
+
+
+	</script>
+	<!-- <script>
+		$('#multi22').mdbRange({
+            single: {
+                active: true,
+                multi: {
+                    active: true,
+                    rangeLength: 2,
+                    counting: true,
+                    countingTarget: ['#ex3', '#ex4']
+                }
+            }
+        });
+
+	</script> -->
+<!-- <script>
+
+
+const rangeInput = document.querySelectorAll(".range-input input"),
+priceInput = document.querySelectorAll(".price-input input"),
+range = document.querySelector(".slider .progress");
+let priceGap = 1000;
+
+
+
+priceInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minPrice = parseInt(priceInput[0].value),
+        maxPrice = parseInt(priceInput[1].value);
+        
+        if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
+            if(e.target.className === "input-min"){
+                rangeInput[0].value = minPrice;
+                range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
+            }else{
+                rangeInput[1].value = maxPrice;
+                range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+            }
+        }
+    });
+});
+
+rangeInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+
+        if((maxVal - minVal) < priceGap){
+            if(e.target.className === "range-min"){
+                rangeInput[0].value = maxVal - priceGap
+            }else{
+                rangeInput[1].value = minVal + priceGap;
+            }
+        }else{
+            priceInput[0].value = minVal;
+            priceInput[1].value = maxVal;
+            range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+            range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+    });
+});
+</script> -->
+</body>
+</html>
+
+                        

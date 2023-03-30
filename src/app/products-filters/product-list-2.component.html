@@ -1,0 +1,253 @@
+<ll-product-hero id="hero"></ll-product-hero>
+<section class="padding" id="main">
+    <div class="card-top container-fluid" id="image-filter">
+    <div class="container d-flex" id="image-filter-flex">
+        <div class="item">
+            <a (click)="removeFilter('rating')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+                <h6>Todos</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filterRating(1)">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
+                <h6>Basico</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filterRating(2 )">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt="">
+                <h6>Intermedio</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filterRating(3 )">
+                <img style="width: 62px; margin-top: 5px;" src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50" alt="">
+                <h6>Superior</h6>
+            </a>
+        </div>
+    </div>
+</div>
+ <h1 id="encabezado" class="grey-text flex align-center">
+      <i class="large material-icons"></i>
+      Products-filters 
+    </h1>bucle
+  
+    <jw-modal id='custom-modal-3' >
+    <app-cotizar-form>  <button type="button" class="btn" (click)="closeModa('custom-modal-3')">Cerrar</button>
+    </app-cotizar-form>
+    </jw-modal>
+ <div class="container" id="conenedor-bucle">
+    <ng-container *ngIf="!(loading$ | async); else loadingTpl">
+      <div class="container"  id="formularios">
+        <div class="ll-search pb-6">
+          <div class="container">
+            <div class="border overflow-hidden sm:rounded-md p-5">
+              <div class="mb-3">
+                <div class="flex justify-between flex-wrap">
+                  <h4>Encontrá lo que necesitás</h4>
+                  <label>Ordenar por &nbsp;</label>
+                  <select [(ngModel)]="SortbyParam">
+                    <option value="empresa">Empresa</option>
+                    <option value="price">Precio</option>
+                  </select>
+                  <button type="button" (click)="onSortDirection()" >
+                    <i *ngIf="SortDirection === 'asc'" class="fas fa-sort-alpha-down"></i>
+                    <i *ngIf="SortDirection === 'desc'" class="fas fa-sort-alpha-up"></i>
+                  </button>
+                  <button (click)="advanceSearchExpanded = !advanceSearchExpanded" mat-button>
+                    <mat-icon>tune</mat-icon> Busqueda Avanzada
+                  </button>
+                  <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                   
+                  
+                    <mat-button-toggle [class.text-accent]="view === 'grid'" (click)="view = 'grid'" mat-icon-button class="view__btn"><mat-icon>grid_view</mat-icon></mat-button-toggle>
+                    <mat-button-toggle [class.text-accent]="view === 'list'" (click)="view = 'list'" mat-icon-button class="view__btn"><mat-icon>list_alt</mat-icon></mat-button-toggle>
+                  </mat-button-toggle-group>
+                </div>
+                <div class="mt-3 flex">
+                  <input
+                    type="text"
+                    placeholder="Estoy buscando ..."
+                    name="filterPlan"
+                    class="flex-1 w-full sm:text-sm lg:text-xl border-gray-300 rounded-l-md py-3 px-6"
+                    required
+                  />
+                  <button class="bg-primary w-24 rounded-r-md"><mat-icon class="leading-8">buscar</mat-icon></button>
+                </div>
+              </div>
+              <mat-expansion-panel [expanded]="advanceSearchExpanded">
+                <div class="grid grid-cols-6 gap-6 mt-4">
+                  <div class="col-span-6 sm:col-span-3">
+                    <input
+                      type="text"
+                      class="
+                        mt-1
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        block
+                        w-full
+                        shadow-sm
+                        sm:text-sm
+                        border-gray-300
+                        rounded-md
+                      "
+                      placeholder="Precio desde"
+                    />
+                  </div>
+                  <div class="col-span-6 sm:col-span-3">
+                    <input
+                      type="text"
+                      class="
+                        mt-1
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        block
+                        w-full
+                        shadow-sm
+                        sm:text-sm
+                        border-gray-300
+                        rounded-md
+                      "
+                      placeholder="Precio hasta"
+                    />
+                  </div>
+                  <div class="col-span-6 sm:col-span-3">
+                    <select
+                      name="categories"
+                      class="
+                        mt-1
+                        block
+                        w-full
+                        py-2
+                        px-3
+                        border border-gray-300
+                        bg-white
+                        rounded-md
+                        shadow-sm
+                        focus:outline-none
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        sm:text-sm
+                      "
+                      [(ngModel)]="empresa"
+                    >
+                      <option>Empresa</option>
+                      <option>SanCor Salud</option>
+                      <option>OMINT</option>
+                      <option>Galeno</option>
+                      <option>Avalian</option>
+                      <option>Swiss Medical</option>
+                      <option>Premedic</option>
+                      <option>Medife</option>
+                    </select>
+                  </div>
+                  <div class="col-span-6 sm:col-span-3">
+                    <select
+                      name="rating"
+                      class="
+                        mt-1
+                        block
+                        w-full
+                        py-2
+                        px-3
+                        border border-gray-300
+                        bg-white
+                        rounded-md
+                        shadow-sm
+                        focus:outline-none
+                        focus:ring-indigo-500
+                        focus:border-indigo-500
+                        sm:text-sm
+                      "
+                    >
+                      <option>Rating</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="col-span-6">
+                    <button mat-flat-button color="accent" (click)="onEmpresaFilter()">Aplicar Filtro</button>
+                    <button mat-flat-button color="accent" (click)="onEmpresaFilterClear()">Limpiar Filtro</button>
+                  </div>
+                </div>
+              </mat-expansion-panel>
+            </div>
+          </div>
+        </div>
+        <app-filters-form></app-filters-form>
+      <div class="row" id="bucle">
+      <!--Products List-->
+      
+      <div class="grid grid-cols-12 gap-6 xxl:gap-8 flex" *ngIf="isLoaded">
+        <div 
+          *ngFor="let product of products | filter: SearchEmpresa:'empresa' | sort: [SortbyParam, SortDirection]"
+          class="col-span-12 md:col-span-6 xl:col-span-4 flex" >
+          <app-product-card  *ngIf="view === 'grid'" [product]="product"></app-product-card>
+        </div>
+      </div>
+  
+        <div  class="col-span-6 md:col-span-12 xl:col-span-12" >
+          <div *ngFor="let product of products | filter: SearchEmpresa:'empresa' | sort: [SortbyParam, SortDirection]">
+          <app-product-filter *ngIf="view === 'list'" [product]="product"></app-product-filter>
+          </div>    
+        </div> 
+        <!-- <app-product-filter  *ngFor='let product of products' [product]=product class="col-span-12 md:col-span-4 xl:col-span-4" 
+        
+        >
+        </app-product-filter> -->
+        
+                 
+              
+              
+      </div>
+  </div>
+  
+    </ng-container>
+  </div>
+  </section>
+    <!--Spinner-->
+    <ng-template #loadingTpl>
+      <div class="progress">
+        <div class="indeterminate"></div>
+      </div>
+    </ng-template>
+  
+ 
+  <jw-modal id='custom-modal-2' >
+    <div id="printable">
+        <p >Clínicas, Sanatorios y Hospitales Privados</p>
+  
+  <app-compara class="child"  [productos]='compareProdList()' [items]='compareProdClinicas(compareProdList())'>
+  </app-compara>
+</div>
+
+  <div class="modal-footer" id="modal-footer">
+    <button type="button" class="btn btn-outline-primary btn-sm mt-2" (click)="onPrint()">
+      Imprimir Listado
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-primary btn-sm mt-2"
+      (click)="closeModal('custom-modal-2')"
+    >Cerrar
+    </button>
+  </div>
+  </jw-modal>
+
+
+    <app-compara-item ></app-compara-item>
+    <app-compara-select></app-compara-select>
+    <ng-container *ngIf='compareProdList().length >= 1 show' >
+      <div id="mybutton" >
+          <h5>Comparalos</h5>
+        <button class="feedback" mat-raised-button color="primary"
+        matBadge={{compareLength}} matBadgePosition="after" matBadgeColor="accent" (click)="openModal('custom-modal-2')">
+        <app-compara-select [comparar]='compareProdList()' ></app-compara-select>
+      </button>
+        </div>
+      </ng-container>
+   

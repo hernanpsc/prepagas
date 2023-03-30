@@ -1,0 +1,48 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "resolveJsonModule":true,
+    "esModuleInterop":true,
+    "emitDecoratorMetadata": true,
+    "target": "es6",
+    // "target": "es2015",
+    "module": "es2020",
+    // "module": "esnext",
+    "lib": ["es2018", "dom"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "fullTemplateTypeCheck": false,
+    "strictTemplates": false,
+    "strict": false
+  },
+  "paths": {
+    "akita-filters-plugin": [
+      "projects/akita-filters-plugin/src/lib/index.ts"
+    ],
+    "akita-filters-plugin/datasource": [
+      "projects/akita-mat-datasource/src/lib/index.ts"
+    ]
+  },
+}
+
+
+
+
+  
+
+  
+   
+ 

@@ -1,0 +1,310 @@
+  {
+      "premedicPIND29+0h": {
+        "premedPlan_C100": 4083,
+        "premedPlan_200": 5492,
+        "premedPlan_300": 8023,
+        "premedPlan_400": 9309,
+        "premedPlan_500": 13222
+      },
+      "premedicPMAT29+0h": {
+        "premedPlan_C100": 8252,
+        "premedPlan_200": 11122,
+        "premedPlan_300": 16582,
+        "premedPlan_400": 18741,
+        "premedPlan_500": 26614
+      },
+      "premedicPMAT29+1h": {
+        "premedPlan_C100": 10209,
+        "premedPlan_200": 13686,
+        "premedPlan_300": 18852,
+        "premedPlan_400": 22877,
+        "premedPlan_500": 35447
+      },
+      "premedicPMAT29+2h": {
+        "premedPlan_C100": 12068,
+        "premedPlan_200": 16210,
+        "premedPlan_300": 22290,
+        "premedPlan_400": 25910,
+        "premedPlan_500": 40163
+      },
+      "premedicPMAT29+3h": {
+        "premedPlan_C100": 13568,
+        "premedPlan_200": 18297,
+        "premedPlan_300": 24240,
+        "premedPlan_400": 28173,
+        "premedPlan_500": 43666
+      },
+      "premedicPAD-1anio": {
+        "premedPlan_C100": 11404,
+        "premedPlan_200": 11404,
+        "premedPlan_300": 12815,
+        "premedPlan_400": 15376,
+        "premedPlan_500": 22244
+      },
+      "premedicPAD-25": {
+        "premedPlan_C100": 2707,
+        "premedPlan_200": 3673,
+        "premedPlan_300": 5166,
+        "premedPlan_400": 5747,
+        "premedPlan_500": 10894
+      },
+      "premedicPIND39+0h": {
+        "premedPlan_C100": 5525,
+        "premedPlan_200": 6895,
+        "premedPlan_300": 10841,
+        "premedPlan_400": 12674,
+        "premedPlan_500": 17997
+      },
+      "premedicPMAT39+0h": {
+        "premedPlan_C100": 10183,
+        "premedPlan_200": 12753,
+        "premedPlan_300": 18669,
+        "premedPlan_400": 21826,
+        "premedPlan_500": 30991
+      },
+      "premedicPMAT39+1h": {
+        "premedPlan_C100": 12433,
+        "premedPlan_200": 15597,
+        "premedPlan_300": 22811,
+        "premedPlan_400": 26660,
+        "premedPlan_500": 38773
+      },
+      "premedicPMAT39+2h": {
+        "premedPlan_C100": 14781,
+        "premedPlan_200": 18578,
+        "premedPlan_300": 26999,
+        "premedPlan_400": 31637,
+        "premedPlan_500": 49047
+      },
+      "premedicPMAT39+3h": {
+        "premedPlan_C100": 16699,
+        "premedPlan_200": 21011,
+        "premedPlan_300": 29426,
+        "premedPlan_400": 34436,
+        "premedPlan_500": 53379
+      },
+      "premedicPIND49+0h": {
+        "premedPlan_C100": 6132,
+        "premedPlan_200": 7682,
+        "premedPlan_300": 12125,
+        "premedPlan_400": 13941,
+        "premedPlan_500": 19793
+      },
+      "premedicPMAT49+0h": {
+        "premedPlan_C100": 11579,
+        "premedPlan_200": 14499,
+        "premedPlan_300": 21922,
+        "premedPlan_400": 25187,
+        "premedPlan_500": 38283
+      },
+      "premedicPMAT49+1h": {
+        "premedPlan_C100": 14054,
+        "premedPlan_200": 17645,
+        "premedPlan_300": 26491,
+        "premedPlan_400": 30448,
+        "premedPlan_500": 47202
+      },
+      "premedicPMAT49+2h": {
+        "premedPlan_C100": 16308,
+        "premedPlan_200": 20505,
+        "premedPlan_300": 30222,
+        "premedPlan_400": 34718,
+        "premedPlan_500": 53820
+      },
+      "premedicPMAT49+3h": {
+        "premedPlan_C100": 18171,
+        "premedPlan_200": 22806,
+        "premedPlan_300": 33082,
+        "premedPlan_400": 36195,
+        "premedPlan_500": 56101
+      },
+      "premedicPIND59+0h": {
+        "premedPlan_C100": 7143,
+        "premedPlan_200": 9059,
+        "premedPlan_300": 14918,
+        "premedPlan_400": 16801,
+        "premedPlan_500": 25533
+      },
+      "premedicPMAT59+0h": {
+        "premedPlan_C100": 13502,
+        "premedPlan_200": 17100,
+        "premedPlan_300": 27708,
+        "premedPlan_400": 31293,
+        "premedPlan_500": 48533
+      },
+      "premedicPMAT59+1h": {
+        "premedPlan_C100": 16342,
+        "premedPlan_200": 20751,
+        "premedPlan_300": 33135,
+        "premedPlan_400": 37379,
+        "premedPlan_500": 61023
+      },
+      "premedicPMAT59+2h": {
+        "premedPlan_C100": 18849,
+        "premedPlan_200": 23930,
+        "premedPlan_300": 36933,
+        "premedPlan_400": 41689,
+        "premedPlan_500": 64608
+      },
+      "premedicPMAT59+3h": {
+        "premedPlan_C100": 20631,
+        "premedPlan_200": 26092,
+        "premedPlan_300": 40325,
+        "premedPlan_400": 45526,
+        "premedPlan_500": 70574
+      },
+      "premedicDIND29+0h": {
+        "premedPlan_C100": 3695,
+        "premedPlan_200": 4971,
+        "premedPlan_300": 7261,
+        "premedPlan_400": 8424,
+        "premedPlan_500": 11966
+      },
+      "premedicDMAT29+0h": {
+        "premedPlan_C100": 7468,
+        "premedPlan_200": 10065,
+        "premedPlan_300": 15006,
+        "premedPlan_400": 16960,
+        "premedPlan_500": 24085
+      },
+      "premedicDMAT29+1h": {
+        "premedPlan_C100": 9239,
+        "premedPlan_200": 12385,
+        "premedPlan_300": 17060,
+        "premedPlan_400": 20703,
+        "premedPlan_500": 32078
+      },
+      "premedicDMAT29+2h": {
+        "premedPlan_C100": 10921,
+        "premedPlan_200": 14670,
+        "premedPlan_300": 20172,
+        "premedPlan_400": 23448,
+        "premedPlan_500": 36347
+      },
+      "premedicDMAT29+3h": {
+        "premedPlan_C100": 12279,
+        "premedPlan_200": 16559,
+        "premedPlan_300": 21937,
+        "premedPlan_400": 25496,
+        "premedPlan_500": 39517
+      },
+      "premedicDAD-1anio": {
+        "premedPlan_C100": 10320,
+        "premedPlan_200": 10320,
+        "premedPlan_300": 11597,
+        "premedPlan_400": 13915,
+        "premedPlan_500": 20130
+      },
+      "premedicDAD-25": {
+        "premedPlan_C100": 2450,
+        "premedPlan_200": 3324,
+        "premedPlan_300": 4675,
+        "premedPlan_400": 5201,
+        "premedPlan_500": 9858
+      },
+      "premedicDIND39+0h": {
+        "premedPlan_C100": 5000,
+        "premedPlan_200": 6240,
+        "premedPlan_300": 9811,
+        "premedPlan_400": 11470,
+        "premedPlan_500": 16287
+      },
+      "premedicDMAT39+0h": {
+        "premedPlan_C100": 9215,
+        "premedPlan_200": 11541,
+        "premedPlan_300": 16895,
+        "premedPlan_400": 19752,
+        "premedPlan_500": 28046
+      },
+      "premedicDMAT39+1h": {
+        "premedPlan_C100": 11252,
+        "premedPlan_200": 14115,
+        "premedPlan_300": 20644,
+        "premedPlan_400": 24127,
+        "premedPlan_500": 35089
+      },
+      "premedicDMAT39+2h": {
+        "premedPlan_C100": 13377,
+        "premedPlan_200": 16813,
+        "premedPlan_300": 24434,
+        "premedPlan_400": 28631,
+        "premedPlan_500": 44387
+      },
+      "premedicDMAT39+3h": {
+        "premedPlan_C100": 15112,
+        "premedPlan_200": 19014,
+        "premedPlan_300": 26630,
+        "premedPlan_400": 31163,
+        "premedPlan_500": 48307
+      },
+      "premedicDIND49+0h": {
+        "premedPlan_C100": 5550,
+        "premedPlan_200": 6952,
+        "premedPlan_300": 10973,
+        "premedPlan_400": 12616,
+        "premedPlan_500": 17913
+      },
+      "premedicDMAT49+0h": {
+        "premedPlan_C100": 10479,
+        "premedPlan_200": 13121,
+        "premedPlan_300": 19839,
+        "premedPlan_400": 22794,
+        "premedPlan_500": 34646
+      },
+      "premedicDMAT49+1h": {
+        "premedPlan_C100": 12718,
+        "premedPlan_200": 15968,
+        "premedPlan_300": 23974,
+        "premedPlan_400": 27555,
+        "premedPlan_500": 42717
+      },
+      "premedicDMAT49+2h": {
+        "premedPlan_C100": 14759,
+        "premedPlan_200": 18557,
+        "premedPlan_300": 27350,
+        "premedPlan_400": 31419,
+        "premedPlan_500": 48706
+      },
+      "premedicDMAT49+3h": {
+        "premedPlan_C100": 16444,
+        "premedPlan_200": 20639,
+        "premedPlan_300": 29939,
+        "premedPlan_400": 32756,
+        "premedPlan_500": 50771
+      },
+      "premedicDIND59+0h": {
+        "premedPlan_C100": 6464,
+        "premedPlan_200": 8198,
+        "premedPlan_300": 13501,
+        "premedPlan_400": 15204,
+        "premedPlan_500": 23107
+      },
+      "premedicDMAT59+0h": {
+        "premedPlan_C100": 12219,
+        "premedPlan_200": 15475,
+        "premedPlan_300": 25075,
+        "premedPlan_400": 28320,
+        "premedPlan_500": 43921
+      },
+      "premedicDMAT59+1h": {
+        "premedPlan_C100": 14789,
+        "premedPlan_200": 18779,
+        "premedPlan_300": 29987,
+        "premedPlan_400": 33827,
+        "premedPlan_500": 55225
+      },
+      "premedicDMAT59+2h": {
+        "premedPlan_C100": 17058,
+        "premedPlan_200": 21656,
+        "premedPlan_300": 33424,
+        "premedPlan_400": 37727,
+        "premedPlan_500": 58469
+      },
+      "premedicDMAT59+3h": {
+        "premedPlan_C100": 18671,
+        "premedPlan_200": 23613,
+        "premedPlan_300": 36493,
+        "premedPlan_400": 41200,
+        "premedPlan_500": 63868
+      }
+    }

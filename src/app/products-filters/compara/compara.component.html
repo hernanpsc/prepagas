@@ -1,0 +1,511 @@
+
+
+
+ 
+    
+    <mat-tab-group  animationDuration="2000ms" id="mat-tab-group">
+
+       <mat-tab label="CABA">
+    <!-- Tab Contents -->
+  
+     
+     <div class="overflow-x-auto w-full">
+ 
+             <table class="table w-full">
+                <thead class="thead-default">
+                   <tr>
+                      <th>Nombre</th>
+                      <th *ngFor='let product of productos'>
+                         {{product.name}}
+                      </th>
+                   </tr>
+                </thead>
+                
+                <tbody>
+                   <tr class="condition" *ngIf="ckeck(items,'Cemic')">
+                      <th scope="row" class="text-left">Cemic   <span class="badge adge-sm">V. Urquiza</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Cemic') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Cemic')">
+                      <th scope="row" class="text-left">Cemic   <span class="badge adge-sm">Palermo</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Cemic') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Adventista Belgrano')">
+                      <th scope="row" class="text-left">Cl. Adventista Belgrano   <span class="badge adge-sm">Belgrano</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Adventista Belgrano') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica De La Esperanza')">
+                      <th scope="row" class="text-left">Cl. De La Esperanza   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica De La Esperanza') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Bazterrica')">
+                      <th scope="row" class="text-left">Cl. Bazterrica   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Bazterrica') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica De Los Virreyes')">
+                      <th scope="row" class="text-left">Cl. De Los Virreyes   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica De Los Virreyes') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Del Sol')">
+                      <th scope="row" class="text-left">Cl. Del Sol   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Del Sol') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica San Camilo')">
+                      <th scope="row" class="text-left">Cl. San Camilo   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica San Camilo') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica San Jeronimo')">
+                      <th scope="row" class="text-left">Cl. San Jeronimo   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica San Jeronimo') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Santa Isabel')">
+                      <th scope="row" class="text-left">Cl. Santa Isabel   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Santa Isabel') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Fleni')">
+                      <th scope="row" class="text-left">Fleni   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Fleni') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Fundacion Favaloro')">
+                      <th scope="row" class="text-left">Fund.Favaloro   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Fundacion Favaloro') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Fundacion Hospitalaria')">
+                      <th scope="row" class="text-left">Fund.Hospitalaria   <span class="badge adge-sm">Saavedra</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Fundacion Hospitalaria') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Hospital Aleman')">
+                      <th scope="row" class="text-left">Hosp. Aleman   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Hospital Aleman') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Hospital Britanico Bs. As.')">
+                      <th scope="row" class="text-left">Hosp.Britanico Bs. As.   <span class="badge adge-sm">Barracas</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Hospital Britanico Bs. As.') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Hospital Italiano De Bs. As.')">
+                      <th scope="row" class="text-left">Hosp.Italiano De Bs. As.   <span class="badge adge-sm">Almagro</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Hospital Italiano De Bs. As.') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Hospital Sirio Libanés')">
+                      <th scope="row" class="text-left">Hosp. Sirio Libanés   <span class="badge adge-sm">V. Devoto</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Hospital Sirio Libanés') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Instituto Arg. Diag. Y Tratamiento')">
+                      <th scope="row" class="text-left">Inst. Arg. Diag. Y Tratamiento   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Instituto Arg. Diag. Y Tratamiento') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Instituto Cardiovasc. De Bs. As.')">
+                      <th scope="row" class="text-left">Inst. Cardiovasc. De Bs. As.   <span class="badge adge-sm">Belgrano</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Instituto Cardiovasc. De Bs. As.') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio De La Providencia')">
+                      <th scope="row" class="text-left">Sanat. De La Providencia   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio De La Providencia') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Colegiales')">
+                      <th scope="row" class="text-left">Sanat. Colegiales   <span class="badge adge-sm">Colegiales</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Colegiales') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Guemes')">
+                      <th scope="row" class="text-left">Sanat. Guemes   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Guemes') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Mater Dei')">
+                      <th scope="row" class="text-left">Sanat. Mater Dei   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Mater Dei') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'UAI Hospital Universitario')">
+                      <th scope="row" class="text-left">UAI Hosp. Universitario   <span class="badge adge-sm">CABA</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'UAI Hospital Universitario') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                </tbody>
+            
+             </table>
+          </div>
+        
+     </mat-tab>
+     
+       <mat-tab label="GBA Norte">
+           <div class="overflow-x-auto w-full">
+         
+             <table class="table w-full">
+                <thead class="thead-default">
+                   <tr>
+                      <th></th>
+                      <th *ngFor='let product of productos'>
+                         {{product.name}}
+                      </th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr class="condition" *ngIf="ckeck(items,'Ctro. Med. El Talar')">
+                      <th scope="row" class="text-left">Ctro. Med. El Talar   <span class="badge badge-sm">Gral. Pacheco</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Ctro. Med. El Talar') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Centro Medico Nordelta')">
+                      <th scope="row" class="text-left">Ctro Medico Nordelta   <span class="badge adge-sm">Tigre</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Centro Medico Nordelta') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Aires De Pacheco')">
+                      <th scope="row" class="text-left">Cl. Aires De Pacheco   <span class="badge adge-sm">Gral. Pacheco</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Aires De Pacheco') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Angelus')">
+                      <th scope="row" class="text-left">Cl. Angelus   <span class="badge adge-sm">San Isidro</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Angelus') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Ntra. Sra. De Fatima')">
+                      <th scope="row" class="text-left">Cl. Priv. Ntra. Sra. De Fatima   <span class="badge adge-sm">Pilar</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Ntra. Sra. De Fatima') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Fatima')">
+                      <th scope="row" class="text-left">Cl. Priv. Fatima   <span class="badge adge-sm">Escobar</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Fatima') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada San Fernando')">
+                      <th scope="row" class="text-left">Cl. Priv. San Fernando   <span class="badge adge-sm">San Fernando</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada San Fernando') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada San Marcos')">
+                      <th scope="row" class="text-left">Cl. Priv. San Marcos   <span class="badge adge-sm">Pilar</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada San Marcos') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Sagrado Corazon')">
+                      <th scope="row" class="text-left">Cl. Sagrado Corazon   <span class="badge adge-sm">Don Torcuato</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Sagrado Corazon') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Santa Maria')">
+                      <th scope="row" class="text-left">Cl. Santa Maria   <span class="badge adge-sm">Villa Ballester</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Santa Maria') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Hospital Austral')">
+                      <th scope="row" class="text-left">Hosp. Austral   <span class="badge adge-sm">Pilar</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Hospital Austral') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Hospital Privado Modelo')">
+                      <th scope="row" class="text-left">Hosp. Priv. Modelo   <span class="badge adge-sm">Vicente Lopez</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Hospital Privado Modelo') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Las Lomas')">
+                      <th scope="row" class="text-left">Sanat. Las Lomas   <span class="badge adge-sm">San Isidro</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Las Lomas') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio San Lucas')">
+                      <th scope="row" class="text-left">Sanat. San Lucas   <span class="badge adge-sm">San Isidro</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio San Lucas') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio San Pablo')">
+                      <th scope="row" class="text-left">Sanat. San Pablo   <span class="badge adge-sm">San Fernando</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio San Pablo') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Santa Sofia')">
+                      <th scope="row" class="text-left">Sanat. Santa Sofia   <span class="badge adge-sm">Villa Adelina</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Santa Sofia') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                </tbody>
+             </table>
+          </div>
+    
+  </mat-tab>
+ 
+       <mat-tab label="GBA Oeste">
+     <div class="overflow-x-auto w-full">
+             <table class="table w-full">
+                <thead class="thead-default">
+                   <tr>
+                      <th></th>
+                      <th *ngFor='let product of productos'>
+                         {{product.name}}
+                      </th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr class="condition" *ngIf="ckeck(items,'Amta-Hospital 24 De Septiembre')">
+                      <th scope="row" class="text-left">Amta-Hosp. 24 De Septiembre   <span class="badge adge-sm">Ciudadela</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Amta-Hospital 24 De Septiembre') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Bessone')">
+                      <th scope="row" class="text-left">Cl. Bessone   <span class="badge adge-sm">San Miguel</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Bessone') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Cruz Celeste')">
+                      <th scope="row" class="text-left">Cl. Cruz Celeste   <span class="badge adge-sm">GBA Oeste</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Cruz Celeste') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Dim Rivadavia')">
+                      <th scope="row" class="text-left">Cl. Dim Rivadavia   <span class="badge adge-sm">Ramos Mejía</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Dim Rivadavia') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Mitre')">
+                      <th scope="row" class="text-left">Cl. Mitre   <span class="badge adge-sm">Ramos Mejía</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Mitre') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Modelo Moron')">
+                      <th scope="row" class="text-left">Cl. Modelo Moron   <span class="badge adge-sm">Morón</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Modelo Moron') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Alcorta')">
+                      <th scope="row" class="text-left">Cl. Priv. Alcorta   <span class="badge adge-sm">Moreno</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Alcorta') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Catan')">
+                      <th scope="row" class="text-left">Cl. Priv. Catan   <span class="badge adge-sm">Gonzalez Catán</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Catan') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Ciudad')">
+                      <th scope="row" class="text-left">Cl. Priv. Ciudad   <span class="badge adge-sm">Ciudad Evita</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Ciudad') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Del Buen Pastor')">
+                      <th scope="row" class="text-left">Cl. Priv. Del Buen Pastor   <span class="badge adge-sm">Lomas del Mirador</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Del Buen Pastor') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Provincial')">
+                      <th scope="row" class="text-left">Cl. Priv. Provincial   <span class="badge adge-sm">Merlo</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Provincial') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Tachella')">
+                      <th scope="row" class="text-left">Cl. Priv. Tachella   <span class="badge adge-sm">Haedo</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Tachella') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,' Corp. Med. Gral. San Martin')">
+                      <th scope="row" class="text-left"> Corp. Med. Gral. San Martin   <span class="badge adge-sm">San Martín</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,' Corp. Med. Gral. San Martin') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Gral. Sarmiento Cl.Priv')">
+                      <th scope="row" class="text-left">Sanat. Gral. Sarmiento Cl. Priv   <span class="badge adge-sm">San Miguel</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Gral. Sarmiento Cl.Priv') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Hospital Italiano - San Justo')">
+                      <th scope="row" class="text-left">Hosp. Italiano   <span class="badge adge-sm">San Justo</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Hospital Italiano - San Justo') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Hospital Privada Mariano Moreno Sa')">
+                      <th scope="row" class="text-left">Hosp. Priv. Mariano Moreno Sa   <span class="badge adge-sm">Moreno</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Hospital Privada Mariano Moreno Sa') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Hospital San Juan De Dios')">
+                      <th scope="row" class="text-left">Hosp. San Juan De Dios   <span class="badge adge-sm">Ramos Mejia</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Hospital San Juan De Dios') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Instituto Medico Aguero')">
+                      <th scope="row" class="text-left">Inst. Medico Aguero   <span class="badge adge-sm">Morón</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Instituto Medico Aguero') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Instituto Medico Central')">
+                      <th scope="row" class="text-left">Inst. Medico Central   <span class="badge adge-sm">GBA Oeste</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Instituto Medico Central') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Del Oeste - Ituzaingo')">
+                      <th scope="row" class="text-left">Sanat. Del Oeste   <span class="badge adge-sm">Ituzaingo</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Del Oeste - Ituzaingo') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Del Oeste - Merlo')">
+                      <th scope="row" class="text-left">Sanat. Del Oeste   <span class="badge adge-sm">Merlo</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Del Oeste - Merlo') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Modelo De Caseros')">
+                      <th scope="row" class="text-left">Sanat. Modelo De Caseros   <span class="badge adge-sm">Caseros</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Modelo De Caseros') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Nuestra Sra. Del Pilar')">
+                      <th scope="row" class="text-left">Sanat. Nuestra Sra. Del Pilar   <span class="badge adge-sm">Ciudadela</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Nuestra Sra. Del Pilar') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Privada Figueroa Paredes')">
+                      <th scope="row" class="text-left">Sanat. Privada Figueroa Paredes   <span class="badge adge-sm">Isidro Casanova</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Privada Figueroa Paredes') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Privada San Mauricio')">
+                      <th scope="row" class="text-left">Sanat. Privada San Mauricio   <span class="badge adge-sm">González Catán</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Privada San Mauricio') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                </tbody>
+             </table>
+          </div>
+    </mat-tab>
+    <mat-tab label="GBA Sur">
+        <div class="overflow-x-auto w-full">
+       
+             <table class="table w-full">
+                <thead class="thead-default">
+                   <tr>
+                      <th></th>
+                      <th *ngFor='let product of productos'>
+                         {{product.name}}
+                      </th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Boedo')">
+                      <th scope="row" class="text-left">Cl. Boedo   <span class="badge adge-sm">L. de Zamora</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Boedo') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Del Niño De Quilmes')">
+                      <th scope="row" class="text-left">Cl. Del Niño De Quilmes   <span class="badge adge-sm">Quilmes</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Del Niño De Quilmes') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Espora')">
+                      <th scope="row" class="text-left">Cl. Espora   <span class="badge adge-sm">Adrogué</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Espora') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Mat. Infantil Privada Lomas')">
+                      <th scope="row" class="text-left">Cl. Mat. Infantil Privada Lomas   <span class="badge adge-sm">L. de Zamora</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Mat. Infantil Privada Lomas') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Modelo De Lanus')">
+                      <th scope="row" class="text-left">Cl. Modelo De Lanus   <span class="badge adge-sm">Lanús</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Modelo De Lanus') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Modelo de Quilmes')">
+                      <th scope="row" class="text-left">Cl. Modelo de Quilmes   <span class="badge adge-sm">Quilmes</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Modelo de Quilmes') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Del Niño Y La Flia.')">
+                      <th scope="row" class="text-left">Cl. Priv. Del Niño Y La Flia.   <span class="badge adge-sm">S. Fco. Solano</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Del Niño Y La Flia.') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Cl.Privada ntra.Sra. Dulce Espera')">
+                      <th scope="row" class="text-left">Cl.Privada ntra.Sra. Dulce Espera   <span class="badge adge-sm">Sarandí</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Cl.Privada ntra.Sra. Dulce Espera') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Gral. Belgrano')">
+                      <th scope="row" class="text-left">Cl. Priv. Gral. Belgrano   <span class="badge adge-sm">Quilmes O.</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Gral. Belgrano') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Lujan')">
+                      <th scope="row" class="text-left">Cl. Priv. Lujan   <span class="badge adge-sm">Florencio Varela</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Lujan') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Monte Grande')">
+                      <th scope="row" class="text-left">Cl. Priv. Monte Grande   <span class="badge adge-sm">Monte Grande</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Monte Grande') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Ranelagh')">
+                      <th scope="row" class="text-left">Cl. Priv. Ranelagh   <span class="badge adge-sm">Ranelagh</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Ranelagh') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada San Vicente')">
+                      <th scope="row" class="text-left">Cl. Priv. San Vicente   <span class="badge adge-sm">San Vicente</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada San Vicente') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Instituto De Maternidad Y Cirugia')">
+                      <th scope="row" class="text-left">Inst.De Maternidad Y Cirugia   <span class="badge adge-sm">Monte Grande</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Instituto De Maternidad Y Cirugia') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica IMA')">
+                      <th scope="row" class="text-left">Cl. IMA   <span class="badge adge-sm">Adrogué</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica IMA') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Policlinica Lomas')">
+                      <th scope="row" class="text-left">Policlinica Lomas   <span class="badge adge-sm">L. de Zamora</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Policlinica Lomas') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Bernal')">
+                      <th scope="row" class="text-left">Sanat. Bernal   <span class="badge adge-sm">Bernal</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Bernal') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Itoiz')">
+                      <th scope="row" class="text-left">Sanat. Itoiz   <span class="badge adge-sm">Avellaneda</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Itoiz') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Juncal')">
+                      <th scope="row" class="text-left">Sanat. Juncal   <span class="badge adge-sm">Temperley</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Juncal') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Privada Del Niño')">
+                      <th scope="row" class="text-left">Sanat. Privada Del Niño   <span class="badge adge-sm">L. de Zamora</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Privada Del Niño') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio San Juan')">
+                      <th scope="row" class="text-left">Sanat. San Juan   <span class="badge adge-sm">Lanús O.</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio San Juan') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Sanatorio Urquiza')">
+                      <th scope="row" class="text-left">Sanat. Urquiza   <span class="badge adge-sm">Quilmes</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Sanatorio Urquiza') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                </tbody>
+             </table>
+       
+          </div>
+       </mat-tab>
+       <mat-tab label="La Plata">
+     
+           <div class="overflow-x-auto w-full">
+             <table class="table w-full">
+                <thead class="thead-default">
+                   <tr>
+                      <th></th>
+                      <th *ngFor='let product of productos'>
+                         {{product.name}}
+                      </th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica City Bell S.A.')">
+                      <th scope="row" class="text-left">Cl. City Bell S.A.   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica City Bell S.A.') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica De La Comunidad')">
+                      <th scope="row" class="text-left">Cl. De La Comunidad   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica De La Comunidad') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Instituto Medico de la Ribera')">
+                      <th scope="row" class="text-left">Inst.Medico de la Ribera   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Instituto Medico de la Ribera') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada De Ojos Santa Lucia')">
+                      <th scope="row" class="text-left">Cl. Priv. De Ojos Santa Lucia   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada De Ojos Santa Lucia') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Clinica Privada Mosconi de Beriso')">
+                      <th scope="row" class="text-left">Cl. Priv. Mosconi de Beriso   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Clinica Privada Mosconi de Beriso') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Hospital Español')">
+                      <th scope="row" class="text-left">Hosp.Español   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Hospital Español') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Hospital Italiano La Plata')">
+                      <th scope="row" class="text-left">Hosp.Italiano La Plata   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Hospital Italiano La Plata') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Hospital Privada Sudamericano')">
+                      <th scope="row" class="text-left">Hosp.Privada Sudamericano   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Hospital Privada Sudamericano') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Instituto Central de Medicina')">
+                      <th scope="row" class="text-left">Inst.Central de Medicina   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Instituto Central de Medicina') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Instituto de Diagnostico de La Plata')">
+                      <th scope="row" class="text-left">Inst.de Diagnostico de La Plata   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Instituto de Diagnostico de La Plata') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Instituto Medico Argentino de Beriso')">
+                      <th scope="row" class="text-left">Inst.Medico Argentino de Beriso   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Instituto Medico Argentino de Beriso') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Instituto Med. Platense')">
+                      <th scope="row" class="text-left">Inst.Med. Platense   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Instituto Med. Platense') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Instituto Prieto Diaz')">
+                      <th scope="row" class="text-left">Inst.Prieto Diaz   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Instituto Prieto Diaz') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                   <tr class="condition" *ngIf="ckeck(items,'Ipensa')">
+                      <th scope="row" class="text-left">Ipensa   <span class="badge adge-sm">La Plata</span></th>
+                      <td *ngFor='let product of productos'><i  [ngClass]="checker(product,'Ipensa') ? 'fa fa-check' : 'fa fa-remove'"></i></td>
+                   </tr>
+                </tbody>
+             </table>
+         
+          </div>
+    </mat-tab>
+ </mat-tab-group>
+ 
+ 
+ 
+ 

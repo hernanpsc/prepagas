@@ -1,0 +1,51 @@
+<mat-card class="ll-product" *ngFor="let product of products">
+  <img mat-card-image [src]="product?.images[0]" alt="{{ product.name }}" style="width: 100%; margin: 0 0 20px" />
+  <mat-card-content class="flex">
+
+    <div class="flex-grow pl-3">
+
+      <h4 class="ll-product__creator"></h4>
+
+      <h2 class="ll-product__name">
+        <a [routerLink]="['/products', product.id]">{{ product.name }}</a>
+      </h2>
+      <div class="flex justify-between mt-5">
+        <div class="ll-product__price-label"></div>
+        <div class="ll-product__price text-accent font-bold"></div>
+      </div>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions class="ll-product__action flex justify-between">
+    <div class="flex-1 text-center flex items-center justify-center">
+      <!-- <mat-icon color="warn">star</mat-icon> {{ product.rating }}/5 -->
+    </div>
+    <div class="flex-1 text-center">
+      <button (click)="openDialog(product)" mat-raised-button color="warn" class="px-4">Más Detalles</button>
+      <!-- <a [routerLink]="['/products', product.id]" mat-raised-button color="warn" class="px-4">Más Detalles</a> -->
+
+         </div>
+  </mat-card-actions>
+</mat-card>
+
+<div class="col-md-4" *ngFor="let product of products">
+  <figure class="card card-product-grid" >
+      <div class="img-wrap"> 
+          <span class="badge badge-danger"> NEW </span>
+          <img [src]="product?.images[0]" alt="{{ product.name }}">
+          <a class="btn-overlay" [routerLink]="['/products', product.id]"><i class="fa fa-search-plus"></i>{{ product.name }}</a>
+      </div> <!-- img-wrap.// -->
+      <figcaption class="info-wrap">
+          <div class="fix-height">
+              <a href="#" class="title">Great item name goes here</a>
+              <div class="price-wrap mt-2">
+                  <span class="price">$1280</span>
+                  <del class="price-old">$1980</del>
+              </div> <!-- price-wrap.// -->
+          </div>
+      <button (click)="openDialog(product)" class="btn btn-block btn-primary px-4">Más Detalles</button>
+
+          <a href="#" class="btn btn-block btn-primary">Add to cart </a>
+      </figcaption>
+  </figure>
+</div>

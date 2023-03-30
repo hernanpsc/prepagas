@@ -1,0 +1,46 @@
+<mat-tab-group (selectedTabChange)="tabChanged($event)">
+    <mat-tab *ngFor="let tabLabel of matTabLabels" label="{{tabLabel}}">
+        <div class="overflow-x-auto w-full">
+            <table class="table w-full">
+              <!-- head -->
+              <thead>
+                <tr>
+                 
+                  <th>Prestador</th>
+                  <th>Barrio/Localidad</th>
+        
+                  <!-- <th></th> -->
+                </tr>
+              </thead>
+              <tbody>
+               
+        <tr  *ngFor="let user of selectedUsers">
+            <td>
+              <div class="flex items-center space-x-3">
+                <div class="avatar">
+                  <!-- <div class="mask mask-squircle w-12 h-12">
+                    <img src="assets/images/avatar.png" alt="Avatar Tailwind CSS Component" />
+                  </div> -->
+                </div>
+                <div>
+                  <div ><h5>{{user.nombre}}</h5></div>
+                </div>
+              </div>
+            </td>
+            <td>
+              {{user.barrio}}
+              
+              <span class="badge badge-ghost badge-sm">{{user.region}}</span>
+            </td>
+      
+            <!-- <th>
+              <button class="btn btn-ghost btn-xs">details</button>
+            </th> -->
+          </tr>
+        
+      </tbody>
+        </table>
+        
+    </div>
+    </mat-tab>
+  </mat-tab-group>
