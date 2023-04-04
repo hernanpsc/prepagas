@@ -273,9 +273,7 @@
       "BeneficioCard":[
          "Plan sin Coseguros"
       ],
-      "clinicas":[
-        
-      ]
+      "clinicas":[]
    },
    {
       "id":10,
@@ -309,9 +307,319 @@
             "beneficio":"otro"
          }
       ],
-      "clinicas":[
+      "clinicas":[]
+   },
+   {
+      "id":11,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
          
-      ]
+      ],
+      "copagos":true,
+      "category":"parcial",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":true,
+      "name":"AMBU2",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"assets/archivos/folletosSM/AMBU2.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
+   },
+   {
+      "id":11,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
+         
+      ],
+      "copagos":true,
+      "category":"parcial internacion",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":true,
+      "name":"INTER1",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"assets/archivos/folletosSM/INTER1.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
+   },
+   {
+      "id":11,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
+         
+      ],
+      "copagos":false,
+      "category":"basico",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":false,
+      "name":"S02",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"assets/archivos/folletosSM/SMG02-01.2023.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
+   },
+   {
+      "id":11,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
+         
+      ],
+      "copagos":false,
+      "category":"intermedio",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":false,
+      "name":"SMG20",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"assets/archivos/folletosSM/SMG02-01.2023.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
+   },
+   {
+      "id":11,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
+         
+      ],
+      "copagos":true,
+      "category":"basico",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":true,
+      "name":"S1",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"/assets/archivos/folletosSM/S1-01.2023.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
+   },
+   {
+      "id":11,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
+         
+      ],
+      "copagos":true,
+      "category":"intermedio",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":true,
+      "name":"S2",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"/assets/archivos/folletosSM/S2-01.2023.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
+   },
+   {
+      "id":11,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
+         
+      ],
+      "copagos":true,
+      "category":"parcial",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":true,
+      "name":"SMG20",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"assets/archivos/folletosSM/SMG20-01.2023.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
+   },
+   {
+      "id":11,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
+         
+      ],
+      "copagos":true,
+      "category":"premium",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":true,
+      "name":"SMG30",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"assets/archivos/folletosSM/SMG30-01.2023.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
+   },
+   {
+      "id":11,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
+         
+      ],
+      "copagos":true,
+      "category":"premium",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":true,
+      "name":"SMG30",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"assets/archivos/folletosSM/SMG30-01.2023.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
+   },
+   {
+      "id":11,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
+         
+      ],
+      "copagos":true,
+      "category":"premium",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":true,
+      "name":"SMG30",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"assets/archivos/folletosSM/SMG30-01.2023.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
+   },
+   {
+      "id":11,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
+         
+      ],
+      "copagos":true,
+      "category":"premium",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":true,
+      "name":"SMG30",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"assets/archivos/folletosSM/SMG30-01.2023.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
+   },
+   {
+      "id":11,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
+         
+      ],
+      "copagos":true,
+      "category":"premium",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":true,
+      "name":"SMG30",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"assets/archivos/folletosSM/SMG30-01.2023.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
    }
 ]
  
