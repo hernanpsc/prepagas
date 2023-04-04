@@ -3,14 +3,14 @@ import { ModalService } from '../../_modal';
 
 
 var  check: any;
-
+var items:any;
 @Component({
   selector: 'app-compara',
   templateUrl: './compara.component.html',
   styleUrls: ['./compara.component.scss']
 })
 export class ComparaComponent implements OnInit {
- 
+  @Input() clinicasVal: any;
   @Input() productos: any;
   @Input() items: any;
  
@@ -19,7 +19,6 @@ export class ComparaComponent implements OnInit {
  
   this.modalService.close('custom-modal-2');
 }
-
 
   
  constructor(
@@ -31,7 +30,9 @@ export class ComparaComponent implements OnInit {
   }
 
   onPrint() {
-    window.print();    
+    window.print();  
+    
+    
   }
   ngOnInit() {
 
@@ -68,7 +69,7 @@ if(name === checkeo ){
 
  checker(product,nombre){
 
-  let clinicas = product['clinicas'];
+  let clinicas = product[0]['clinicas'];
   let checkeos = []
   var  checkeo = clinicas.some( e => e.nombre === nombre);
   checkeos.push(checkeos);

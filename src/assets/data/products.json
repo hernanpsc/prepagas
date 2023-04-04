@@ -1,0 +1,317 @@
+[
+    {
+       "id":1,
+       "price":99999,
+       "rating":2,
+       "feedback":3,
+       "filtroClinica":[
+          
+       ],
+       "copagos":true,
+       "category":"basico",
+       "tags":[
+          "tag1",
+          "tag2",
+          "tag3"
+       ],
+       "hijosSolos":false,
+       "name":"SanCor 700A",
+       "empresa":"SanCor Salud",
+       "folleto":"assets/archivos/700.pdf",
+       "images":[
+          "assets/images/images/card-header/sancorsalud.png",
+          "assets/images/planes_sancor/Feed 700A-sm(680x664).jpg"
+       ],
+       "BeneficioCard":[
+          "Plan con Coseguros"
+       ],
+       "clinicas":[
+          
+       ]
+    },
+    {
+       "id":2,
+       "price":3550,
+       "rating":3,
+       "feedback":3,
+       "filtroClinica":[
+          
+       ],
+       "copagos":false,
+       "category":"basico",
+       "tags":[
+          "tag1",
+          "tag2",
+          "tag3"
+       ],
+       "hijosSolos":false,
+       "name":"SanCor 800V",
+       "logo":"assets/images/card-header/sancorsalud.png",
+       "images":[
+          "assets/images/images/card-header/sancorsalud.png",
+          "assets/images/planes_sancor/Feed 800V-sm(680x664).jpg"
+       ],
+       "empresa":"SanCor Salud",
+       "folleto":"assets/archivos/800.pdf",
+       "BeneficioCard":[
+          "Plan sin Coseguros"
+       ],
+       "clinicas":[
+          
+       ]
+    },
+    {
+       "id":3,
+       "price":4550,
+       "rating":3,
+       "feedback":3,
+       "filtroClinica":[
+          
+       ],
+       "copagos":false,
+       "category":"basico",
+       "tags":[
+          "tag1",
+          "tag2",
+          "tag3"
+       ],
+       "hijosSolos":false,
+       "name":"SanCor 1000B",
+       "empresa":"SanCor Salud",
+       "folleto":"assets/archivos/1000.pdf",
+       "logo":"assets/images/card-header/sancorsalud.png",
+       "images":[
+          "assets/images/images/card-header/sancorsalud.png",
+          "assets/images/planes_sancor/Feed 1000B-sm(680x664).jpg"
+       ],
+       "BeneficioCard":[
+          "Plan sin Coseguros"
+       ],
+       "clinicas":[
+          
+       ]
+    },
+    {
+       "id":4,
+       "price":5550,
+       "rating":4,
+       "feedback":3,
+       "filtroClinica":[
+          
+       ],
+       "copagos":false,
+       "category":"intermedio",
+       "tags":[
+          "tag1",
+          "tag2",
+          "tag3"
+       ],
+       "hijosSolos":false,
+       "name":"SanCor 1500B",
+       "empresa":"SanCor Salud",
+       "folleto":"assets/archivos/1500.pdf",
+       "logo":"assets/images/card-header/sancorsalud.png",
+       "images":[
+          "assets/images/images/card-header/sancorsalud.png",
+          "assets/images/planes_sancor/Feed 1500B-sm(680x664).jpg"
+       ],
+       "BeneficioCard":[
+          "Plan sin Coseguros"
+       ],
+       "clinicas":[
+         
+       ]
+    },
+    {
+       "id":5,
+       "price":6550,
+       "rating":2,
+       "feedback":3,
+       "filtroClinica":[
+          
+       ],
+       "copagos":false,
+       "category":"superior",
+       "tags":[
+          "tag1",
+          "tag2",
+          "tag3"
+       ],
+       "hijosSolos":false,
+       "name":"SanCor 3000B",
+       "empresa":"SanCor Salud",
+       "folleto":"assets/archivos/3000.pdf",
+       "logo":"assets/images/card-header/sancorsalud.png",
+       "images":[
+          "assets/images/images/card-header/sancorsalud.png",
+          "assets/images/planes_sancor/Feed 3000B-sm(680x664).jpg"
+       ],
+       "BeneficioCard":[
+          "Plan sin Coseguros"
+       ],
+       "clinicas":[
+         
+       ]
+    },
+    {
+       "id":6,
+       "price":8550,
+       "rating":4,
+       "feedback":3,
+       "filtroClinica":[
+          
+       ],
+       "copagos":false,
+       "category":"basico",
+       "tags":[
+          "tag1",
+          "tag2",
+          "tag3"
+       ],
+       "hijosSolos":false,
+       "name":"SanCor 3500",
+       "empresa":"SanCor Salud",
+       "logo":"assets/images/card-header/sancorsalud.png",
+       "images":[
+          "assets/images/images/card-header/sancorsalud.png",
+          "assets/images/planes_sancor/Feed 3500-sm(680x664).jpg"
+       ],
+       "folleto":"assets/archivos/3500.pdf",
+       "BeneficioCard":[
+          "Plan sin Coseguros"
+       ],
+       "clinicas":[
+          
+       ]
+    },
+    {
+       "id":7,
+       "price":9550,
+       "rating":2,
+       "feedback":3,
+       "filtroClinica":[
+          
+       ],
+       "copagos":false,
+       "category":"superior",
+       "tags":[
+          "tag1",
+          "tag2",
+          "tag3"
+       ],
+       "hijosSolos":false,
+       "name":"SanCor 4000",
+       "empresa":"SanCor Salud",
+       "folleto":"assets/archivos/4000.pdf",
+       "logo":"assets/images/card-header/sancorsalud.png",
+       "images":[
+          "assets/images/images/card-header/sancorsalud.png",
+          "assets/images/planes_sancor/Feed 4000-sm(680x664).jpg"
+       ],
+       "BeneficioCard":[
+          "Plan sin Coseguros"
+       ],
+       "clinicas":[
+         
+       ]
+    },
+    {
+       "id":8,
+       "price":12550,
+       "rating":4,
+       "feedback":3,
+       "filtroClinica":[
+          
+       ],
+       "copagos":true,
+       "category":"superior",
+       "tags":[
+          "tag1",
+          "tag2",
+          "tag3"
+       ],
+       "hijosSolos":false,
+       "name":"SanCor 4500",
+       "empresa":"SanCor Salud",
+       "folleto":"assets/archivos/4500.pdf",
+       "logo":"assets/images/card-header/sancorsalud.png",
+       "images":[
+          "assets/images/images/card-header/sancorsalud.png",
+          "assets/images/planes_sancor/Feed 4500-sm(680x664).jpg"
+       ],
+       "BeneficioCard":[
+          "Plan sin Coseguros"
+       ],
+       "clinicas":[
+          
+       ]
+    },
+    {
+       "id":9,
+       "price":22550,
+       "rating":2,
+       "feedback":3,
+       "filtroClinica":[
+          
+       ],
+       "copagos":false,
+       "category":"premium",
+       "tags":[
+          "tag1",
+          "tag2",
+          "tag3"
+       ],
+       "hijosSolos":false,
+       "name":"Exclusive 5000 ",
+       "empresa":"SanCor Salud",
+       "folleto":"assets/archivos/5000.pdf",
+       "logo":"assets/images/card-header/sancorsalud.png",
+       "images":[
+          "assets/images/images/card-header/sancorsalud.png",
+          "assets/images/planes_sancor/Folleto Exclusive S5000-sm(680x640).jpg"
+       ],
+       "BeneficioCard":[
+          "Plan sin Coseguros"
+       ],
+       "clinicas":[
+         
+       ]
+    },
+    {
+       "id":10,
+       "price":32550,
+       "rating":2,
+       "feedback":3,
+       "filtroClinica":[
+          
+       ],
+       "copagos":false,
+       "category":"premium",
+       "tags":[
+          "tag1",
+          "tag2",
+          "tag3"
+       ],
+       "hijosSolos":false,
+       "name":"Exclusive 6000",
+       "empresa":"SanCor Salud",
+       "folleto":"assets/archivos/6000.pdf",
+       "logo":"assets/images/card-header/sancorsalud.png",
+       "images":[
+          "assets/images/images/card-header/sancorsalud.png",
+          "assets/images/planes_sancor/Folleto Exclusive S6000-sm(680x640).jpg"
+       ],
+       "BeneficioCard":[
+          {
+             "beneficio":"Plan sin Coseguros"
+          },
+          {
+             "beneficio":"otro"
+          }
+       ],
+       "clinicas":[
+          
+       ]
+    }
+ ]
+  

@@ -32,11 +32,12 @@ export class ProductsListComponent implements OnInit {
   loading$: Observable<boolean>;
   public show:boolean = false;
   public buttonName:any = 'Show';
-
+  
   bodyText: string;
   title = 'product-app';
   public secureProducts: any = (planes as any).default; 
   public products: any = (planes as any).default;
+  public qPlanes: number = this.products.length;
   hidden = false;
   compareList: [];
   compareLength: any;
@@ -75,6 +76,7 @@ export class ProductsListComponent implements OnInit {
   dropdownClinica = [];
   clinicaSettings:IDropdownSettings = {};
   selectedClinica = [];
+
   constructor(
     private modalService: ModalService,
     private retornarService: ServcioRetronoPrecioService,
@@ -98,43 +100,174 @@ export class ProductsListComponent implements OnInit {
     compareProdList() {
       this.compareLength = this.products.filter(p => p.compare).length;
       this.compareList = this.products.filter(p => p.compare);
-      return this.products.filter(p => p.compare);
+      var planesSel = this.products.filter(p => p.compare);
+     
+      return planesSel
+      
+    }
+    compareCliListVal() {
+
+      var clinicasGrilla = this.compareProdClinicas(this.compareProdList())
+      return clinicasGrilla
+      
     }
 
-  compareProdClinicas(products){
-    var clinicas = [];
-    let itemSelected = products; 
-    // console.log('seleccionados' + itemSelected )
-for ( let x = 0 ; x < itemSelected.length ; x++ ) {
-    let item = itemSelected[x].clinicas;
-    for( let i = 0 ; i < item.length ; i++ ){
-        let name = item[i].nombre;
-        if (clinicas.indexOf(name)==-1) clinicas.push(name) 
-       }}
-      //  console.log(clinicas)
-       return clinicas
-      }
-      removeFilter( id: any ) {
+  listadoColumna1 (compareProdList){
+    let listaCompleta = [];
+    
+    for ( let i = 0 ; i < compareProdList.length ; i++ ){
+    let clinicas = compareProdList[i].clinicas
+       clinicas.forEach(element => { if ( listaCompleta.indexOf(element,0) == -1){
+        listaCompleta.push(element)
+       }
+          
+         });
+        } 
+  };
+
+
+
+
+
+      
+ 
+    compareProdClinicas(products) {
+      
+      var clinicas = [];
+      let itemSelected = products;
+    
+      itemSelected.forEach((product) => {
+        product.clinicas.forEach((clinic) => {
+          
+          const id = clinic.item_id;
+       
+          
+          const validacion = clinicas.map(producto => producto.item_id).indexOf(id)
+          if (validacion === -1 ){
+            clinicas.push(clinic)
+            }
+        });
+      });
+      var data = [];
+for ( let x in clinicas ){
+  clinicas[x].valida = [];
+  clinicas[x].planesSeleccionados = [];
+  clinicas[x].cliPased = [];
+
+  for ( let i = 0 ; i < products.length ; i++){
+    var obj = {};
+    clinicas[x].planesSeleccionados.push(products[i].name);
+    
+  }
+  obj['nombre'] = clinicas[x].nombre;
+  obj['barrio'] = clinicas[x].barrio;
+  for ( let i = 0 ; i < products.length ; i++){
+   
+      let id = products[i].id
+     if (clinicas[x].cartillas.includes(id) == true  ){
+      console.log(clinicas[x].cliPased)
+
+      
+      
+      obj[products[i].name] = 'ok';
+      clinicas[x].cliPased.push(obj);
+
+      clinicas[x].valida.push('ok');
+    }else{clinicas[x].valida.push('no');
+     obj[products[i].name] = 'no';
+  };
+  }clinicas[x].cliPased = obj
+
+
+  data.push(obj);
+  console.log(data)
+}  
+//  daa = [
+//   { hospital: 'Hospital Sirio Libanés', service1: 'ok', service2: 'ok' },
+//   { hospital: 'Sanatorio De La Providencia', service1: 'ok', service2: 'ok' },
+//   { hospital: 'Sanatorio Colegiales', service1: 'ok', service2: 'ok' },
+//   { hospital: 'UAI Hospital Universitario', service1: 'ok', service2: 'ok' },
+//   { hospital: 'Clinica Bazterrica', service1: 'no', service2: 'ok' },
+//   { hospital: 'Hospital Britanico Bs. As.', service1: 'no', service2: 'ok' },
+// ];
+
+var planesElegidos =[]
+for ( let  n in clinicas ){
+       clinicas[n].valida.unshift(clinicas[n]['nombre']);
+       clinicas[n].planesSeleccionados.unshift('Nombre de Entidad');
+       planesElegidos = clinicas[n].planesSeleccionados
+} 
+const clCaba = clinicas.filter(function(clinica){ return clinica.region === 'CABA'});
+const clNorte = clinicas.filter(function(clinica){ return clinica.region === 'GBA-Norte'});
+const clOeste = clinicas.filter(function(clinica){ return clinica.region === 'GBA-Oeste'});
+const clSur = clinicas.filter(function(clinica){ return clinica.region === 'GBA-Sur'});
+const clLaPlata = clinicas.filter(function(clinica){ return clinica.region === 'La Plata'});
+// let clinicasHeader = clinicas[0]['planesSeleccionados'];
+let clinicasCaba = clCaba.map(planes => planes.valida);
+let clinicasMorte = clNorte.map(planes => planes.valida);
+let clinicasOeste = clOeste.map(planes => planes.valida);
+let clinicasSur = clSur.map(planes => planes.valida);
+let clinicasLaPlata = clLaPlata.map(planes => planes.valida);
+
+let clinicasCabaPased = clCaba.map(planes => planes.cliPased);
+let clinicasNortePased = clNorte.map(planes => planes.cliPased);
+let clinicasOestePased = clOeste.map(planes => planes.cliPased);
+let clinicasSurPased = clSur.map(planes => planes.cliPased);
+let clinicasLaPlataPased = clLaPlata.map(planes => planes.cliPased);
+
+console.log(clinicasCabaPased);
+console.log(clinicasNortePased);
+console.log(clinicasOestePased);
+console.log(clinicasSurPased);
+console.log(clinicasLaPlataPased);
+
+
+console.log(clinicasCaba); return [clinicasCabaPased,clinicasNortePased,clinicasOestePased,clinicasSurPased,clinicasLaPlataPased, planesElegidos,clinicasCaba,clinicasMorte,clinicasOeste,clinicasSur,clinicasLaPlata];
+    }
+   
+ 
+
+
+
+removeFilter( id: any ) {
         this.productsService.removeFilter(id);
         this.setInitialFilters();
-      } 
+} 
 
-      changeDisplay(mode: number): void {
-        this.display = mode;
-      }
-  toggleBadgeVisibility() {
+toggleBadgeVisibility() {
     this.hidden = !this.hidden;
   }
 tempArrayShow:any=[];
 tempArrayHide:any=[];
+// addClinicas(clinicas,products)
 
 
-onItemSelect(item: any){
-  console.log('onItemSelect', item);
+addClinicas(){
+ 
+ let products = this.products;
+
+ for ( let i = 0; i<products.length;i++){
+  console.log(this.products[i].id)
+  let clinicPlan = []
+
+  for ( let x in this.clinicas ){
+    var incluyeid = this.clinicas[x].cartillas.includes(this.products[i].id);
+    if ( incluyeid == true ){
+      clinicPlan.push(this.clinicas[x])
+    } 
+    this.products[i].clinicas = clinicPlan;
+  }
+
+
+}}
+
+
+onItemSelect(selectedClinica: any){
+  console.log('onItemSelect', selectedClinica);
    console.log(this.tempArrayShow);
    console.log(this.tempArrayHide);
   
- 
+  
 
   let newArray = [];
   
@@ -150,9 +283,9 @@ console.log(this.products)
   this.showandHide = this.products;
 // planes = this.tempArrayHide.concat(this.tempArrayShow);
   var clinicas_seleccionadas = seleccion.map(function (selectas, index, array) {
-    return selectas.item_text; 
+    return selectas.nombre; 
 });
-if ( seleccion.length = 0 ){
+if ( seleccion.length === 0 ){
   for (let j in planes  ){
     this.products[j].validacionclinica = 'show'
   }
@@ -209,7 +342,7 @@ console.log(this.products)
   this.showandHide = this.products;
 // planes = this.tempArrayHide.concat(this.tempArrayShow);
   var clinicas_seleccionadas = seleccion.map(function (selectas, index, array) {
-    return selectas.item_text; 
+    return selectas.nombre; 
 });
 if ( seleccion.length = 0 ){
   for (let j in planes  ){
@@ -299,7 +432,9 @@ closeButon() {
     
   ngOnInit(): void {
     this.getProduct()
-    this.onItemSelect(event);
+    this.addClinicas()
+        this.onItemSelect(this.selectedClinica);
+    
     // setTimeout(() => {
       // this.productsService.getProduct()
       // .subscribe(res=>{
@@ -345,7 +480,7 @@ console.log(procuctosSeguros);
       singleSelection: false,
       closeDropDownOnSelection: true,
       idField: 'item_id',
-      textField: 'item_text',
+      textField: 'nombre',
       allowSearchFilter: true,
       searchPlaceholderText: 'Type here to search',
       limitSelection	:3

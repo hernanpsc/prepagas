@@ -106,6 +106,7 @@ mat-tab-group {
 }
 
 /* Style the table */
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -118,8 +119,13 @@ th, td {
   text-align: center;
   padding: 16px;
 }
-
-th:first-child, td:first-child {
+th:first-child {
+  position: sticky !important;
+  top: 0;
+  background: white;
+  z-index: 1;
+}
+td:first-child {
   text-align: left;
 }
 
@@ -145,13 +151,24 @@ tr:nth-child(even) {
 .table th {
 	border-top: none !important;
 }
-
+thead.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
 .table thead th {
 	border-bottom: none !important;
 }
-
+.table thead.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
 .header {
 	background-color: #f8f8f8;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .hdr {
@@ -274,4 +291,18 @@ input {
   // }
   }
   
-   
+  .active-cell {
+    background-color: green;
+    color: white;
+  }
+  
+  .inactive-cell {
+    background-color: red;
+    color: white;
+  }
+  
+  .pending-cell {
+    background-color: yellow;
+    color: black;
+  }
+  
