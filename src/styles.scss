@@ -622,7 +622,15 @@ body {
  z-index: 100;
 }
 
-
+.tab-custom-overflow .mat-tab-body-wrapper {
+  overflow: visible !important;
+}
+.tab-custom-overflow .mat-tab-body-active {
+  overflow: visible !important;
+}
+.tab-custom-overflow .mat-tab-body-content {
+  overflow: visible !important;
+}
 
 
 
