@@ -1,6 +1,6 @@
 [
    {
-      "id":1,
+      "id":101,
       "price":99999,
       "rating":2,
       "feedback":3,
@@ -30,7 +30,7 @@
       ]
    },
    {
-      "id":2,
+      "id":102,
       "price":3550,
       "rating":3,
       "feedback":3,
@@ -61,7 +61,7 @@
       ]
    },
    {
-      "id":3,
+      "id":103,
       "price":4550,
       "rating":3,
       "feedback":3,
@@ -92,7 +92,7 @@
       ]
    },
    {
-      "id":4,
+      "id":104,
       "price":5550,
       "rating":4,
       "feedback":3,
@@ -123,7 +123,7 @@
       ]
    },
    {
-      "id":5,
+      "id":105,
       "price":6550,
       "rating":2,
       "feedback":3,
@@ -154,7 +154,7 @@
       ]
    },
    {
-      "id":6,
+      "id":106,
       "price":8550,
       "rating":4,
       "feedback":3,
@@ -185,7 +185,7 @@
       ]
    },
    {
-      "id":7,
+      "id":107,
       "price":9550,
       "rating":2,
       "feedback":3,
@@ -216,7 +216,7 @@
       ]
    },
    {
-      "id":8,
+      "id":108,
       "price":12550,
       "rating":4,
       "feedback":3,
@@ -247,7 +247,7 @@
       ]
    },
    {
-      "id":9,
+      "id":109,
       "price":22550,
       "rating":2,
       "feedback":3,
@@ -276,7 +276,7 @@
       "clinicas":[]
    },
    {
-      "id":10,
+      "id":110,
       "price":32550,
       "rating":2,
       "feedback":3,
@@ -310,7 +310,33 @@
       "clinicas":[]
    },
    {
-      "id":11,
+      "id":201,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
+         
+      ],
+      "copagos":true,
+      "category":"parcial",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":true,
+      "name":"AMBU1",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"assets/archivos/folletosSM/AMBU1.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
+   },
+   {
+      "id":202,
       "price":5555,
       "rating":2,
       "feedback":3,
@@ -336,7 +362,7 @@
       "clinicas":[]
    },
    {
-      "id":11,
+      "id":203,
       "price":5555,
       "rating":2,
       "feedback":3,
@@ -362,7 +388,7 @@
       "clinicas":[]
    },
    {
-      "id":11,
+      "id":213,
       "price":5555,
       "rating":2,
       "feedback":3,
@@ -377,7 +403,33 @@
          "tag3"
       ],
       "hijosSolos":false,
-      "name":"S02",
+      "name":"SMG01",
+      "id_empresa": 2,
+      "empresa":"Swiss Medical",
+      "folleto":"assets/archivos/folletosSM/SMG01-01.2023.pdf",
+      "images":[
+         "/assets/images/images/card-header/swissmedical.png"
+      ],
+      "sistema":"cerrado",
+      "clinicas":[]
+   },
+   {
+      "id":214,
+      "price":5555,
+      "rating":2,
+      "feedback":3,
+      "filtroClinica":[
+         
+      ],
+      "copagos":false,
+      "category":"basico",
+      "tags":[
+         "tag1",
+         "tag2",
+         "tag3"
+      ],
+      "hijosSolos":false,
+      "name":"SMG02",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
       "folleto":"assets/archivos/folletosSM/SMG02-01.2023.pdf",
@@ -388,7 +440,7 @@
       "clinicas":[]
    },
    {
-      "id":11,
+      "id":216,
       "price":5555,
       "rating":2,
       "feedback":3,
@@ -414,7 +466,7 @@
       "clinicas":[]
    },
    {
-      "id":11,
+      "id":211,
       "price":5555,
       "rating":2,
       "feedback":3,
@@ -440,7 +492,7 @@
       "clinicas":[]
    },
    {
-      "id":11,
+      "id":212,
       "price":5555,
       "rating":2,
       "feedback":3,
@@ -466,7 +518,7 @@
       "clinicas":[]
    },
    {
-      "id":11,
+      "id":216,
       "price":5555,
       "rating":2,
       "feedback":3,
@@ -492,7 +544,7 @@
       "clinicas":[]
    },
    {
-      "id":11,
+      "id":217,
       "price":5555,
       "rating":2,
       "feedback":3,
@@ -518,7 +570,7 @@
       "clinicas":[]
    },
    {
-      "id":11,
+      "id":218,
       "price":5555,
       "rating":2,
       "feedback":3,
@@ -533,10 +585,10 @@
          "tag3"
       ],
       "hijosSolos":true,
-      "name":"SMG30",
+      "name":"SMG40",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/SMG30-01.2023.pdf",
+      "folleto":"assets/archivos/folletosSM/SMG40-01.2023.pdf",
       "images":[
          "/assets/images/images/card-header/swissmedical.png"
       ],
@@ -544,7 +596,7 @@
       "clinicas":[]
    },
    {
-      "id":11,
+      "id":219,
       "price":5555,
       "rating":2,
       "feedback":3,
@@ -559,10 +611,10 @@
          "tag3"
       ],
       "hijosSolos":true,
-      "name":"SMG30",
+      "name":"SMG50",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/SMG30-01.2023.pdf",
+      "folleto":"assets/archivos/folletosSM/SMG50-01.2023.pdf",
       "images":[
          "/assets/images/images/card-header/swissmedical.png"
       ],
@@ -570,7 +622,7 @@
       "clinicas":[]
    },
    {
-      "id":11,
+      "id":220,
       "price":5555,
       "rating":2,
       "feedback":3,
@@ -585,10 +637,10 @@
          "tag3"
       ],
       "hijosSolos":true,
-      "name":"SMG30",
+      "name":"SMG60",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/SMG30-01.2023.pdf",
+      "folleto":"assets/archivos/folletosSM/SMG60-01.2023.pdf",
       "images":[
          "/assets/images/images/card-header/swissmedical.png"
       ],
@@ -596,7 +648,7 @@
       "clinicas":[]
    },
    {
-      "id":11,
+      "id":221,
       "price":5555,
       "rating":2,
       "feedback":3,
@@ -611,10 +663,10 @@
          "tag3"
       ],
       "hijosSolos":true,
-      "name":"SMG30",
+      "name":"SMG70",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/SMG30-01.2023.pdf",
+      "folleto":"assets/archivos/folletosSM/SMG70-01.2023.pdf",
       "images":[
          "/assets/images/images/card-header/swissmedical.png"
       ],

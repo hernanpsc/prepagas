@@ -572,6 +572,9 @@ checkboxArray: any = [
 
 productArray:any = [];
 arrays: any = [];
+getProductos(){
+  this.products= this.api.getProduct();
+}
 getProduct(){
   this.arrays = this.api.productService();
 }

@@ -1,5 +1,3 @@
-<script src="pagination.js"></script>
-<div key={product.id}>
 
 <div class="row justify-content-center mb-3">
   <div class="col-md-12 col-xl-12" [ngClass]="product.compare ? 'product compare' : 'product'">
@@ -57,9 +55,9 @@
             <h6 class="text-success"><span>{{product.precio}}</span>6</h6>
             <div class="d-flex flex-column mt-4">
             <!-- <button (click)="openDialog(product)" class="btn btn-outline-primary btn-sm mt-2" type="button">Detalles</button> -->
-              <button (click)='toggleCompare()' class="btn btn-outline-primary btn-sm mt-2" type="button">
-                {{comparar}}
-              </button> 
+            <button (click)='toggleCompare()' class="btn btn-outline-primary btn-sm mt-2" type="button">
+              {{comparar}}
+            </button>
               <!-- <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button> -->
 
             </div>
@@ -71,3 +69,4 @@
     </div>
   </div>
 </div>
+

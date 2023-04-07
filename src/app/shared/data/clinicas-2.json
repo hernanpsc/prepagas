@@ -1,6 +1,6 @@
 [
    {
-      "item_id":1,
+      "id":1,
       "entidad":"ASOCIACION MEDICA DE LOMAS DE ZAMORA S.A POLICLINICO LOMAS",
       "nombre":"Policlinico Lomas",
       "direccion":"Avenida Hipólito Yrigoyen 8439",
@@ -35,7 +35,7 @@
       ]
    },
    {
-      "item_id":2,
+      "id":2,
       "entidad":"CLINICA MARIANO MORENO",
       "nombre":"Hospital Privado Mariano Moreno",
       "direccion":"Uruguay 146",
@@ -72,7 +72,7 @@
       ]
    },
    {
-      "item_id":3,
+      "id":3,
       "entidad":"CLINICA MATERNO INFANTIL DE QUILMES",
       "nombre":"Cl. Materno Infantil De Quilmes",
       "direccion":"BRANDZEN 128",
@@ -106,7 +106,7 @@
       ]
    },
    {
-      "item_id":4,
+      "id":4,
       "entidad":"CLINICA MATERNO INFANTIL PRIVADA LOMAS",
       "nombre":"Cl. Materno Infantil Priv. Lomas",
       "direccion":"Acevedo 253",
@@ -138,7 +138,7 @@
       ]
    },
    {
-      "item_id":5,
+      "id":5,
       "entidad":"CLINICA MODELO DE LANUS",
       "nombre":"Cl. Mod. De Lanus",
       "direccion":"Avenida Hipólito Yrigoyen 4835",
@@ -177,7 +177,7 @@
       ]
    },
    {
-      "item_id":6,
+      "id":6,
       "entidad":"CLINICA Ntra. Sra. DE FATIMA",
       "nombre":"Cl. Ntra. Sra. De Fatima",
       "direccion":"VICTOR VERGANI 830",
@@ -209,7 +209,7 @@
       ]
    },
    {
-      "item_id":7,
+      "id":7,
       "entidad":"CLINICA PRIVADA CIUDAD",
       "nombre":"Cl. Priv. Ciudad",
       "direccion":"Reinalda Rodriguez nº 3784",
@@ -231,7 +231,7 @@
       ]
    },
    {
-      "item_id":8,
+      "id":8,
       "entidad":"CLINICA PRIVADA DE OJOS SANTA LUCIA",
       "nombre":"Cl. Priv. De Ojos Sta. Lucia",
       "direccion":"Almirante Brown 438",
@@ -264,7 +264,7 @@
       ]
    },
    {
-      "item_id":9,
+      "id":9,
       "entidad":"Clinica Privada Libertad",
       "nombre":"Cl. Priv. Libertad",
       "direccion":"Av. Eva Perón 4855",
@@ -293,7 +293,7 @@
       ]
    },
    {
-      "item_id":10,
+      "id":10,
       "entidad":"CLINICA PRIVADA MITRE",
       "nombre":"Cl. Priv. Mitre",
       "direccion":"Bartolomé Mitre 164",
@@ -323,7 +323,7 @@
       ]
    },
    {
-      "item_id":11,
+      "id":11,
       "entidad":"CLINICA PRIVADA PROVINCIAL (DE MERLO)",
       "nombre":"Cl. Priv. Provincial (De Merlo)",
       "direccion":"Garay 2260",
@@ -350,7 +350,7 @@
       ]
    },
    {
-      "item_id":12,
+      "id":12,
       "entidad":"Hospital Español",
       "nombre":"Hosp. Español",
       "direccion":"Calle 9 Nº 175 (Entre 35 y 36) - LA PLATA",
@@ -385,7 +385,7 @@
       ]
    },
    {
-      "item_id":13,
+      "id":13,
       "entidad":"SANATORIO CLINICA MODELO LAFERRERE",
       "nombre":"Srio. Cl. Mod. Laferrere",
       "direccion":"Avenida Luro 6055",
@@ -411,7 +411,7 @@
       ]
    },
    {
-      "item_id":14,
+      "id":14,
       "entidad":"SANATORIO CLINICA PRIVADA ALCORTA",
       "nombre":"Srio. Cl. Priv. Alcorta",
       "direccion":"Aristóbulo del Valle 2629",
@@ -455,7 +455,7 @@
       ]
    },
    {
-      "item_id":15,
+      "id":15,
       "entidad":"SANATORIO CLINICA PRIVADA CATAN",
       "nombre":"Srio. Cl. Priv. Catan",
       "direccion":"José León Larre 250",
@@ -491,7 +491,7 @@
       ]
    },
    {
-      "item_id":16,
+      "id":16,
       "entidad":"SANATORIO CLINICA PRIVADA FATIMA",
       "nombre":"Srio. Cl. Priv. Fatima",
       "direccion":"Spadaccini 1084",
@@ -534,7 +534,7 @@
       ]
    },
    {
-      "item_id":17,
+      "id":17,
       "entidad":"SANATORIO DEL OESTE - (EX IMC SANATORIO ITUZAINGO)",
       "nombre":"Srio. Del Oeste - (Ex Imc Srio. Ituzaingo)",
       "direccion":"Gral. Olazabal 319",
@@ -583,7 +583,7 @@
       ]
    },
    {
-      "item_id":18,
+      "id":18,
       "entidad":"Sanatorio Modelo Estrella",
       "nombre":"Srio. Mod. Estrella",
       "direccion":"Av. Bruzzone 685/87",
@@ -609,7 +609,7 @@
       ]
    },
    {
-      "item_id":19,
+      "id":19,
       "entidad":"SANATORIO MODELO ESTRELLA",
       "nombre":"Srio. Mod. Estrella",
       "direccion":"Av. Bruzzone 685/87",
@@ -639,7 +639,7 @@
       ]
    },
    {
-      "item_id":20,
+      "id":20,
       "entidad":"SANATORIO MODELO QUILMES",
       "nombre":"Srio. Mod. Quilmes",
       "direccion":"Andrés Baranda 282",
@@ -677,7 +677,7 @@
       ]
    },
    {
-      "item_id":21,
+      "id":21,
       "entidad":"SANATORIO NUEVOS AIRES SA",
       "nombre":"Srio. Nuevos Aires Sa",
       "direccion":"J. Canale 30",
@@ -706,7 +706,7 @@
       ]
    },
    {
-      "item_id":22,
+      "id":22,
       "entidad":"SANATORIO SANTA CLARA FLORENCIO VARELA",
       "nombre":"Srio. Sta. Clara Florencio Varela",
       "direccion":"General Juan M. de Pueyrredón 396",
@@ -732,7 +732,7 @@
       ]
    },
    {
-      "item_id":23,
+      "id":23,
       "entidad":"CEMIC - HOSPITAL UNIVERSITARIO SEDE LAS HERAS.",
       "nombre":"Cemic - Hosp. Universitario Sede Las Heras.",
       "direccion":"AV. GRAL. LAS HERAS 2900",
@@ -764,7 +764,7 @@
       ]
    },
    {
-      "item_id":24,
+      "id":24,
       "entidad":"CENTRO DE TERAPIA RADIANTE ACEVEDO",
       "nombre":"Ctro. De Terapia Radiante Acevedo",
       "direccion":"Manuel Acevedo 365",
@@ -789,7 +789,7 @@
       ]
    },
    {
-      "item_id":25,
+      "id":25,
       "entidad":"CENTRO DE TRAUMATOLOGIA - VALLS",
       "nombre":"Ctro. De Traumatologia - Valls",
       "direccion":"Av. Pueyrredón 2332",
@@ -814,7 +814,7 @@
       ]
    },
    {
-      "item_id":26,
+      "id":26,
       "entidad":"CENTRO MEDICO HEPTA",
       "nombre":"Ctro. Med. Hepta",
       "direccion":"Avenida Fondo de la Legua 577",
@@ -839,7 +839,7 @@
       ]
    },
    {
-      "item_id":27,
+      "id":27,
       "entidad":"CENTRO MEDICO LABORAL LUZURIAGA",
       "nombre":"Ctro. Med. Laboral Luzuriaga",
       "direccion":"Luzuriaga 246",
@@ -864,7 +864,7 @@
       ]
    },
    {
-      "item_id":28,
+      "id":28,
       "entidad":"Centro Medico San Jeronimo",
       "nombre":"Ctro. Med. San Jeronimo",
       "direccion":"Avenida San Martín Nº 2335 - Lomas del Mirador",
@@ -889,7 +889,7 @@
       ]
    },
    {
-      "item_id":29,
+      "id":29,
       "entidad":"Centro Medico Santa Rita",
       "nombre":"Ctro. Med. Sta. Rita",
       "direccion":"BLANCO ENCALADA 158",
@@ -914,7 +914,7 @@
       ]
    },
    {
-      "item_id":30,
+      "id":30,
       "entidad":"CENTRO MEDICO TALAR",
       "nombre":"Ctro. Med. Talar",
       "direccion":"Ruta 197 y Panamericana",
@@ -953,7 +953,7 @@
       ]
    },
    {
-      "item_id":31,
+      "id":31,
       "entidad":"CLINICA AIRES DE PACHECO",
       "nombre":"Cl. Aires De Pacheco",
       "direccion":"Avenida Hipólito Yrigoyen 2270",
@@ -987,7 +987,7 @@
       ]
    },
    {
-      "item_id":32,
+      "id":32,
       "entidad":"CLINICA ANGELUS",
       "nombre":"Cl. Angelus",
       "direccion":"Avenida Fondo de la Legua 390",
@@ -1015,7 +1015,7 @@
       ]
    },
    {
-      "item_id":33,
+      "id":33,
       "entidad":"CLINICA AVELLANEDA MEDICAL CENTER",
       "nombre":"Cl. Avellaneda Medical Center",
       "direccion":"Juan B. Palaá 325",
@@ -1040,7 +1040,7 @@
       ]
    },
    {
-      "item_id":34,
+      "id":34,
       "entidad":"Clinica Calchaqui 19 de Enero",
       "nombre":"Cl. Calchaqui 19 De Enero",
       "direccion":"Av. Calchaquí 24",
@@ -1068,7 +1068,7 @@
       ]
    },
    {
-      "item_id":35,
+      "id":35,
       "entidad":"Clinica de los Virreyes",
       "nombre":"Cl. De Los Virreyes",
       "direccion":"Ciudad de la Paz 1157",
@@ -1108,7 +1108,7 @@
       ]
    },
    {
-      "item_id":36,
+      "id":36,
       "entidad":"CLINICA DEL NIÑO DE QUILMES",
       "nombre":"Cl. Del Niño De Quilmes",
       "direccion":"Avenida Lamadrid 444",
@@ -1146,7 +1146,7 @@
       ]
    },
    {
-      "item_id":37,
+      "id":37,
       "entidad":"Clinica del Niño y La Familia",
       "nombre":"Cl. Del Niño Y La Familia",
       "direccion":"Avenida Colón 2749",
@@ -1171,7 +1171,7 @@
       ]
    },
    {
-      "item_id":38,
+      "id":38,
       "entidad":"CLINICA DELTA",
       "nombre":"Cl. Delta",
       "direccion":"Boulevard Sarmiento 154",
@@ -1196,7 +1196,7 @@
       ]
    },
    {
-      "item_id":39,
+      "id":39,
       "entidad":"Clinica Dim Rivadavia",
       "nombre":"Cl. Dim Rivadavia",
       "direccion":"Avenida Rivadavia 14252",
@@ -1232,7 +1232,7 @@
       ]
    },
    {
-      "item_id":40,
+      "id":40,
       "entidad":"Clinica Espora",
       "nombre":"Cl. Espora",
       "direccion":"Avenida Tomás Espora 645",
@@ -1271,7 +1271,7 @@
       ]
    },
    {
-      "item_id":41,
+      "id":41,
       "entidad":"CLINICA I.M.A.",
       "nombre":"Cl. I.M.A.",
       "direccion":"Francisco Seguí 593",
@@ -1306,7 +1306,7 @@
       ]
    },
    {
-      "item_id":42,
+      "id":42,
       "entidad":"Clinica los Almendros",
       "nombre":"Cl. Los Almendros",
       "direccion":"San Luis 425",
@@ -1332,7 +1332,7 @@
       ]
    },
    {
-      "item_id":43,
+      "id":43,
       "entidad":"CLINICA MODELO DE MORON",
       "nombre":"Cl. Mod. De Moron",
       "direccion":"República Oriental de Uruguay 224",
@@ -1385,7 +1385,7 @@
       ]
    },
    {
-      "item_id":44,
+      "id":44,
       "entidad":"CLINICA MONTE GRANDE",
       "nombre":"Cl. Monte Grande",
       "direccion":"General Rodríguez 158",
@@ -1422,7 +1422,7 @@
       ]
    },
    {
-      "item_id":45,
+      "id":45,
       "entidad":"CLINICA Ntra. Sra. DE LA DULCE ESPERA",
       "nombre":"Cl. Ntra. Sra. De La Dulce Espera",
       "direccion":"General Ferre 521",
@@ -1457,7 +1457,7 @@
       ]
    },
    {
-      "item_id":46,
+      "id":46,
       "entidad":"CLINICA PRIVADA ARANZAZU",
       "nombre":"Cl. Priv. Aranzazu",
       "direccion":"Avenida Presidente Teniente General Juan Domingo Perón 1212",
@@ -1482,7 +1482,7 @@
       ]
    },
    {
-      "item_id":47,
+      "id":47,
       "entidad":"CLINICA PRIVADA COLON",
       "nombre":"Cl. Priv. Colon",
       "direccion":"Colón 3263",
@@ -1507,7 +1507,7 @@
       ]
    },
    {
-      "item_id":48,
+      "id":48,
       "entidad":"CLINICA PRIVADA CRISTO REY",
       "nombre":"Cl. Priv. Cristo Rey",
       "direccion":"Av. Gaspar Campos n°4988",
@@ -1536,7 +1536,7 @@
       ]
    },
    {
-      "item_id":49,
+      "id":49,
       "entidad":"Cl. Privada de Excelencia Médica Belgrano",
       "nombre":"Cl. Priv. De Excelencia Médica Belgrano",
       "direccion":"Calle 4 1074",
@@ -1561,7 +1561,7 @@
       ]
    },
    {
-      "item_id":50,
+      "id":50,
       "entidad":"CLINICA PRIVADA DEL BUEN PASTOR",
       "nombre":"Cl. Priv. Del Buen Pastor",
       "direccion":"Avenida Gral. Enrique Mosconi 1716",
@@ -1606,7 +1606,7 @@
       ]
    },
    {
-      "item_id":51,
+      "id":51,
       "entidad":"CLINICA PRIVADA DEL CARMEN SRL",
       "nombre":"Cl. Priv. Del Carmen Srl",
       "direccion":"Avenida Rivadavia 585",
@@ -1631,7 +1631,7 @@
       ]
    },
    {
-      "item_id":52,
+      "id":52,
       "entidad":"CLINICA PRIVADA DRES. MARCELO S. TACHELLA",
       "nombre":"Cl. Priv. Dres. Marcelo S. Tachella",
       "direccion":"Avenida Rivadavia 15577",
@@ -1673,7 +1673,7 @@
       ]
    },
    {
-      "item_id":53,
+      "id":53,
       "entidad":"CLINICA PRIVADA ENRIQUE MOSCONI",
       "nombre":"Cl. Priv. Enrique Mosconi",
       "direccion":"Calle 8 3419",
@@ -1706,7 +1706,7 @@
       ]
    },
    {
-      "item_id":54,
+      "id":54,
       "entidad":"CLINICA PRIVADA GENERAL BELGRANO",
       "nombre":"Cl. Priv. General Belgrano",
       "direccion":"Camino Gral. Belgrano 960",
@@ -1740,7 +1740,7 @@
       ]
    },
    {
-      "item_id":55,
+      "id":55,
       "entidad":"CLINICA PRIVADA GUEMES",
       "nombre":"Cl. Priv. Guemes",
       "direccion":"Mariano Moreno 1360",
@@ -1765,7 +1765,7 @@
       ]
    },
    {
-      "item_id":56,
+      "id":56,
       "entidad":"Clinica Privada Instituto Medico Modelo",
       "nombre":"Cl. Priv. Inst. Med. Mod.",
       "direccion":"Calle 841 2469",
@@ -1787,7 +1787,7 @@
       ]
    },
    {
-      "item_id":57,
+      "id":57,
       "entidad":"CLINICA PRIVADA IPENSA",
       "nombre":"Cl. Priv. Ipensa",
       "direccion":"Calle 59 436",
@@ -1822,7 +1822,7 @@
       ]
    },
    {
-      "item_id":58,
+      "id":58,
       "entidad":"Clinica Privada Lujan",
       "nombre":"Cl. Priv. Lujan",
       "direccion":"Buenos Aires 50",
@@ -1858,7 +1858,7 @@
       ]
    },
    {
-      "item_id":59,
+      "id":59,
       "entidad":"CLINICA PRIVADA OLIVOS",
       "nombre":"Cl. Priv. Olivos",
       "direccion":"Avenida Maipú 1660",
@@ -1893,7 +1893,7 @@
       ]
    },
    {
-      "item_id":60,
+      "id":60,
       "entidad":"CLINICA PRIVADA PASSO",
       "nombre":"Cl. Priv. Passo",
       "direccion":"Avenida Eva Perón 3097",
@@ -1925,7 +1925,7 @@
       ]
    },
    {
-      "item_id":61,
+      "id":61,
       "entidad":"Clinica Privada Provincial",
       "nombre":"Cl. Priv. Provincial",
       "direccion":"25 de Mayo 70",
@@ -1960,7 +1960,7 @@
       ]
    },
    {
-      "item_id":62,
+      "id":62,
       "entidad":"Clinica Privada Ranelagh",
       "nombre":"Cl. Priv. Ranelagh",
       "direccion":"Camino General Manuel Belgrano 4786",
@@ -1995,7 +1995,7 @@
       ]
    },
    {
-      "item_id":63,
+      "id":63,
       "entidad":"Clinica Privada San Fernando",
       "nombre":"Cl. Priv. San Fernando",
       "direccion":"Gral. Lavalle 1439",
@@ -2031,7 +2031,7 @@
       ]
    },
    {
-      "item_id":64,
+      "id":64,
       "entidad":"Clinica Privada San Marcos",
       "nombre":"Cl. Priv. San Marcos",
       "direccion":"Pringles",
@@ -2064,7 +2064,7 @@
       ]
    },
    {
-      "item_id":65,
+      "id":65,
       "entidad":"Clinica Privada San Vicente",
       "nombre":"Cl. Priv. San Vicente",
       "direccion":"AVENIDA SARMIENTO 901",
@@ -2099,7 +2099,7 @@
       ]
    },
    {
-      "item_id":66,
+      "id":66,
       "entidad":"CLINICA PRIVADA SANATORIO GENERAL SARMIENTO",
       "nombre":"Cl. Priv. Srio. General Sarmiento",
       "direccion":"Avenida Presidente Juan Domingo Perón 1796",
@@ -2137,7 +2137,7 @@
       ]
    },
    {
-      "item_id":67,
+      "id":67,
       "entidad":"CLINICA PRIVADA SANATORIO MODELO BURZACO",
       "nombre":"Cl. Priv. Srio. Mod. Burzaco",
       "direccion":"Avenida Tomás Espora 3250",
@@ -2163,7 +2163,7 @@
       ]
    },
    {
-      "item_id":68,
+      "id":68,
       "entidad":"CLINICA PRIVADA SANATORIO URQUIZA",
       "nombre":"Cl. Priv. Srio. Urquiza",
       "direccion":"Urquiza 1537",
@@ -2197,7 +2197,7 @@
       ]
    },
    {
-      "item_id":69,
+      "id":69,
       "entidad":"CLINICA PRIVADA SANTA MARIA",
       "nombre":"Cl. Priv. Sta. Maria",
       "direccion":"E. Marengo 3908",
@@ -2248,7 +2248,7 @@
       ]
    },
    {
-      "item_id":70,
+      "id":70,
       "entidad":"CLINICA SAGRADO CORAZON DON TORCUATO",
       "nombre":"Cl. Sagrado Corazon Don Torcuato",
       "direccion":"Alvear 650",
@@ -2291,7 +2291,7 @@
       ]
    },
    {
-      "item_id":71,
+      "id":71,
       "entidad":"Clinica San Camilo",
       "nombre":"Cl. San Camilo",
       "direccion":"Sivori 814",
@@ -2340,7 +2340,7 @@
       ]
    },
    {
-      "item_id":72,
+      "id":72,
       "entidad":"Clinica Zabala",
       "nombre":"Cl. Zabala",
       "direccion":"cabildo 1295",
@@ -2373,7 +2373,7 @@
       ]
    },
    {
-      "item_id":73,
+      "id":73,
       "entidad":"CONSULTORIOS EXTERNOS CLINICA MODELO DE MORON ANEXO CASTELAR",
       "nombre":"Cons. Ext. Cl. Mod. De Moron Anexo Castelar",
       "direccion":"AVENIDA PRESIDENTE PERON 6202 ESQUINA LOS INDIOS",
@@ -2395,7 +2395,7 @@
       ]
    },
    {
-      "item_id":74,
+      "id":74,
       "entidad":"CONSULTORIOS EXTERNOS CLINICA PRIVADA DRES. MARCELO S. TACHELLA SA",
       "nombre":"Cons. Ext. Cl. Priv. Dres. Marcelo S. Tachella Sa",
       "direccion":"Avda. Rivadavia Nº 15571",
@@ -2417,7 +2417,7 @@
       ]
    },
    {
-      "item_id":75,
+      "id":75,
       "entidad":"CONSULTORIOS EXTERNOS DE LA CLINICA BOEDO",
       "nombre":"Cons. Ext. De La Cl. Boedo",
       "direccion":"Hipólito Irigoyen 8389 - PB",
@@ -2439,7 +2439,7 @@
       ]
    },
    {
-      "item_id":76,
+      "id":76,
       "entidad":"CONSULTORIOS EXTERNOS DE LA CLINICA Ntra. Sra. DE LA DULCE ESPERA",
       "nombre":"Cons. Ext. De La Cl. Ntra. Sra. De La Dulce Espera",
       "direccion":"Avenida Manuel Belgrano 2994",
@@ -2461,7 +2461,7 @@
       ]
    },
    {
-      "item_id":77,
+      "id":77,
       "entidad":"CONSULTORIOS EXTERNOS DEL SANATORIO ANCHORENA",
       "nombre":"Cons. Ext. Del Srio. Anchorena",
       "direccion":"JUYAREZ N 4178",
@@ -2483,7 +2483,7 @@
       ]
    },
    {
-      "item_id":78,
+      "id":78,
       "entidad":"Hospital Italiano",
       "nombre":"Hosp. Italiano",
       "direccion":"DR. RAMON CARRILLO 2215",
@@ -2514,7 +2514,7 @@
       ]
    },
    {
-      "item_id":79,
+      "id":79,
       "entidad":"HOSPITAL ITALIANO DE LA PLATA",
       "nombre":"Hosp. Italiano De La Plata",
       "direccion":"Avenida 51 1725",
@@ -2546,7 +2546,7 @@
       ]
    },
    {
-      "item_id":80,
+      "id":80,
       "entidad":"HOSPITAL ITALIANO DE SAN JUSTO",
       "nombre":"Hosp. Italiano De San Justo",
       "direccion":"Calle Presidente Perón Nº 2231",
@@ -2577,7 +2577,7 @@
       ]
    },
    {
-      "item_id":81,
+      "id":81,
       "entidad":"HOSPITAL PRIVADO 24 DE SEPTIEMBRE",
       "nombre":"Hosp. Priv. 24 De Septiembre",
       "direccion":"Santa Juana de Arco 3545/55",
@@ -2609,7 +2609,7 @@
       ]
    },
    {
-      "item_id":82,
+      "id":82,
       "entidad":"HOSPITAL PRIVADO DR. ALBERTO DUHAU",
       "nombre":"Hosp. Priv. Dr. Alberto Duhau",
       "direccion":"General Lavalle 2066",
@@ -2634,7 +2634,7 @@
       ]
    },
    {
-      "item_id":83,
+      "id":83,
       "entidad":"HOSPITAL PRIVADO MODELO",
       "nombre":"Hosp. Priv. Mod.",
       "direccion":"Julio Argentino Roca 1811",
@@ -2677,7 +2677,7 @@
       ]
    },
    {
-      "item_id":84,
+      "id":84,
       "entidad":"HOSPITAL PRIVADO SUDAMERICANO",
       "nombre":"Hosp. Priv. Sudamericano",
       "direccion":"Calle 2 432",
@@ -2709,7 +2709,7 @@
       ]
    },
    {
-      "item_id":85,
+      "id":85,
       "entidad":"Hospital Universitario Austral",
       "nombre":"Hosp. Universitario Austral",
       "direccion":"Avenida Juan Domingo Perón 1500",
@@ -2743,7 +2743,7 @@
       ]
    },
    {
-      "item_id":86,
+      "id":86,
       "entidad":"Instituto Central de Medicina",
       "nombre":"Inst. Central De Medicina",
       "direccion":"Calle 43 581",
@@ -2776,7 +2776,7 @@
       ]
    },
    {
-      "item_id":87,
+      "id":87,
       "entidad":"Instituto de Diagnostico de La Plata",
       "nombre":"Inst. De Diagnostico De La Plata",
       "direccion":"Calle 62 - 370",
@@ -2808,7 +2808,7 @@
       ]
    },
    {
-      "item_id":88,
+      "id":88,
       "entidad":"INSTITUTO DE OFTALMOLOGIA PRIETO DIAZ",
       "nombre":"Inst. De Oftalmologia Prieto Diaz",
       "direccion":"Avenida 53 693",
@@ -2840,7 +2840,7 @@
       ]
    },
    {
-      "item_id":89,
+      "id":89,
       "entidad":"INSTITUTO MEDICO AGUERO",
       "nombre":"Inst. Med. Aguero",
       "direccion":"Agüero 1395",
@@ -2879,7 +2879,7 @@
       ]
    },
    {
-      "item_id":90,
+      "id":90,
       "entidad":"INSTITUTO MEDICO ARGENTINO DE BERISSO SA",
       "nombre":"Inst. Med. Argentino De Berisso Sa",
       "direccion":"12 N 4295",
@@ -2912,7 +2912,7 @@
       ]
    },
    {
-      "item_id":91,
+      "id":91,
       "entidad":"INSTITUTO MEDICO BRANDSEN",
       "nombre":"Inst. Med. Brandsen",
       "direccion":"Ferrari 128",
@@ -2938,7 +2938,7 @@
       ]
    },
    {
-      "item_id":92,
+      "id":92,
       "entidad":"Instituto Medico de la Ribera",
       "nombre":"Inst. Med. De La Ribera",
       "direccion":"La Merced e/ Perú y Sarmiento  286",
@@ -2973,7 +2973,7 @@
       ]
    },
    {
-      "item_id":93,
+      "id":93,
       "entidad":"Instituto Medico Mater Dei",
       "nombre":"Inst. Med. Mater Dei",
       "direccion":"Calle 45 - 915",
@@ -2998,7 +2998,7 @@
       ]
    },
    {
-      "item_id":94,
+      "id":94,
       "entidad":"INSTITUTO MEDICO PLATENSE",
       "nombre":"Inst. Med. Platense",
       "direccion":"Calle 51 Nº 315",
@@ -3033,7 +3033,7 @@
       ]
    },
    {
-      "item_id":95,
+      "id":95,
       "entidad":"INSTITUTO OTORRINOLARINGOLOGICO",
       "nombre":"Inst. Otorrinolaringologico",
       "direccion":"Juan Domingo Perón 2150",
@@ -3058,7 +3058,7 @@
       ]
    },
    {
-      "item_id":96,
+      "id":96,
       "entidad":"Instituto Pediatrico Castelar",
       "nombre":"Inst. Pediatrico Castelar",
       "direccion":"MONTES DE OCA 2231",
@@ -3083,7 +3083,7 @@
       ]
    },
    {
-      "item_id":97,
+      "id":97,
       "entidad":"NUEVA CLINICA DEL NIÑO DE LA PLATA",
       "nombre":"Nueva Cl. Del Niño De La Plata",
       "direccion":"Calle 63 Nº 763",
@@ -3118,7 +3118,7 @@
       ]
    },
    {
-      "item_id":98,
+      "id":98,
       "entidad":"NUEVA CLINICA PRIVADA BECCAR",
       "nombre":"Nueva Cl. Priv. Beccar",
       "direccion":"Julian Navarro 48",
@@ -3144,7 +3144,7 @@
       ]
    },
    {
-      "item_id":99,
+      "id":99,
       "entidad":"NUEVO SANATORIO BERAZATEGUI",
       "nombre":"Nuevo Srio. Berazategui",
       "direccion":"Rigolleau (14) Nº 4121 esq. 141",
@@ -3170,7 +3170,7 @@
       ]
    },
    {
-      "item_id":100,
+      "id":100,
       "entidad":"POLICLINICA BANCARIA 9 DE JULIO - OSBA",
       "nombre":"Policlinica Bancaria 9 De Julio - Osba",
       "direccion":"Av. Gaona 2197",
@@ -3196,7 +3196,7 @@
       ]
    },
    {
-      "item_id":101,
+      "id":101,
       "entidad":"POLICLINICA CRISTO CAMINANTE",
       "nombre":"Policlinica Cristo Caminante",
       "direccion":"Barragán Bastilla 5651",
@@ -3219,7 +3219,7 @@
       ]
    },
    {
-      "item_id":102,
+      "id":102,
       "entidad":"POLICLINICA MPS MEDICINA PLATENSE SOLIDARIA SA",
       "nombre":"Policlinica Mps Medicina Platense Solidaria Sa",
       "direccion":"Avenida 44 1022",
@@ -3244,7 +3244,7 @@
       ]
    },
    {
-      "item_id":103,
+      "id":103,
       "entidad":"POLICLINICA PRIVADA ALVEAR",
       "nombre":"Policlinica Priv. Alvear",
       "direccion":"AVENIDA MARCELO T. DE ALVEAR 2737/2757",
@@ -3269,7 +3269,7 @@
       ]
    },
    {
-      "item_id":104,
+      "id":104,
       "entidad":"REHABILITACION SAN JERONIMO",
       "nombre":"Rehabilitacion San Jeronimo",
       "direccion":"Villegas Nº 2154",
@@ -3296,7 +3296,7 @@
       ]
    },
    {
-      "item_id":105,
+      "id":105,
       "entidad":"SANATORIO ANCHORENA SAN MARTIN",
       "nombre":"Srio. Anchorena San Martin",
       "direccion":"Liniers 1632",
@@ -3321,7 +3321,7 @@
       ]
    },
    {
-      "item_id":106,
+      "id":106,
       "entidad":"Sanatorio Argentino del Plata",
       "nombre":"Srio. Argentino Del Plata",
       "direccion":"56 N° 874",
@@ -3356,7 +3356,7 @@
       ]
    },
    {
-      "item_id":107,
+      "id":107,
       "entidad":"SANATORIO AUGUSTO TIMOTEO VANDOR",
       "nombre":"Srio. Augusto Timoteo Vandor",
       "direccion":"General Belgrano 76",
@@ -3382,7 +3382,7 @@
       ]
    },
    {
-      "item_id":108,
+      "id":108,
       "entidad":"Sanatorio Bernal",
       "nombre":"Srio. Bernal",
       "direccion":"Avenida San Martín 572",
@@ -3417,7 +3417,7 @@
       ]
    },
    {
-      "item_id":109,
+      "id":109,
       "entidad":"SANATORIO CLINICA SAN JOSE OBRERO",
       "nombre":"Srio. Cl. San Jose Obrero",
       "direccion":"FLANDES Y SAN MARTIN S/N",
@@ -3442,7 +3442,7 @@
       ]
    },
    {
-      "item_id":110,
+      "id":110,
       "entidad":"SANATORIO DE LA TRINIDAD DE RAMOS MEJIA",
       "nombre":"Srio. De La Trinidad De Ramos Mejia",
       "direccion":"Avenida Rivadavia N° 13280",
@@ -3475,7 +3475,7 @@
       ]
    },
    {
-      "item_id":111,
+      "id":111,
       "entidad":"SANATORIO DE LA TRINIDAD SAN ISIDRO",
       "nombre":"Srio. De La Trinidad San Isidro",
       "direccion":"Avenida Fondo de la Legua 851",
@@ -3505,7 +3505,7 @@
       ]
    },
    {
-      "item_id":112,
+      "id":112,
       "entidad":"SANATORIO DEL OESTE (EX IMC SANATORIO MERLO)",
       "nombre":"Srio. Del Oeste (Ex Imc Srio. Merlo)",
       "direccion":"Avenida del Libertador 295",
@@ -3556,7 +3556,7 @@
       ]
    },
    {
-      "item_id":113,
+      "id":113,
       "entidad":"SANATORIO LA TORRE LOMAS DEL MIRADOR",
       "nombre":"Srio. La Torre Lomas Del Mirador",
       "direccion":"Av. General Mosconi 1527",
@@ -3582,7 +3582,7 @@
       ]
    },
    {
-      "item_id":114,
+      "id":114,
       "entidad":"SANATORIO MEDICO LOS TILOS",
       "nombre":"Srio. Med. Los Tilos",
       "direccion":"Calle 41Nº 347",
@@ -3615,7 +3615,7 @@
       ]
    },
    {
-      "item_id":115,
+      "id":115,
       "entidad":"Sanatorio Modelo Adrogue",
       "nombre":"Srio. Mod. Adrogue",
       "direccion":"Avenida Tomás Espora 2250",
@@ -3640,7 +3640,7 @@
       ]
    },
    {
-      "item_id":116,
+      "id":116,
       "entidad":"Sanatorio Modelo de Caseros",
       "nombre":"Srio. Mod. De Caseros",
       "direccion":"Lisandro Medina 2285",
@@ -3679,7 +3679,7 @@
       ]
    },
    {
-      "item_id":117,
+      "id":117,
       "entidad":"Sanatorio Vicente Lopez - La Torre",
       "nombre":"Srio. Vicente Lopez - La Torre",
       "direccion":"San Martín 2142",
@@ -3708,7 +3708,7 @@
       ]
    },
    {
-      "item_id":118,
+      "id":118,
       "entidad":"SANATORIO MODELO Ntra. Sra. DE LA MERCED",
       "nombre":"Srio. Mod. Ntra. Sra. De La Merced",
       "direccion":"Julio Besada 6969",
@@ -3737,7 +3737,7 @@
       ]
    },
    {
-      "item_id":119,
+      "id":119,
       "entidad":"SANATORIO Ntra. Sra. DEL PILAR",
       "nombre":"Srio. Ntra. Sra. Del Pilar",
       "direccion":"Avenida Gaona 3979",
@@ -3773,7 +3773,7 @@
       ]
    },
    {
-      "item_id":120,
+      "id":120,
       "entidad":"Sanatorio Plaza",
       "nombre":"Srio. Plaza",
       "direccion":"Florentino Ameghino 650",
@@ -3798,7 +3798,7 @@
       ]
    },
    {
-      "item_id":121,
+      "id":121,
       "entidad":"SANATORIO PRIVADO FIGUEROA PAREDES ( ISIDRO CASANOVA )",
       "nombre":"Figueroa Paredes ( Isidro Casanova )",
       "direccion":"Dante Alighieri 3637",
@@ -3837,7 +3837,7 @@
       ]
    },
    {
-      "item_id":122,
+      "id":122,
       "entidad":"SANATORIO PRIVADO FIGUEROA PAREDES ( MARIANO ACOSTA )",
       "nombre":"Figueroa Paredes ( Mariano Acosta )",
       "direccion":"Tres Sargentos 540",
@@ -3862,7 +3862,7 @@
       ]
    },
    {
-      "item_id":123,
+      "id":123,
       "entidad":"SANATORIO PRIVADO FIGUEROA PAREDES LAFERRERE DE SICOMED",
       "nombre":"Figueroa Paredes (Laferrere)",
       "direccion":"Ruta Nacional 3 10841",
@@ -3901,7 +3901,7 @@
       ]
    },
    {
-      "item_id":124,
+      "id":124,
       "entidad":"SANATORIO PRIVADO MADERO",
       "nombre":"Srio. Priv. Madero",
       "direccion":"Domingo Millan 20",
@@ -3926,7 +3926,7 @@
       ]
    },
    {
-      "item_id":125,
+      "id":125,
       "entidad":"SANATORIO PRIVADO MARIANO ACOSTA SA",
       "nombre":"Srio. Priv. Mariano Acosta Sa",
       "direccion":"Tres Sargentos 540",
@@ -3958,7 +3958,7 @@
       ]
    },
    {
-      "item_id":126,
+      "id":126,
       "entidad":"SANATORIO PROFESOR ITOIZ",
       "nombre":"Srio. Profesor Itoiz",
       "direccion":"Avenida Adolfo Alsina 174/82",
@@ -3993,7 +3993,7 @@
       ]
    },
    {
-      "item_id":127,
+      "id":127,
       "entidad":"Sanatorio Ramon Cereijo",
       "nombre":"Srio. Ramon Cereijo",
       "direccion":"lavalle 1686",
@@ -4017,7 +4017,7 @@
       ]
    },
    {
-      "item_id":128,
+      "id":128,
       "entidad":"Sanatorio San Francisco",
       "nombre":"Srio. San Francisco",
       "direccion":"Avenida Mitre Nº 2455",
@@ -4046,7 +4046,7 @@
       ]
    },
    {
-      "item_id":129,
+      "id":129,
       "entidad":"Sanatorio San Jose De Villa Elisa",
       "nombre":"Srio. San Jose De Villa Elisa",
       "direccion":"Calle 15 esq. 55",
@@ -4079,7 +4079,7 @@
       ]
    },
    {
-      "item_id":130,
+      "id":130,
       "entidad":"Sanatorio San Lucas",
       "nombre":"Srio. San Lucas",
       "direccion":"Belgrano 369",
@@ -4121,7 +4121,7 @@
       ]
    },
    {
-      "item_id":131,
+      "id":131,
       "entidad":"SANATORIO SAN MAURICIO",
       "nombre":"Srio. San Mauricio",
       "direccion":"Av. Sáenz 456",
@@ -4154,7 +4154,7 @@
       ]
    },
    {
-      "item_id":132,
+      "id":132,
       "entidad":"Sanatorio Santa Sofia",
       "nombre":"Srio. Sta. Sofia",
       "direccion":"Los Ceibos 1792",
@@ -4186,7 +4186,7 @@
       ]
    },
    {
-      "item_id":133,
+      "id":133,
       "entidad":"CLINICA PRIVADA DEL NIÑO Y LA FAMILIA",
       "nombre":"Cl. Priv. Del Niño Y La Familia",
       "direccion":"CALLE 843 2416",
@@ -4222,7 +4222,7 @@
       ]
    },
    {
-      "item_id":134,
+      "id":134,
       "entidad":"Centro Medico Nordelta",
       "nombre":"Ctro. Med. Nordelta",
       "direccion":"Avenida De Los Lagos 6785",
@@ -4253,7 +4253,7 @@
       ]
    },
    {
-      "item_id":135,
+      "id":135,
       "entidad":"CLINICA PRIVADA CENTRO SA",
       "nombre":"Cl. Priv. Ctro. Sa",
       "direccion":"España 352",
@@ -4278,7 +4278,7 @@
       ]
    },
    {
-      "item_id":136,
+      "id":136,
       "entidad":"Clinica Instituto Medico de La Rivera",
       "nombre":"Cl. Inst. Med. De La Rivera",
       "direccion":"La Merced 286",
@@ -4310,7 +4310,7 @@
       ]
    },
    {
-      "item_id":137,
+      "id":137,
       "entidad":"INSTITUTO MEDICO DE ALTA COMPLEJIDAD - IMAC",
       "nombre":"Inst. Med. De Alta Complejidad - IMAC",
       "direccion":"Av. Díaz Vélez 4363",
@@ -4346,7 +4346,7 @@
       ]
    },
    {
-      "item_id":138,
+      "id":138,
       "entidad":"CENTRO PRIVADO DE OJOS",
       "nombre":"Ctro. Priv. De Ojos",
       "direccion":"Av. Rivadavia 1902",
@@ -4371,7 +4371,7 @@
       ]
    },
    {
-      "item_id":139,
+      "id":139,
       "entidad":"SANATORIPO SOLANO INSTITUTO MEDICO MODELO",
       "nombre":"Sanatoripo Solano Inst. Med. Mod.",
       "direccion":"Calle 841 2469",
@@ -4397,7 +4397,7 @@
       ]
    },
    {
-      "item_id":140,
+      "id":140,
       "entidad":"GRUPO PEDIATRICO HOSPITAL MILITAR",
       "nombre":"Grupo Pediatrico Hosp. Militar",
       "direccion":"Av. Luis María Campos 726, Piso 8",
@@ -4423,7 +4423,7 @@
       ]
    },
    {
-      "item_id":141,
+      "id":141,
       "entidad":"HOSPITAL BRITANICO DE BUENOS AIRES CENTRAL",
       "nombre":"Hosp. Britanico De Buenos Aires Central",
       "direccion":"Perdriel 74",
@@ -4470,7 +4470,7 @@
       ]
    },
    {
-      "item_id":142,
+      "id":142,
       "entidad":"Sanatorio San Juan",
       "nombre":"Srio. San Juan",
       "direccion":"Av. Hipolito Yrigoyen 5132",
@@ -4506,7 +4506,7 @@
       ]
    },
    {
-      "item_id":143,
+      "id":143,
       "entidad":"Instituto Alexander Fleming",
       "nombre":"Inst. Alexander Fleming",
       "direccion":"Avenida Crámer 1180",
@@ -4548,7 +4548,7 @@
       ]
    },
    {
-      "item_id":144,
+      "id":144,
       "entidad":"Clinica Bazterrica",
       "nombre":"Cl. Bazterrica",
       "direccion":"Billinghurst 2072 (esquina Juncal)",
@@ -4587,7 +4587,7 @@
       ]
    },
    {
-      "item_id":145,
+      "id":145,
       "entidad":"Clinica Bessone",
       "nombre":"Cl. Bessone",
       "direccion":"Paunero 1652",
@@ -4629,7 +4629,7 @@
       ]
    },
    {
-      "item_id":146,
+      "id":146,
       "entidad":"CLINICA DEL SOL",
       "nombre":"Cl. Del Sol",
       "direccion":"Avenida Coronel Díaz 2211",
@@ -4662,7 +4662,7 @@
       ]
    },
    {
-      "item_id":147,
+      "id":147,
       "entidad":"CEMIC - HOSPITAL UNIVERSITARIO SEDE SAAVEDRA",
       "nombre":"Cemic - Hosp. Universitario Sede Saavedra",
       "direccion":"Galván 4102",
@@ -4705,7 +4705,7 @@
       ]
    },
    {
-      "item_id":148,
+      "id":148,
       "entidad":"CENTRO DE OJOS LOMAS",
       "nombre":"Ctro. De Ojos Lomas",
       "direccion":"Avenida Almirante Brown 2461",
@@ -4730,7 +4730,7 @@
       ]
    },
    {
-      "item_id":149,
+      "id":149,
       "entidad":"CENTRO GALLEGO DE BUENOS AIRES",
       "nombre":"Ctro. Gallego De Buenos Aires",
       "direccion":"Avenida Belgrano 2199",
@@ -4753,7 +4753,7 @@
       ]
    },
    {
-      "item_id":150,
+      "id":150,
       "entidad":"CLINICA ADVENTISTA BELGRANO",
       "nombre":"Cl. Adventista Belgrano",
       "direccion":"Estomba 1710",
@@ -4802,7 +4802,7 @@
       ]
    },
    {
-      "item_id":151,
+      "id":151,
       "entidad":"Clinica De Cirugia Especializada",
       "nombre":"Cl. De Cirugia Especializada",
       "direccion":"Larrea 926",
@@ -4824,7 +4824,7 @@
       ]
    },
    {
-      "item_id":152,
+      "id":152,
       "entidad":"CLIMEDICA",
       "nombre":"Climedica",
       "direccion":"Saavedra 1039",
@@ -4853,7 +4853,7 @@
       ]
    },
    {
-      "item_id":153,
+      "id":153,
       "entidad":"Clinica de la Comunidad",
       "nombre":"Cl. De La Comunidad",
       "direccion":"La Merced 383",
@@ -4886,7 +4886,7 @@
       ]
    },
    {
-      "item_id":154,
+      "id":154,
       "entidad":"Clinica de la Esperanza",
       "nombre":"Cl. De La Esperanza",
       "direccion":"Tres Arroyos 2060",
@@ -4919,7 +4919,7 @@
       ]
    },
    {
-      "item_id":155,
+      "id":155,
       "entidad":"Clinica Oftalmologica Malbran",
       "nombre":"Cl. Oftalmologica Malbran",
       "direccion":"Parera 164",
@@ -4944,7 +4944,7 @@
       ]
    },
    {
-      "item_id":156,
+      "id":156,
       "entidad":"Clinica de Microcirugia",
       "nombre":"Cl. De Microcirugia",
       "direccion":"TENIENTE GENERAL JUAN DOMINGO PERON 1834",
@@ -4969,7 +4969,7 @@
       ]
    },
    {
-      "item_id":157,
+      "id":157,
       "entidad":"CLINICA SAN JERONIMO - SEDE ABASTO",
       "nombre":"Cl. San Jeronimo - Sede Abasto",
       "direccion":"Gallo 548",
@@ -5004,7 +5004,7 @@
       ]
    },
    {
-      "item_id":158,
+      "id":158,
       "entidad":"Clinica Cruz Celeste",
       "nombre":"Cl. Cruz Celeste",
       "direccion":"Bermúdez 2895",
@@ -5047,7 +5047,7 @@
       ]
    },
    {
-      "item_id":159,
+      "id":159,
       "entidad":"Clinica Y Maternidad Suizo Argentina",
       "nombre":"Cl. Y Maternidad Suizo Argentina",
       "direccion":"Av. Pueyrredón 1461",
@@ -5080,7 +5080,7 @@
       ]
    },
    {
-      "item_id":160,
+      "id":160,
       "entidad":"Diagnostico Maipu por Imagenes",
       "nombre":"Diagnostico Maipu Por Imagenes",
       "direccion":"CABILDO 457",
@@ -5105,7 +5105,7 @@
       ]
    },
    {
-      "item_id":161,
+      "id":161,
       "entidad":"FUNDACION ARAUZ",
       "nombre":"Fundacion Arauz",
       "direccion":"Tte. Gral. Juan Domingo Perón 2238",
@@ -5144,7 +5144,7 @@
       ]
    },
    {
-      "item_id":162,
+      "id":162,
       "entidad":"HOSPITAL PRIVADO DE NIÑOS FUNDACION HOSPITALARIA",
       "nombre":"Hosp. Priv. De Niños Fundacion Hosp.aria",
       "direccion":"Av. Crámer 4601",
@@ -5183,7 +5183,7 @@
       ]
    },
    {
-      "item_id":163,
+      "id":163,
       "entidad":"FLENI - SEDE BELGRANO",
       "nombre":"Fleni - Sede Belgrano",
       "direccion":"Montañeses 2325",
@@ -5220,7 +5220,7 @@
       ]
    },
    {
-      "item_id":164,
+      "id":164,
       "entidad":"INSTITUTO DE CARDIOLOGIA Y CIRUGIA CARDIOVASCULAR - FUNDACION FAVALORO (EDIFICIO CENTRAL)",
       "nombre":"Inst. De Cardiologia Y Cirugia Cardiovascular - Fundacion Favaloro (Edificio Central)",
       "direccion":"Av. Belgrano 1746",
@@ -5260,7 +5260,7 @@
       ]
    },
    {
-      "item_id":165,
+      "id":165,
       "entidad":"CENTRO DE INTERNACION E INVESTIGACION CLINICA FUNDALEU",
       "nombre":"Ctro. De Internacion E Investigacion Cl. Fundaleu",
       "direccion":"JOSE EVARISTO URIBURU 1450 / 1520",
@@ -5286,7 +5286,7 @@
       ]
    },
    {
-      "item_id":166,
+      "id":166,
       "entidad":"Hospital Aleman",
       "nombre":"Hosp. Aleman",
       "direccion":"Avenida Pueyrredón 1650",
@@ -5325,7 +5325,7 @@
       ]
    },
    {
-      "item_id":167,
+      "id":167,
       "entidad":"HOSPITAL ITALIANO DE BUENOS AIRES",
       "nombre":"Hosp. Italiano De Buenos Aires",
       "direccion":"Gascón 450",
@@ -5363,7 +5363,7 @@
       ]
    },
    {
-      "item_id":168,
+      "id":168,
       "entidad":"HOSPITAL ASOCIACION DE BENEFICENCIA HOSPITAL SIRIO LIBANES",
       "nombre":"Hosp. Asociacion De Beneficencia Hosp. Sirio Libanes",
       "direccion":"Campana 4658",
@@ -5389,7 +5389,7 @@
       ]
    },
    {
-      "item_id":169,
+      "id":169,
       "entidad":"INSTITUTO ARGENTINO DE DIAGNOSTICO Y TRATAMIENTO",
       "nombre":"Inst. Argentino De Diagnostico Y Tratamiento",
       "direccion":"Marcelo T. de Alvear 2346",
@@ -5427,7 +5427,7 @@
       ]
    },
    {
-      "item_id":170,
+      "id":170,
       "entidad":"ICBA INSTITUTO CARDIOVASCULAR DE BUENOS AIRES",
       "nombre":"Icba Inst. Cardiovascular De Buenos Aires",
       "direccion":"BLANCO ENCALADA 1543/47",
@@ -5474,7 +5474,7 @@
       ]
    },
    {
-      "item_id":171,
+      "id":171,
       "entidad":"IFER - INSTITUTO DE GINECOLOGIA Y FERTILIDAD",
       "nombre":"Ifer - Inst. De Ginecologia Y Fertilidad",
       "direccion":"Marcelo T. de Alvear 2261 7º Piso",
@@ -5496,7 +5496,7 @@
       ]
    },
    {
-      "item_id":172,
+      "id":172,
       "entidad":"INSTITUTO MEDICO DE OBSTETRICIA (I.M.O)",
       "nombre":"Inst. Med. De Obstetricia (I.M.O)",
       "direccion":"Presidente J.D. Perón 2275",
@@ -5521,7 +5521,7 @@
       ]
    },
    {
-      "item_id":173,
+      "id":173,
       "entidad":"Instituto Dupuytren de Traumatologia y Ortopedia",
       "nombre":"Inst. Dupuytren De Traumatologia Y Ortopedia",
       "direccion":"Av. Belgrano 3402 1º Piso",
@@ -5556,7 +5556,7 @@
       ]
    },
    {
-      "item_id":174,
+      "id":174,
       "entidad":"INSTITUTO QUIRURGICO DEL CALLAO",
       "nombre":"Inst. Quirurgico Del Callao",
       "direccion":"Callao  483/486 /499 / Lavalle 1790",
@@ -5578,7 +5578,7 @@
       ]
    },
    {
-      "item_id":175,
+      "id":175,
       "entidad":"Instituto Superior De Otorrinolaringologia",
       "nombre":"Inst. Superior De Otorrinolaringologia",
       "direccion":"Pasteur 740",
@@ -5607,7 +5607,7 @@
       ]
    },
    {
-      "item_id":176,
+      "id":176,
       "entidad":"Sanatorio Las Lomas",
       "nombre":"Srio. Las Lomas",
       "direccion":"Avenida Diego Carman 555",
@@ -5646,7 +5646,7 @@
       ]
    },
    {
-      "item_id":177,
+      "id":177,
       "entidad":"CLINICA LA SAGRADA FAMILIA",
       "nombre":"Cl. La Sagrada Familia",
       "direccion":"José Hernández 1642",
@@ -5687,7 +5687,7 @@
       ]
    },
    {
-      "item_id":178,
+      "id":178,
       "entidad":"Sanatorio Agote",
       "nombre":"Srio. Agote",
       "direccion":"Dr. Luis Agote 2477",
@@ -5717,7 +5717,7 @@
       ]
    },
    {
-      "item_id":179,
+      "id":179,
       "entidad":"SANATORIO ANCHORENA",
       "nombre":"Srio. Anchorena",
       "direccion":"Anchorena 1872",
@@ -5752,7 +5752,7 @@
       ]
    },
    {
-      "item_id":180,
+      "id":180,
       "entidad":"Sanatorio Colegiales",
       "nombre":"Srio. Colegiales",
       "direccion":"Conde 851",
@@ -5793,7 +5793,7 @@
       ]
    },
    {
-      "item_id":181,
+      "id":181,
       "entidad":"Sanatorio De Los Arcos",
       "nombre":"Srio. De Los Arcos",
       "direccion":"AV. JUAN B. JUSTO 909",
@@ -5826,7 +5826,7 @@
       ]
    },
    {
-      "item_id":182,
+      "id":182,
       "entidad":"SANATORIO FINOCHIETTO - OBRA SOCIAL DEL PERSONAL DE DIRECCION DE ACCION SOCIAL DE EMPRESARIOS (ASE)",
       "nombre":"Srio. Finochietto",
       "direccion":"Córdoba 2674",
@@ -5867,7 +5867,7 @@
       ]
    },
    {
-      "item_id":183,
+      "id":183,
       "entidad":"SANATORIO GUEMES",
       "nombre":"Srio. Guemes",
       "direccion":"Francisco Acuña de Figueroa 1240",
@@ -5903,7 +5903,7 @@
       ]
    },
    {
-      "item_id":184,
+      "id":184,
       "entidad":"Sanatorio Mater Dei",
       "nombre":"Srio. Mater Dei",
       "direccion":"San Martín de Tours 2952",
@@ -5946,7 +5946,7 @@
       ]
    },
    {
-      "item_id":185,
+      "id":185,
       "entidad":"SANATORIO DE LA TRINIDAD MITRE",
       "nombre":"Srio. De La Trinidad Mitre",
       "direccion":"Bartolomé Mitre 2553",
@@ -5983,7 +5983,7 @@
       ]
    },
    {
-      "item_id":186,
+      "id":186,
       "entidad":"Sanatorio Otamendi Y Miroli",
       "nombre":"Srio. Otamendi Y Miroli",
       "direccion":"Azcuénaga 870",
@@ -6016,7 +6016,7 @@
       ]
    },
    {
-      "item_id":187,
+      "id":187,
       "entidad":"Sanatorio San Jose",
       "nombre":"Srio. San Jose",
       "direccion":"Sánchez de Bustamante 1674",
@@ -6042,7 +6042,7 @@
       ]
    },
    {
-      "item_id":188,
+      "id":188,
       "entidad":"Sanatorio San Pablo",
       "nombre":"Srio. San Pablo",
       "direccion":"Alvear 1444",
@@ -6096,7 +6096,7 @@
       ]
    },
    {
-      "item_id":189,
+      "id":189,
       "entidad":"Centro Médico Trinidad Barrio Norte",
       "nombre":"Ctro. Médico Trinidad Barrio Norte",
       "direccion":"Av. Córdoba 1712",
@@ -6121,7 +6121,7 @@
       ]
    },
    {
-      "item_id":190,
+      "id":190,
       "entidad":"Centro Medico Trinidad Jockey Club",
       "nombre":"Ctro. Med. Trinidad Jockey Club",
       "direccion":"Av. Sir Alexander Fleming 590",
@@ -6146,7 +6146,7 @@
       ]
    },
    {
-      "item_id":191,
+      "id":191,
       "entidad":"CASA HOSPITAL SAN JUAN DE DIOS",
       "nombre":"Casa Hosp. San Juan De Dios",
       "direccion":"Doctor Gabriel Ardoino 714",
@@ -6196,7 +6196,7 @@
       ]
    },
    {
-      "item_id":192,
+      "id":192,
       "entidad":"Clinica y Maternidad Santa Isabel",
       "nombre":"Cl. Y Maternidad Sta. Isabel",
       "direccion":"Av. Directorio 2037",
@@ -6245,7 +6245,7 @@
       ]
    },
    {
-      "item_id":193,
+      "id":193,
       "entidad":"SANATORIO DE LA PROVIDENCIA",
       "nombre":"Srio. De La Providencia",
       "direccion":"Tucumán 1863",
@@ -6296,7 +6296,7 @@
       ]
    },
    {
-      "item_id":194,
+      "id":194,
       "entidad":"Sanatorio Juncal",
       "nombre":"Srio. Juncal",
       "direccion":"Avenida Almirante Brown 2779",
@@ -6330,7 +6330,7 @@
       ]
    },
    {
-      "item_id":195,
+      "id":195,
       "entidad":"SANATORIO PRIVADO DEL NIÑO",
       "nombre":"Srio. Priv. Del Niño",
       "direccion":"Adolfo Alsina 1519",
@@ -6360,7 +6360,7 @@
       ]
    },
    {
-      "item_id":196,
+      "id":196,
       "entidad":"SANATORIO DE LA TRINIDAD PALERMO",
       "nombre":"Srio. De La Trinidad Palermo",
       "direccion":"Cerviño 4720",
@@ -6392,7 +6392,7 @@
       ]
    },
    {
-      "item_id":197,
+      "id":197,
       "entidad":"SANATORIO DE LA TRINIDAD QUILMES",
       "nombre":"Srio. De La Trinidad Quilmes",
       "direccion":"Avenida Carlos Pellegrini 499",
@@ -6428,7 +6428,7 @@
       ]
    },
    {
-      "item_id":198,
+      "id":198,
       "entidad":"CLINICA UNIVERSITARIA ( UAI )",
       "nombre":"Cl. Universitaria ( Uai )",
       "direccion":"Portela 2967/75",
@@ -6460,7 +6460,7 @@
       ]
    },
    {
-      "item_id":199,
+      "id":199,
       "entidad":"CLINICA PRIVADA CORPORACION MEDICA GENERAL SAN MARTIN",
       "nombre":"Cl. Priv. Corporacion Medica General San Martin",
       "direccion":"Matheu N° 4023 / Consultorios Felix Ballester 2221",
@@ -6498,7 +6498,7 @@
       ]
    },
    {
-      "item_id":200,
+      "id":200,
       "entidad":"CLINICA CITY BELL",
       "nombre":"Cl. City Bell",
       "direccion":"CALLE 13 B 344",
@@ -6533,7 +6533,7 @@
       ]
    },
    {
-      "item_id":201,
+      "id":201,
       "entidad":"CENTRO DE ATENCION AMBULATORIA RETIRO (HOSPITAL BRITANICO)",
       "nombre":"Ctro. De Atencion Ambulatoria Retiro (Hosp. Britanico)",
       "direccion":"Suipacha 732",
@@ -6582,7 +6582,7 @@
       ]
    },
    {
-      "item_id":202,
+      "id":202,
       "entidad":"CENTRO DE ATENCION DEL HOSPITAL BRITANICO ( FLORIDA )",
       "nombre":"Ctro. De Atencion Del Hosp. Britanico ( Florida )",
       "direccion":"Avenida Maipu 1450",
@@ -6631,7 +6631,7 @@
       ]
    },
    {
-      "item_id":203,
+      "id":203,
       "entidad":"CENTRO DE ATENCION DEL HOSPITAL BRITANICO ( LANUS )",
       "nombre":"Ctro. De Atencion Del Hosp. Britanico ( Lanus )",
       "direccion":"Avenida Yrigoyen 4429",
@@ -6653,7 +6653,7 @@
       ]
    },
    {
-      "item_id":204,
+      "id":204,
       "entidad":"CENTRO DE ATENCION DEL HOSPITAL BRITANICO ( LOMAS DE ZAMORA )",
       "nombre":"Ctro. De Atencion Del Hosp. Britanico ( Lomas De Zamora )",
       "direccion":"Pereyra Lucena 580",
@@ -6702,7 +6702,7 @@
       ]
    },
    {
-      "item_id":205,
+      "id":205,
       "entidad":"CENTRO DE ATENCION DEL HOSPITAL BRITANICO ( QUILMES )",
       "nombre":"Ctro. De Atencion Del Hosp. Britanico ( Quilmes )",
       "direccion":"Av. Caseros 1750",
@@ -6724,7 +6724,7 @@
       ]
    },
    {
-      "item_id":206,
+      "id":206,
       "entidad":"Centro de Ojos del Sur Bonaerense Ciocchi",
       "nombre":"Ctro. De Ojos Del Sur Bonaerense Ciocchi",
       "direccion":"Sarandí 199",
@@ -6749,7 +6749,7 @@
       ]
    },
    {
-      "item_id":207,
+      "id":207,
       "entidad":"CLINICA DE LA COMUNIDAD DE ENSENADA",
       "nombre":"Cl. De La Comunidad De Ensenada",
       "direccion":"LA MERCED 383",
@@ -6779,7 +6779,7 @@
       ]
    },
    {
-      "item_id":208,
+      "id":208,
       "entidad":"Clinica Privada del Centro Pediatrica",
       "nombre":"Cl. Priv. Del Ctro. Pediatrica",
       "direccion":"Calle 12 761",
@@ -6804,7 +6804,7 @@
       ]
    },
    {
-      "item_id":209,
+      "id":209,
       "entidad":"Clinica Privada Dr. J.J. Vaccarini",
       "nombre":"Cl. Priv. Dr. J.J. Vaccarini",
       "direccion":"C. 80 570",
@@ -6829,7 +6829,7 @@
       ]
    },
    {
-      "item_id":210,
+      "id":210,
       "entidad":"CONSULTORIOS EXTERNOS DEL HOSPITAL ITALIANO ( CASEROS )",
       "nombre":"Cons. Ext. Del Hosp. Italiano ( Caseros )",
       "direccion":"Avenida San Martín 2282",
@@ -6851,7 +6851,7 @@
       ]
    },
    {
-      "item_id":211,
+      "id":211,
       "entidad":"CONSULTORIOS EXTERNOS DEL HOSPITAL ITALIANO ( LOMAS DE ZAMORA )",
       "nombre":"Cons. Ext. Del Hosp. Italiano ( Lomas De Zamora )",
       "direccion":"España 151",
@@ -6873,7 +6873,7 @@
       ]
    },
    {
-      "item_id":212,
+      "id":212,
       "entidad":"CONSULTORIOS EXTERNOS DEL HOSPITAL ITALIANO ( MORON )",
       "nombre":"Cons. Ext. Del Hosp. Italiano ( Moron )",
       "direccion":"Avenida Rivadavia 17955",
@@ -6895,7 +6895,7 @@
       ]
    },
    {
-      "item_id":213,
+      "id":213,
       "entidad":"CONSULTORIOS EXTERNOS DEL HOSPITAL ITALIANO ( SAN ISIDRO )",
       "nombre":"Cons. Ext. Del Hosp. Italiano ( San Isidro )",
       "direccion":"Avenida Centenario 635",
@@ -6917,7 +6917,7 @@
       ]
    },
    {
-      "item_id":214,
+      "id":214,
       "entidad":"CONSULTORIOS EXTERNOS DEL HOSPITAL ITALIANO ( VILLA DEL PARQUE )",
       "nombre":"Cons. Ext. Del Hosp. Italiano ( Villa Del Parque )",
       "direccion":"Cuenca 2586",
@@ -6939,7 +6939,7 @@
       ]
    },
    {
-      "item_id":215,
+      "id":215,
       "entidad":"Instituto de la Vision",
       "nombre":"Inst. De La Vision",
       "direccion":"M.T. de Alvear 2261",
@@ -6964,7 +6964,7 @@
       ]
    },
    {
-      "item_id":216,
+      "id":216,
       "entidad":"Sanatorio Carlos Miner",
       "nombre":"Srio. Carlos Miner",
       "direccion":"HIPOLITO YRIGOYEN 523",
@@ -6990,7 +6990,7 @@
       ]
    },
    {
-      "item_id":218,
+      "id":218,
       "entidad":"SWISS MEDICAL CENTER BARRIO NORTE",
       "nombre":"Swiss Medical Center Barrio Norte",
       "direccion":"AV SANTA FE 2479 PISO 2",
@@ -7012,7 +7012,7 @@
       ]
    },
    {
-      "item_id":219,
+      "id":219,
       "entidad":"SWISS MEDICAL CENTER MICROCENTRO",
       "nombre":"Swiss Medical Center Microcentro",
       "direccion":"25 DE MAYO 264",
@@ -7034,7 +7034,7 @@
       ]
    },
    {
-      "item_id":220,
+      "id":220,
       "entidad":"CENTRO DE OJOS ESTEBAN ECHEVERRIA",
       "nombre":"Ctro. De Ojos Esteban Echeverria",
       "direccion":"Leandro N. Alem 648",

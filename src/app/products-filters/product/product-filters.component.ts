@@ -50,6 +50,7 @@ export class ProductFiltersComponent implements OnInit{
   public productList : any ;
   public filterCategory : any
 
+
   constructor(
     private modalService: ModalService,
     public dialog: MatDialog,
