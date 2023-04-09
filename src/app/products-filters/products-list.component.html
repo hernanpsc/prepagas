@@ -1,12 +1,12 @@
 <!-- ============== SECTION PAGETOP ============== -->
 <section class="bg-primary py-5" id="hero">
   <div class="container">
-    <h2 class="text-white">Men's wear</h2>
-    <ol class="breadcrumb ondark mb-0">
+    <!-- <h2 class="text-white">Men's wear</h2> -->
+    <!-- <ol class="breadcrumb ondark mb-0">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
     <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
-    </ol>
+    <li class="breadcrumb-item active" aria-current="page">Data</li> -->
+    <!-- </ol> -->
   </div> <!-- container //  -->
   </section>
   <!-- ============== SECTION PAGETOP END// ============== -->
@@ -24,7 +24,7 @@
   <!-- ===== Card for sidebar filter ===== -->
   <div id="aside_filter" class="collapse card d-lg-block mb-5">
     <form [formGroup]="formFilter">
-        <article class="filter-group">
+        <article class="filter-group" hidden>
       <header class="card-header">
         <a href="#" class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside1">
         <i class="icon-control fa fa-chevron-down"></i>   Related items 
@@ -46,7 +46,7 @@
       </div> <!-- card-body.// -->
     </div> <!-- collapse.// -->
     </article> <!-- filter-group // -->
-    <article class="filter-group"> 
+    <article class="filter-group" hidden> 
       <header class="card-header">
         <a href="#" class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside1">
         <i class="icon-control fa fa-chevron-down"></i>   Clinicas 
@@ -70,7 +70,7 @@
      </ng-template>
     </article> <!-- filter-group // -->
 
-    <article class="filter-group">
+    <article class="filter-group" hidden>
     <header class="card-header ">
       <a href="#" class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside_brands">
       <i class="icon-control fa fa-chevron-down"></i>  Brands 
@@ -117,7 +117,7 @@
     </div> <!-- collapse.// -->
     </article>
   
-    <article class="filter-group">
+    <article class="filter-group" hidden>
     <header class="card-header">
       <a href="#" class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside2">
       <i class="icon-control fa fa-chevron-down"></i>  Price 
@@ -152,7 +152,7 @@
     formControlName="buscaClinica">
    </ng-multiselect-dropdown>
 
-  <article class="filter-group">
+  <article class="filter-group" hidden>
     <header class="card-header">
       <a href="#" class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside3">
       <i class="icon-control fa fa-chevron-down"></i>  Size 
@@ -194,7 +194,7 @@
 <header class="d-sm-flex align-items-center border-bottom mb-4 pb-3">
   <strong class="d-block py-2"></strong>
   <div>
-    <button type="button" class="btn" (click)="openModa('custom-modal-3')">Cotizar</button>
+    <!-- <button type="button" class="btn" (click)="openModa('custom-modal-3')">Cotizar</button> -->
   </div>
 
  
@@ -210,7 +210,7 @@
                       <option>Medife</option>
                     </select>
                   </div>
-                  <div class="col-span-6">
+                  <div class="col-span-6" hidden>
                     <label>Ordenar por &nbsp;</label>
                     <select [(ngModel)]="SortbyParam" (click)="onSortDirection()">
                       <option value="empresa">Empresa</option>
@@ -222,13 +222,14 @@
                     </button>
                    </div> 
   <div class="ms-auto ">
-    <select class="form-select d-inline-block w-auto me-1">
+    <div hidden>
+    <select class="form-select d-inline-block w-auto me-1" >
       <option value="0">Best match</option>
       <option value="1">Recommended</option>
       <option value="2">High rated</option>
       <option value="3">Randomly</option>
     </select> 
-  
+  </div>
     
     <div class="btn-group" id="view">
       <button  [class.text-primary]="view === 'list'" (click)="view = 'list';"  type="button"  class="btn btn-secondary" data-bs-toggle="tooltip" title="List view"> 
@@ -350,8 +351,8 @@
           <div >
               
         
-        <app-compara id="printable" class="child"  [productos]='compareProdList()' [clinicasVal]='compareProdClinicas(compareProdList())' [items]='compareProdClinicas(compareProdList())'>
-        </app-compara>
+        
+        <app-compara-item [productos]='compareProdList()' [clinicasVal]='compareProdClinicas(compareProdList())' [items]='compareProdClinicas(compareProdList())'></app-compara-item>
       </div>
       
         <div class="modal-footer" id="modal-footer">
@@ -368,15 +369,17 @@
         </jw-modal>
       
       
-          <app-compara-item ></app-compara-item>
-          <app-compara-select></app-compara-select>
           <ng-container *ngIf='compareProdList().length >= 1 show' >
             <div id="mybutton" >
-                <h5>Comparalos</h5>
-              <button class="feedback" mat-raised-button color="primary"
-              matBadge={{compareLength}} matBadgePosition="after" matBadgeColor="accent" (click)="openModal('custom-modal-2')">
-              <app-compara-select [comparar]='compareProdList()' ></app-compara-select>
-            </button>
+              <ng-container *ngIf='compareProdList().length >= 2 show' >
+           <button  class="btn btn-primary"  (click)="openModal('custom-modal-2')">comparalos</button>
+                </ng-container>
+              <!-- <button class="feedback" mat-raised-button color="primary"
+              matBadge={{compareLength}} matBadgePosition="after" matBadgeColor="accent"> -->
+                <app-compara-select [product]='compareProdList()'></app-compara-select>
+                
+               
+            <!-- </button> -->
               </div>
             </ng-container>
 

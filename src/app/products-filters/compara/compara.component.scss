@@ -377,3 +377,43 @@ table {
     left: 0;
   }
 }
+// .container {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   background-color: #f2f2f2;
+//   padding: 10px;
+//   margin: 0 auto;
+//   max-width: 800px;
+//   display: flex;
+//   align-items: center;
+//   border-bottom: 1px solid #ccc;
+// }
+// .container h2 {
+//   font-size: 1.5rem;
+//   margin: 0;
+// }
+
+.container .close-btn {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #555;
+}
+.box {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 20%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.box h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-size: 16px;
+  line-height: 1.5;
+}

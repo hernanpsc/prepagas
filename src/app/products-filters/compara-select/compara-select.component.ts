@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {ServcioRetronoPrecioService} from '../../services/servcio-retrono-precio.service';
-
+import { ServicioDeCompararService } from '../../services/servicio-de-comparar.service';
 
 @Component({
   selector: 'app-compara-select',
@@ -8,11 +7,17 @@ import {ServcioRetronoPrecioService} from '../../services/servcio-retrono-precio
   styleUrls: ['./compara-select.component.css']
 })
 export class ComparaSelectComponent implements OnInit {
-  @Input() comparar:any;
+  @Input() product: any[];
 
-  constructor() { }
+  constructor(private ServicioComparar: ServicioDeCompararService) {}
 
   ngOnInit(): void {
+    console.log(this.product)
   }
+  toggleCompare(product: any) {
+    product.compare = !product.compare;
+  }
+  
+  }
+  
 
-}

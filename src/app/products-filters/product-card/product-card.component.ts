@@ -46,7 +46,7 @@ export class ProductCardComponent implements OnInit{
   searchKey:string ="";
 
   dialogRef: MatDialogRef<MasDetallesComponent>;
-  public comparar:any = 'Comparar';
+  public comparar:any;
   public productList : any ;
   public filterCategory : any
 
@@ -60,21 +60,18 @@ export class ProductCardComponent implements OnInit{
 
   }
 
-  @ViewChild("compararButon") compararButon: ElementRef; //https://bit.ly/Replacement_ElementRef
+  // @ViewChild("compararButon") compararButon: ElementRef;
+   //https://bit.ly/Replacement_ElementRef
    toggleCompare() {
   
     this.product.compare = !this.product.compare;
-    // this.compararButon.nativeElement.innerHTML = "REMOVER";
-    if(this.product.compare)  
-    this.comparar  = "Remover";
-  else
-    this.comparar = "Comparar";
+
 }
   
-agregarcomparar(){
-  console.log(this.comparar)
-  this.ServicioComparar.servicioComparar.emit({data:this.comparar});
-  }
+// agregarcomparar(){
+//   console.log(this.comparar)
+//   this.ServicioComparar.servicioComparar.emit({data:this.comparar});
+//   }
 
   ngOnInit(): void {
     

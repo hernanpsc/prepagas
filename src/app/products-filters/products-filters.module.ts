@@ -26,7 +26,8 @@ import { ComparaSelectComponent } from './compara-select/compara-select.componen
 import {MatTabsModule} from '@angular/material/tabs';
 import { ProductosComponent } from './productos/productos.component';
 import { FormsModule } from '@angular/forms';
-
+import { PdfViewerModule} from 'ng2-pdf-viewer';
+import { PdfViewerComponent} from './pdf-viewer/pdf-viewer.component';
 import { BusinessComponent } from './business/business.component';
 // import { HeroFormComponent } from '../hero-form/hero-form.component';
 import { FiltroPipe } from './pipes/filtro.pipe';
@@ -62,7 +63,8 @@ const routes: Routes = [
     ProductosComponent,
     BusinessComponent,
     FiltroPipe,
-    FiltroClinica
+    FiltroClinica,
+    PdfViewerComponent
   ],
   imports: [
     CommonModule,
@@ -74,6 +76,7 @@ const routes: Routes = [
     HomeModule,
     MatTabsModule,
     FormsModule,
+    PdfViewerModule,
     NgMultiSelectDropDownModule.forRoot(),
     RouterModule.forChild(routes)],
 

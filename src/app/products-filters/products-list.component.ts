@@ -71,7 +71,7 @@ export class ProductsListComponent implements OnInit {
   ShowFilter = false;
   limitSelection = false;
   formFilter: FormGroup;
-  
+  planeSelect = this.compareProdList();
   dropdownSettings: {};
   dropdownClinica = [];
   clinicaSettings:IDropdownSettings = {};
@@ -98,11 +98,14 @@ export class ProductsListComponent implements OnInit {
       });
     }
     compareProdList() {
+      // console.log(this.servicioComparar.compareList)
       this.compareLength = this.products.filter(p => p.compare).length;
-      this.compareList = this.products.filter(p => p.compare);
-      var planesSel = this.products.filter(p => p.compare);
-     
-      return planesSel
+      // this.compareList = this.products.filter(p => p.compare);
+      // console.log(this.compareList)
+      // var planesSel = this.products.filter(p => p.compare);
+      this.servicioComparar.compareList = this.products.filter(p => p.compare)
+      // console.log(this.servicioComparar.compareList)
+      return this.servicioComparar.compareList
       
     }
     compareCliListVal() {
@@ -159,13 +162,13 @@ for ( let x in clinicas ){
     clinicas[x].planesSeleccionados.push(products[i].name);
     
   }
-  obj['nombre'] = clinicas[x].nombre;
+  obj['nombre'] = clinicas[x].entity;
   obj['barrio'] = clinicas[x].barrio;
   for ( let i = 0 ; i < products.length ; i++){
    
       let id = products[i].id
      if (clinicas[x].cartillas.includes(id) == true  ){
-      console.log(clinicas[x].cliPased)
+      // console.log(clinicas[x].cliPased)
 
       
       
@@ -180,7 +183,7 @@ for ( let x in clinicas ){
 
 
   data.push(obj);
-  console.log(data)
+  // console.log(data)
 }  
 //  daa = [
 //   { hospital: 'Hospital Sirio Libanés', service1: 'ok', service2: 'ok' },
@@ -193,7 +196,7 @@ for ( let x in clinicas ){
 
 var planesElegidos =[]
 for ( let  n in clinicas ){
-       clinicas[n].valida.unshift(clinicas[n]['nombre']);
+       clinicas[n].valida.unshift(clinicas[n]['entity']);
        clinicas[n].planesSeleccionados.unshift('Nombre de Entidad');
        planesElegidos = clinicas[n].planesSeleccionados
 } 
@@ -215,14 +218,15 @@ let clinicasOestePased = clOeste.map(planes => planes.cliPased);
 let clinicasSurPased = clSur.map(planes => planes.cliPased);
 let clinicasLaPlataPased = clLaPlata.map(planes => planes.cliPased);
 
-console.log(clinicasCabaPased);
-console.log(clinicasNortePased);
-console.log(clinicasOestePased);
-console.log(clinicasSurPased);
-console.log(clinicasLaPlataPased);
+// console.log(clinicasCabaPased);
+// console.log(clinicasNortePased);
+// console.log(clinicasOestePased);
+// console.log(clinicasSurPased);
+// console.log(clinicasLaPlataPased);
 
 
-console.log(clinicasCaba); return [clinicasCabaPased,clinicasNortePased,clinicasOestePased,clinicasSurPased,clinicasLaPlataPased, planesElegidos,clinicasCaba,clinicasMorte,clinicasOeste,clinicasSur,clinicasLaPlata];
+// console.log(clinicasCaba); 
+return [clinicasCabaPased,clinicasNortePased,clinicasOestePased,clinicasSurPased,clinicasLaPlataPased, planesElegidos,clinicasCaba,clinicasMorte,clinicasOeste,clinicasSur,clinicasLaPlata];
     }
    
  
@@ -247,7 +251,7 @@ addClinicas(){
  let products = this.products;
 
  for ( let i = 0; i<products.length;i++){
-  console.log(this.products[i].id)
+  // console.log(this.products[i].id)
   let clinicPlan = []
 
   for ( let x in this.clinicas ){
@@ -264,8 +268,8 @@ addClinicas(){
 
 onItemSelect(selectedClinica: any){
   console.log('onItemSelect', selectedClinica);
-   console.log(this.tempArrayShow);
-   console.log(this.tempArrayHide);
+  //  console.log(this.tempArrayShow);
+  //  console.log(this.tempArrayHide);
   
   
 
@@ -274,7 +278,7 @@ onItemSelect(selectedClinica: any){
 
   this.products = this.secureProducts;
 
-console.log(this.products)
+// console.log(this.products)
   var seleccion = this.selectedClinica
   for( let i=0;i<seleccion.length;i++){
     console.log(seleccion[i])
@@ -310,11 +314,11 @@ if ( validation == clinicas_seleccionadas.length){
 }};
 }
 
-console.log(planes)
+// console.log(planes)
 this.tempArrayHide  = planes.filter((e:any)=> e.validacionclinica != "show");
 this.tempArrayShow  = planes.filter((e:any)=> e.validacionclinica == "show");
-console.log(this.tempArrayShow)
-console.log(this.tempArrayHide)
+// console.log(this.tempArrayShow)
+// console.log(this.tempArrayHide)
 this.products = this.tempArrayShow
 this.newArray = this.tempArrayShow.concat(this.tempArrayHide);
 
@@ -322,9 +326,9 @@ this.newArray = this.tempArrayShow.concat(this.tempArrayHide);
 }   
 
 onItemDeSelect(item: any){
-  console.log('onItemSelect', item);
-   console.log(this.tempArrayShow);
-   console.log(this.tempArrayHide);
+  // console.log('onItemSelect', item);
+  //  console.log(this.tempArrayShow);
+  //  console.log(this.tempArrayHide);
   
  
 
@@ -336,7 +340,7 @@ onItemDeSelect(item: any){
 console.log(this.products)
   var seleccion = this.selectedClinica
   for( let i=0;i<seleccion.length;i++){
-    console.log(seleccion[i])
+    // console.log(seleccion[i])
   }
   var planes = this.products;
   this.showandHide = this.products;
@@ -354,7 +358,7 @@ if ( seleccion.length = 0 ){
 for (let j in planes  ) {
   var clinicas = planes[j].clinicas 
 var clinicas_del_plan = clinicas.map(function (clinicas_list, index, array) {
-  return clinicas_list.nombre; 
+  return clinicas_list.entity; 
 });
 var validation = 0
 clinicas_seleccionadas.forEach( item => { 
@@ -466,13 +470,13 @@ console.log(procuctosSeguros);
 
 });
 
- this.deselctComparar.disparadorDePrecio.subscribe(deselct=>{
-   console.log('Recibiendo data en home...',deselct);
-   console.log(deselct);
-   console.log(this.products);
- var compareProdList = desectItem(this.compareProdList,deselct);
- console.log(compareProdList);
- });
+//  this.servicioComparar.servicioComparar.subscribe(deselct=>{
+//    console.log('Recibiendo data en home...',deselct);
+//    console.log(deselct);
+//    console.log(this.products);
+//  var compareProdList = desectItem(this.compareProdList,deselct);
+//  console.log(compareProdList);
+//  });
 
   this.dropdownClinica = this.clinicas
     this.selectedClinica = [];
@@ -482,7 +486,7 @@ console.log(procuctosSeguros);
       idField: 'item_id',
       textField: 'nombre',
       allowSearchFilter: true,
-      searchPlaceholderText: 'Type here to search',
+      searchPlaceholderText: 'Busca por nombre',
       limitSelection	:3
     };     
   }
@@ -540,9 +544,7 @@ handleLimitSelection() {
   else
     this.buttonName = "Show";
 }
-deleteMsg(i) {
-  
-}
+
 
 checkboxArray: any = [
   {

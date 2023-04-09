@@ -61,9 +61,10 @@ export class ProductFiltersComponent implements OnInit{
 
   }
 
-  @ViewChild("compararButon") compararButon: ElementRef; //https://bit.ly/Replacement_ElementRef
+  // @ViewChild("compararButon") compararButon: ElementRef;
+   //https://bit.ly/Replacement_ElementRef
    toggleCompare() {
-  
+  console.log(this.product)
     this.product.compare = !this.product.compare;
     // this.compararButon.nativeElement.innerHTML = "REMOVER";
     if(this.product.compare)  
@@ -78,6 +79,7 @@ agregarcomparar(){
   }
 
   ngOnInit(): void {
+  console.log(this.product)
     
   }
 

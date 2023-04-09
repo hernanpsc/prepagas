@@ -1,10 +1,4 @@
-
-
-    
-<ul>
-    <li *ngFor="let compara of comparar" >
-        <div>
-            {{compara?.name}}
-        </div>
-    </li>
-</ul>
+<div class="product-item " *ngFor="let item of product">
+    <img class="product-image" [src]="item.images[1]" [alt]="item.name"><i class="close-icon"  (click)="toggleCompare(item)">x</i>
+    <!-- <button (click)="toggleCompare(item)">Compare</button></div> -->
+  

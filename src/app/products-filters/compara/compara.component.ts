@@ -24,10 +24,23 @@ export class ComparaComponent implements OnInit {
  constructor(
 
   private modalService: ModalService,
- ) { 
+ ) {   }
 
+ showDiv1 = false;
+showDiv2 = true;
 
+filter(value: string) {
+  if (value === 'basico') {
+    this.showDiv1 = true;
+    this.showDiv2 = false;
+  } else if (value === 'intermedio') {
+    this.showDiv1 = false;
+    this.showDiv2 = true;
+  } else {
+    this.showDiv1 = false;
+    this.showDiv2 = false;
   }
+}
 
   onPrint() {
     window.print();  

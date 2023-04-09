@@ -5,6 +5,7 @@ import { EventType } from '@angular/router';
   providedIn: 'root'
 })
 export class ServicioDeCompararService {
+  compareList: any[] = [];
   @Output() servicioComparar: EventEmitter <any> = new EventEmitter;
   constructor() { }
 }

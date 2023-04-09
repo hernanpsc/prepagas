@@ -1,0 +1,273 @@
+
+                           
+                  <div class="grid grid-cols-12 gap-8" >
+                   
+                    <div class="col-span-12 md:col-span-7 xl:col-span-8 border">
+                      
+                      <div class="ll-content mt-12">
+                        <div class="flex flex-wrap">
+                        <div class="w-full">
+                      
+
+  <nav class="flex flex-col sm:flex-row">
+    <img class="btn box focus:outline-none" src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="" (click)="filter('')" >
+    <img class="btn box focus:outline-none" src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="" (click)="filter('basico')">
+    <img class="btn box focus:outline-none" src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" (click)="filter('intermedio')">
+  </nav>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
+
+                <mat-dialog-content >
+          <div class="header">
+            <span class="close-btn">&times;</span>
+        </div>  
+  <!-- <div class="container">
+    <div class="box" (click)="filter('')">
+      <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+      <h6>Todos</h6>
+    </div>
+    <div class="box" (click)="filter('basico')">
+      <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
+      <h6>Basico</h6>
+    </div>
+    <div class="box" (click)="filter('intermedio')">
+      <img src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt="">
+      <h6>Intermedio</h6>
+    </div>
+    <div class="box" (click)="filter('superior')">
+      <img src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50" alt="">
+      <h6>Superior</h6>
+    </div>
+  </div> -->
+  <mat-tab-group animationDuration="100ms" id="mat-tab-group" *ngIf="showDiv2">
+  
+    <p >Clínicas, Sanatorios y Hospitales Privados</p>
+    <mat-tab label="CABA">
+      <div class="overflow-x-auto w-full" style="overflow-y: visible; height: 100%">
+        <table class="table w-full">
+          <thead class="sticky-header">
+            <tr>
+              <th>Nombre</th>
+              <th>Barrio/Loc.</th>
+              <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
+                <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+                  <th>{{ prop.key }}</th>
+                </ng-container>
+              </ng-container>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let item of clinicasVal[0]; let i = index">
+              <tr>
+                <td matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}</td>
+                <td matTooltip="{{ item.barrio }}" matTooltipShowDelay="500">{{ item.barrio }}</td>
+                <ng-container *ngFor="let prop of item | keyvalue">
+                  <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+                    <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
+                      <ng-container *ngIf="prop.value == 'ok'">
+                        <i class="fa fa-check"></i>
+                      </ng-container>
+                      <ng-container *ngIf="prop.value == 'no'">
+                        <i class="fa fa-times fa-times-circle text-red-500"></i>
+                      </ng-container>
+                    </td>
+                  </ng-container>
+                </ng-container>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </div>
+    </mat-tab>
+    
+    
+    
+    
+    
+    <mat-tab label="GBA Norte">
+       <div class="overflow-x-auto w-full" style="overflow-y: visible; height: 100%">
+        <table class="table w-full">
+          <thead class="sticky-header">
+            <tr>
+              <th>Nombre</th>
+              <th>Barrio/Loc.</th>
+              <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
+                <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+                  <th>{{ prop.key }}</th>
+                </ng-container>
+              </ng-container>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let item of clinicasVal[1]; let i = index">
+              <tr>
+                <td matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}</td>
+                <td matTooltip="{{ item.barrio }}" matTooltipShowDelay="500">{{ item.barrio }}</td>
+                <ng-container *ngFor="let prop of item | keyvalue">
+                  <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+                    <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
+                      <ng-container *ngIf="prop.value == 'ok'">
+                        <i class="fa fa-check"></i>
+                      </ng-container>
+                      <ng-container *ngIf="prop.value == 'no'">
+                        <i class="fa fa-times fa-times-circle text-red-500"></i>
+                      </ng-container>
+                    </td>
+                  </ng-container>
+                </ng-container>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </div>
+  </mat-tab>
+  
+  <mat-tab label="GBA Oeste">
+     <div class="overflow-x-auto w-full" style="overflow-y: visible; height: 100%">
+      <table class="table w-full">
+        <thead class="sticky-header">
+          <tr>
+            <th>Nombre</th>
+            <th>Barrio/Loc.</th>
+            <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
+              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+                <th>{{ prop.key }}</th>
+              </ng-container>
+            </ng-container>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let item of clinicasVal[2]; let i = index">
+            <tr>
+              <td matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}</td>
+              <td matTooltip="{{ item.barrio }}" matTooltipShowDelay="500">{{ item.barrio }}</td>
+              <ng-container *ngFor="let prop of item | keyvalue">
+                <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+                  <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
+                    <ng-container *ngIf="prop.value == 'ok'">
+                      <i class="fa fa-check"></i>
+                    </ng-container>
+                    <ng-container *ngIf="prop.value == 'no'">
+                      <i class="fa fa-times fa-times-circle text-red-500"></i>
+                    </ng-container>
+                  </td>
+                </ng-container>
+              </ng-container>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </mat-tab>
+  <mat-tab label="GBA Sur">
+     <div class="overflow-x-auto w-full" style="overflow-y: visible; height: 100%">
+      <table class="table w-full">
+        <thead class="sticky-header">
+          <tr>
+            <th>Nombre</th>
+            <th>Barrio/Loc.</th>
+            <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
+              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+                <th>{{ prop.key }}</th>
+              </ng-container>
+            </ng-container>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let item of clinicasVal[3]; let i = index">
+            <tr>
+              <td matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}</td>
+              <td matTooltip="{{ item.barrio }}" matTooltipShowDelay="500">{{ item.barrio }}</td>
+              <ng-container *ngFor="let prop of item | keyvalue">
+                <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+                  <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
+                    <ng-container *ngIf="prop.value == 'ok'">
+                      <i class="fa fa-check"></i>
+                    </ng-container>
+                    <ng-container *ngIf="prop.value == 'no'">
+                      <i class="fa fa-times fa-times-circle text-red-500"></i>
+                    </ng-container>
+                  </td>
+                </ng-container>
+              </ng-container>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </mat-tab>
+  
+  <mat-tab label="La Plata">
+     <div class="overflow-x-auto w-full" style="overflow-y: visible; height: 100%">
+      <table class="table w-full">
+        <thead class="sticky-header">
+          <tr>
+            <th>Nombre</th>
+            <th>Barrio/Loc.</th>
+            <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
+              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+                <th>{{ prop.key }}</th>
+              </ng-container>
+            </ng-container>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let item of clinicasVal[4]; let i = index">
+            <tr>
+              <td matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}</td>
+              <td matTooltip="{{ item.barrio }}" matTooltipShowDelay="500">{{ item.barrio }}</td>
+              <ng-container *ngFor="let prop of item | keyvalue">
+                <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+                  <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
+                    <ng-container *ngIf="prop.value == 'ok'">
+                      <i class="fa fa-check"></i>
+                    </ng-container>
+                    <ng-container *ngIf="prop.value == 'no'">
+                      <i class="fa fa-times fa-times-circle text-red-500"></i>
+                    </ng-container>
+                  </td>
+                </ng-container>
+              </ng-container>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </mat-tab>
+  </mat-tab-group>
+ 
+
+
+   
+
+                    <div class="col-span-12 md:col-span-5 xl:col-span-4">
+                      <div class="border">
+
+
+                        <div class="border-b">
+                        
+                          <div class="font-medium text-lg mt-3 text-gray-400 tracking-wider">
+                            <!-- Price -->
+                  
+                            <div class="wistia_responsive_padding" style="padding:100.0% 0 0 0;position:relative;">
+                              <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;" >
+                                <iframe src="https://fast.wistia.net/embed/iframe/uxji6fv9k6?seo=false&videoFoam=true" title="4B. Descuento 15% Debito_POST Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" msallowfullscreen width="100%" height="100%"></iframe>
+                              </div>
+                              <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;" >
+                              </div>
+
+                             
+                            </div>
+                            <script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>                      
+                           
+                          </div>
+
+                          
+                          
+
+                         
+                        </div>
+
+                        
+                        
+                
+                

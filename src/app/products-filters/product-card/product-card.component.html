@@ -12,7 +12,7 @@
     
     <!-- <button (click)="openDialog(product)" class="btn btn-outline-primary btn-sm mt-2" type="button">Detalles</button> -->
           <button (click)='toggleCompare()' class="btn btn-outline-primary btn-sm mt-2" type="button">
-            {{comparar}}
+            {{product.compare ? "Remover" : "Comparar"}}
           </button>
           <a href="#" class="btn btn-block btn-primary">Add to cart </a>
     <a href="#" class="btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
