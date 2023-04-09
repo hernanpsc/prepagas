@@ -1,6 +1,10 @@
 import { Component, Inject, OnInit, VERSION } from '@angular/core';
 import {MatDialogModule, MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {DialogData} from '../../home/home-products/home-products.component';
+import {DialogData1} from '../../products-filters/product/product-filters.component';
+import {DialogData2} from '../../products-filters/product-card/product-card.component';
+
+
 
 @Component({
   selector: 'app-pdf-viewer',
@@ -14,15 +18,33 @@ import {DialogData} from '../../home/home-products/home-products.component';
 
 })
 export class PdfViewerComponent implements OnInit {
-
-  constructor(public dialogRef: MatDialogRef<PdfViewerComponent>,@Inject(MAT_DIALOG_DATA) public data: DialogData,) { }
-
+  public pdfSrc : string;
+  constructor(public dialogRef: MatDialogRef<PdfViewerComponent>,@Inject(MAT_DIALOG_DATA) public data: DialogData,
+  public dialogRef1: MatDialogRef<PdfViewerComponent>,@Inject(MAT_DIALOG_DATA) public data1: DialogData1,
+  public dialogRef2: MatDialogRef<PdfViewerComponent>,@Inject(MAT_DIALOG_DATA) public data2: DialogData2,) { }
+ 
   ngOnInit() {
-    console.log(this.data.name),
-    console.log(this.data.folleto),
-    console.log("pdfSrc")
+    if(this.data){
+      console.log(this.data.name);
+    console.log(this.data.folleto);
+    console.log("pdfSrc");
+    this.pdfSrc = this.data.folleto;
+    }else if (this.data1){
+      console.log(this.data1.name);
+    console.log(this.data1.folleto);
+    console.log("pdfSrc");
+    this.pdfSrc = this.data1.folleto;
+    }else if(this.data2){    
+    console.log(this.data2.name);
+    console.log(this.data2.folleto);
+    console.log("pdfSrc");
+    this.pdfSrc = this.data2.folleto;
   }
-  pdfSrc = this.data.folleto;
+    
+    
+  }
+  
+  
 }
 
 

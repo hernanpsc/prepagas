@@ -17,7 +17,7 @@
       "hijosSolos":false,
       "name":"SanCor 700A",
       "empresa":"SanCor Salud",
-      "folleto":"assets/archivos/700.pdf",
+      "folleto":["assets/archivos/sancorsalud/beneficios/700.pdf","sancorsalud","700.pdf"],
       "images":[
          "assets/images/images/card-header/sancorsalud.png","assets/images/images/credenciales/ssf700.png",
          "assets/images/planes_sancor/Feed 700A-sm(680x664).jpg"
@@ -52,7 +52,7 @@
          "assets/images/planes_sancor/Feed 800V-sm(680x664).jpg"
       ],
       "empresa":"SanCor Salud",
-      "folleto":"assets/archivos/800.pdf",
+      "folleto":["assets/archivos/sancorsalud/beneficios/800.pdf"],
       "BeneficioCard":[
          "Plan sin Coseguros"
       ],
@@ -78,7 +78,7 @@
       "hijosSolos":false,
       "name":"SanCor 1000B",
       "empresa":"SanCor Salud",
-      "folleto":"assets/archivos/1000.pdf",
+      "folleto":["assets/archivos/sancorsalud/beneficios/1000.pdf"],
       "logo":"assets/images/card-header/sancorsalud.png",
       "images":[
          "assets/images/images/card-header/sancorsalud.png","assets/images/images/credenciales/ss1000b.png",
@@ -109,7 +109,7 @@
       "hijosSolos":false,
       "name":"SanCor 1500B",
       "empresa":"SanCor Salud",
-      "folleto":"assets/archivos/1500.pdf",
+      "folleto":["assets/archivos/sancorsalud/beneficios/1500.pdf"],
       "logo":"assets/images/card-header/sancorsalud.png",
       "images":[
          "assets/images/images/card-header/sancorsalud.png","assets/images/images/credenciales/ss1500b.png",
@@ -140,7 +140,7 @@
       "hijosSolos":false,
       "name":"SanCor 3000B",
       "empresa":"SanCor Salud",
-      "folleto":"assets/archivos/3000.pdf",
+      "folleto":["assets/archivos/sancorsalud/beneficios/3000.pdf"],
       "logo":"assets/images/card-header/sancorsalud.png",
       "images":[
          "assets/images/images/card-header/sancorsalud.png","assets/images/images/credenciales/ss3000b.png",
@@ -176,7 +176,7 @@
          "assets/images/images/card-header/sancorsalud.png","assets/images/images/credenciales/ss3500.png",
          "assets/images/planes_sancor/Feed 3500-sm(680x664).jpg"
       ],
-      "folleto":"assets/archivos/3500.pdf",
+      "folleto":["assets/archivos/sancorsalud/beneficios/3500.pdf"],
       "BeneficioCard":[
          "Plan sin Coseguros"
       ],
@@ -202,7 +202,7 @@
       "hijosSolos":false,
       "name":"SanCor 4000",
       "empresa":"SanCor Salud",
-      "folleto":"assets/archivos/4000.pdf",
+      "folleto":["assets/archivos/sancorsalud/beneficios/4000.pdf"],
       "logo":"assets/images/card-header/sancorsalud.png",
       "images":[
          "assets/images/images/card-header/sancorsalud.png","assets/images/images/credenciales/ss4000.png",
@@ -233,7 +233,7 @@
       "hijosSolos":false,
       "name":"SanCor 4500",
       "empresa":"SanCor Salud",
-      "folleto":"assets/archivos/4500.pdf",
+      "folleto":["assets/archivos/sancorsalud/beneficios/4500.pdf"],
       "logo":"assets/images/card-header/sancorsalud.png",
       "images":[
          "assets/images/images/card-header/sancorsalud.png","assets/images/images/credenciales/ss4500.png",
@@ -264,7 +264,7 @@
       "hijosSolos":false,
       "name":"Exclusive_5000 ",
       "empresa":"SanCor Salud",
-      "folleto":"assets/archivos/5000.pdf",
+      "folleto":["assets/archivos/sancorsalud/beneficios/5000.pdf"],
       "logo":"assets/images/card-header/sancorsalud.png",
       "images":[
          "assets/images/images/card-header/sancorsalud.png","assets/images/images/credenciales/ss5000.png",
@@ -293,7 +293,7 @@
       "hijosSolos":false,
       "name":"Exclusive_6000",
       "empresa":"SanCor Salud",
-      "folleto":"assets/archivos/6000.pdf",
+      "folleto":["assets/archivos/sancorsalud/beneficios/6000.pdf"],
       "logo":"assets/images/card-header/sancorsalud.png",
       "images":[
          "assets/images/images/card-header/sancorsalud.png","assets/images/images/credenciales/ss6000.png",
@@ -328,7 +328,7 @@
       "name":"AMBU1",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/AMBU1.pdf",
+      "folleto":["assets/archivos/swissmedical/beneficios/AMBU1.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png"
       ],
@@ -354,7 +354,7 @@
       "name":"AMBU2",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/AMBU2.pdf",
+      "folleto":["assets/archivos/swissmedical/beneficios/AMBU2.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png"
       ],
@@ -380,7 +380,7 @@
       "name":"INTER1",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/INTER1.pdf",
+      "folleto":["assets/archivos/swissmedical/beneficios/INTER1.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png"
       ],
@@ -406,7 +406,7 @@
       "name":"S1",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"/assets/archivos/folletosSM/S1-01.2023.pdf",
+      "folleto":["/assets/archivos/beneficiosSM/S1-01.2023.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png","assets/images/images/credenciales/sms1.gif"
       ],
@@ -432,7 +432,7 @@
       "name":"S2",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"/assets/archivos/folletosSM/S2-01.2023.pdf",
+      "folleto":["/assets/archivos/beneficiosSM/S2-01.2023.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png","assets/images/images/credenciales/sms2.gif"
       ],
@@ -458,7 +458,7 @@
       "name":"SMG01",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/SMG01-01.2023.pdf",
+      "folleto":["assets/archivos/swissmedical/beneficios/SMG01-01.2023.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png","assets/images/images/credenciales/smsmg01.gif"      ],
       "sistema":"cerrado",
@@ -483,7 +483,7 @@
       "name":"SMG02",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/SMG02-01.2023.pdf",
+      "folleto":["assets/archivos/swissmedical/beneficios/SMG02-01.2023.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png","assets/images/images/credenciales/smsmg02.gif"
       ],
@@ -509,7 +509,7 @@
       "name":"SMG10",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/SMG10-01.2023.pdf",
+      "folleto":["assets/archivos/swissmedical/beneficios/SMG10-01.2023.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png","assets/images/images/credenciales/smsmg10.gif"
       ],
@@ -535,7 +535,7 @@
       "name":"SMG20",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/SMG20-01.2023.pdf",
+      "folleto":["assets/archivos/swissmedical/beneficios/SMG20-01.2023.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png","assets/images/images/credenciales/smsmg20.gif"
       ],
@@ -561,7 +561,7 @@
       "name":"SMG30",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/SMG30-01.2023.pdf",
+      "folleto":["assets/archivos/swissmedical/beneficios/SMG30-01.2023.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png","assets/images/images/credenciales/smsmg30.gif"
       ],
@@ -587,7 +587,7 @@
       "name":"SMG40",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/SMG40-01.2023.pdf",
+      "folleto":["assets/archivos/swissmedical/beneficios/SMG40-01.2023.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png","assets/images/images/credenciales/smsmg40.gif"
       ],
@@ -613,7 +613,7 @@
       "name":"SMG50",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/SMG50-01.2023.pdf",
+      "folleto":["assets/archivos/swissmedical/beneficios/SMG50-01.2023.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png","assets/images/images/credenciales/smsmg50.gif"
       ],
@@ -639,7 +639,7 @@
       "name":"SMG60",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/SMG60-01.2023.pdf",
+      "folleto":["assets/archivos/swissmedical/beneficios/SMG60-01.2023.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png","assets/images/images/credenciales/smsmg60.gif"
       ],
@@ -665,7 +665,7 @@
       "name":"SMG70",
       "id_empresa": 2,
       "empresa":"Swiss Medical",
-      "folleto":"assets/archivos/folletosSM/SMG70-01.2023.pdf",
+      "folleto":["assets/archivos/swissmedical/beneficios/SMG70-01.2023.pdf"],
       "images":[
          "/assets/images/images/card-header/swissmedical.png","assets/images/images/credenciales/smsmg70.gif"
       ],

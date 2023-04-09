@@ -3,6 +3,10 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialo
 import {DialogData} from '../home/home-products/home-products.component';
 import { ActivatedRoute, Router, RouterLinkActive, Routes } from '@angular/router';
 
+import {DialogData1} from '../products-filters/product/product-filters.component';
+import {DialogData2} from '../products-filters/product-card/product-card.component';
+
+
 
 
 
@@ -15,10 +19,10 @@ import { ActivatedRoute, Router, RouterLinkActive, Routes } from '@angular/route
 export class MasDetallesComponent implements OnInit, OnDestroy {
   selectedIndex;
   matTabLabels = ['Clinicas y Sanatorios','Folleto'];
- 
-
+  product: any;
+  public pdfSrc : string;
+folleto: string;
   navLinks = [];
-
   selectedIndexChange(val: number) {
     this.selectedIndex = val;
     console.log('this is selected index: ', val);
@@ -37,6 +41,8 @@ export class MasDetallesComponent implements OnInit, OnDestroy {
     private router: Router,
     private changeDetector: ChangeDetectorRef,
        @Inject(MAT_DIALOG_DATA) public data: DialogData,
+       @Inject(MAT_DIALOG_DATA) public data1: DialogData1,
+       @Inject(MAT_DIALOG_DATA) public data2: DialogData2,
    ) { 
    }
 
@@ -53,13 +59,47 @@ export class MasDetallesComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    console.log(this.data.id),
+    if(this.data){
+      console.log(this.data.id),
     console.log(this.data.name),
     console.log(this.data.price),
     console.log(this.data.category),
     console.log(this.data.rating),
     console.log(this.data.clinicas),
     console.log(this.data.producto),
+    console.log("pdfSrc");
+    this.product= this.data.producto;
+    this.pdfSrc = this.data.folleto[0];
+    this.folleto= 'assets/archivos/' + this.product.folleto[2] + '/beneficios/' + this.product.folleto[2]
+    }else if (this.data1){
+      console.log(this.data1.id),
+    console.log(this.data1.name),
+    console.log(this.data1.price),
+    console.log(this.data1.category),
+    console.log(this.data1.rating),
+    console.log(this.data1.clinicas),
+    console.log(this.data1.producto),
+    console.log("pdfSrc");
+    this.product= this.data1.producto;
+    this.folleto= 'assets/archivos/' + this.product.folleto[2] + '/beneficios/' + this.product.folleto[2]
+    this.pdfSrc = this.data1.folleto[0];
+    }else if(this.data2){    
+      console.log(this.data2.id),
+      console.log(this.data2.name),
+      console.log(this.data2.price),
+      console.log(this.data2.category),
+      console.log(this.data2.rating),
+      console.log(this.data2.clinicas),
+      console.log(this.data2.producto),
+    this.product= this.data2.producto;
+    this.folleto= 'assets/archivos/' + this.product.folleto[2] + '/beneficios/' + this.product.folleto[2]
+    this.pdfSrc = this.data2.folleto[0];
+  }
+    
+    
+    
+
+    
     this.navLinks = (
       this.route.routeConfig && this.route.routeConfig.children ?
         this.buildNavItems(this.route.routeConfig.children) :

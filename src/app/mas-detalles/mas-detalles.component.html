@@ -1,11 +1,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet">
 
                 <mat-dialog-content >
-          <div class="header">
-            <button mat-icon-button style="float: right;" class="close-button" [mat-dialog-close]="true">
-            <mat-icon  class="close-icon" color="warn">X</mat-icon>
-          </button>
-        </div>  
+                  <i class="close-icon"  [mat-dialog-close]="true">x</i>
                            
                   <div class="grid grid-cols-12 gap-8" >
                    
@@ -42,6 +38,11 @@
       <mat-tab label="Folleto">
         <div class="container">
           <app-pdf-viewer></app-pdf-viewer>
+          <a href={{folleto}};
+class="btn"
+target="_blank"
+download={{folleto}}
+>Download Now</a>
         </div>
       </mat-tab>
 </mat-tab-group>   

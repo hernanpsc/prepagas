@@ -7,7 +7,7 @@ import { CartService } from '../../services/cart.service';
 import { ApiService } from '../../services/api.service';
 
 
-export interface DialogData {
+export interface DialogData2 {
   name: string;
   price: Number;
   id:any;
