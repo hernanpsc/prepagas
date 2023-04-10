@@ -1,13 +1,13 @@
 .product-item {
    
-    max-width: 10%; /* set the maximum width of the image to 100% of its parent div */
+    max-width: 20%; /* set the maximum width of the image to 100% of its parent div */
     max-height: 13%; /* set the maximum height of the image to 100% of its parent div */
 
     /* border: 1px solid #ccc;  */
     /* add a border for visual separation */
     /* display: inline-block; */
      /* make the divs display inline */
-    margin-top: 10px; 
+    margin-bottom: 10px; 
     /* add some margin to the right of each div */
     display: flex;
     flex-wrap: wrap;

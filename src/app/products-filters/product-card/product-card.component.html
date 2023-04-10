@@ -6,16 +6,16 @@
   </div>
   <figcaption class="info-wrap border-top">
     <div class="price-wrap">
-    <strong class="price">${{product.precio}}</strong>
+    <strong class="price">{{product.name}}</strong>
     </div> <!-- price-wrap.// -->
-    <p class="title mb-2">Summer New Men's Denim Jeans Shorts </p>
+    <p class="title mb-2"></p>
     
     <button (click)="openDialog(product)" class="btn btn-outline-primary btn-sm mt-2" type="button">Detalles</button>
           <button (click)='toggleCompare()' class="btn btn-outline-primary btn-sm mt-2" type="button">
             {{product.compare ? "Remover" : "Comparar"}}
           </button>
           <!-- <a href="#" class="btn btn-block btn-primary">Add to cart </a> -->
-    <a href="#" class="btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a>
+    <!-- <a href="#" class="btn btn-light btn-icon"> <i class="fa fa-heart"></i> </a> -->
   </figcaption>
   </figure>
 </div> <!-- col end.// -->
