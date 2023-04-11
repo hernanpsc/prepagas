@@ -8,10 +8,9 @@
         <thead class="sticky-header">
           <tr>
             <th>Nombre</th>
-            <th>Barrio/Loc.</th>
-            <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
+             <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
               <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
-                <th>{{ prop.key }}</th>
+                <th >{{ prop.key }}</th>
               </ng-container>
             </ng-container>
           </tr>
@@ -19,16 +18,16 @@
         <tbody>
           <ng-container *ngFor="let item of clinicasVal[0]; let i = index">
             <tr>
-              <td matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}</td>
-              <td matTooltip="{{ item.barrio }}" matTooltipShowDelay="500">{{ item.barrio }}</td>
+              <td  class="nombre-col" matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}<br><span  class="badge badge-ghost nombre-col-barrio">{{item.barrio}}</span></td>
+        
               <ng-container *ngFor="let prop of item | keyvalue">
-                <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
-                  <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
+                <ng-container *ngIf="prop.key !== 'nombre' &&  prop.key !== 'barrio'" >
+                  <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}"  style="text-align:center">
                     <ng-container *ngIf="prop.value == 'ok'">
-                      <i class="fa fa-check"></i>
+                      <i  class="fa fa-check"></i>
                     </ng-container>
                     <ng-container *ngIf="prop.value == 'no'">
-                      <i class="fa fa-times fa-times-circle text-red-500"></i>
+                      <i  class="fa fa-times fa-times-circle text-red-500"></i>
                     </ng-container>
                   </td>
                 </ng-container>
@@ -45,15 +44,14 @@
   
   
   <mat-tab label="GBA Norte">
-     <div class="overflow-x-auto w-full" style="overflow-y: visible; height: 100%">
+    <div class="overflow-x-auto w-full" style="overflow-y: visible; height: 100%">
       <table class="table w-full">
         <thead class="sticky-header">
           <tr>
             <th>Nombre</th>
-            <th>Barrio/Loc.</th>
-            <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
-              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
-                <th>{{ prop.key }}</th>
+             <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
+              <ng-container *ngIf="prop.key !== 'nombre'">
+                <th >{{ prop.key }}</th>
               </ng-container>
             </ng-container>
           </tr>
@@ -61,10 +59,10 @@
         <tbody>
           <ng-container *ngFor="let item of clinicasVal[1]; let i = index">
             <tr>
-              <td matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}</td>
-              <td matTooltip="{{ item.barrio }}" matTooltipShowDelay="500">{{ item.barrio }}</td>
+              <td  class="nombre-col" matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}<span class="badge badge-ghost badge-sm">{{item.barrio}}</span></td>
+        
               <ng-container *ngFor="let prop of item | keyvalue">
-                <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+                <ng-container *ngIf="prop.key !== 'nombre'">
                   <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
                     <ng-container *ngIf="prop.value == 'ok'">
                       <i class="fa fa-check"></i>
@@ -83,15 +81,14 @@
 </mat-tab>
 
 <mat-tab label="GBA Oeste">
-   <div class="overflow-x-auto w-full" style="overflow-y: visible; height: 100%">
+  <div class="overflow-x-auto w-full" style="overflow-y: visible; height: 100%">
     <table class="table w-full">
       <thead class="sticky-header">
         <tr>
           <th>Nombre</th>
-          <th>Barrio/Loc.</th>
-          <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
-            <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
-              <th>{{ prop.key }}</th>
+           <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
+            <ng-container *ngIf="prop.key !== 'nombre'">
+              <th >{{ prop.key }}</th>
             </ng-container>
           </ng-container>
         </tr>
@@ -99,10 +96,10 @@
       <tbody>
         <ng-container *ngFor="let item of clinicasVal[2]; let i = index">
           <tr>
-            <td matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}</td>
-            <td matTooltip="{{ item.barrio }}" matTooltipShowDelay="500">{{ item.barrio }}</td>
+            <td  class="nombre-col" matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}<span class="badge badge-ghost badge-sm">{{item.barrio}}</span></td>
+      
             <ng-container *ngFor="let prop of item | keyvalue">
-              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+              <ng-container *ngIf="prop.key !== 'nombre'">
                 <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
                   <ng-container *ngIf="prop.value == 'ok'">
                     <i class="fa fa-check"></i>
@@ -120,15 +117,14 @@
   </div>
 </mat-tab>
 <mat-tab label="GBA Sur">
-   <div class="overflow-x-auto w-full" style="overflow-y: visible; height: 100%">
+  <div class="overflow-x-auto w-full" style="overflow-y: visible; height: 100%">
     <table class="table w-full">
       <thead class="sticky-header">
         <tr>
           <th>Nombre</th>
-          <th>Barrio/Loc.</th>
-          <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
-            <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
-              <th>{{ prop.key }}</th>
+           <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
+            <ng-container *ngIf="prop.key !== 'nombre'">
+              <th >{{ prop.key }}</th>
             </ng-container>
           </ng-container>
         </tr>
@@ -136,10 +132,10 @@
       <tbody>
         <ng-container *ngFor="let item of clinicasVal[3]; let i = index">
           <tr>
-            <td matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}</td>
-            <td matTooltip="{{ item.barrio }}" matTooltipShowDelay="500">{{ item.barrio }}</td>
+            <td  class="nombre-col" matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}<span class="badge badge-ghost badge-sm">{{item.barrio}}</span></td>
+      
             <ng-container *ngFor="let prop of item | keyvalue">
-              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+              <ng-container *ngIf="prop.key !== 'nombre'">
                 <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
                   <ng-container *ngIf="prop.value == 'ok'">
                     <i class="fa fa-check"></i>
@@ -158,15 +154,14 @@
 </mat-tab>
 
 <mat-tab label="La Plata">
-   <div class="overflow-x-auto w-full" style="overflow-y: visible; height: 100%">
+  <div class="overflow-x-auto w-full" style="overflow-y: visible; height: 100%">
     <table class="table w-full">
       <thead class="sticky-header">
         <tr>
           <th>Nombre</th>
-          <th>Barrio/Loc.</th>
-          <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
-            <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
-              <th>{{ prop.key }}</th>
+           <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
+            <ng-container *ngIf="prop.key !== 'nombre'">
+              <th >{{ prop.key }}</th>
             </ng-container>
           </ng-container>
         </tr>
@@ -174,10 +169,10 @@
       <tbody>
         <ng-container *ngFor="let item of clinicasVal[4]; let i = index">
           <tr>
-            <td matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}</td>
-            <td matTooltip="{{ item.barrio }}" matTooltipShowDelay="500">{{ item.barrio }}</td>
+            <td  class="nombre-col" matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}<span class="badge badge-ghost badge-sm">{{item.barrio}}</span></td>
+      
             <ng-container *ngFor="let prop of item | keyvalue">
-              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
+              <ng-container *ngIf="prop.key !== 'nombre'">
                 <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
                   <ng-container *ngIf="prop.value == 'ok'">
                     <i class="fa fa-check"></i>
