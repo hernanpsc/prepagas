@@ -259,7 +259,7 @@ function grupoFamiliar(age0, age1, kids) {
 	    //	<!-----------------------Bucle SANCOR start------------------------>							
 
 			 		for (j in valor_plan_sancor) {
-						
+						console.log(valor_plan_sancor[j])
 						let otrosBenPrecios = [{"col_1": 1,"SSPRO": 125,"SSOD": 283,"SSAC": 67,"SUF": 28,"CS": 600},{"col_1": 2,"SSPRO": 218,"SSOD": 566,"SSAC": 134,"SUF": 56,"CS": 1200},{"col_1": 3,"SSPRO": 333,"SSOD": 566,"SSAC": 201,"SUF": 84,"CS": 1800}, {"col_1": 4,"SSPRO": 442,"SSOD": 566,"SSAC": 268,"SUF": 112,"CS": 2400}, {"col_1": 5,"SSPRO": 553,"SSOD": 566,"SSAC": 335,"SUF": 140,"CS": 3000}, {"col_1": 6,"SSPRO": 661,"SSOD": 566,"SSAC": 402,"SUF": 168,"CS": 3600}];
 						let cuotaSocial = grupoFam * 600;
 						let segVidaPrecio = [{"col_1": '18 A 45',"col_2": 441},{"col_1": '46 A 54',"col_2": 686},{"col_1": '55 A 59',"col_2": 686}];
@@ -281,6 +281,8 @@ function grupoFamiliar(age0, age1, kids) {
 						let arrPlan = [];
 						let todosPrecios = [];
 				        let empresaPlan = [j][0];
+						console.log(empresaPlan);
+
 						let empresa = empresaPlan.substring(0, 6);
 						let plan_nombre = empresaPlan.substring(6);
 						let plan_gen = empresaPlan.substring(6, 9);
@@ -289,6 +291,7 @@ function grupoFamiliar(age0, age1, kids) {
 						let bonAfinidad = 0;
 
 						function adPlan(planName, valor_plan_sancor) {
+							
 							arrPlan.push(planName);
 							todosPrecios.push(valor_plan_sancor);					 
                         }
@@ -589,7 +592,7 @@ function grupoFamiliar(age0, age1, kids) {
 
 		for ( let i=0; i<array2.length;i++){
 			console.log('Pasada numero ' + j + 'del array1'  );
-			if ( array1[j].name == array2[i].name ){	
+			if ( array1[j].id == array2[i].id ){	
 				console.log('Pasada numero ' + j + ' sobre el array2');
 				console.log(array1[j]);
 				console.log(array2[i]);

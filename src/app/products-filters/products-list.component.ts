@@ -461,7 +461,7 @@ closeButon() {
  var products = addProp(this.products,data);
  console.log(products);
  
- });this.retornarService.disparadorDePrecio.subscribe(data=>{
+});this.retornarService.disparadorDePrecio.subscribe(data=>{
   console.log('Recibiendo data en home...',data);
   console.log(data)
   console.log(this.secureProducts)
@@ -470,13 +470,13 @@ console.log(procuctosSeguros);
 
 });
 
-//  this.servicioComparar.servicioComparar.subscribe(deselct=>{
-//    console.log('Recibiendo data en home...',deselct);
-//    console.log(deselct);
-//    console.log(this.products);
-//  var compareProdList = desectItem(this.compareProdList,deselct);
-//  console.log(compareProdList);
-//  });
+ this.servicioComparar.servicioComparar.subscribe(deselct=>{
+   console.log('Recibiendo data en home...',deselct);
+   console.log(deselct);
+   console.log(this.products);
+ var compareProdList = desectItem(this.compareProdList,deselct);
+ console.log(compareProdList);
+ });
 
   this.dropdownClinica = this.clinicas
     this.selectedClinica = [];

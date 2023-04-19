@@ -1,6 +1,6 @@
 [
    {
-     "id": 211,
+     "id": "0211",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -24,7 +24,7 @@
      "clinicas": []
    },
    {
-     "id": 212,
+     "id": "0212",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -48,7 +48,7 @@
      "clinicas": []
    },
    {
-     "id": 213,
+     "id": "0213",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -72,7 +72,7 @@
      "clinicas": []
    },
    {
-     "id": 214,
+     "id": "0214",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -96,7 +96,7 @@
      "clinicas": []
    },
    {
-     "id": 215,
+     "id": "0215",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -120,7 +120,7 @@
      "clinicas": []
    },
    {
-     "id": 216,
+     "id": "0216",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -144,7 +144,7 @@
      "clinicas": []
    },
    {
-     "id": 217,
+     "id": "0217",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -168,7 +168,7 @@
      "clinicas": []
    },
    {
-     "id": 218,
+     "id": "0218",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -192,7 +192,7 @@
      "clinicas": []
    },
    {
-     "id": 219,
+     "id": "0219",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -216,7 +216,7 @@
      "clinicas": []
    },
    {
-     "id": 220,
+     "id": "0220",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -240,7 +240,7 @@
      "clinicas": []
    },
    {
-     "id": 221,
+     "id": "0221",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -264,7 +264,7 @@
      "clinicas": []
    },
    {
-     "id": 101,
+     "id": "0101",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -289,7 +289,57 @@
      "clinicas": []
    },
    {
-     "id": 102,
+    "id": "0102",
+    "price": 0,
+    "rating": 0,
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "1000B c/copagos",
+    "empresa": "SanCor Salud",
+    "folleto": [
+      "assets/archivos/sancorsalud/beneficios/1000.pdf"
+    ],
+    "images": [
+      "assets/images/images/card-header/sancorsalud.png",
+      "assets/images/images/credenciales/ss1000b.png",
+      "assets/images/planes_sancor/Feed 1000B-sm(680x664).jpg"
+    ],
+    "beneficios": [],
+    "clinicas": []
+  },
+  {
+    "id": "0103",
+    "price": 0,
+    "rating": 0,
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "1500B c/copagos",
+    "empresa": "SanCor Salud",
+    "folleto": [
+      "assets/archivos/sancorsalud/beneficios/1500.pdf"
+    ],
+    "images": [
+      "assets/images/images/card-header/sancorsalud.png",
+      "assets/images/images/credenciales/ss1500b.png",
+      "assets/images/planes_sancor/Feed 1500B-sm(680x664).jpg"
+    ],
+    "beneficios": [],
+    "clinicas": []
+  },
+   {
+     "id": "0104",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -313,8 +363,9 @@
      "beneficios": [],
      "clinicas": []
    },
+   
    {
-     "id": 103,
+     "id": "0105",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -339,7 +390,7 @@
      "clinicas": []
    },
    {
-     "id": 104,
+     "id": "0106",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -364,7 +415,7 @@
      "clinicas": []
    },
    {
-     "id": 105,
+     "id": "0107",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -389,7 +440,7 @@
      "clinicas": []
    },
    {
-     "id": 106,
+     "id": "0108",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -414,7 +465,7 @@
      "clinicas": []
    },
    {
-     "id": 107,
+     "id": "0109",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -439,7 +490,7 @@
      "clinicas": []
    },
    {
-     "id": 108,
+     "id": "0110",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -464,7 +515,7 @@
      "clinicas": []
    },
    {
-     "id": 109,
+     "id": "0111",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -489,7 +540,7 @@
      "clinicas": []
    },
    {
-     "id": 110,
+     "id": "0112",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -514,7 +565,7 @@
      "clinicas": []
    },
    {
-     "id": 301,
+     "id": "0301",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -537,7 +588,7 @@
      "clinicas": []
    },
    {
-     "id": 302,
+     "id": "0302",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -560,7 +611,7 @@
      "clinicas": []
    },
    {
-     "id": 303,
+     "id": "0303",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -583,7 +634,7 @@
      "clinicas": []
    },
    {
-     "id": 304,
+     "id": "0304",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -606,7 +657,7 @@
      "clinicas": []
    },
    {
-     "id": 305,
+     "id": "0305",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -629,7 +680,7 @@
      "clinicas": []
    },
    {
-     "id": 306,
+     "id": "0306",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -652,7 +703,7 @@
      "clinicas": []
    },
    {
-     "id": 307,
+     "id": "0307",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -675,7 +726,7 @@
      "clinicas": []
    },
    {
-     "id": 308,
+     "id": "0308",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -698,7 +749,7 @@
      "clinicas": []
    },
    {
-     "id": 309,
+     "id": "0309",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -721,7 +772,7 @@
      "clinicas": []
    },
    {
-     "id": 310,
+     "id": "0310",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -744,7 +795,7 @@
      "clinicas": []
    },
    {
-     "id": 311,
+     "id": "0311",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -767,7 +818,7 @@
      "clinicas": []
    },
    {
-     "id": 312,
+     "id": "0312",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -790,7 +841,7 @@
      "clinicas": []
    },
    {
-     "id": 313,
+     "id": "0313",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -813,7 +864,7 @@
      "clinicas": []
    },
    {
-     "id": 314,
+     "id": "0314",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -836,7 +887,7 @@
      "clinicas": []
    },
    {
-     "id": 315,
+     "id": "0315",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -859,7 +910,7 @@
      "clinicas": []
    },
    {
-     "id": 316,
+     "id": "0316",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -882,7 +933,7 @@
      "clinicas": []
    },
    {
-     "id": 317,
+     "id": "0317",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -905,7 +956,7 @@
      "clinicas": []
    },
    {
-     "id": 318,
+     "id": "0318",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -928,7 +979,7 @@
      "clinicas": []
    },
    {
-     "id": 319,
+     "id": "0319",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -951,7 +1002,7 @@
      "clinicas": []
    },
    {
-     "id": 320,
+     "id": "0320",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -974,7 +1025,7 @@
      "clinicas": []
    },
    {
-     "id": 321,
+     "id": "0321",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -997,7 +1048,7 @@
      "clinicas": []
    },
    {
-     "id": 322,
+     "id": "0322",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1020,7 +1071,7 @@
      "clinicas": []
    },
    {
-     "id": 323,
+     "id": "0323",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1043,7 +1094,7 @@
      "clinicas": []
    },
    {
-     "id": 324,
+     "id": "0324",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1066,7 +1117,7 @@
      "clinicas": []
    },
    {
-     "id": 325,
+     "id": "0325",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1089,7 +1140,7 @@
      "clinicas": []
    },
    {
-     "id": 326,
+     "id": "0326",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1112,7 +1163,7 @@
      "clinicas": []
    },
    {
-     "id": 327,
+     "id": "0327",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1135,7 +1186,7 @@
      "clinicas": []
    },
    {
-     "id": 328,
+     "id": "0328",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1158,7 +1209,7 @@
      "clinicas": []
    },
    {
-     "id": 400,
+     "id": "0400",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1182,7 +1233,7 @@
      "clinicas": []
    },
    {
-     "id": 401,
+     "id": "0401",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1206,7 +1257,7 @@
      "clinicas": []
    },
    {
-     "id": 402,
+     "id": "0402",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1230,7 +1281,7 @@
      "clinicas": []
    },
    {
-     "id": 403,
+     "id": "0403",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1254,7 +1305,7 @@
      "clinicas": []
    },
    {
-     "id": 404,
+     "id": "0404",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1278,7 +1329,7 @@
      "clinicas": []
    },
    {
-     "id": 405,
+     "id": "0405",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1302,7 +1353,7 @@
      "clinicas": []
    },
    {
-     "id": 406,
+     "id": "0406",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1326,7 +1377,7 @@
      "clinicas": []
    },
    {
-     "id": 501,
+     "id": "0501",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1347,7 +1398,7 @@
      "clinicas": []
    },
    {
-     "id": 502,
+     "id": "0502",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1368,7 +1419,7 @@
      "clinicas": []
    },
    {
-     "id": 503,
+     "id": "0503",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1389,7 +1440,7 @@
      "clinicas": []
    },
    {
-     "id": 601,
+     "id": "0601",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1412,7 +1463,7 @@
      "clinicas": []
    },
    {
-     "id": 602,
+     "id": "0602",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1435,7 +1486,7 @@
      "clinicas": []
    },
    {
-     "id": 603,
+     "id": "0603",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1458,7 +1509,7 @@
      "clinicas": []
    },
    {
-     "id": 604,
+     "id": "0604",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1481,7 +1532,7 @@
      "clinicas": []
    },
    {
-     "id": 701,
+     "id": "0701",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1504,7 +1555,7 @@
      "clinicas": []
    },
    {
-     "id": 702,
+     "id": "0702",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1527,7 +1578,7 @@
      "clinicas": []
    },
    {
-     "id": 703,
+     "id": "0703",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1550,7 +1601,7 @@
      "clinicas": []
    },
    {
-     "id": 704,
+     "id": "0704",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1573,7 +1624,7 @@
      "clinicas": []
    },
    {
-     "id": 705,
+     "id": "0705",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1596,7 +1647,7 @@
      "clinicas": []
    },
    {
-     "id": 706,
+     "id": "0706",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1619,7 +1670,7 @@
      "clinicas": []
    },
    {
-     "id": 801,
+     "id": "0801",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1640,7 +1691,7 @@
      "clinicas": []
    },
    {
-     "id": 802,
+     "id": "0802",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1661,7 +1712,7 @@
      "clinicas": []
    },
    {
-     "id": 803,
+     "id": "0803",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1682,7 +1733,7 @@
      "clinicas": []
    },
    {
-     "id": 804,
+     "id": "0804",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1703,7 +1754,7 @@
      "clinicas": []
    },
    {
-     "id": 805,
+     "id": "0805",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1724,7 +1775,7 @@
      "clinicas": []
    },
    {
-     "id": 901,
+     "id": "0901",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1747,7 +1798,7 @@
      "clinicas": []
    },
    {
-     "id": 902,
+     "id": "0902",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1770,7 +1821,7 @@
      "clinicas": []
    },
    {
-     "id": 904,
+     "id": "0904",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1793,7 +1844,7 @@
      "clinicas": []
    },
    {
-     "id": 905,
+     "id": "0905",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1816,7 +1867,7 @@
      "clinicas": []
    },
    {
-     "id": 1001,
+     "id": "1001",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1839,7 +1890,7 @@
      "clinicas": []
    },
    {
-     "id": 2001,
+     "id": "2001",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1860,7 +1911,7 @@
      "clinicas": []
    },
    {
-     "id": 2002,
+     "id": "2002",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1881,7 +1932,7 @@
      "clinicas": []
    },
    {
-     "id": 2003,
+     "id": "2003",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1902,7 +1953,7 @@
      "clinicas": []
    },
    {
-     "id": 2004,
+     "id": "2004",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1923,7 +1974,7 @@
      "clinicas": []
    },
    {
-     "id": 2005,
+     "id": "2005",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1944,7 +1995,7 @@
      "clinicas": []
    },
    {
-     "id": 3001,
+     "id": "3001",
      "price": 0,
      "rating": 0,
      "copagos": false,
@@ -1967,7 +2018,7 @@
      "clinicas": []
    },
    {
-     "id": 3001,
+     "id": "3001",
      "price": 0,
      "rating": 0,
      "copagos": false,

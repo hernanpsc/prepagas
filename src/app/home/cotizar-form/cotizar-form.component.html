@@ -15,7 +15,7 @@
   
   
   
-  <div class="form-group" hidden>
+  <div class="form-group">
     <label for="">Elegir Prepaga</label>
     <select class="form-control" formControlName="empresa_prepaga">
       <option selected value=0>Todas</option>
@@ -155,7 +155,7 @@
 
     <!------------------------------suprasDIV start------------------------------>
 
-    <div class="form-check form-check-inline" hidden>
+    <div class="form-check form-check-inline">
       <br>
       <label class="form-check-label" for="supras">Agregar Supras</label>
       <input class="form-check-input" type="checkbox" formControlName="supras">
@@ -167,7 +167,7 @@
 
     <!------------------------------segvidaDIV start------------------------------>
 
-    <div id="segurosVidaDiv" hidden>
+    <div id="segurosVidaDiv">
       <p>Seguro de Vida : </p>
       <div class="form-check form-check-inline">
 
@@ -185,7 +185,7 @@
 
   
 
-  <div formGroupName="personalData" *ngIf="tipoField.value!=''" hidden>
+  <div formGroupName="personalData" *ngIf="tipoField.value!=''">
     <mat-form-field appearance="fill">
       <mat-label>Nombre: {{ nameField.value}}</mat-label>
         <input matInput type="text" formControlName="name"/>
@@ -196,7 +196,7 @@
     
     <br>
 
-    <mat-form-field class="example-full-width" appearance="fill" hidden>
+    <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Email: </mat-label>
       <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
       <mat-error *ngIf="emailField.hasError('email') && !emailField.hasError('required')">
@@ -207,7 +207,7 @@
       </mat-error>
     </mat-form-field>
     <br>
-    <mat-form-field class="example-full-width" appearance="fill" hidden>
+    <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Celular:</mat-label>
       <span matPrefix>+54 9 &nbsp;</span>
       <input type="tel" matInput placeholder="555-555-1234" formControlName="phone">

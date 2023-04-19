@@ -92,17 +92,17 @@ private buildForm(){
     supras: [false],
     segvida: [false],
     segvida1: [false],
-    region: ['']
-    // personalData: this.formBuilder.group({
-      // name: ['',[Validators.required, Validators.maxLength(10),Validators.pattern(/^[a-zA-Z\s]*$/)]],
-      // email: ['',[Validators.required,Validators.email]],
-      // phone: ['',Validators.required],
-      // region: [''],
+    region: [''],
+    personalData: this.formBuilder.group({
+      name: ['',[Validators.required, Validators.maxLength(10),Validators.pattern(/^[a-zA-Z\s]*$/)]],
+      email: ['',[Validators.required,Validators.email]],
+      phone: ['',Validators.required],
+      region: [''],
       // name: [''],
       // email: [''],
       // phone: [''],
       // region: [''],
-    // })
+    })
     
   });
 
@@ -223,18 +223,12 @@ let valor_Omint = valorOmint(edad2, numHijos, precio_titular_Omint, precio_conyu
 // let precio_titular_Omint = removeEmpty(precios_omint[edadID1OMINT]);
 // let precio_conyuge_Omint = removeEmpty(precios_omint[edadID2OMINT]);
 // let precio_hijo1_Omint = removeEmpty(precios_omint[hijoIdOMINT]);
-// let precio_hijo2_Omint = removeEmpty(rprecios_omint[hijo2IdOMINT]);
+// let precio_hijo2_Omint = removeEmpty(precios_omint[hijo2IdOMINT]);
 
 // <! -----------------------------VALOR PRECIO OMINT END---------------------------------------------------->
 
-
-
-
-
 this.preciosToHome.push(valorSanCor);
-
 // this.preciosToHome.push(valor_Premedic);
-
 let pre = JSON.stringify(planes);
 let prec = JSON.parse(pre);
 const preciosTodos = valorSanCor.concat(valor_Premedic);
