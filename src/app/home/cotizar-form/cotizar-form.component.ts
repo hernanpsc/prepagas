@@ -1,11 +1,11 @@
 import { Options } from '@angular-slider/ngx-slider';
 import { Component, OnInit, Input } from '@angular/core';
-import {FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
+import {Validators, FormGroup, FormBuilder } from '@angular/forms';
 import * as sancor from '../../shared/data/sancor.json';
 import * as premedic from '../../shared/data/premedic.json';
 import * as galeno from '../../shared/data/galeno.json';
 import * as omint from '../../shared/data/omint.json';
-import {ServcioRetronoPrecioService} from '../../services/servcio-retrono-precio.service';
+import {ServcioRetornoPrecioService} from '../../services/servcio-retorno-precio.service';
 import * as planes from '../../../../public/products.json';
 
 
@@ -32,9 +32,6 @@ declare var productIdOmint: any;
 })
 export class CotizarFormComponent implements OnInit {
    
-  // preciosToHome:[];
-
-
   checkedmon: boolean;
   checkedaf: boolean;
   checkedsupras: boolean;
@@ -59,7 +56,7 @@ preciosToHome=[];
 
  constructor(
   private formBuilder: FormBuilder,
-  private retornarService: ServcioRetronoPrecioService
+  private retornarService: ServcioRetornoPrecioService
   ) { 
     this.buildForm();
 
@@ -121,125 +118,10 @@ save(event){
     this.formCotizar.markAllAsTouched();
   };
 
-  let edad1 = this.formCotizar.value.edad_1;
-  let edad2 = this.formCotizar.value.edad_2;
-  let kids =  this.formCotizar.value.numkids; 
-  // funcion1();
+  
 
- let grupo = grupoFamiliar(edad1, edad2, kids);
- let num_adultos = grupo[0]; //checked
- 
- let numhijo1 = grupo[1]; //checked
-
- let numhijo2 = grupo[2]; //checked
- 
- let numHijos = grupo[3]; //checked
-
- let numhijos = grupo[3]; //checked
-
- let gen = grupo[4]; //checked
-
- let grupoFam = grupo[5];
-
- let tipoAsoc = this.formCotizar.value.tipo;
-
- let tipoIngreso = this.formCotizar.value.tipo;
- let monoAdicional = this.formCotizar.value.monoadic;
- let cantAport = this.formCotizar.value.cantAport;
- let sueldo = this.formCotizar.value.sueldo;
- let segVida1 = this.formCotizar.value.segvida;
- let segVida2 = this.formCotizar.value.segvida1;
- let supras = this.formCotizar.value.supras;
- let Tipo_de_Dato = this.formCotizar.value.aporteOS;
- let afinidadCheck = this.formCotizar.value.afinidad;
- let bonifAf = this.formCotizar.value.bonAfinidad;
- let prepaga = this.formCotizar.value.empresa_prepaga;
- let tipoAsociadoSanCor = tipoAsociado (tipoIngreso,grupoFam,cantAport);
- 
- if (tipoIngreso == "M" || tipoIngreso == "D" && monoAdicional == true) {
-  if (cantAport > grupoFam) {
-      alert("El número de aportantes no puede ser mayor a los integrantes del grupo familiar. Calcularemos con la cantidad máxima");
-      cantAport = grupoFam
-  };
-}
-
-let idSancor = productID(edad1, tipoAsoc, gen, 'titular', numHijos);
-let edadID1 = 'sancor'+ idSancor[0]; 
-let edadID2 = 'sancor'+ productID(edad2, tipoAsoc, gen, 'conyuge', numHijos)[1]; 
-
-let hijoId = 'sancor'+ idSancor[2];
-let hijo2Id = 'sancor'+ idSancor[3];
-let edadIdGaleno = 'galeno'+productIdGaleno(edad1, edad2, tipoAsoc, numHijos);
-let edadIdPremedic = 'premedic'+productIdPremedic(edad1, edad2, tipoAsoc, numHijos);
-
-let hijoIdmenor1preme = 'premedic'+tipoAsoc + 'AD-1anio';
-let hijoIdmenor25preme = 'premedic'+tipoAsoc + 'AD-25';
-let idOmint = productIdOmint(edad1, tipoAsoc, 'titular');
-let edadID1OMINT = 'omint'+ idOmint[0];
-let edadID2OMINT = 'omint'+productIdOmint(edad2, tipoAsoc, 'conyuge')[1];
-let hijoIdOMINT = 'omint'+ idOmint[2];
-let hijo2IdOMINT = 'omint'+ idOmint[3];
-let precios_omint = omint;
-let precios_sancor = sancor;
-let precios_galeno = galeno;
-
-
-
-// <! -----------------------------VALOR PRECIO SANCOR START---------------------------------------------------->
-let precio1Hijo = precios_sancor[hijoId]
-let precio2Hijo = precios_sancor[hijo2Id];    
-let precioTitular = precios_sancor[edadID1];
-let preciosConyuge = conyuge(edad2);
-let valorSanCor = valorSancorSalud(edad2,kids, precio1Hijo,precio2Hijo,precioTitular,preciosConyuge,numhijo2,tipoAsociadoSanCor,Tipo_de_Dato,sueldo,cantAport,grupoFam,segVida1,segVida2,supras,afinidadCheck,bonifAf,gen );
-console.log(valorSanCor);
-function conyuge(edad){
-  if (edad>17){ precios_sancor[edadID2];
-  } else {''}
-};
-// <! -----------------------------VALOR PRECIO SANCOR END-------------------------------------------------------->
-
-// <! -----------------------------VALOR PRECIO PREMEDIC START---------------------------------------------------->
-let precios_premedic = premedic;
-let valorAdultosPremedic = precios_premedic[edadIdPremedic];
-let preciohm1 = precios_premedic[hijoIdmenor1preme];
-let preciohm25 = precios_premedic[hijoIdmenor25preme];
-let valor_Premedic = valorPremedic(edad2, kids, valorAdultosPremedic, preciohm25, preciohm1, edadIdPremedic,afinidadCheck,bonifAf,tipoIngreso);
-console.log(valor_Premedic);
-// <! -----------------------------VALOR PRECIO PREMEDIC END----------------------------------------------------->
-let preciosDetodos =  [valorSanCor,valor_Premedic];
-// <! -----------------------------VALOR PRECIO GALENO START----------------------------------------------------->
-let valorGaleno = precios_galeno[edadIdGaleno];
-
-// <! -----------------------------VALOR PRECIO GALENO END----------------------------------------------------->
-
-// <! -----------------------------VALOR PRECIO OMINT START------------------------------------------------------>
-
-let precio_titular_Omint= precios_omint[edadID1OMINT];
-let precio_conyuge_Omint = precios_omint[edadID2OMINT];
-let precio_hijo1_Omint = precios_omint[hijoIdOMINT];
-let precio_hijo2_Omint = precios_omint[hijo2IdOMINT] ;
-let valor_Omint = valorOmint(edad2, numHijos, precio_titular_Omint, precio_conyuge_Omint, precio_hijo1_Omint, precio_hijo2_Omint, edadID1OMINT);
-
-// let precio_titular_Omint = removeEmpty(precios_omint[edadID1OMINT]);
-// let precio_conyuge_Omint = removeEmpty(precios_omint[edadID2OMINT]);
-// let precio_hijo1_Omint = removeEmpty(precios_omint[hijoIdOMINT]);
-// let precio_hijo2_Omint = removeEmpty(precios_omint[hijo2IdOMINT]);
-
-// <! -----------------------------VALOR PRECIO OMINT END---------------------------------------------------->
-
-this.preciosToHome.push(valorSanCor);
-// this.preciosToHome.push(valor_Premedic);
-let pre = JSON.stringify(planes);
-let prec = JSON.parse(pre);
-const preciosTodos = valorSanCor.concat(valor_Premedic);
- 
-console.log(preciosTodos);
-
-// agregarPrecio(this.preciosToHome,planes);
-// const preciosPlanes = JSON.stringify(valorSanCor)
-
-this.retornarService.disparadorDePrecio.emit(preciosTodos);
-console.log('Enviando datos...',preciosTodos);
+this.retornarService.disparadorDePrecio.emit(this.formCotizar);
+console.log('Enviando datos...',this.formCotizar);
 
 }
 
@@ -264,7 +146,6 @@ ngOnInit()
   }
   onChanges(): void {
     this.formCotizar.get('grupo').valueChanges.subscribe(val => {
-  // this.formattedMessage = `My name is ${val}.`;
 });
   }
 

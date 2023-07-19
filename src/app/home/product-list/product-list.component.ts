@@ -1,7 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { productsDB } from '../../shared/data/products';
 import { PlanesService } from '../../services/planes.service';
-import {ServcioRetronoPrecioService} from '../../services/servcio-retrono-precio.service';
+import {ServcioRetornoPrecioService} from '../../services/servcio-retorno-precio.service';
 import * as planes from '../../../../public/products-copy.json';
 
 import { ActivatedRoute, Router } from '@angular/router';
@@ -61,7 +61,7 @@ loading$: Observable<boolean>;
     private modalService: ModalService,
     private productsService: ProductsFiltersService,
     private productsQuery: ProductsFiltersQuery,
-    private retornarService: ServcioRetronoPrecioService) {}
+    private retornarService: ServcioRetornoPrecioService) {}
 
   public productosActualizados:Array<any> = []
   compareProdList() {

@@ -7,7 +7,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { ApiService } from '../../services/api.service';
 import { CartService } from '../../services/cart.service';
 import { ModalService } from '../../_modal';
-import {ServcioRetronoPrecioService} from '../../services/servcio-retrono-precio.service';
+import {ServcioRetornoPrecioService} from '../../services/servcio-retorno-precio.service';
 import {ServicioDeCompararService} from '../../services/servicio-de-comparar.service';
 
 declare var addProp:any;
@@ -46,8 +46,8 @@ export class ProductosComponent implements OnInit {
     private productsService: ProductsFiltersService,
     private productsQuery: ProductsFiltersQuery,
     private modalService: ModalService,
-    private retornarService: ServcioRetronoPrecioService,
-    private deselctComparar: ServcioRetronoPrecioService,
+    private retornarService: ServcioRetornoPrecioService,
+    private deselctComparar: ServcioRetornoPrecioService,
     private servicioComparar: ServicioDeCompararService,
     private cartService : CartService
     ) {}

@@ -11,7 +11,6 @@ import { CompareComponent } from './compare/compare.component';
 import { CompareItemComponent } from './compare-item/compare-item.component';
 import {MatTabsModule} from '@angular/material/tabs';
 // import { NgParticlesModule } from 'ng-particles';
-
 import { PrepagasComponent } from './prepagas/prepagas.component';
 import { CotizarFormComponent } from './cotizar-form/cotizar-form.component';
 import {ReactiveFormsModule} from "@angular/forms";

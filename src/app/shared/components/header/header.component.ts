@@ -23,17 +23,17 @@ export class HeaderComponent implements OnInit {
  
   ngOnInit(): void {
     this.menuList = staticMenuList;
-    this.breakpointObserver.observe(['(max-width: 1199px)']).subscribe(({ matches }) => {
-      this.isLessThenLargeDevice = matches;
-    });
-    this.cartService.getProducts()
-    .subscribe(res=>{
-      this.totalItem = res.length;
-    })
+    // this.breakpointObserver.observe(['(max-width: 1199px)']).subscribe(({ matches }) => {
+    //   this.isLessThenLargeDevice = matches;
+    // });
+    // this.cartService.getProducts()
+    // .subscribe(res=>{
+    //   this.totalItem = res.length;
+    // })
   }
 
-  @HostListener('window:scroll', ['$event'])
-  checkScroll() {
-    this.isScrolled = window.pageYOffset > 15;
-  }
+  // @HostListener('window:scroll', ['$event'])
+  // checkScroll() {
+  //   this.isScrolled = window.pageYOffset > 15;
+  // }
 }

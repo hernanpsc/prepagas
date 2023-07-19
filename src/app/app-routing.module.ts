@@ -16,8 +16,8 @@ const baseLayoutRouting: Routes = [
 ];
 
 const routes: Routes = [
-  {path: '',component: BaseLayoutComponent,children: baseLayoutRouting},
-  {path: 'filtros', loadChildren: () => import('./products-filters/products-filters.module').then(m => m.ProductsFiltersModule)},
+  // {path: '',component: BaseLayoutComponent,children: baseLayoutRouting},
+  {path: '', loadChildren: () => import('./products-filters/products-filters.module').then(m => m.ProductsFiltersModule)},
   {path: 'contact-form',component: ContactFormComponent},
   {path: 'cotizar',component: CotizarFormComponent},
   {path: 'cart',component: CartComponent},

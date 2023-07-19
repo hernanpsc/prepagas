@@ -7,12 +7,14 @@ import { ActivatedRoute, Router } from '@angular/router'
 import * as planes from '../../../public/products.json';
 import { ModalService } from '../_modal';
 import { CartService } from '../services/cart.service';
-import {ServcioRetronoPrecioService} from '../services/servcio-retrono-precio.service';
+import {ServcioRetornoPrecioService} from '../services/servcio-retorno-precio.service';
 import {ServicioDeCompararService} from '../services/servicio-de-comparar.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import * as clinicas from '../shared/data/clinicas.json';
-import { ApiService } from '../services/api.service'
+import { ApiService } from '../services/api.service';
+import { HttpClient } from '@angular/common/http';
+
 
 
 declare var addProp:any;
@@ -79,12 +81,13 @@ export class ProductsListComponent implements OnInit {
 
   constructor(
     private modalService: ModalService,
-    private retornarService: ServcioRetronoPrecioService,
-    private deselctComparar: ServcioRetronoPrecioService,
+    private retornarService: ServcioRetornoPrecioService,
+    private deselctComparar: ServcioRetornoPrecioService,
     private servicioComparar: ServicioDeCompararService,
     private cartService : CartService,
     private formBuilder: FormBuilder,
     private api: ApiService,
+    private http: HttpClient
     ) {
       this.buildForm();
     }
@@ -435,6 +438,14 @@ closeButon() {
   }
     
   ngOnInit(): void {
+    this.http.get<any>('https://clinicas-listado.onrender.com/planes').subscribe({
+      next: (data) => {
+        this.products = data; // Asigna los datos de los productos a la variable 'products'
+      },
+      error: (error) => {
+        console.log(error); // Maneja el error si la solicitud no se realiza correctamente
+      }
+    });
     this.getProduct()
     this.addClinicas()
         this.onItemSelect(this.selectedClinica);
@@ -455,28 +466,12 @@ closeButon() {
         this.isLoaded = true;
       // },0);
     this.retornarService.disparadorDePrecio.subscribe(data=>{
-      console.log('Recibiendo data en home...',data);
-      console.log(data)
-      console.log(this.products)
- var products = addProp(this.products,data);
- console.log(products);
+      console.log('Recibiendo data en product.list.component.ts...',data);
+     
  
-});this.retornarService.disparadorDePrecio.subscribe(data=>{
-  console.log('Recibiendo data en home...',data);
-  console.log(data)
-  console.log(this.secureProducts)
-var procuctosSeguros = addProp(this.secureProducts,data);
-console.log(procuctosSeguros);
+})
 
-});
 
- this.servicioComparar.servicioComparar.subscribe(deselct=>{
-   console.log('Recibiendo data en home...',deselct);
-   console.log(deselct);
-   console.log(this.products);
- var compareProdList = desectItem(this.compareProdList,deselct);
- console.log(compareProdList);
- });
 
   this.dropdownClinica = this.clinicas
     this.selectedClinica = [];

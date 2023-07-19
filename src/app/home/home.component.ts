@@ -4,7 +4,7 @@ import {ProductPlant, ProductsFiltersQuery, ProductsFiltersService} from './stat
 
 import { ModalService } from '../_modal';
 import { CartService } from '../services/cart.service';
-import {ServcioRetronoPrecioService} from '../services/servcio-retrono-precio.service';
+import {ServcioRetornoPrecioService} from '../services/servcio-retorno-precio.service';
 import {ServicioDeCompararService} from '../services/servicio-de-comparar.service';
 
 declare var addProp:any;
@@ -32,8 +32,8 @@ export class HomeComponent implements OnInit {
 
    constructor(
     private modalService: ModalService,
-    private retornarService: ServcioRetronoPrecioService,
-    private deselctComparar: ServcioRetronoPrecioService,
+    private retornarService: ServcioRetornoPrecioService,
+    private deselctComparar: ServcioRetornoPrecioService,
     private servicioComparar: ServicioDeCompararService,
     private cartService : CartService
     ) {} 
