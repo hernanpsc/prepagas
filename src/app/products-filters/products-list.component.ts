@@ -441,6 +441,7 @@ closeButon() {
     this.http.get<any>('https://clinicas-listado.onrender.com/planes').subscribe({
       next: (data) => {
         this.products = data; // Asigna los datos de los productos a la variable 'products'
+        this.secureProducts = data;
       },
       error: (error) => {
         console.log(error); // Maneja el error si la solicitud no se realiza correctamente
