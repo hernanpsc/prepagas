@@ -50,7 +50,7 @@
           <tr>
             <th>Nombre</th>
              <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
-              <ng-container *ngIf="prop.key !== 'nombre'">
+              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
                 <th >{{ prop.key }}</th>
               </ng-container>
             </ng-container>
@@ -87,7 +87,7 @@
         <tr>
           <th>Nombre</th>
            <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
-            <ng-container *ngIf="prop.key !== 'nombre'">
+            <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
               <th >{{ prop.key }}</th>
             </ng-container>
           </ng-container>
@@ -123,7 +123,7 @@
         <tr>
           <th>Nombre</th>
            <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
-            <ng-container *ngIf="prop.key !== 'nombre'">
+            <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
               <th >{{ prop.key }}</th>
             </ng-container>
           </ng-container>
@@ -160,7 +160,7 @@
         <tr>
           <th>Nombre</th>
            <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
-            <ng-container *ngIf="prop.key !== 'nombre'">
+            <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
               <th >{{ prop.key }}</th>
             </ng-container>
           </ng-container>

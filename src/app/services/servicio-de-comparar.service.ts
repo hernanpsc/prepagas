@@ -1,5 +1,4 @@
 import { EventEmitter, Injectable,Output } from '@angular/core';
-import { EventType } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'

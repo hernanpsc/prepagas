@@ -40,7 +40,7 @@ export class ClinicasListGroupComponent implements OnInit {
     if (event.index != 0) {
       const filterText = event.tab.textLabel;
       this.selectedUsers = this.data.clinicas.filter((clinicas: any) => {
-        return clinicas.region === filterText;
+        return clinicas.ubicacion.region === filterText;
       });
       console.log(this.selectedUsers);
     } else {

@@ -101,19 +101,21 @@ export class ProductsListComponent implements OnInit {
       });
     }
     compareProdList() {
-      // console.log(this.servicioComparar.compareList)
-      this.compareLength = this.products.filter(p => p.compare).length;
-      // this.compareList = this.products.filter(p => p.compare);
-      // console.log(this.compareList)
-      // var planesSel = this.products.filter(p => p.compare);
+      console.log(this.servicioComparar.compareList)
+      this.compareLength = this.products.filter((p: { compare: any; }) => p.compare).length;
+      this.compareList = this.products.filter(p => p.compare);
+      console.log(this.compareList)
+      var planesSel = this.products.filter(p => p.compare);
       this.servicioComparar.compareList = this.products.filter(p => p.compare)
-      // console.log(this.servicioComparar.compareList)
+      console.log(this.servicioComparar.compareList)
+      console.log(this.compareProdClinicas(this.servicioComparar.compareList))
       return this.servicioComparar.compareList
       
     }
     compareCliListVal() {
 
       var clinicasGrilla = this.compareProdClinicas(this.compareProdList())
+      console.log(clinicasGrilla)
       return clinicasGrilla
       
     }
@@ -137,12 +139,13 @@ export class ProductsListComponent implements OnInit {
 
       
  
-    compareProdClinicas(products) {
-      
+    compareProdClinicas(products: any[]) {
       var clinicas = [];
       let itemSelected = products;
-    
-      itemSelected.forEach((product) => {
+          // console.log(products)
+          // console.log(clinicas)
+
+      itemSelected.forEach((product: { clinicas: any[]; }) => {
         product.clinicas.forEach((clinic) => {
           
           const id = clinic.item_id;
@@ -155,10 +158,12 @@ export class ProductsListComponent implements OnInit {
         });
       });
       var data = [];
+      // console.log(clinicas)
 for ( let x in clinicas ){
   clinicas[x].valida = [];
   clinicas[x].planesSeleccionados = [];
   clinicas[x].cliPased = [];
+  // console.log(clinicas)
 
   for ( let i = 0 ; i < products.length ; i++){
     var obj = {};
@@ -166,7 +171,7 @@ for ( let x in clinicas ){
     
   }
   obj['nombre'] = clinicas[x].entity;
-  obj['barrio'] = clinicas[x].barrio;
+  obj['barrio'] = clinicas[x].ubicacion.barrio;
   for ( let i = 0 ; i < products.length ; i++){
    
       let id = products[i].id
@@ -203,11 +208,11 @@ for ( let  n in clinicas ){
        clinicas[n].planesSeleccionados.unshift('Nombre de Entidad');
        planesElegidos = clinicas[n].planesSeleccionados
 } 
-const clCaba = clinicas.filter(function(clinica){ return clinica.region === 'CABA'});
-const clNorte = clinicas.filter(function(clinica){ return clinica.region === 'GBA-Norte'});
-const clOeste = clinicas.filter(function(clinica){ return clinica.region === 'GBA-Oeste'});
-const clSur = clinicas.filter(function(clinica){ return clinica.region === 'GBA-Sur'});
-const clLaPlata = clinicas.filter(function(clinica){ return clinica.region === 'La Plata'});
+const clCaba = clinicas.filter(function(clinica){ return clinica.ubicacion.region === 'CABA'});
+const clNorte = clinicas.filter(function(clinica){ return clinica.ubicacion.region === 'GBA-Norte'});
+const clOeste = clinicas.filter(function(clinica){ return clinica.ubicacion.region === 'GBA-Oeste'});
+const clSur = clinicas.filter(function(clinica){ return clinica.ubicacion.region === 'GBA-Sur'});
+const clLaPlata = clinicas.filter(function(clinica){ return clinica.ubicacion.region === 'La Plata'});
 // let clinicasHeader = clinicas[0]['planesSeleccionados'];
 let clinicasCaba = clCaba.map(planes => planes.valida);
 let clinicasMorte = clNorte.map(planes => planes.valida);
@@ -250,7 +255,9 @@ tempArrayHide:any=[];
 
 
 addClinicas(){
- 
+ console.log(this.products)
+ console.log(this.clinicas)
+
  let products = this.products;
 
  for ( let i = 0; i<products.length;i++){
@@ -258,15 +265,18 @@ addClinicas(){
   let clinicPlan = []
 
   for ( let x in this.clinicas ){
-    var incluyeid = this.clinicas[x].cartillas.includes(this.products[i].id);
+    var incluyeid = this.clinicas[x].cartillas.includes(this.products[i].item_id);
+
     if ( incluyeid == true ){
       clinicPlan.push(this.clinicas[x])
     } 
     this.products[i].clinicas = clinicPlan;
   }
+} 
 
 
-}}
+
+}
 
 
 onItemSelect(selectedClinica: any){
@@ -438,17 +448,29 @@ closeButon() {
   }
     
   ngOnInit(): void {
-    this.http.get<any>('https://clinicas-listado.onrender.com/planes').subscribe({
+    
+    this.http.get<any>('http://localhost:5200/clinicas').subscribe({
       next: (data) => {
-        this.products = data; // Asigna los datos de los productos a la variable 'products'
-        this.secureProducts = data;
+        // console.log(data)
+        this.clinicas = data; // Asigna los datos de los productos a la variable 'products'
+        this.http.get<any>('http://localhost:5200/planes').subscribe({
+          next: (data) => {
+            // console.log(data)
+            this.products = data; // Asigna los datos de los productos a la variable 'products'
+            this.secureProducts = data;
+            this.addClinicas();
+          },
+          error: (error) => {
+            console.log(error); // Maneja el error si la solicitud no se realiza correctamente
+          }
+        });
       },
       error: (error) => {
         console.log(error); // Maneja el error si la solicitud no se realiza correctamente
       }
     });
-    this.getProduct()
-    this.addClinicas()
+    // this.getProduct()
+
         this.onItemSelect(this.selectedClinica);
     
     // setTimeout(() => {
@@ -464,7 +486,8 @@ closeButon() {
       //   });
       // });
       
-        this.isLoaded = true;
+        this.isLoaded = true;    
+
       // },0);
     this.retornarService.disparadorDePrecio.subscribe(data=>{
       console.log('Recibiendo data en product.list.component.ts...',data);

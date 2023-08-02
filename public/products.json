@@ -1,297 +1,10 @@
+
+
 [
-   {
-     "_id": "0211",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "S1",
-     "empresa": "Swiss Medical",
-     "folleto": [
-       "assets/archivos/swissmedical/beneficios/S1.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/swissmedical.png",
-       "assets/images/images/credenciales/sms1.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0212",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "S2",
-     "empresa": "Swiss Medical",
-     "folleto": [
-       "assets/archivos/swissmedical/beneficios/S2.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/swissmedical.png",
-       "assets/images/images/credenciales/sms2.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0213",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "SMG01",
-     "empresa": "Swiss Medical",
-     "folleto": [
-       "assets/archivos/swissmedical/beneficios/SMG01.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/swissmedical.png",
-       "assets/images/images/credenciales/smsmg01.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0214",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "SMG02",
-     "empresa": "Swiss Medical",
-     "folleto": [
-       "assets/archivos/swissmedical/beneficios/SMG02.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/swissmedical.png",
-       "assets/images/images/credenciales/smsmg02.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0215",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "SMG10",
-     "empresa": "Swiss Medical",
-     "folleto": [
-       "assets/archivos/swissmedical/beneficios/SMG10.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/swissmedical.png",
-       "assets/images/images/credenciales/smsmg10.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0216",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "SMG20",
-     "empresa": "Swiss Medical",
-     "folleto": [
-       "assets/archivos/swissmedical/beneficios/SMG20.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/swissmedical.png",
-       "assets/images/images/credenciales/smsmg20.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0217",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "SMG30",
-     "empresa": "Swiss Medical",
-     "folleto": [
-       "assets/archivos/swissmedical/beneficios/SMG30.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/swissmedical.png",
-       "assets/images/images/credenciales/smsmg30.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0218",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "SMG40",
-     "empresa": "Swiss Medical",
-     "folleto": [
-       "assets/archivos/swissmedical/beneficios/SMG40.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/swissmedical.png",
-       "assets/images/images/credenciales/smsmg40.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0219",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "SMG50",
-     "empresa": "Swiss Medical",
-     "folleto": [
-       "assets/archivos/swissmedical/beneficios/SMG50.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/swissmedical.png",
-       "assets/images/images/credenciales/smsmg50.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0220",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "SMG60",
-     "empresa": "Swiss Medical",
-     "folleto": [
-       "assets/archivos/swissmedical/beneficios/SMG60.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/swissmedical.png",
-       "assets/images/images/credenciales/smsmg60.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0221",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "SMG70",
-     "empresa": "Swiss Medical",
-     "folleto": [
-       "assets/archivos/swissmedical/beneficios/SMG70.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/swissmedical.png",
-       "assets/images/images/credenciales/smsmg70.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0101",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "F700",
-     "empresa": "SanCor Salud",
-     "folleto": [
-       "assets/archivos/sancorsalud/beneficios/700.pdf"
-     ],
-     "images": [
-       "assets/images/images/card-header/sancorsalud.png",
-       "assets/images/images/credenciales/ssf700.png",
-       "assets/images/planes_sancor/Feed 700A-sm(680x664).jpg"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-    "_id": "0102",
-    "price": 0,
-    "rating": 0,
+  
+  {
+    "_id": "64ba9b97db5ab7cec7937aa9",
+    "item_id": "Pr_200",
     "copagos": false,
     "category": "",
     "tags": [
@@ -300,23 +13,27 @@
       "tag3"
     ],
     "hijosSolos": false,
-    "name": "1000B c/copagos",
-    "empresa": "SanCor Salud",
+    "name": "200",
+    "empresa": "Premedic",
+    "sigla": "Pr",
     "folleto": [
-      "assets/archivos/sancorsalud/beneficios/1000.pdf"
+      "assets/archivos/premedic/beneficios/550,pdf"
     ],
     "images": [
-      "assets/images/images/card-header/sancorsalud.png",
-      "assets/images/images/credenciales/ss1000b.png",
-      "assets/images/planes_sancor/Feed 1000B-sm(680x664).jpg"
+      "/assets/images/images/card-header/premedic,png"
     ],
-    "beneficios": [],
-    "clinicas": []
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
   },
   {
-    "_id": "0103",
-    "price": 0,
-    "rating": 0,
+    "_id": "64ba9b97db5ab7cec7937aaa",
+    "item_id": "Pr_300",
     "copagos": false,
     "category": "",
     "tags": [
@@ -325,318 +42,27 @@
       "tag3"
     ],
     "hijosSolos": false,
-    "name": "1500B c/copagos",
-    "empresa": "SanCor Salud",
+    "name": "300",
+    "empresa": "Premedic",
+    "sigla": "Pr",
     "folleto": [
-      "assets/archivos/sancorsalud/beneficios/1500.pdf"
+      "assets/archivos/premedic/beneficios/550,pdf"
     ],
     "images": [
-      "assets/images/images/card-header/sancorsalud.png",
-      "assets/images/images/credenciales/ss1500b.png",
-      "assets/images/planes_sancor/Feed 1500B-sm(680x664).jpg"
+      "/assets/images/images/card-header/premedic,png"
     ],
-    "beneficios": [],
-    "clinicas": []
-  },
-   {
-     "_id": "0104",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "F800",
-     "empresa": "SanCor Salud",
-     "folleto": [
-       "assets/archivos/sancorsalud/beneficios/800.pdf"
-     ],
-     "images": [
-       "assets/images/images/card-header/sancorsalud.png",
-       "assets/images/images/credenciales/ssf800.png",
-       "assets/images/planes_sancor/Feed 800V-sm(680x664).jpg"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   
-   {
-     "_id": "0105",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "1000B",
-     "empresa": "SanCor Salud",
-     "folleto": [
-       "assets/archivos/sancorsalud/beneficios/1000.pdf"
-     ],
-     "images": [
-       "assets/images/images/card-header/sancorsalud.png",
-       "assets/images/images/credenciales/ss1000b.png",
-       "assets/images/planes_sancor/Feed 1000B-sm(680x664).jpg"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0106",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "1500B",
-     "empresa": "SanCor Salud",
-     "folleto": [
-       "assets/archivos/sancorsalud/beneficios/1500.pdf"
-     ],
-     "images": [
-       "assets/images/images/card-header/sancorsalud.png",
-       "assets/images/images/credenciales/ss1500b.png",
-       "assets/images/planes_sancor/Feed 1500B-sm(680x664).jpg"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0107",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "3000B",
-     "empresa": "SanCor Salud",
-     "folleto": [
-       "assets/archivos/sancorsalud/beneficios/3000.pdf"
-     ],
-     "images": [
-       "assets/images/images/card-header/sancorsalud.png",
-       "assets/images/images/credenciales/ss3000b.png",
-       "assets/images/planes_sancor/Feed 3000B-sm(680x664).jpg"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0108",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "3500",
-     "empresa": "SanCor Salud",
-     "folleto": [
-       "assets/archivos/sancorsalud/beneficios/3500.pdf"
-     ],
-     "images": [
-       "assets/images/images/card-header/sancorsalud.png",
-       "assets/images/images/credenciales/ss3500.png",
-       "assets/images/planes_sancor/Feed 3500-sm(680x664).jpg"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0109",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "4000",
-     "empresa": "SanCor Salud",
-     "folleto": [
-       "assets/archivos/sancorsalud/beneficios/4000.pdf"
-     ],
-     "images": [
-       "assets/images/images/card-header/sancorsalud.png",
-       "assets/images/images/credenciales/ss4000.png",
-       "assets/images/planes_sancor/Feed 4000-sm(680x664).jpg"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0110",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "4500",
-     "empresa": "SanCor Salud",
-     "folleto": [
-       "assets/archivos/sancorsalud/beneficios/4500.pdf"
-     ],
-     "images": [
-       "assets/images/images/card-header/sancorsalud.png",
-       "assets/images/images/credenciales/ss4500.png",
-       "assets/images/planes_sancor/Feed 4500-sm(680x664).jpg"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0111",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "5000",
-     "empresa": "SanCor Salud",
-     "folleto": [
-       "assets/archivos/sancorsalud/beneficios/5000.pdf"
-     ],
-     "images": [
-       "assets/images/images/card-header/sancorsalud.png",
-       "assets/images/images/credenciales/ss5000.png",
-       "assets/images/planes_sancor/Folleto Exclusive S5000-sm(680x640).jpg"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0112",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "6000",
-     "empresa": "SanCor Salud",
-     "folleto": [
-       "assets/archivos/sancorsalud/beneficios/6000.pdf"
-     ],
-     "images": [
-       "assets/images/images/card-header/sancorsalud.png",
-       "assets/images/images/credenciales/ss6000.png",
-       "assets/images/planes_sancor/Folleto Exclusive S6000-sm(680x640).jpg"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0330",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "MIDOC10",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/MIDOC_10.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0331",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "MIDOC10S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/MIDOC_10S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-    "_id": "0320",
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
     "price": 0,
-    "rating": 0,
-    "copagos": false,
-    "category": "",
-    "tags": [
-      "tag1",
-      "tag2",
-      "tag3"
-    ],
-    "hijosSolos": false,
-    "name": "1500 20",
-    "empresa": "OMINT",
-    "folleto": [
-      "assets/archivos/omint/beneficios/1500_22.pdf"
-    ],
-    "images": [
-      "/assets/images/images/card-header/omint.png"
-    ],
-    "beneficios": [],
-    "clinicas": []
+    "rating": 0
   },
   {
-    "_id": "0321",
-    "price": 0,
-    "rating": 0,
+    "_id": "64ba9b97db5ab7cec7937aab",
+    "item_id": "Pr_400",
     "copagos": false,
     "category": "",
     "tags": [
@@ -645,251 +71,27 @@
       "tag3"
     ],
     "hijosSolos": false,
-    "name": "1500 20 S",
-    "empresa": "OMINT",
+    "name": "400",
+    "empresa": "Premedic",
+    "sigla": "Pr",
     "folleto": [
-      "assets/archivos/omint/beneficios/1500_22S.pdf"
+      "assets/archivos/premedic/beneficios/550,pdf"
     ],
     "images": [
-      "/assets/images/images/card-header/omint.png"
+      "/assets/images/images/card-header/premedic,png"
     ],
-    "beneficios": [],
-    "clinicas": []
-  },
-   {
-     "_id": "0301",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "1500 22",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/1500_22.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0302",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "1500 22 S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/1500_22S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0322",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "2500 20",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/2500_20.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0323",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "2500 20 S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/2500_20S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0303",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "2500 24",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/2500_24.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0304",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "2500 24 S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/2500_24S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0324",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "4021 20",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/4021_20.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0325",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "4021 20 S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/4021_20S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0305",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "4021 22",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/4021_22.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0306",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "4021 22 S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/4021_22S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-    "_id": "0307",
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
     "price": 0,
-    "rating": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937aac",
+    "item_id": "Pr_500",
     "copagos": false,
     "category": "",
     "tags": [
@@ -898,1213 +100,602 @@
       "tag3"
     ],
     "hijosSolos": false,
-    "name": "4021 23",
-    "empresa": "OMINT",
+    "name": "500",
+    "empresa": "Premedic",
+    "sigla": "Pr",
     "folleto": [
-      "assets/archivos/omint/beneficios/4021_22.pdf"
+      "assets/archivos/premedic/beneficios/550,pdf"
     ],
     "images": [
-      "/assets/images/images/card-header/omint.png"
+      "/assets/images/images/card-header/premedic,png"
     ],
-    "beneficios": [],
-    "clinicas": []
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
   },
-   {
-     "_id": "0326",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "4500 20",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/4500_20.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0327",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "4500 20 S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/4500_20S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0308",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "4500 23",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/4500_23.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0309",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "4500 23 S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/4500_23S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0310",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "4500 24",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/4500_24.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0311",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "4500 24 S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/4500_24S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0328",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "6500 20",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/6500_20.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0329",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "6500 20 S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/6500_20S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0312",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "6500 21",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/6500_21.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0313",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "6500 21 S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/6500_21S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0314",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "6500 22",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/6500_22.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0315",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "6500 22 S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/6500_22S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0316",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "8500 21",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/8500_21.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0317",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "8500 21 S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/8500_21S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0318",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "8500 22",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/8500_22.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0319",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "8500 22 S",
-     "empresa": "OMINT",
-     "folleto": [
-       "assets/archivos/omint/beneficios/8500_22S.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/omint.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0400",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "PMO",
-     "empresa": "Avalian",
-     "folleto": [
-       "assets/archivos/avalian/beneficios/pmo.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/avalian.png",
-       "assets/images/images/credenciales/apmo.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0401",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "AS100",
-     "empresa": "Avalian",
-     "folleto": [
-       "assets/archivos/avalian/beneficios/cerca.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/avalian.png",
-       "assets/images/images/credenciales/aas100.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0402",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "AS200",
-     "empresa": "Avalian",
-     "folleto": [
-       "assets/archivos/avalian/beneficios/integral.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/avalian.png",
-       "assets/images/images/credenciales/aas200.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0403",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "AS204",
-     "empresa": "Avalian",
-     "folleto": [
-       "assets/archivos/avalian/beneficios/integral.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/avalian.png",
-       "assets/images/images/credenciales/aas204.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0404",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "AS300",
-     "empresa": "Avalian",
-     "folleto": [
-       "assets/archivos/avalian/beneficios/superior.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/avalian.png",
-       "assets/images/images/credenciales/aas300.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0405",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "AS400",
-     "empresa": "Avalian",
-     "folleto": [
-       "assets/archivos/avalian/beneficios/select.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/avalian.png",
-       "assets/images/images/credenciales/aas400.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0406",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "AS500",
-     "empresa": "Avalian",
-     "folleto": [
-       "assets/archivos/avalian/beneficios/select.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/avalian.png",
-       "assets/images/images/credenciales/aas500.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0501",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "Bronce",
-     "empresa": "Medife",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/medife.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0502",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "Plata",
-     "empresa": "Medife",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/medife.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0503",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "Oro",
-     "empresa": "Medife",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/medife.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0601",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "220 AZUL",
-     "empresa": "Galeno",
-     "folleto": [
-       "assets/archivos/galeno/beneficios/220.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/galeno.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0602",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "330 PLATA",
-     "empresa": "Galeno",
-     "folleto": [
-       "assets/archivos/galeno/beneficios/330.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/galeno.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0603",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "440 ORO",
-     "empresa": "Galeno",
-     "folleto": [
-       "assets/archivos/galeno/beneficios/440.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/galeno.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0604",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "550 ORO",
-     "empresa": "Galeno",
-     "folleto": [
-       "assets/archivos/galeno/beneficios/550.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/galeno.gif"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0701",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "PMO",
-     "empresa": "Premedic",
-     "folleto": [
-       "assets/archivos/premedic/beneficios/550.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/premedic.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0702",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "C-100",
-     "empresa": "Premedic",
-     "folleto": [
-       "assets/archivos/premedic/beneficios/550.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/premedic.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0703",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "200",
-     "empresa": "Premedic",
-     "folleto": [
-       "assets/archivos/premedic/beneficios/550.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/premedic.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0704",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "300",
-     "empresa": "Premedic",
-     "folleto": [
-       "assets/archivos/premedic/beneficios/550.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/premedic.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0705",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "400",
-     "empresa": "Premedic",
-     "folleto": [
-       "assets/archivos/premedic/beneficios/550.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/premedic.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0706",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "500",
-     "empresa": "Premedic",
-     "folleto": [
-       "assets/archivos/premedic/beneficios/550.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/premedic.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0801",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "210",
-     "empresa": "OSDE",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/osde.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0802",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "310",
-     "empresa": "OSDE",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/osde.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0803",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "410",
-     "empresa": "OSDE",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/osde.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0804",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "450",
-     "empresa": "OSDE",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/osde.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0805",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "510",
-     "empresa": "OSDE",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/osde.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0901",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "A1",
-     "empresa": "Prevencion Salud",
-     "folleto": [
-       "assets/archivos/prevencion/beneficios/a1.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/prevencion.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0902",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "A2",
-     "empresa": "Prevencion Salud",
-     "folleto": [
-       "assets/archivos/prevencion/beneficios/a2.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/prevencion.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0904",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "A4",
-     "empresa": "Prevencion Salud",
-     "folleto": [
-       "assets/archivos/prevencion/beneficios/a3.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/prevencion.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "0905",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "A5",
-     "empresa": "Prevencion Salud",
-     "folleto": [
-       "assets/archivos/prevencion/beneficios/a4.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/prevencion.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "1001",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "Vita",
-     "empresa": "Hominis",
-     "folleto": [
-       "assets/archivos/hominis/beneficios/vita.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/hominis.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "2001",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "RAS",
-     "empresa": "Fosdic",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/fosdic.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "2002",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "500",
-     "empresa": "Fosdic",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/fosdic.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "2003",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "1000",
-     "empresa": "Fosdic",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/fosdic.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "2004",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "2000",
-     "empresa": "Fosdic",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/fosdic.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "2005",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "3000",
-     "empresa": "Fosdic",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/fosdic.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "3002",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "SC30",
-     "empresa": "Salud Central",
-     "folleto": [
-       "assets/archivos/saludcentral/beneficios/sc30.pdf"
-     ],
-     "images": [
-       "/assets/images/images/card-header/saludcentral.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   },
-   {
-     "_id": "3001",
-     "price": 0,
-     "rating": 0,
-     "copagos": false,
-     "category": "",
-     "tags": [
-       "tag1",
-       "tag2",
-       "tag3"
-     ],
-     "hijosSolos": false,
-     "name": "SC70",
-     "empresa": "Salud Central",
-     "folleto": [],
-     "images": [
-       "/assets/images/images/card-header/saludcentral.png"
-     ],
-     "beneficios": [],
-     "clinicas": []
-   }
- ]
+  {
+    "_id": "64ba9b97db5ab7cec7937aad",
+    "item_id": "Pr_PMO",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "PMO",
+    "empresa": "Premedic",
+    "sigla": "Pr",
+    "folleto": [
+      "assets/archivos/premedic/beneficios/550,pdf"
+    ],
+    "images": [
+      "/assets/images/images/card-header/premedic,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937aae",
+    "item_id": "PS_A1",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "A1",
+    "empresa": "Prevencion Salud",
+    "sigla": "PS",
+    "folleto": [
+      "assets/archivos/prevencion/beneficios/a1,pdf"
+    ],
+    "images": [
+      "/assets/images/images/card-header/prevencion,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937aaf",
+    "item_id": "PS_A2",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "A2",
+    "empresa": "Prevencion Salud",
+    "sigla": "PS",
+    "folleto": [
+      "assets/archivos/prevencion/beneficios/a2,pdf"
+    ],
+    "images": [
+      "/assets/images/images/card-header/prevencion,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937ab0",
+    "item_id": "PS_A4",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "A4",
+    "empresa": "Prevencion Salud",
+    "sigla": "PS",
+    "folleto": [
+      "assets/archivos/prevencion/beneficios/a3,pdf"
+    ],
+    "images": [
+      "/assets/images/images/card-header/prevencion,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937ab1",
+    "item_id": "PS_A5",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "A5",
+    "empresa": "Prevencion Salud",
+    "sigla": "PS",
+    "folleto": [
+      "assets/archivos/prevencion/beneficios/a4,pdf"
+    ],
+    "images": [
+      "/assets/images/images/card-header/prevencion,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937ab2",
+    "item_id": "SC_SC30",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "SC30",
+    "empresa": "Salud Central",
+    "sigla": "SC",
+    "folleto": [
+      "assets/archivos/saludcentral/beneficios/sc30,pdf"
+    ],
+    "images": [
+      "/assets/images/images/card-header/saludcentral,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937ab3",
+    "item_id": "Fo_1000",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "1000",
+    "empresa": "Fosdic",
+    "sigla": "Fo",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/fosdic,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937ab4",
+    "item_id": "Fo_2000",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "2000",
+    "empresa": "Fosdic",
+    "sigla": "Fo",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/fosdic,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937ab5",
+    "item_id": "OS_210",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "210",
+    "empresa": "OSDE",
+    "sigla": "OS",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/osde,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937ab6",
+    "item_id": "Fo_3000",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "3000",
+    "empresa": "Fosdic",
+    "sigla": "Fo",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/fosdic,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937ab7",
+    "item_id": "OS_310",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "310",
+    "empresa": "OSDE",
+    "sigla": "OS",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/osde,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937ab8",
+    "item_id": "OS_410",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "410",
+    "empresa": "OSDE",
+    "sigla": "OS",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/osde,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937ab9",
+    "item_id": "OS_450",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "450",
+    "empresa": "OSDE",
+    "sigla": "OS",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/osde,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937aba",
+    "item_id": "Fo_500",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "500",
+    "empresa": "Fosdic",
+    "sigla": "Fo",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/fosdic,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937abb",
+    "item_id": "OS_510",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "510",
+    "empresa": "OSDE",
+    "sigla": "OS",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/osde,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937abc",
+    "item_id": "Me_Bronce",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "Bronce",
+    "empresa": "Medife",
+    "sigla": "Me",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/medife,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937abd",
+    "item_id": "Me_Oro",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "Oro",
+    "empresa": "Medife",
+    "sigla": "Me",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/medife,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937abe",
+    "item_id": "Me_Plata",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "Plata",
+    "empresa": "Medife",
+    "sigla": "Me",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/medife,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937abf",
+    "item_id": "Fo_RAS",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "RAS",
+    "empresa": "Fosdic",
+    "sigla": "Fo",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/fosdic,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  },
+  {
+    "_id": "64ba9b97db5ab7cec7937ac0",
+    "item_id": "SC_SC70",
+    "copagos": false,
+    "category": "",
+    "tags": [
+      "tag1",
+      "tag2",
+      "tag3"
+    ],
+    "hijosSolos": false,
+    "name": "SC70",
+    "empresa": "Salud Central",
+    "sigla": "SC",
+    "folleto": [
+      
+    ],
+    "images": [
+      "/assets/images/images/card-header/saludcentral,png"
+    ],
+    "beneficios": [
+      
+    ],
+    "clinicas": [
+      
+    ],
+    "price": 0,
+    "rating": 0
+  }
+]
