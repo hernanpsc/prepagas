@@ -14,7 +14,7 @@ import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import * as clinicas from '../shared/data/clinicas.json';
 import { ApiService } from '../services/api.service';
 import { HttpClient } from '@angular/common/http';
-
+import { SERVER_URL } from '../constants';
 
 
 declare var addProp:any;
@@ -34,7 +34,7 @@ export class ProductsListComponent implements OnInit {
   loading$: Observable<boolean>;
   public show:boolean = false;
   public buttonName:any = 'Show';
-  
+  serverUrl = SERVER_URL;
   bodyText: string;
   title = 'product-app';
   public secureProducts: any = (planes as any).default; 
@@ -440,13 +440,11 @@ closeButon() {
     
   ngOnInit(): void {
     
-    this.http.get<any>('http://localhost:5200/clinicas').subscribe({
+    this.http.get<any>(this.serverUrl).subscribe({
       next: (data) => {
-        // console.log(data)
         this.clinicas = data; // Asigna los datos de los productos a la variable 'products'
-        this.http.get<any>('http://localhost:5200/planes').subscribe({
+        this.http.get<any>(this.serverUrl).subscribe({
           next: (data) => {
-            // console.log(data)
             this.products = data; // Asigna los datos de los productos a la variable 'products'
             this.secureProducts = data;
             this.addClinicas();
