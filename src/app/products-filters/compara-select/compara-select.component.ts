@@ -12,7 +12,6 @@ export class ComparaSelectComponent implements OnInit {
   constructor(private ServicioComparar: ServicioDeCompararService) {}
 
   ngOnInit(): void {
-    console.log(this.product)
   }
   toggleCompare(product: any) {
     product.compare = !product.compare;

@@ -15,6 +15,7 @@ export class ComparaComponent implements OnInit {
   @Input() items: any;
  
 
+
  closeModal(id: string) {
  
   this.modalService.close('custom-modal-2');
@@ -49,8 +50,11 @@ filter(value: string) {
   }
   ngOnInit() {
 
-    // console.log(this.items);
-   
+    console.log(this.clinicasVal);
+
+    console.log(this.productos);
+    
+    console.log(this.items);
  
   }
 //   ckecking (array,name){
@@ -64,7 +68,7 @@ filter(value: string) {
 //   }
 // }
 
-ckeck (items, name){
+ckeck (items: any[], name: any){
   var  checkeo =  items.find(element => element == name)
 // console.log('Consultado : ' + name)
 // console.log('Obtenido con Find : ' + checkeo)
@@ -80,7 +84,7 @@ if(name === checkeo ){
 }
 
 
- checker(product,nombre){
+ checker(product: { [x: string]: any; }[],nombre: any){
 
   let clinicas = product[0]['clinicas'];
   let checkeos = []

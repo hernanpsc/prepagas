@@ -7,6 +7,7 @@ import { CartService } from '../../services/cart.service';
 import { ApiService } from '../../services/api.service';
 
 
+
 export interface DialogData2 {
   name: string;
   price: Number;
@@ -84,7 +85,7 @@ export class ProductCardComponent implements OnInit{
       // enterAnimationDuration,
       // exitAnimationDuration,
       data: { name: product ? product.name : '',
-      id : product ? product.id : '', 
+      id : product ? product.item_id : '', 
       price : product ? product.price : '',
       category : product ? product.category : '',
       rating : product ? product.rating : '',

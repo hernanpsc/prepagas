@@ -101,21 +101,21 @@ export class ProductsListComponent implements OnInit {
       });
     }
     compareProdList() {
-      console.log(this.servicioComparar.compareList)
+      // console.log(this.servicioComparar.compareList)
       this.compareLength = this.products.filter((p: { compare: any; }) => p.compare).length;
       this.compareList = this.products.filter(p => p.compare);
-      console.log(this.compareList)
+      // console.log(this.compareList)
       var planesSel = this.products.filter(p => p.compare);
       this.servicioComparar.compareList = this.products.filter(p => p.compare)
-      console.log(this.servicioComparar.compareList)
-      console.log(this.compareProdClinicas(this.servicioComparar.compareList))
+      // console.log(this.servicioComparar.compareList)
+      // console.log(this.compareProdClinicas(this.servicioComparar.compareList))
       return this.servicioComparar.compareList
       
     }
     compareCliListVal() {
 
       var clinicasGrilla = this.compareProdClinicas(this.compareProdList())
-      console.log(clinicasGrilla)
+      // console.log(clinicasGrilla)
       return clinicasGrilla
       
     }
@@ -168,24 +168,24 @@ for ( let x in clinicas ){
   for ( let i = 0 ; i < products.length ; i++){
     var obj = {};
     clinicas[x].planesSeleccionados.push(products[i].name);
-    
+    // console.log(products[i].name)
   }
   obj['nombre'] = clinicas[x].entity;
   obj['barrio'] = clinicas[x].ubicacion.barrio;
   for ( let i = 0 ; i < products.length ; i++){
    
-      let id = products[i].id
+      let id = products[i].item_id
      if (clinicas[x].cartillas.includes(id) == true  ){
       // console.log(clinicas[x].cliPased)
 
       
       
-      obj[products[i].name] = 'ok';
+      obj[products[i].item_id] = 'ok';
       clinicas[x].cliPased.push(obj);
 
       clinicas[x].valida.push('ok');
     }else{clinicas[x].valida.push('no');
-     obj[products[i].name] = 'no';
+     obj[products[i].item_id] = 'no';
   };
   }clinicas[x].cliPased = obj
 
@@ -193,15 +193,6 @@ for ( let x in clinicas ){
   data.push(obj);
   // console.log(data)
 }  
-//  daa = [
-//   { hospital: 'Hospital Sirio Libanés', service1: 'ok', service2: 'ok' },
-//   { hospital: 'Sanatorio De La Providencia', service1: 'ok', service2: 'ok' },
-//   { hospital: 'Sanatorio Colegiales', service1: 'ok', service2: 'ok' },
-//   { hospital: 'UAI Hospital Universitario', service1: 'ok', service2: 'ok' },
-//   { hospital: 'Clinica Bazterrica', service1: 'no', service2: 'ok' },
-//   { hospital: 'Hospital Britanico Bs. As.', service1: 'no', service2: 'ok' },
-// ];
-
 var planesElegidos =[]
 for ( let  n in clinicas ){
        clinicas[n].valida.unshift(clinicas[n]['entity']);
@@ -255,8 +246,8 @@ tempArrayHide:any=[];
 
 
 addClinicas(){
- console.log(this.products)
- console.log(this.clinicas)
+//  console.log(this.products)
+//  console.log(this.clinicas)
 
  let products = this.products;
 
@@ -294,7 +285,7 @@ onItemSelect(selectedClinica: any){
 // console.log(this.products)
   var seleccion = this.selectedClinica
   for( let i=0;i<seleccion.length;i++){
-    console.log(seleccion[i])
+    // console.log(seleccion[i])
   }
   var planes = this.products;
   this.showandHide = this.products;
@@ -350,7 +341,7 @@ onItemDeSelect(item: any){
 
   this.products = this.secureProducts;
 
-console.log(this.products)
+// console.log(this.products)
   var seleccion = this.selectedClinica
   for( let i=0;i<seleccion.length;i++){
     // console.log(seleccion[i])
@@ -386,13 +377,13 @@ if ( validation == clinicas_seleccionadas.length){
 }};
 }
 
-console.log(planes)
-this.tempArrayHide  = planes.filter((e:any)=> e.validacionclinica != "show");
-this.tempArrayShow  = planes.filter((e:any)=> e.validacionclinica == "show");
-console.log(this.tempArrayShow)
-console.log(this.tempArrayHide)
-this.products = this.tempArrayShow
-this.newArray = this.tempArrayShow.concat(this.tempArrayHide);
+// console.log(planes)
+// this.tempArrayHide  = planes.filter((e:any)=> e.validacionclinica != "show");
+// this.tempArrayShow  = planes.filter((e:any)=> e.validacionclinica == "show");
+// console.log(this.tempArrayShow)
+// console.log(this.tempArrayHide)
+// this.products = this.tempArrayShow
+// this.newArray = this.tempArrayShow.concat(this.tempArrayHide);
 
 
 }   
@@ -608,7 +599,7 @@ this.tempArray  = this.arrays.filter((e:any)=> e.id == event.target.value);
 
 this.productArray = [];
 this.newArray.push(this.tempArray);
-console.log(this.newArray)
+// console.log(this.newArray)
 for(let i=0;i<this.newArray.length;i++){
   var firstArray = this.newArray[i]; 
   for(let i=0;i<firstArray.length;i++){
