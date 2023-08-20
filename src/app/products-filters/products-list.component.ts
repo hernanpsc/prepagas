@@ -440,10 +440,10 @@ closeButon() {
     
   ngOnInit(): void {
     
-    this.http.get<any>(this.serverUrl).subscribe({
+    this.http.get<any>(this.serverUrl + '/clinicas').subscribe({
       next: (data) => {
         this.clinicas = data; // Asigna los datos de los productos a la variable 'products'
-        this.http.get<any>(this.serverUrl).subscribe({
+        this.http.get<any>(this.serverUrl + '/planes').subscribe({
           next: (data) => {
             this.products = data; // Asigna los datos de los productos a la variable 'products'
             this.secureProducts = data;

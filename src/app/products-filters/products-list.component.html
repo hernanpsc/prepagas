@@ -262,39 +262,39 @@
     </div> -->
     <ng-container *ngIf="isLoaded">
       <div class="row">
-    <div>
-      <div *ngFor="let product of products | filter: SearchEmpresa:'empresa' | sort: [SortbyParam, SortDirection]">
-        <app-product-card  *ngIf="view === 'grid'" [product]="product"></app-product-card>
-      </div>
-    </div>   
-
-      <div >
-        <div *ngFor="let product of products | filter: SearchEmpresa:'empresa' | sort: [SortbyParam, SortDirection]">
-        <app-product-filter *ngIf="view === 'list'" [product]="product"></app-product-filter>
         
-        </div>    
-      </div>   
+          <div *ngFor="let product of products | filter: SearchEmpresa:'empresa' | sort: [SortbyParam, SortDirection]"  class="col-lg-4 col-md-6 col-sm-6">
+            <app-product-card  *ngIf="view === 'grid'" [product]="product"></app-product-card>
+          </div>
+      
+    
+        
+            <div *ngFor="let product of products | filter: SearchEmpresa:'empresa' | sort: [SortbyParam, SortDirection]">
+            <app-product-filter *ngIf="view === 'list'" [product]="product"></app-product-filter>
+            
+            </div>    
           
-      <footer class="d-flex mt-4">
-              
-        <nav class="ms-3">
-            <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item active" aria-current="page">
-                <span class="page-link">2</span>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-            </li>
-            </ul>
-        </nav>
-        </footer>
- 
-   
-   
-  
-    </div>
+      
+          <footer class="d-flex mt-4">
+                  
+            <nav class="ms-3">
+                <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                    <span class="page-link">2</span>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+                </ul>
+            </nav>
+            </footer>
+     
+       
+       
+      
+        </div>
   </ng-container> 
       <hr>
       <div *ngIf="!isLoaded">
