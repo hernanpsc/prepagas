@@ -1,0 +1,158 @@
+.content {
+  margin-top: 2rem;
+  height: calc(100vh - 326px);
+  overflow: auto;
+}
+
+.spinner-item {
+  display: grid;
+  place-items: center;
+  margin-top: 10px;
+}
+
+.title-center {
+  margin: 0 auto;
+}
+
+.title-toolbar {
+  background: #FFF159;
+  color: rgb(26, 38, 124) !important;
+}
+
+.mat-toolbar-multiple-rows {
+  height: 56px !important;
+}
+
+.mat-option.mat-active {
+  background: red !important;
+}
+
+.product-comparison-list-b-0 {
+  border-top: 1px solid #ccc;
+  height: 100px;
+}
+
+.product-comparison-list-b-1 {
+  height: 100px;
+}
+
+.product-comparison-list-buttons-b {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mat-list-item-item {
+  display:block;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 100%;
+}
+
+.mat-toolbar-input-search-row {
+  width: 30%;
+  padding-left: 1rem;
+  font-size: large;
+}
+
+.mat-toolbar-input-search {
+  padding-bottom: 5rem;
+}
+
+.comparison-report-virtual-scroll-b {
+  height: calc(100vh - 246px);
+  overflow: auto;
+  margin-top: 2rem;
+}
+
+.product-comparison-list-status {
+  position: absolute;
+  bottom: 1rem;
+  left: calc(50% - 6rem);
+  text-align: center;
+}
+
+.toggle-show {
+  display: block;
+}
+
+.toggle-hide {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .compare-button {
+    font-size: 10px !important;
+  }
+}
+
+/* Responsive Material Table */ 
+table {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .mat-table[matTableResponsive] {
+
+    .mat-header-row {
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+
+      th.mat-header-cell {
+          display: none;
+      }
+    }
+
+    .mat-row {
+      height: auto;
+
+      td.mat-cell:not(.mat-column-actions) {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 0.5rem;
+        text-align: left;
+        word-break: break-word;
+
+        & > * {
+          grid-column: 2;
+        }
+
+        &:before {
+          font-weight: 800;
+          content: attr(data-column-name);
+          text-align: left;
+        }
+      }
+
+      td.mat-column-actions {
+        display: flex;
+        justify-content: center;
+        padding: 0 0.5rem;
+
+        & > button {
+          margin: 0.5rem 0;
+        }
+      }
+
+      &:last-of-type td:last-of-type {
+        border: none;
+      }
+
+      &:not(:last-of-type) td:last-of-type {
+        border-bottom: 1px solid;
+        border-bottom-style: dashed;
+      }
+    }
+  }
+}

@@ -26,19 +26,19 @@ export class PdfViewerComponent implements OnInit {
   ngOnInit() {
     if(this.data){
       console.log(this.data.name);
-    console.log(this.data.folleto[0]);
+    console.log(this.data.folleto);
     console.log("pdfSrc");
-    this.pdfSrc = this.data.folleto[0];
+    this.pdfSrc = this.data.folleto;
     }else if (this.data1){
       console.log(this.data1.name);
-    console.log(this.data1.folleto[0]);
+    console.log(this.data1.folleto);
     console.log("pdfSrc");
-    this.pdfSrc = this.data1.folleto[0];
+    this.pdfSrc = this.data1.folleto;
     }else if(this.data2){    
     console.log(this.data2.name);
-    console.log(this.data2.folleto[0]);
+    console.log(this.data2.folleto);
     console.log("pdfSrc");
-    this.pdfSrc = this.data2.folleto[0];
+    this.pdfSrc = this.data2.folleto;
   }
     
     

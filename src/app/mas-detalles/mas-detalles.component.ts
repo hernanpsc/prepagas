@@ -3,8 +3,8 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialo
 import {DialogData} from '../home/home-products/home-products.component';
 import { ActivatedRoute, Router, RouterLinkActive, Routes } from '@angular/router';
 
-import {DialogData1} from '../products-filters/product/product-filters.component';
-import {DialogData2} from '../products-filters/product-card/product-card.component';
+import {DialogData1} from '../products-list/product-land/product-land.component';
+import {DialogData2} from '../products-list/product-card/product-card.component';
 
 
 

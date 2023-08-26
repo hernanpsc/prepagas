@@ -12,24 +12,19 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule} from '@angular/common/http';
 import { HomeRoutingModule } from './home/home-routing.module';
 import {HomeModule} from './home/home.module';
-
 import {ReactiveFormsModule} from "@angular/forms";
 import {NG_ENTITY_SERVICE_CONFIG} from '@datorama/akita-ng-entity-service';
-import {AkitaNgDevtools} from '@datorama/akita-ngdevtools';
 import {MarkdownModule} from 'ngx-markdown';
 import {environment} from '../environments/environment';
 import { NgxWhastappButtonModule } from "ngx-whatsapp-button";
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import {CommonModule} from '@angular/common';
-import {CartComponent} from "./cart/cart.component";
-import {ProductosComponent} from "./productos/productos.component";
 import { FilterPipe } from './shared/filter.pipe';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 // import { FilterPipe } from './shared/filter.pipe';
 import { FiltroPipe } from './pipes/filtro.pipe';
-import { FiltroClinica } from './products-filters/pipes/clinica.pipe'
-
-
+import { FiltroClinica } from './products-list/pipes/clinica.pipe'
+import { ProductsListModule } from './products-list/products-list.module';
 
 
 
@@ -40,8 +35,6 @@ import { FiltroClinica } from './products-filters/pipes/clinica.pipe'
   declarations: [
     AppComponent,
     PageLoaderComponent,
-    CartComponent,
-    ProductosComponent,
     FilterPipe,
     FiltroPipe,
     // FiltroClinica
@@ -65,9 +58,7 @@ import { FiltroClinica } from './products-filters/pipes/clinica.pipe'
     HomeRoutingModule,
     CommonModule,
     MarkdownModule,  
-    NgxSliderModule,     
-    environment.production ? [] : AkitaNgDevtools.forRoot(),
-    
+    NgxSliderModule    
     
 
 

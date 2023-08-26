@@ -2,7 +2,6 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MasDetallesComponent } from './mas-detalles.component';
-// import { HttpClient } from '@angular/common/http';
 import { ClinicasListComponent } from './clinicas-list/clinicas-list.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';

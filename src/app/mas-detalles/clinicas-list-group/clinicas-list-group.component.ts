@@ -13,7 +13,7 @@ import {DialogData} from '../../home/home-products/home-products.component';
   styleUrls: ['./clinicas-list-group.component.css']
 })
 export class ClinicasListGroupComponent implements OnInit {
-  selectedUsers: any;
+  selectedClinicas: any;
   matTabLabels = ['TODAS','CABA', 'GBA-Sur', 'GBA-Norte', 'GBA-Oeste','La Plata'];
   
   displayedColumns: string[] = ['Nombre', 'Barrio/Localidad'];
@@ -26,7 +26,7 @@ export class ClinicasListGroupComponent implements OnInit {
 
 
   ngOnInit() {
-    this.selectedUsers = this.data.clinicas;
+    this.selectedClinicas = this.data.clinicas;
     console.log(this.data.name),
     console.log(this.data.price),
     console.log(this.data.category),
@@ -39,12 +39,12 @@ export class ClinicasListGroupComponent implements OnInit {
     console.log(event);
     if (event.index != 0) {
       const filterText = event.tab.textLabel;
-      this.selectedUsers = this.data.clinicas.filter((clinicas: any) => {
+      this.selectedClinicas = this.data.clinicas.filter((clinicas: any) => {
         return clinicas.ubicacion.region === filterText;
       });
-      console.log(this.selectedUsers);
+      console.log(this.selectedClinicas);
     } else {
-      this.selectedUsers = this.data.clinicas;
+      this.selectedClinicas = this.data.clinicas;
     }
   }
 }
