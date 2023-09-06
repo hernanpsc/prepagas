@@ -14,26 +14,27 @@ import {DialogData} from '../../home/home-products/home-products.component';
 })
 export class ClinicasListGroupComponent implements OnInit {
   selectedClinicas: any;
-  matTabLabels = ['TODAS','CABA', 'GBA-Sur', 'GBA-Norte', 'GBA-Oeste','La Plata'];
-  
+  matTabLabels: string[] = [];
+   SortbyParam = '';
+  SortDirection = 'asc';
   displayedColumns: string[] = ['Nombre', 'Barrio/Localidad'];
-  
+  searchText: string = '';
+  filteredProducts: any[] = [];
  
   constructor(public dialogRef: MatDialogRef<ClinicasListGroupComponent>,@Inject(MAT_DIALOG_DATA) public data: DialogData,
-  ) {
+  
+  ) {  
 
 }
 
 
   ngOnInit() {
     this.selectedClinicas = this.data.clinicas;
-    console.log(this.data.name),
-    console.log(this.data.price),
-    console.log(this.data.category),
-    console.log(this.data.rating),
-    console.log(this.data.clinicas),
-    console.log(this.data.producto)
+    this.filterProducts();
+    console.log(this.data.clinicas)
+  this.populateMatTabLabels();
   }
+  
 
   tabChanged(event: any) {
     console.log(event);
@@ -46,5 +47,17 @@ export class ClinicasListGroupComponent implements OnInit {
     } else {
       this.selectedClinicas = this.data.clinicas;
     }
+  }
+
+  populateMatTabLabels(): void {
+    const regions: string[] = this.data.clinicas.map((clinica: any) => clinica.ubicacion.region);
+    const uniqueRegions: string[] = Array.from(new Set(regions));
+    this.matTabLabels = ['TODAS', ...uniqueRegions];
+  }
+  
+  filterProducts() {
+    this.filteredProducts = this.selectedClinicas.filter((clinica: { nombre: string; }) =>
+      clinica.nombre.toLowerCase().includes(this.searchText.toLowerCase())
+    );
   }
 }

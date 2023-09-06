@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import { Observable, Subject, tap } from 'rxjs';
+import { Observable, Subject} from 'rxjs';
 import { Planes } from '../interfaces/planes';
 import { SERVER_URL } from '../constants';
 
@@ -10,6 +10,7 @@ import { SERVER_URL } from '../constants';
 })
 export class PlanesService {
   private planes$: Subject<Planes[]> = new Subject();
+  private _search$ = new Subject<void>();
 
   private url = SERVER_URL;
 
@@ -20,6 +21,7 @@ export class PlanesService {
       'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, HEAD, OPTIONS'
     })
   }
+  productRating: any;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -39,4 +41,5 @@ export class PlanesService {
   //     console.log(data);
   //   });
   // }
+ 
 }

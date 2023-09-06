@@ -1,16 +1,25 @@
-<div *ngFor="let group of attributeGroups">
-  <h2>{{ group }}</h2>
+<div class="d-flex justify-content-center align-items-center">
   <table>
     <thead>
       <tr>
         <th></th>
-        <th *ngFor="let producto of productos">{{ producto.item_id }}</th>
+        <th *ngFor="let producto of productos">
+          <div class="product-info">
+            <img src="{{ producto.images[0].url }}">
+            <p>{{ producto.name }}</p>
+            <p>{{ producto.price }}</p>
+          </div>
+        </th>
       </tr>
     </thead>
-    <tbody>
+
+    <tbody class="features" *ngFor="let group of attributeGroups" style="margin-top: 20px;">
+      <tr>
+        <td class="features__cell features__cell--bold features__cell--shaded" colspan="">{{ group }}</td>
+      </tr>
       <tr *ngFor="let attribute of getAttributesInGroup(group)">
-        <td>{{ attribute.name }}</td>
-        <td *ngFor="let producto of productos">
+        <td class="features__cell">{{ attribute.name }}</td>
+        <td *ngFor="let producto of productos" class="features__cell features__cell--center features__cell--data">
           {{ findAttributeValue(producto, attribute.name) }}
         </td>
       </tr>

@@ -1,4 +1,4 @@
-import {Component, OnInit,HostBinding, ViewChild, ChangeDetectionStrategy , Input, ElementRef, NgZone } from '@angular/core';
+import {Component, ChangeDetectorRef ,OnInit,HostBinding, ViewChild, ChangeDetectionStrategy , Input, ElementRef, NgZone } from '@angular/core';
 import {Observable} from 'rxjs';
 import {map, pairwise, filter, throttleTime } from 'rxjs/operators';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
@@ -7,29 +7,38 @@ import { ModalService } from '../_modal';
 import { CartService } from '../services/cart.service';
 import {ServcioRetornoPrecioService} from '../services/servcio-retorno-precio.service';
 import {ServicioDeCompararService} from '../services/servicio-de-comparar.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { IDropdownSettings } from 'ng-multiselect-dropdown';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import * as clinicas from '../shared/data/clinicas.json';
-import { ApiService } from '../services/api.service';
 import { HttpClient } from '@angular/common/http';
 import { SERVER_URL } from '../constants';
 import { ItemsService } from '../shared/item/items.service';
-
-
+import { SelectItem } from 'primeng/api'; // Import SelectItem from PrimeNG
+import { Empresa } from '../interfaces/empresas'
+import { trigger, state, style, animate, transition } from '@angular/animations';
+import { MegaMenuItem, MenuItem } from 'primeng/api';
+import { ReactiveFormsModule } from '@angular/forms';
 declare var addProp:any;
 declare var desectItem:any;
 declare var showandHide:any;
+interface Country {
+  name: string;
+}
 
   
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
   styleUrls: ['./products-list.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Default
-
+  
+ 
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class ProductsListComponent implements OnInit {
   @ViewChild('scroller') scroller!: CdkVirtualScrollViewport;
+  itemsPerPage = 10; // Número de elementos por página
+  totalProducts = 100; // Número total de productos en tu lista (ajusta esto según tus datos reales)
+  currentPage = 1; // Página actual, inicializada en 1
+
   displayedColumns: string[] = ['feature', 'item_1_value_name', 'item_2_value_name'];
   public productList : any ;
   public filterCategory : any;
@@ -50,9 +59,14 @@ export class ProductsListComponent implements OnInit {
   offset: number = 0;
   query: string = '';
   limit: number = 10;
-  
-  
-
+  multiDefaultOption: any[] = []; // Declaración de multiDefaultOption como un arreglo vacío
+  countries!: Country[];
+  selectedCountries!: Country[];
+  display: boolean = false;
+  layout: string = 'list';
+  visibleTopSidebar: boolean = false;
+  SortbyParam: string = 'empresa'; // Valor por defecto
+selectedRaiting : FormControl = new FormControl('');
   isLoaded: boolean;
   advanceSearchExpanded: boolean = false;
   planes : any = [];
@@ -60,22 +74,25 @@ export class ProductsListComponent implements OnInit {
   
   validacionclinica = 'show';
   SearchClinica = '';
-  empresa = '';
+  empresa: FormControl = new FormControl('');
   SearchEmpresa = '';
-  SortbyParam = '';
+  displayDialog: boolean = false;
   SortDirection = 'asc';
   showFiller = false;
-  product = [{"empresa": "SanCor Salud",},{"empresa": "OMINT"},{"empresa": "Galeno"},{"empresa": "Avalian"},{"empresa": "Swiss Medical"},{"empresa": "Premedic"},{"empresa":"Medife"}]
-
+  empresas: any ;
+  
+      minRaiting: number = 0; // Valor inicial de calificación mínima
   disabled = false;
   ShowFilter = false;
   limitSelection = false;
   formFilter: FormGroup;
   planeSelect = this.compareProdList();
   dropdownSettings: {};
-  dropdownClinica = [];
-  clinicaSettings:IDropdownSettings = {};
-  selectedClinica = [];
+  dropdownClinica: SelectItem[] = [];
+  selectedClinica: any[] = [];
+  selectedClinicaControl = new FormControl([]);
+  rowsPerPageOptions = [5, 10, 20];
+  tieredItems: MenuItem[] = [];
 
   constructor(
     private modalService: ModalService,
@@ -84,24 +101,42 @@ export class ProductsListComponent implements OnInit {
     private servicioComparar: ServicioDeCompararService,
     private cartService : CartService,
     private formBuilder: FormBuilder,
-    private api: ApiService,
     private http: HttpClient,
     public itemsService: ItemsService,
     private ngZone: NgZone,
+    private cdr: ChangeDetectorRef
+
     
 
     ) {
       this.buildForm();
+      this.countries = [
+        { name: 'Australia' },
+        { name: 'Brazil' },
+        { name: 'China' },
+        { name: 'Egypt'},
+        { name: 'France'},
+        { name: 'Germany' },
+        { name: 'India' },
+        { name: 'Japan' },
+        { name: 'Spain'},
+        { name: 'United States' }
+    ];
+    
     }
+    
+    SortbyParamControl = new FormControl(this.SortbyParam);
     public productosActualizados:Array<any> = []
     private buildForm(){
 
       this.formFilter =this.formBuilder.group({
         buscaClinica: [''],
         empresa_prepaga: ['0'],
-
+        selectedRaiting:0,
       });
     }
+   
+    
     compareProdList() {
       // console.log(this.servicioComparar.compareList)
       this.compareLength = this.products.filter((p: { compare: any; }) => p.compare).length;
@@ -109,10 +144,11 @@ export class ProductsListComponent implements OnInit {
       // console.log(this.compareList)
       var planesSel = this.products.filter(p => p.compare);
       this.servicioComparar.compareList = this.products.filter(p => p.compare)
-      console.log(this.servicioComparar.compareList)
+      // console.log(this.servicioComparar.compareList)
       // console.log(this.compareProdClinicas(this.servicioComparar.compareList))
-
-      return this.servicioComparar.compareList
+      this.visibleTopSidebar = this.compareList.length >= 1;
+console.log(this.visibleTopSidebar)
+          return this.servicioComparar.compareList
       
     }
     compareCliListVal() {
@@ -233,8 +269,9 @@ return [clinicasCabaPased,clinicasNortePased,clinicasOestePased,clinicasSurPased
    
  
 
-
-
+    toggleCompare(product: any) {
+      product.compare = !product.compare;
+    }
 removeFilter( id: any ) {
         this.productsService.removeFilter(id);
         this.setInitialFilters();
@@ -273,6 +310,17 @@ this.itemsService.setItems(this.products);
 
 }
 
+showButton() {
+  const container = document.querySelector('.center-button');
+  container.classList.add('show');
+  container.classList.remove('hide');
+}
+
+hideButton() {
+  const container = document.querySelector('.center-button');
+  container.classList.remove('show');
+  container.classList.add('hide');
+}
 
 onItemSelect(selectedClinica: any){
   console.log('onItemSelect', selectedClinica);
@@ -294,7 +342,7 @@ onItemSelect(selectedClinica: any){
   var planes = this.products;
   this.showandHide = this.products;
 // planes = this.tempArrayHide.concat(this.tempArrayShow);
-  var clinicas_seleccionadas = seleccion.map(function (selectas, index, array) {
+  var clinicas_seleccionadas = seleccion.map(function (selectas, _index, _array) {
     return selectas.nombre; 
 });
 if ( seleccion.length === 0 ){
@@ -306,7 +354,7 @@ if ( seleccion.length === 0 ){
 } else {
 for (let j in planes  ) {
   var clinicas = planes[j].clinicas 
-var clinicas_del_plan = clinicas.map(function (clinicas_list, index, array) {
+var clinicas_del_plan = clinicas.map(function (clinicas_list: { nombre: any; }, _index: any, _array: any) {
   return clinicas_list.nombre; 
 });
 var validation = 0
@@ -333,7 +381,7 @@ this.newArray = this.tempArrayShow.concat(this.tempArrayHide);
 
 }   
 
-onItemDeSelect(item: any){
+onItemDeSelect(_item: any){
   // console.log('onItemSelect', item);
   //  console.log(this.tempArrayShow);
   //  console.log(this.tempArrayHide);
@@ -353,7 +401,7 @@ onItemDeSelect(item: any){
   var planes = this.products;
   this.showandHide = this.products;
 // planes = this.tempArrayHide.concat(this.tempArrayShow);
-  var clinicas_seleccionadas = seleccion.map(function (selectas, index, array) {
+  var clinicas_seleccionadas = seleccion.map(function (selectas, _index, _array) {
     return selectas.nombre; 
 });
 if ( seleccion.length = 0 ){
@@ -365,7 +413,7 @@ if ( seleccion.length = 0 ){
 } else {
 for (let j in planes  ) {
   var clinicas = planes[j].clinicas 
-var clinicas_del_plan = clinicas.map(function (clinicas_list, index, array) {
+var clinicas_del_plan = clinicas.map(function (clinicas_list, _index, _array) {
   return clinicas_list.entity; 
 });
 var validation = 0
@@ -384,7 +432,7 @@ if ( validation == clinicas_seleccionadas.length){
 
 }   
 
-  openModal(id: string) {
+  openModal(_id: string) {
 
     this.modalService.open('custom-modal-2');
    
@@ -392,16 +440,16 @@ if ( validation == clinicas_seleccionadas.length){
   onPrint() {
     window.print();    
   }
-  closeModal(id: string) {
+  closeModal(_id: string) {
  
     this.modalService.close('custom-modal-2');
   }
-  openModa(id: string) {
+  openModa(_id: string) {
     this.modalService.open('custom-modal-3');
 
   }
 
-  closeModa(id: string) {
+  closeModa(_id: string) {
     this.modalService.close('custom-modal-3');
 
   }
@@ -414,36 +462,40 @@ closeButon() {
     this.cartService.addtoCart(item);
   }
  
-   filterRating( rating: number ) {
+   filterRaiting( raiting: number ) {
     this.productsService.setFilter({
-      id: 'rating',
-      name: `${rating} rating`,
-      value: rating,
-      predicate: entity => entity.rating === rating
+      id: 'raiting',
+      name: `${raiting} raiting`,
+      value: raiting,
+      predicate: entity => entity.raiting === raiting
     });
     
   }
 
-  filterClinicas( rating: number ) {
-    this.productsService.setFilter({
-      id: 'rating',
-      name: `${rating} rating`,
-      value: rating,
-      predicate: entity => entity.rating === rating
-    });
+  // filterClinicas( raiting: number ) {
+
+  //   this.productsService.setFilter({
+  //     id: 'raiting',
+  //     name: `${raiting} raiting`,
+  //     value: raiting,
+  //     predicate: entity => entity.raiting === raiting
+  //   });
     
-  }
+  // }
     
   ngOnInit(): void {
     
     this.http.get<any>(this.serverUrl + '/clinicas').subscribe({
       next: (data) => {
         this.clinicas = data; // Asigna los datos de los productos a la variable 'products'
+        this.dropdownClinica = this.clinicas
+        this.selectedClinica = [];
         this.http.get<any>(this.serverUrl + '/planes').subscribe({
           next: (data) => {
             this.products = data; // Asigna los datos de los productos a la variable 'products'
             this.secureProducts = data;
             this.addClinicas();
+            console.log(this.products )
           },
           error: (error) => {
             console.log(error); // Maneja el error si la solicitud no se realiza correctamente
@@ -454,8 +506,30 @@ closeButon() {
         console.log(error); // Maneja el error si la solicitud no se realiza correctamente
       }
     });
-    // this.getProduct()
 
+    this.http.get<any>(this.serverUrl + '/empresas').subscribe({
+      next: (data) => {
+        this.empresas = data;
+ 
+      },
+      error: (error) => {
+        console.log(error); 
+      }
+    });
+    this.SortbyParamControl.valueChanges.subscribe((selectedValue: string) => {
+      // Realiza acciones basadas en el valor seleccionado
+      console.log('Nuevo valor seleccionado:', selectedValue);
+    });
+    this.empresa.valueChanges.subscribe((selectedValue: string) => {
+      // Realiza accioNuevones basadas en el valor seleccionado de la empresa
+      console.log(' valor seleccionado de la empresa:', selectedValue);
+      // Puedes agregar aquí la lógica para filtrar o realizar otras acciones
+    });
+    this.selectedRaiting.valueChanges.subscribe((selectedValue: number) => {
+      console.log('Valor seleccionado de la calificación:', selectedValue);
+      this.filterProductsByRating(selectedValue);
+    });
+    this.compareProdList();
         this.onItemSelect(this.selectedClinica);
     
     // setTimeout(() => {
@@ -481,20 +555,18 @@ closeButon() {
 })
 
 
-
-  this.dropdownClinica = this.clinicas
-    this.selectedClinica = [];
-    this.clinicaSettings = {
-      singleSelection: false,
-      closeDropDownOnSelection: true,
-      idField: 'item_id',
-      textField: 'nombre',
-      allowSearchFilter: true,
-      searchPlaceholderText: 'Busca por nombre',
-      limitSelection	:3
-    };     
+    
+  }
+  onEmpresaFilter() {
+    // Obtener el valor del FormControl y asignarlo a SearchEmpresa
+    this.SearchEmpresa = this.empresa.value;
   }
 
+  onEmpresaFilterClear() {
+    // Limpiar el valor de SearchEmpresa y restablecer el valor del FormControl
+    this.SearchEmpresa = '';
+    this.empresa.setValue('Empresa');
+  }
 
 onSelectAll(items: any) {
     console.log('onSelectAll', items);
@@ -511,14 +583,7 @@ handleLimitSelection() {
         this.dropdownSettings = Object.assign({}, this.dropdownSettings, { limitSelection: null });
     }
 }
-  onEmpresaFilter() {
-    this.SearchEmpresa = this.empresa;
-  }
-
-  onEmpresaFilterClear() {
-    this.SearchEmpresa = '';
-    this.empresa = 'Empresa';
-  }
+ 
   onClinicaFilter() {
     this.SearchClinica = 'show';
   }
@@ -598,20 +663,20 @@ for(let i=0;i<this.newArray.length;i++){
 }
 }
 
-ngAfterViewInit(): void {
+// ngAfterViewInit(): void {
 
-  this.scroller.elementScrolled().pipe(
-    map(() => this.scroller.measureScrollOffset('bottom')),
-    pairwise(),
-    filter(([y1, y2]) => (y2 < y1 && y2 < 140)),
-    throttleTime(200)
-  ).subscribe(() => {
-    this.ngZone.run(() => {
-      this.offset += 1;
-      this.itemsService.fetchMore(this.query, this.offset, this.limit);
-    });
-  });
-}
+//   this.scroller.elementScrolled().pipe(
+//     map(() => this.scroller.measureScrollOffset('bottom')),
+//     pairwise(),
+//     filter(([y1, y2]) => (y2 < y1 && y2 < 140)),
+//     throttleTime(200)
+//   ).subscribe(() => {
+//     this.ngZone.run(() => {
+//       this.offset += 1;
+//       this.itemsService.fetchMore(this.query, this.offset, this.limit);
+//     });
+//   });
+// }
 
 onTextChange(query:string) {
   this.itemsService.items.length = 0;
@@ -643,7 +708,48 @@ selectToCompare(item: any) {
 
 
 removeSelectedItem(item:any) {
-  this.itemsService.removeSelection(item);
+  this.itemsService.removeSelection(item);{
+    console.log('ok')
+  }
 }
+
+removeSelection(item: any) {
+  const index = this.selectedClinica.indexOf(item);
+  if (index !== -1) {
+    this.selectedClinica.splice(index, 1);
+  }
+  this.onItemSelect(this.selectedClinica);
+}
+
+
+
+load(index: number) {
+  this.loading[index] = true;
+  setTimeout(() => this.loading[index] = false, 1000);
+}
+
+
+checkIfCompareListHasItems() {
+  if (this.compareProdList().length >= 1) {
+    this.visibleTopSidebar = true;
+  }
+}
+
+openDialog() {
+  this.displayDialog = true;
+}
+
+closeDialog() {
+  this.displayDialog = false;
+} 
+filterProductsByRaiting(selectedRaiting: number) {
+  // Filtra los productos según la calificación seleccionada
+  this.filteredProducts = this.products.filter(product => {
+    return product.rating >= selectedRaiting;
+  });
+}
+
+
+
 
 }

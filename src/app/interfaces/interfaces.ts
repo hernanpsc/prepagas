@@ -1,4 +1,6 @@
 export interface Imagen {
+    id:string;
+    empresa:string;
     url: string;
     descripcion: string;
   }

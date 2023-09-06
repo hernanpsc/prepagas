@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Output, Input, OnInit, OnDestroy } from '@angular/core';
 import { Subject, Subscription } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
-
+import { FormControl } from '@angular/forms';
 @Component({
   selector: 'app-input-search',
   templateUrl: './input-search.component.html',
@@ -13,8 +13,8 @@ export class InputSearchComponent implements OnInit, OnDestroy {
   @Output() textChange = new EventEmitter<string>();
   @Output() textClear = new EventEmitter();
 
-  value = ''
-  subscriptions: Subscription[] = [];
+  valueControl = new FormControl('');
+    subscriptions: Subscription[] = [];
   inputValue = new Subject<string>();
   trigger = this.inputValue.pipe(debounceTime(this.debounceTime));
   
@@ -31,6 +31,11 @@ export class InputSearchComponent implements OnInit, OnDestroy {
 
   onInput(e: any) {
     this.inputValue.next(e.target.value);
+  }
+
+  clearValue() {
+    this.valueControl.setValue('');
+    // Emitir un evento o realizar otras acciones necesarias después de borrar el valor
   }
 }
 

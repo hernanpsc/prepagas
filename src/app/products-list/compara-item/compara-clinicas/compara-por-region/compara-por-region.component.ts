@@ -1,6 +1,7 @@
 import {ChangeDetectionStrategy,ViewEncapsulation, Component, OnInit,Input } from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
-import {combineLatest, map, Observable} from 'rxjs';
+import {combineLatest, Observable} from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Clinicas } from 'src/app/interfaces/clinicas';
 
 @Component({

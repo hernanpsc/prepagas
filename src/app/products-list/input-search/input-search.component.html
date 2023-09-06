@@ -1,9 +1,10 @@
 <mat-form-field class="input-search-form-field">
-    <input matInput type="text" placeholder="Buscar por produto" [(ngModel)]="value" (input)="onInput($event)">
-    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Limpar" (click)="value='';this.textClear.emit();">
-      <mat-icon>close</mat-icon>
-    </button>
+  <input matInput type="text" placeholder="Buscar por producto" [formControl]="valueControl" (input)="onInput($event)">
+  <button mat-button *ngIf="valueControl.value" matSuffix mat-icon-button aria-label="Limpar" (click)="clearValue()">
+    <mat-icon>close</mat-icon>
+  </button>
 </mat-form-field>
+
   
 <!-- Copyright 2018 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that

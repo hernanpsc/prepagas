@@ -1,47 +1,31 @@
-.product-item {
-   
-    max-width: 20%; /* set the maximum width of the image to 100% of its parent div */
-    max-height: 13%; /* set the maximum height of the image to 100% of its parent div */
+.close-icon {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  text-decoration: none;
+}
+/* Utiliza display: flex en el contenedor para alinear elementos en fila */
+.contenedor-grid {
+  display: flex;
+  flex-wrap: nowrap; /* Evita que los elementos se envuelvan a la siguiente fila */
+  gap: 20px; /* Espacio entre los elementos */
+}
 
-    /* border: 1px solid #ccc;  */
-    /* add a border for visual separation */
-    /* display: inline-block; */
-     /* make the divs display inline */
-    margin-bottom: 10px; 
-    /* add some margin to the right of each div */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .product-image {
-    position:inherit;
-    max-width: 100%; /* set the maximum width of the image to 100% of its parent div */
-    max-height: 100%; /* set the maximum height of the image to 100% of its parent div */
-    display: block; /* make the image a block element */
-    margin: 0 auto; /* center the image horizontally */
-  
-    object-fit: cover;
-    
-  }
-  .product-item {
-    position: relative; /* set the position of the div to relative */
-    /* other CSS styles omitted */
-  }
-  
-  .close-icon {
-    position: absolute; /* set the position of the close icon to absolute */
-    top: -5px; /* position the close icon 5px from the top */
-    right: -5px; /* position the close icon 5px from the right */
-    font-size: 20px; /* set the font size of the close icon */
-    color: #fff; /* set the color of the close icon */
-    background-color: #000; /* set the background color of the close icon */
-    border-radius: 50%; /* make the close icon circular */
-    width: 20px; /* set the width of the close icon */
-    height: 20px; /* set the height of the close icon */
-    text-align: center; /* center the text (the "X" in this case) inside the close icon */
-    line-height: 20px; /* set the line height of the close icon to match its height */
-    text-decoration: none; /* remove underline from the close icon */
-  }
-    
+.rectangulo {
+  flex: 0 0 calc(33.33% - 20px); /* Divide el espacio en tres columnas y resta el espacio entre elementos */
+  height: 100px;
+  background-color: #3498db;
+  border: 2px solid #2980b9;
+  border-radius: 10px;
+  display: inline;
+   float:left;
+   margin-left:5px;
+}

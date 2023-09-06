@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import * as planes from '../../../public/products-copy.json';
-import {ProductPlant, ProductsFiltersQuery, ProductsFiltersService} from './state';
 
 import { ModalService } from '../_modal';
 import { CartService } from '../services/cart.service';

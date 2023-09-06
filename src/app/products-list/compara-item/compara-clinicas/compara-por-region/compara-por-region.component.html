@@ -15,8 +15,8 @@
     <mat-card-content>
       <mat-list role="list">
         <mat-list-item role="listitem" *ngFor="let item of clinicas | async">
-          {{item.title}}
-          {{item.price}}
+          <!-- {{item.title}} -->
+          <!-- {{item.price}} -->
         </mat-list-item>
       </mat-list>
     </mat-card-content>
@@ -39,7 +39,7 @@
         <tbody>
           <ng-container *ngFor="let item of clinicasVal[0]; let i = index">
             <tr>
-              <td  class="nombre-col" matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}<br><span class="badge-custom">{{item.barrio}}</span></td>
+              <td  class="nombre-col" matTooltipShowDelay="500">{{ item.nombre }}<br><span class="badge-custom">{{item.barrio}}</span></td>
         
               <ng-container *ngFor="let prop of item | keyvalue">
                 <ng-container *ngIf="prop.key !== 'nombre'">

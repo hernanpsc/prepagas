@@ -36,10 +36,7 @@
           <h4>Encontrá lo que necesitás</h4>
 
           <label>Ordenar por &nbsp;</label>
-          <select [(ngModel)]="SortbyParam">
-            <option value="empresa">Empresa</option>
-            <option value="price">Precio</option>
-          </select>
+       
           <button type="button" (click)="onSortDirection()" >
             <i *ngIf="SortDirection === 'asc'" class="fas fa-sort-alpha-down"></i>
             <i *ngIf="SortDirection === 'desc'" class="fas fa-sort-alpha-up"></i>
@@ -102,34 +99,7 @@
             />
           </div>
           <div class="col-span-6 sm:col-span-3">
-            <select
-              name="categories"
-              class="
-                mt-1
-                block
-                w-full
-                py-2
-                px-3
-                border border-gray-300
-                bg-white
-                rounded-md
-                shadow-sm
-                focus:outline-none
-                focus:ring-indigo-500
-                focus:border-indigo-500
-                sm:text-sm
-              "
-              [(ngModel)]="empresa"
-            >
-              <option>Empresa</option>
-              <option>SanCor Salud</option>
-              <option>OMINT</option>
-              <option>Galeno</option>
-              <option>Avalian</option>
-              <option>Swiss Medical</option>
-              <option>Premedic</option>
-              <option>Medife</option>
-            </select>
+           
           </div>
           <div class="col-span-6 sm:col-span-3">
             <select

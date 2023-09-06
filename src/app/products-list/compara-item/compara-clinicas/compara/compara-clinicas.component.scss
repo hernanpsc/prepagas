@@ -1,5 +1,4 @@
 @import '../../../../styles/variables';
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 // .container {
 //   width: flex;
 //   height: 700px;
@@ -428,11 +427,11 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
-  font-size: 24px;
+  font-size: 14px;
 
 }
 .nombre-col .nombre-col-barrio {
-  font-size: 24px;
+  font-size: 12px;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -484,7 +483,7 @@ mat-tab-group {
     overflow: hidden;
     box-shadow: 0 13px 21px -5px rgba(0, 0, 0, 0.05);
     border: 1px solid #eee;
-    font-size: 24px;
+    font-size: 12px;
     table-layout: fixed;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Ajusta los valores según tus necesidades */
@@ -508,7 +507,7 @@ mat-tab-group {
     }
 
     th[scope="row"] {
-      font-size: 24px;
+      font-size: 12px;
       color: #393c45;
       font-weight: normal;
       background-color: #f9f9f9;
@@ -520,7 +519,7 @@ mat-tab-group {
     tr {
       &.condition {
         color: #fff;
-        font-size: 24px;
+        font-size: 12px;
       }
 
       &.colors span {
@@ -534,7 +533,7 @@ mat-tab-group {
 
     thead {
       th {
-        font-size: 24px;
+        font-size: 14px;
         color: #393c45;
         font-weight: normal;
       }
@@ -561,7 +560,7 @@ th, td {
   padding-bottom: 16px;
   min-width: 100px; /* Ancho mínimo, ajusta según tus necesidades */
   max-width: 1fr; /* Ancho máximo igual a una fracción flexible */
-  font-size: 24px;
+  font-size: 12px;
 
 }
 
@@ -724,6 +723,56 @@ input {
   display: inline-flex; /* Usa inline-flex para evitar que se alinee al margen izquierdo */
   align-items: center;
   justify-content: center; /* Centra horizontalmente el contenido */
-  font-size: 24px; /* Ajusta el tamaño del ícono según tus necesidades */
+  font-size: 12px; /* Ajusta el tamaño del ícono según tus necesidades */
   height: 100%; /* Asegura que ocupe toda la altura de la celda */
+}
+
+.features {
+  border-collapse: collapse;
+  font-family: sans-serif;
+}
+
+.features__cell {
+  max-width: 250px;
+  font-size: 0.9em;
+  font-weight: normal;
+  padding: 0.5em 1em;
+  color: #333333;
+  border: 1px solid #dddddd;
+  line-height: 1.4;
+}
+
+.features__cell--bold {
+  font-weight: bold;
+}
+
+.features__cell--shaded {
+  background: #eeeeee;
+}
+
+.features__cell--large {
+  font-size: 1.25em;
+}
+
+.features__cell--center {
+  text-align: center;
+}
+
+.features__tick::after {
+  content: "\2714";
+  font-size: 1.5em;
+  color: green;
+}
+.features__cross::after { 
+  content: "\2716"; /* Carácter unicode para una 'x' */
+  font-size: 1.5em; /* Tamaño del carácter */
+  color: red; /* Color del carácter */
+  display: inline-block; /* Hace que el carácter se muestre en línea con el texto */
+  width: 1em; /* Ancho del elemento */
+  height: 1em; /* Altura del elemento */
+  text-align: center; /* Alineación del texto */
+  line-height: 1em; /* Altura de línea igual a la altura del elemento para centrar verticalmente */
+  border: 1px solid red; /* Borde rojo alrededor del círculo */
+  border-radius: 50%; /* Hace que el borde forme un círculo */
+  background: white; /* Fondo blanco detrás de la 'x' para que se vea como un círculo rojo con una 'x' */
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { PrimeNGConfig } from 'primeng/api';
+// import { PrimeNGConfig } from 'primeng/api';
 
 
 @Component({
@@ -14,7 +14,9 @@ import { PrimeNGConfig } from 'primeng/api';
 
 export class AppComponent implements OnInit, OnDestroy {
   title: any;
-  constructor(private config: PrimeNGConfig) { }
+  constructor(
+    // private config: PrimeNGConfig
+    ) { }
   ngOnDestroy(): void {
     throw new Error('Method not implemented.');
   }
@@ -23,11 +25,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   
   ngOnInit() {
-      this.config.setTranslation({
-          accept: 'Accept',
-          reject: 'Cancel',
+      // this.config.setTranslation({
+      //     accept: 'Accept',
+      //     reject: 'Cancel',
           // translations
-      });
+      // });
   }
   
 }

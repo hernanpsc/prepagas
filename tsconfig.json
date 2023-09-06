@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -10,31 +9,30 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "resolveJsonModule":true,
-    "esModuleInterop":true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
-    "target": "es6",
-    // "target": "es2015",
+    "target": "ES2022",
     "module": "es2020",
-    // "module": "esnext",
-    "lib": ["es2018", "dom"],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
     "typeRoots": [
       "node_modules/@types"
     ],
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
-    "fullTemplateTypeCheck": false,
-    "strictTemplates": false,
-    "strict": false
+    "strictTemplates": true,
+    "strict": false,
+    "enableIvy": true
   },
   "paths": {
-    "akita-filters-plugin": [
-      "projects/akita-filters-plugin/src/lib/index.ts"
-    ],
-    "akita-filters-plugin/datasource": [
-      "projects/akita-mat-datasource/src/lib/index.ts"
-    ]
+    "@angular/*": ["node_modules/@angular/*"],
+    
   },
 }
 

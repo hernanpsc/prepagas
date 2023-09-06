@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { takeWhile } from 'rxjs';
+import { takeWhile } from 'rxjs/operators';
 import { PageLoaderService } from '../services/page-loader.service';
 
 

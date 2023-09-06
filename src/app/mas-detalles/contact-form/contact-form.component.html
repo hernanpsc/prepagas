@@ -40,7 +40,7 @@
 </div>
 <mat-form-field class="example-full-width" appearance="fill">
   <mat-label>Email: </mat-label>
-  <input type="email" matInput [formControl]="emailField" placeholder="Ex. pat@example.com">
+  <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
   <mat-error *ngIf="emailField.hasError('email') && !emailField.hasError('required')">
     Please enter a valid email address
   </mat-error>
@@ -76,9 +76,9 @@
 
   <div class="messages" [class.active]="ageField.touched && ageField.invalid"></div>
     <p>
-      <stong *ngIf="ageField.hasError('required')">
+      <strong *ngIf="ageField.hasError('required')">
         Este campo es requerido
-      </stong>
+      </strong>
     </p>
     <p>
       <strong *ngIf="ageField.hasError('min')">Debe ser mayor de edad</strong>
@@ -152,7 +152,7 @@
    
   
   <p>
-  <ngx-slider formControlName="control" [options]="options"></ngx-slider>
+  <!-- <ngx-slider formControlName="control" [options]="options"></ngx-slider> -->
   </p>
 
 

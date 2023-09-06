@@ -7,7 +7,7 @@ import * as planes from '../../../../public/products-copy.json';
 import { ActivatedRoute, Router } from '@angular/router';
 import {Observable} from 'rxjs';
 import { ModalService } from '../../_modal';
-import {ProductPlant, ProductsFiltersQuery, ProductsFiltersService} from '../state';
+// import {ProductPlant, ProductsFiltersQuery, ProductsFiltersService} from '../state';
 
 
 
@@ -22,7 +22,7 @@ declare var $: any;
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  products$: Observable<ProductPlant[]>;
+  // products$: Observable<ProductPlant[]>;
 loading$: Observable<boolean>;
   [x: string]: any;
 

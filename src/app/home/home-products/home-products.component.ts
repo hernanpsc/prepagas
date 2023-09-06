@@ -4,7 +4,6 @@ import { MasDetallesComponent } from '../../mas-detalles/mas-detalles.component'
 import {MatDialogModule, MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {ServicioDeCompararService} from '../../services/servicio-de-comparar.service'
 import { CartService } from '../../services/cart.service';
-import { ApiService } from '../../services/api.service';
 
 
 export interface DialogData {
@@ -52,7 +51,6 @@ export class HomeProductsComponent implements OnInit {
     public dialog: MatDialog,
     private ServicioComparar: ServicioDeCompararService,
     private cartService : CartService,
-    private api : ApiService,
     ) { 
 
   }

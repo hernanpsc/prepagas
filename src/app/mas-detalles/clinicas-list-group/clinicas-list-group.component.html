@@ -1,5 +1,12 @@
 <mat-tab-group (selectedTabChange)="tabChanged($event)">
     <mat-tab *ngFor="let tabLabel of matTabLabels" label="{{tabLabel}}">
+      <div class="field col-12 md:col-4">
+        <span class="p-float-label p-input-icon-right">
+          <i class="pi pi-search"></i>
+
+            <input type="text" id="righticon" pInputText [(ngModel)]="searchText" (input)="filterProducts()">
+        </span>
+    </div>
         <div class="overflow-x-auto w-full">
             <table class="table w-full">
               <!-- head -->
@@ -14,7 +21,7 @@
               </thead>
               <tbody>
                
-        <tr  *ngFor="let clinica of selectedClinicas">
+        <tr  *ngFor="let clinica of filteredProducts | sort: [SortbyParam, SortDirection]">
             <td>
               <div class="flex items-center space-x-3">
                 <div class="avatar">

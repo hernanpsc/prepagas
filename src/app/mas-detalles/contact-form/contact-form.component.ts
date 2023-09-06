@@ -1,4 +1,3 @@
-import { Options, LabelType } from '@angular-slider/ngx-slider';
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
 
@@ -13,10 +12,7 @@ export class ContactFormComponent implements OnInit {
   cotizar: FormGroup;
 
 
-options: Options = {
-  floor: 0,
-  ceil: 100
-};
+
 
 
   

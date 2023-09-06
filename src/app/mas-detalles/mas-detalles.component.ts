@@ -133,9 +133,9 @@ folleto: string;
       }));
   }
 
-  isLinkActive(rla: RouterLinkActive): boolean {
-    const routerLink = rla.linksWithHrefs.first;
+  // isLinkActive(rla: RouterLinkActive): boolean {
+  //   const routerLink = rla.linksWithHrefs.first;
 
-    return this.router.isActive(routerLink.urlTree, false);
-  }
+  //   return this.router.isActive(routerLink.urlTree, false);
+  // }
 }

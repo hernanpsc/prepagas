@@ -10,22 +10,7 @@ export class ComparaItemComponent implements OnInit {
   @Input() clinicasVal: any;
   @Input() productos: any;
   @Input() items: any;
-  attributeGroups = [
-    {
-      "item_id": "product1",
-      "attributes": [
-        { "attribute_group_name": "Group1", "name": "Attr1", "value_name": "Value1" },
-        { "attribute_group_name": "Group2", "name": "Attr2", "value_name": "Value2" }
-      ]
-    },
-    {
-      "item_id": "product2",
-      "attributes": [
-        { "attribute_group_name": "Group1", "name": "Attr1", "value_name": "Value3" },
-        { "attribute_group_name": "Group2", "name": "Attr2", "value_name": "Value4" }
-      ]
-    }
-  ];
+ 
   constructor() { }
   showDiv1 = false;
   showDiv2 = true;

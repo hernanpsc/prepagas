@@ -153,3 +153,17 @@
   text-decoration: none; /* remove underline from the close icon */
 }
   
+/* Asegúrate de seleccionar la clase o etiqueta correcta que representa al encabezado del diálogo */
+.p-dialog-header {
+  display: none; /* Oculta el encabezado del diálogo */
+  padding: 0; /* Elimina el espacio vertical ocupado por el encabezado */
+}
+/* Agrega margen derecho al botón de cerrar */
+.p-dialog-header .p-dialog-header-icon {
+  margin-right: 20px; /* Ajusta el valor según sea necesario */
+}
+
+/* Estilo para el contenedor del espacio adicional */
+.content-placeholder {
+  margin: 10px 0; /* Ajusta los márgenes según sea necesario */
+}

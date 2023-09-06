@@ -8,7 +8,6 @@ import { SERVER_URL } from '../../constants';
 import * as clinicas from '../../shared/data/clinicas.json';
 import * as planes from '../../../../public/products.json';
 import { HttpClient } from '@angular/common/http';
-import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-comparator',
@@ -33,7 +32,6 @@ export class ComparatorComponent implements OnInit, AfterViewInit {
     public itemsService: ItemsService,
     private notifierService: NotifierService,
   
-    private api: ApiService,
     private http: HttpClient
     ) {
   }

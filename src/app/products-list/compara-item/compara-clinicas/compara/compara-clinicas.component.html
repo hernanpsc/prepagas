@@ -9,8 +9,9 @@
           <tr>
             <th>Nombre</th>
              <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
-              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
-                <th >{{ prop.key }}</th>
+              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio' && prop && prop.key">
+                <th >{{ findEmpresaById(prop.key) }}  <br>{{ findNameById(prop.key) }}            
+                </th>      
               </ng-container>
             </ng-container>
          
@@ -19,20 +20,17 @@
         <tbody>
           <ng-container *ngFor="let item of clinicasVal[0]; let i = index">
             <tr>
-              <td  class="nombre-col" matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}<br><span class="badge-custom">{{item.barrio}}</span></td>
+              <td  class="nombre-col" matTooltipShowDelay="500">{{ item.nombre }}<br><span class="badge-custom">{{item.barrio}}</span></td>
         
               <ng-container *ngFor="let prop of item | keyvalue">
                 <ng-container *ngIf="prop.key !== 'nombre'">
-                  <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
-                    <ng-container *ngIf="prop.value == 'ok'">
-                       <br>                     
-                          <i class="fa fa-check  icon-container"></i>
-                    </ng-container>
-                    <ng-container *ngIf="prop.value == 'no'">
- <br>                     <i class="fa fa-times fa-times-circle text-red-500 icon-container"></i>
-                    </ng-container>
+                  <td>
+                    <br>
+                    <i *ngIf="prop.value == 'ok'" class="features__tick icon-container"></i>
+                    <i *ngIf="prop.value == 'no'" class="features__cross icon-container"></i>
                   </td>
                 </ng-container>
+                
               </ng-container>
             </tr>
           </ng-container>
@@ -52,8 +50,9 @@
           <tr>
             <th>Nombre</th>
              <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
-              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
-                <th >{{ prop.key }}</th>
+              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio' && prop && prop.key">
+                <th >{{ findEmpresaById(prop.key) }}  <br>{{ findNameById(prop.key) }}            
+                </th>      
               </ng-container>
             </ng-container>
          
@@ -62,19 +61,17 @@
         <tbody>
           <ng-container *ngFor="let item of clinicasVal[1]; let i = index">
             <tr>
-              <td  class="nombre-col" matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}<br><span class="badge-custom">{{item.barrio}}</span></td>
+              <td  class="nombre-col" matTooltipShowDelay="500">{{ item.nombre }}<br><span class="badge-custom">{{item.barrio}}</span></td>
         
               <ng-container *ngFor="let prop of item | keyvalue">
                 <ng-container *ngIf="prop.key !== 'nombre'">
-                  <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
-                    <ng-container *ngIf="prop.value == 'ok'">
- <br>                     <i class="fa fa-check  icon-container"></i>
-                    </ng-container>
-                    <ng-container *ngIf="prop.value == 'no'">
- <br>                     <i class="fa fa-times fa-times-circle text-red-500 icon-container"></i>
-                    </ng-container>
+                  <td>
+                    <br>
+                    <i *ngIf="prop.value == 'ok'" class="features__tick icon-container"></i>
+                    <i *ngIf="prop.value == 'no'" class="features__cross icon-container"></i>
                   </td>
                 </ng-container>
+                
               </ng-container>
             </tr>
           </ng-container>
@@ -89,30 +86,29 @@
       <thead class="sticky-header">
         <tr>
           <th>Nombre</th>
-           <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
-            <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
-              <th >{{ prop.key }}</th>
+             <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
+              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio' && prop && prop.key">
+                <th >{{ findEmpresaById(prop.key) }}  <br>{{ findNameById(prop.key) }}            
+                </th>      
+              </ng-container>
             </ng-container>
-          </ng-container>
        
         </tr>
       </thead>
       <tbody>
         <ng-container *ngFor="let item of clinicasVal[2]; let i = index">
           <tr>
-            <td  class="nombre-col" matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}<br><span class="badge-custom">{{item.barrio}}</span></td>
+            <td  class="nombre-col" matTooltipShowDelay="500">{{ item.nombre }}<br><span class="badge-custom">{{item.barrio}}</span></td>
       
             <ng-container *ngFor="let prop of item | keyvalue">
               <ng-container *ngIf="prop.key !== 'nombre'">
-                <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
-                  <ng-container *ngIf="prop.value == 'ok'">
-                    <i class="fa fa-check  icon-container"></i>
-                  </ng-container>
-                  <ng-container *ngIf="prop.value == 'no'">
-                    <i class="fa fa-times fa-times-circle text-red-500 icon-container"></i>
-                  </ng-container>
+                <td>
+                  <br>
+                  <i *ngIf="prop.value == 'ok'" class="features__tick icon-container"></i>
+                  <i *ngIf="prop.value == 'no'" class="features__cross icon-container"></i>
                 </td>
               </ng-container>
+              
             </ng-container>
           </tr>
         </ng-container>
@@ -126,30 +122,29 @@
       <thead class="sticky-header">
         <tr>
           <th>Nombre</th>
-           <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
-            <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
-              <th >{{ prop.key }}</th>
+             <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
+              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio' && prop && prop.key">
+                <th >{{ findEmpresaById(prop.key) }}  <br>{{ findNameById(prop.key) }}            
+                </th>      
+              </ng-container>
             </ng-container>
-          </ng-container>
        
         </tr>
       </thead>
       <tbody>
         <ng-container *ngFor="let item of clinicasVal[3]; let i = index">
           <tr>
-            <td  class="nombre-col" matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}<br><span class="badge-custom">{{item.barrio}}</span></td>
+            <td  class="nombre-col" matTooltipShowDelay="500">{{ item.nombre }}<br><span class="badge-custom">{{item.barrio}}</span></td>
       
             <ng-container *ngFor="let prop of item | keyvalue">
               <ng-container *ngIf="prop.key !== 'nombre'">
-                <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
-                  <ng-container *ngIf="prop.value == 'ok'">
-                    <i class="fa fa-check  icon-container"></i>
-                  </ng-container>
-                  <ng-container *ngIf="prop.value == 'no'">
-                    <i class="fa fa-times fa-times-circle text-red-500 icon-container"></i>
-                  </ng-container>
+                <td>
+                  <br>
+                  <i *ngIf="prop.value == 'ok'" class="features__tick icon-container"></i>
+                  <i *ngIf="prop.value == 'no'" class="features__cross icon-container"></i>
                 </td>
               </ng-container>
+              
             </ng-container>
           </tr>
         </ng-container>
@@ -164,30 +159,29 @@
       <thead class="sticky-header">
         <tr>
           <th>Nombre</th>
-           <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
-            <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio'">
-              <th >{{ prop.key }}</th>
+             <ng-container *ngFor="let prop of clinicasVal[0][0] | keyvalue">
+              <ng-container *ngIf="prop.key !== 'nombre' && prop.key !== 'barrio' && prop && prop.key">
+                <th >{{ findEmpresaById(prop.key) }}  <br>{{ findNameById(prop.key) }}            
+                </th>      
+              </ng-container>
             </ng-container>
-          </ng-container>
        
         </tr>
       </thead>
       <tbody>
         <ng-container *ngFor="let item of clinicasVal[4]; let i = index">
           <tr>
-            <td  class="nombre-col" matTooltip="{{ item.nombre }}" matTooltipShowDelay="500">{{ item.nombre }}<br><span class="badge-custom">{{item.barrio}}</span></td>
+            <td  class="nombre-col" matTooltipShowDelay="500">{{ item.nombre }}<br><span class="badge-custom">{{item.barrio}}</span></td>
       
             <ng-container *ngFor="let prop of item | keyvalue">
               <ng-container *ngIf="prop.key !== 'nombre'">
-                <td [ngClass]="{'check': prop.value == 'ok', 'no-check': prop.value == 'no'}">
-                  <ng-container *ngIf="prop.value == 'ok'">
-                    <i class="fa fa-check  icon-container"></i>
-                  </ng-container>
-                  <ng-container *ngIf="prop.value == 'no'">
-                    <i class="fa fa-times fa-times-circle text-red-500 icon-container"></i>
-                  </ng-container>
+                <td>
+                  <br>
+                  <i *ngIf="prop.value == 'ok'" class="features__tick icon-container"></i>
+                  <i *ngIf="prop.value == 'no'" class="features__cross icon-container"></i>
                 </td>
               </ng-container>
+              
             </ng-container>
           </tr>
         </ng-container>

@@ -15,7 +15,6 @@ export class ComparaClinicasComponent implements OnInit {
   @Input() items: any;
  
 
-
  closeModal(id: string) {
  
   this.modalService.close('custom-modal-2');
@@ -42,6 +41,7 @@ filter(value: string) {
     this.showDiv2 = false;
   }
 }
+propKey: string = '';
 
   onPrint() {
     window.print();  
@@ -55,12 +55,18 @@ filter(value: string) {
     console.log(this.productos);
     
     console.log(this.items);
- 
   }
 
+  findEmpresaById(itemId: any): any {
+    const planes = this.productos.find((item: { item_id: any; }) => item.item_id === itemId);
+    return planes ? planes.empresa : ''; // Devuelve el "name" si se encuentra, de lo contrario, una cadena vacía.
+  }
 
+  findNameById(itemId: any): any {
+    const planes = this.productos.find((item: { item_id: any; }) => item.item_id === itemId);
+    return planes ? planes.name : ''; // Devuelve el "name" si se encuentra, de lo contrario, una cadena vacía.
+  }
 
- 
   
 };
 
