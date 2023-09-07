@@ -1,3 +1,19 @@
+.icon-large{
+    font-size: 24px;
+    color:blue /* Cambia el tamaño según tus preferencias */
+}
+.icon-small{
+    font-size: 18px;
+    color:blue /* Cambia el tamaño según tus preferencias */
+    /* Cambia el tamaño según tus preferencias */
+}
+.custom-flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+.article{
+    margin-top:60px
+}
 @import '~primeicons/primeicons.css';
 
 .example-container {

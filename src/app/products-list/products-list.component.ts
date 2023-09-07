@@ -110,18 +110,7 @@ selectedRaiting : FormControl = new FormControl('');
 
     ) {
       this.buildForm();
-      this.countries = [
-        { name: 'Australia' },
-        { name: 'Brazil' },
-        { name: 'China' },
-        { name: 'Egypt'},
-        { name: 'France'},
-        { name: 'Germany' },
-        { name: 'India' },
-        { name: 'Japan' },
-        { name: 'Spain'},
-        { name: 'United States' }
-    ];
+     
     
     }
     
@@ -525,10 +514,7 @@ closeButon() {
       console.log(' valor seleccionado de la empresa:', selectedValue);
       // Puedes agregar aquí la lógica para filtrar o realizar otras acciones
     });
-    this.selectedRaiting.valueChanges.subscribe((selectedValue: number) => {
-      console.log('Valor seleccionado de la calificación:', selectedValue);
-      this.filterProductsByRating(selectedValue);
-    });
+   
     this.compareProdList();
         this.onItemSelect(this.selectedClinica);
     

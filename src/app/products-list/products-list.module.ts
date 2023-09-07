@@ -43,6 +43,10 @@ import { DialogModule } from 'primeng/dialog';
 import { DataViewModule } from "primeng/dataview";
 import {InputTextModule} from 'primeng/inputtext';
 import {PanelModule} from 'primeng/panel';
+import { FiltersProductsComponent } from './filters-products/filters-products.component';
+import { TooltipModule } from 'primeng/tooltip';
+import {SliderModule} from 'primeng/slider';
+import { DividerModule } from 'primeng/divider';
 
 const publicApi = [
   ProductsListComponent,
@@ -73,7 +77,8 @@ const routes: Routes = [
         ComparatorComponent,
         InputSearchComponent,
         ProductCardPrimengComponent,
-        RatingFilterPipe
+        RatingFilterPipe,
+        FiltersProductsComponent
     ],
     exports: [publicApi],
     imports: [
@@ -103,7 +108,10 @@ const routes: Routes = [
         DialogModule,
         DataViewModule,
         InputTextModule,
-        PanelModule
+        PanelModule,
+        TooltipModule,
+        SliderModule,
+        DividerModule
         
         // NgSelectModule
         

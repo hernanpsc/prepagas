@@ -22,16 +22,16 @@
   <!-- ============== SECTION PAGETOP END// ============== -->
   
   <!-- ============== SECTION CONTENT ============== -->
-  <section class="padding-y">
+  <!-- <section class="padding-y">
     
 
  
 
 
-  </section>
+  </section> -->
 
     <div class="container">
-      <div class="card card-w-title">
+      <div class="">
         <div class="d-flex flex-wrap justify-content-between surface-card p-2 shadow-2 border-round" style="background-color: whitesmoke; margin: 0 5px 5px 5px; align-items: center;">
           <div class="d-flex flex-wrap">
             <p-multiSelect
@@ -42,9 +42,6 @@
               defaultLabel="Busca por nombre"
               [selectedItemsLabel]="'Selected Clinicas'"
               [(ngModel)]="selectedClinica"
-              [style]="{'width':'450px'}"
-              [style]="{'heigth':'150px'}"
-              [panelStyle]="{'width':'450px'}"
               optionLabel="nombre"
               (onChange)="onItemSelect($event)">
               <!-- Plantilla para elementos seleccionados -->
@@ -110,315 +107,24 @@
       </div>
     
   <div class="row ">
-    
+
+
     <aside class="col-lg-3 ">
-  
-    <!-- ===== Card for sidebar filter ===== -->
-   
-  
+     <app-filters-products [product]="products" ></app-filters-products>
+    </aside> <!-- col .// -->
 
-
-<div class="flex flex-wrap gap-2 container " style="position: sticky">
-  <p-button badge="{{ products.length }}"  style="font:24px;margin:0px" label=":"><strong>Resultados</strong>
-  </p-button> 
-</div>
-<div id="aside_filter left-column" class="collapse card d-lg-block mb-5" >
-  <div class="card-header">
-    <div class="d-flex mb-3">
-      <div class="flex-grow-1">
-        <h5 class="fs-16">Filtros</h5>
-      </div>
-      <div class="flex-shrink-0">
-        <a href="javascript:void(0);" (click)="clearall($event)" class="text-decoration-underline">LImpiar todo</a>
-      </div>
-    </div>
-  </div>
-
-  <article class="filter-group">
-    <header class="card-header  justify-content-center" style="background-color: #FFD700; margin: 0px; align-items: center; opacity: 0.6" >
-      <a href="#" class="title">
-      <i class="icon-control"></i>Completar Perfil
-      </a>
-    </header>
-    <div>
-      <div class="card-body   justify-content-center">
-      <div class="row mb-12">
-       
-  
-        <div class="col-12">
-        </div> <!-- col end.// -->
-      </div> <!-- row end.// -->
-      <button pButton pRipple type="button" label="Completar Perfil" class="p-button-raised p-button-danger" (click)="onButtonClick()" style="animation: aura 0.5s ease-in-out;"></button>
-    </div> <!-- card-body.// -->
-    </div> <!-- collapse.// -->
-    </article> <!-- filter-group // -->
-
-    <article class="filter-group" >
-      <header class="card-header" >
-        <a href="#" class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside2">
-        <i class="icon-control fa fa-chevron-down"></i>  Precio
-        </a>
-      </header>
-      <div class="collapse show" id="collapse_aside2">
-        <div class="card-body">
-        <input type="range" class="form-range" min="0" max="100">
-        <div class="row mb-3">
-          <div class="col-6">
-          <label for="min" class="form-label">Min</label>
-          <input class="form-control" id="min" placeholder="$0" type="number">
-          </div> <!-- col end.// -->
-    
-          <div class="col-6">
-          <label for="max" class="form-label">Max</label>
-          <input class="form-control" id="max" placeholder="$1,0000" type="number">
-          </div> <!-- col end.// -->
-        </div> <!-- row end.// -->
-        <button class="btn btn-light w-100" type="button">Aplicar</button>
-        </div> <!-- card-body.// -->
-      </div> <!-- collapse.// -->
-      </article> <!-- filter-group // -->
-    <div class="filter-choices-input">
-      <!-- <ng-select  bindLabel="name" [(ngModel)]="multiDefaultOption">
-        <ng-template ng-optgroup-tmp let-item="item">
-          {{item.country || 'Unnamed group'}}
-        </ng-template>
-      </ng-select> -->
-   
-  </div>
-  <form [formGroup]="formFilter" >
-      <article class="filter-group" >
-    <header class="card-header" >
-      <a href="#" class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside1">
-      <i class="icon-control fa fa-chevron-down"></i>   Related items 
-      </a>
-    </header>
-  
-  <div class="collapse show" id="collapse_aside1">
-    <div class="card-body border-bottom">
-      <div>
-        <p class="text-muted text-uppercase fs-13 fw-medium mb-2">Products</p>
-        <ul class="list-unstyled mb-0 filter-list">
-          <li>
-            <a href="javascript:void(0);" class="d-flex py-1 align-items-center"
-              (click)="changeProducts($event,'Kitchen Storage & Containers','Grocery')">
-              <div class="flex-grow-1">
-                <h5 class="fs-13 mb-0 listname">Grocery</h5>
-              </div>
-              <div class="flex-shrink-0 ms-2" *ngIf="grocery > 0">
-                <span class="badge bg-light text-muted">{{grocery}}</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="d-flex py-1 align-items-center"
-              (click)="changeProducts($event,'Clothes','Fashion')">
-              <div class="flex-grow-1">
-                <h5 class="fs-13 mb-0 listname">Fashion</h5>
-              </div>
-              <div class="flex-shrink-0 ms-2" *ngIf="fashion > 0">
-                <span class="badge bg-light text-muted">{{fashion}}</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="d-flex py-1 align-items-center"
-              (click)="changeProducts($event,'Watches','Watches')">
-              <div class="flex-grow-1">
-                <h5 class="fs-13 mb-0 listname">Watches</h5>
-              </div>
-              <div class="flex-shrink-0 ms-2" *ngIf="watches > 0">
-                <span class="badge bg-light text-muted">{{watches}}</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="d-flex py-1 align-items-center"
-              (click)="changeProducts($event,'Electronics','Electronics')">
-              <div class="flex-grow-1">
-                <h5 class="fs-13 mb-0 listname">Electronics</h5>
-              </div>
-              <div class="flex-shrink-0 ms-2" *ngIf="electronics > 0">
-                <span class="badge bg-light text-muted">{{electronics}}</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="d-flex py-1 align-items-center"
-              (click)="changeProducts($event,'Furniture','Furniture')">
-              <div class="flex-grow-1">
-                <h5 class="fs-13 mb-0 listname">Furniture</h5>
-              </div>
-              <div class="flex-shrink-0 ms-2" *ngIf="furniture > 0">
-                <span class="badge bg-light text-muted">{{furniture}}</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="d-flex py-1 align-items-center"
-              (click)="changeProducts($event,'Bike Accessories','Automotive Accessories')">
-              <div class="flex-grow-1">
-                <h5 class="fs-13 mb-0 listname">Automotive Accessories</h5>
-              </div>
-              <div class="flex-shrink-0 ms-2" *ngIf="accessories > 0">
-                <span class="badge bg-light text-muted">{{accessories}}</span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="d-flex py-1 align-items-center"
-              (click)="changeProducts($event,'Tableware & Dinnerware','Appliances')">
-              <div class="flex-grow-1">
-                <h5 class="fs-13 mb-0 listname">Appliances</h5>
-              </div>
-              <div class="flex-shrink-0 ms-2" *ngIf="appliance > 0">
-                <span class="badge bg-light text-muted">{{appliance}}</span>
-              </div>
-            </a>
-          </li>
-
-          <li>
-            <a href="javascript:void(0);" class="d-flex py-1 align-items-center"
-              (click)="changeProducts($event,'Bags, Wallets and Luggage','Kids')">
-              <div class="flex-grow-1">
-                <h5 class="fs-13 mb-0 listname">Kids</h5>
-              </div>
-              <div class="flex-shrink-0 ms-2" *ngIf="kids > 0">
-                <span class="badge bg-light text-muted">{{kids}}</span>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-  </div> <!-- collapse.// -->
-  </article> <!-- filter-group // -->
-
-  <article class="filter-group">
-  <header class="card-header ">
-    <a href="#" class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside_brands">
-    <i class="icon-control fa fa-chevron-down"></i>  Brands 
-    </a>
-  </header>
-  <div class="collapse show" id="collapse_aside_brands">
-    <div class="card-body">
-      <label class="form-check mb-2">
-      <input class="form-check-input" type="checkbox" value="" checked>
-      <span class="form-check-label"> Mercedes </span>
-      <b class="badge rounded-pill bg-gray-dark float-end"></b>
-      </label> <!-- form-check end.// -->
-
-      <label class="form-check mb-2">
-      <input class="form-check-input" type="checkbox" value="" checked>
-      <span class="form-check-label"> Toyota </span>
-      <b class="badge rounded-pill bg-gray-dark float-end"></b>
-      </label> form-check end.//
-
-      <label class="form-check mb-2">
-      <input class="form-check-input" type="checkbox" value="" checked>
-      <span class="form-check-label"> Mitsubishi </span>
-      <b class="badge rounded-pill bg-gray-dark float-end"></b>
-      </label> <!-- form-check end.// -->
-
-      <label class="form-check mb-2">
-      <input class="form-check-input" type="checkbox" value="" checked>
-      <span class="form-check-label"> Nissan </span>
-      <b class="badge rounded-pill bg-gray-dark float-end"></b>
-      </label> <!-- form-check end.// -->
-
-      <label class="form-check mb-2">
-      <input class="form-check-input" type="checkbox" value="">
-      <span class="form-check-label"> Honda </span>
-      <b class="badge rounded-pill bg-gray-dark float-end"></b>
-      </label> <!-- form-check end.// -->
-
-      <label class="form-check mb-2">
-      <input class="form-check-input" type="checkbox" value="">
-      <span class="form-check-label"> Honda accord </span>
-      <b class="badge rounded-pill bg-gray-dark float-end"></b>
-      </label> <!-- form-check end.// -->
-    </div> <!-- card-body .// -->
-  </div> <!-- collapse.// -->
-  </article>
-
-
-  
-
-<article class="filter-group"  >
-  <header class="card-header">
-    <a href="#" class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside3">
-    <i class="icon-control fa fa-chevron-down"></i>  Size 
-    </a>
-  </header>
-  <div class="collapse show" id="collapse_aside3">
-    <div class="card-body">
-      <label class="checkbox-btn">
-      <input type="checkbox">
-      <span class="btn btn-light"></span>
-      </label>
-
-      <label class="checkbox-btn">
-      <input type="checkbox">
-      <span class="btn btn-light"> SM </span>
-      </label>
-
-      <label class="checkbox-btn">
-      <input type="checkbox">
-      <span class="btn btn-light"> LG </span>
-      </label>
-
-      <label class="checkbox-btn">
-      <input type="checkbox">
-      <span class="btn btn-light"> XXL </span>
-      </label>
-    </div> <!-- card-body.// -->
-  </div> <!-- collapse.// -->
-  </article>  <!-- filter-group // -->
-  <article class="filter-group" >
-    <header class="card-header">
-      <a href="#" class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside3">
-      <i class="icon-control fa fa-chevron-down"></i>  Raiting
-      </a>
-    </header>
-    <div class="collapse show" id="collapse_aside3">
-      <div class="card-body">
-  <p-rating [formControl]="selectedRaiting"></p-rating>
-</div> <!-- card-body.// -->
-</div> <!-- collapse.// -->
-</article>  <!-- filter-group // -->
-
-</form>
-</div> <!-- card.// -->
-<!-- ===== Card for sidebar filter .// ===== -->
-
-</aside> <!-- col .// -->
 <main class="col-lg-9">
   <ng-container *ngIf="!(loading$ | async); else loadingTpl">
 <header class="d-sm-flex align-items-center border-bottom mb-4 pb-3">
-  <!-- <strong class="d-block py-2"></strong> -->
-  <!-- <div>
-    <button type="button" class="btn" (click)="openModa('custom-modal-3')">Cotizar</button> 
-  </div> -->
+  
 
  
   
 </header>
     <!-- ========= content items ========= -->
      <div class="container">
-      <div class="ul_checkbox">
-      <ul>
-        <!-- <li *ngFor="let checkboxarrays of checkboxArray">
-          <input type="{{checkboxarrays.type}}" value="{{checkboxarrays.id}}" (change)="onChange($event)">{{checkboxarrays.price}}
-        </li> -->
-      </ul>
-    </div>
-<!-- <div>
-  <ul>
-    <li *ngFor="let productArrays of productArray">
-      {{productArrays.price}}kkk
-    </li>
-  </ul>
-</div> -->
+      
+
 
     </div>
     <ng-container *ngIf="isLoaded">
@@ -427,7 +133,7 @@
         <div class="row ">
           <div class="d-flex flex-column justify-content-center surface-card p-2 shadow-2 border-round  " style="background-color: rgba(255, 215, 0, 0.6); margin: 0 5px 5px 5px; align-items: center; animation: shake 0.5s ease-in-out;">
             <div class="text-lg font-medium text-600 mb-2"><strong>Paso 1:</strong> Ingresa tu <strong>edad</strong> para calcular precios exactos y obtener los mejores planes</div>
-            <button pButton pRipple type="button" label="Completar Perfil" class="p-button-raised p-button-danger" (click)="onButtonClick()" style="animation: aura 0.5s ease-in-out;"></button>
+            <button pButton pRipple type="button" label="Completar Perfil" class="p-button-raised p-button-danger" (click)="openModa('custom-modal-3')" style="animation: aura 0.5s ease-in-out;"></button>
           </div>
         
         
