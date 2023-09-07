@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import * as planes from '../../../public/products-copy.json';
 
 import { ModalService } from '../_modal';
-import { CartService } from '../services/cart.service';
 import {ServcioRetornoPrecioService} from '../services/servcio-retorno-precio.service';
 import {ServicioDeCompararService} from '../services/servicio-de-comparar.service';
 
@@ -34,7 +33,6 @@ export class HomeComponent implements OnInit {
     private retornarService: ServcioRetornoPrecioService,
     private deselctComparar: ServcioRetornoPrecioService,
     private servicioComparar: ServicioDeCompararService,
-    private cartService : CartService
     ) {} 
 
   public productosActualizados:Array<any> = []
@@ -88,9 +86,7 @@ closeButon() {
  alert(this.compareList.length);
 
   }
-  addtocart(item: any){
-    this.cartService.addtoCart(item);
-  }
+ 
   ngOnInit(): void {
    this.retornarService.disparadorDePrecio.subscribe(data=>{
      console.log('Recibiendo data en home...',data);

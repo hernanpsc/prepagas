@@ -4,7 +4,6 @@ import {map, pairwise, filter, throttleTime } from 'rxjs/operators';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import * as planes from '../../../public/products.json';
 import { ModalService } from '../_modal';
-import { CartService } from '../services/cart.service';
 import {ServcioRetornoPrecioService} from '../services/servcio-retorno-precio.service';
 import {ServicioDeCompararService} from '../services/servicio-de-comparar.service';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
@@ -99,15 +98,11 @@ selectedRaiting : FormControl = new FormControl('');
     private retornarService: ServcioRetornoPrecioService,
     private deselctComparar: ServcioRetornoPrecioService,
     private servicioComparar: ServicioDeCompararService,
-    private cartService : CartService,
     private formBuilder: FormBuilder,
     private http: HttpClient,
     public itemsService: ItemsService,
     private ngZone: NgZone,
     private cdr: ChangeDetectorRef
-
-    
-
     ) {
       this.buildForm();
      

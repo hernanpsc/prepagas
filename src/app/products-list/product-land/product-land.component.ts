@@ -3,7 +3,6 @@ import { ModalService } from '../../_modal';
 import { MasDetallesComponent } from '../../mas-detalles/mas-detalles.component';
 import {MatDialogModule, MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {ServicioDeCompararService} from '../../services/servicio-de-comparar.service'
-import { CartService } from '../../services/cart.service';
 
 
 export interface DialogData1 {
@@ -54,7 +53,6 @@ export class ProductLandComponent implements OnInit{
     private modalService: ModalService,
     public dialog: MatDialog,
     private servicioComparar: ServicioDeCompararService,
-    private cartService : CartService,
     ) { 
 
   }

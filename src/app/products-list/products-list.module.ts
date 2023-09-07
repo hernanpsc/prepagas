@@ -47,7 +47,7 @@ import { FiltersProductsComponent } from './filters-products/filters-products.co
 import { TooltipModule } from 'primeng/tooltip';
 import {SliderModule} from 'primeng/slider';
 import { DividerModule } from 'primeng/divider';
-
+import { ProductsService } from './products.service';
 const publicApi = [
   ProductsListComponent,
   ProductLandComponent,
@@ -116,7 +116,7 @@ const routes: Routes = [
         // NgSelectModule
         
     ],
-    providers: [DialogService]
+    providers: [DialogService,ProductsService]
 })
 export class ProductsListModule {
   
