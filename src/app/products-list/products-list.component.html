@@ -35,15 +35,15 @@
         <div class="d-flex flex-wrap justify-content-between surface-card p-2 shadow-2 border-round" style="background-color: whitesmoke; margin: 0 5px 5px 5px; align-items: center;">
           <div class="d-flex flex-wrap">
             <p-multiSelect
-              class="custom-ms"
-              [options]="dropdownClinica"
-              display="chip" 
-              [filter]="true"
-              defaultLabel="Busca por nombre"
-              [selectedItemsLabel]="'Selected Clinicas'"
-              [(ngModel)]="selectedClinica"
-              optionLabel="nombre"
-              (onChange)="onItemSelect($event)">
+            class="custom-ms"
+            [options]="dropdownClinica"
+            display="chip" 
+            [filter]="true"
+            defaultLabel="Busca por nombre"
+            [selectedItemsLabel]="'Selected Clinicas'"
+            [(ngModel)]="selectedClinica"
+            optionLabel="nombre"
+            (onChange)="onItemSelect($event)">
               <!-- Plantilla para elementos seleccionados -->
               <ng-template let-option pTemplate="selectedItems">
                 <div class="selected-chips">
@@ -58,7 +58,7 @@
               <!-- Plantilla para elementos en la lista -->
               <ng-template let-option pTemplate="item">
                 <div class="item">
-                  {{ option.nombre }}
+                  {{ option.entity }}
                 </div>
               </ng-template>
             </p-multiSelect>
@@ -108,11 +108,17 @@
     
   <div class="row ">
 
-
-    <aside class="col-lg-3 ">
-     <app-filters-products [product]="products" ></app-filters-products>
-    </aside> <!-- col .// -->
-
+    <!-- <aside class="col-lg-3 ">
+     <app-filters-products  [product]="products" ></app-filters-products>
+    </aside> -->
+    <div class="collapse content" *ngIf="!sidebarVisible">
+      <app-filters-products [product]="products"></app-filters-products>
+      <!-- Contenido principal aquí -->
+    </div>
+    <aside class=" col-lg-3 filters-sidebar">
+      <app-filters-products [product]="products"></app-filters-products>
+    </aside>
+    
 <main class="col-lg-9">
   <ng-container *ngIf="!(loading$ | async); else loadingTpl">
 <header class="d-sm-flex align-items-center border-bottom mb-4 pb-3">
@@ -139,13 +145,13 @@
         
         
         
-          <div *ngFor="let product of products | filter: SearchEmpresa:'empresa' |ratingFilter: minRating |  sort: [SortbyParam, SortDirection]"  class="col-lg-4 col-md-6 col-sm-6 ">
+          <div *ngFor="let product of products | filter: SearchEmpresa:'empresa'  |  sort: [SortbyParam, SortDirection]"  class="col-lg-4 col-md-6 col-sm-6 ">
             <app-product-card  *ngIf="view === 'grid'" [product]="product"></app-product-card>
           </div>
       
     
         
-            <div *ngFor="let product of products | filter: SearchEmpresa:'empresa' |ratingFilter: minRating |  sort: [SortbyParam, SortDirection]" >
+            <div *ngFor="let product of products | filter: SearchEmpresa:'empresa'  |  sort: [SortbyParam, SortDirection]" >
             <app-product-land *ngIf="view === 'list'" [product]="product"></app-product-land>
             
             </div>  </div>  
@@ -228,12 +234,29 @@
       </div>
     </p-dialog>
     
-      
-      
- 
-           
-         
+    <p-sidebar [(visible)]="sidebarVisible" styleClass="w-30rem">
+      <p>
 
+      </p>
+  </p-sidebar>
+  <p-button (click)="sidebarVisible = true" icon="pi pi-arrow-right"></p-button>
+
+ 
+  <p-sidebar [(visible)]="sidebarVisible" [fullScreen]="true">
+    <div class="content">
+    
+        <app-filters-products [product]="products" ></app-filters-products>
+          <!-- Contenido principal aquí -->
+    </div>
+</p-sidebar>
+<p-button (click)="sidebarVisible = true" icon="pi pi-th-large"></p-button>
+         
+<button *ngIf="mostrarBotonPersonalizado" (click)="mostrarOcultarColumna()">Mostrar/Ocultar Columna</button>
+
+<!-- Botón de filtros en la parte inferior de la pantalla -->
+<button *ngIf="mostrarBotonFiltros" (click)="mostrarFiltros()">
+  <i class="pi pi-filter"></i> Filtros
+</button>
 
             <jw-modal id='custom-modal-3' >
               <app-cotizar-form>  <button type="button" class="btn" (click)="closeModa('custom-modal-3')">Cerrar</button>

@@ -16,6 +16,7 @@ import { Empresa } from '../interfaces/empresas'
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { MegaMenuItem, MenuItem } from 'primeng/api';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductsService } from './products.service'
 declare var addProp:any;
 declare var desectItem:any;
 declare var showandHide:any;
@@ -102,7 +103,8 @@ selectedRaiting : FormControl = new FormControl('');
     private http: HttpClient,
     public itemsService: ItemsService,
     private ngZone: NgZone,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private productoService:ProductsService
     ) {
       this.buildForm();
      
@@ -468,7 +470,7 @@ closeButon() {
   // }
     
   ngOnInit(): void {
-    
+    this.productoService.getProducts().subscribe(data => {});
     this.http.get<any>(this.serverUrl + '/clinicas').subscribe({
       next: (data) => {
         this.clinicas = data; // Asigna los datos de los productos a la variable 'products'
@@ -509,7 +511,11 @@ closeButon() {
       console.log(' valor seleccionado de la empresa:', selectedValue);
       // Puedes agregar aquí la lógica para filtrar o realizar otras acciones
     });
-   
+    this.productoService.products$.subscribe(filteredProducts => {
+      this.products = filteredProducts;
+
+    });
+
     this.compareProdList();
         this.onItemSelect(this.selectedClinica);
     
@@ -605,9 +611,9 @@ arrays: any = [];
 getProductos(){
   this.products= this.api.getProduct();
 }
-getProduct(){
-  this.arrays = this.api.productService();
-}
+// getProduct(){
+//   this.arrays = this.api.productService();
+// }
 
 tempArray:any=[];
 newArray:any=[];
@@ -729,7 +735,6 @@ filterProductsByRaiting(selectedRaiting: number) {
     return product.rating >= selectedRaiting;
   });
 }
-
 
 
 

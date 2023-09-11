@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,ChangeDetectorRef  } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { ProductsService } from '../products.service';
 @Component({
@@ -9,7 +9,7 @@ import { ProductsService } from '../products.service';
 export class FiltersProductsComponent implements OnInit  {
   @Input() product: any[];
   filtrosSeleccionadosGroup: FormGroup | undefined; // Definición inicial
-  selectedRaiting : FormControl = new FormControl('');
+  selectedRaiting : FormControl = new FormControl(0);
   formFilter: FormGroup;
   multiDefaultOption: any[] = []; 
   tooltipContent: string = 'Your tooltip content here';
@@ -37,7 +37,7 @@ export class FiltersProductsComponent implements OnInit  {
   val2: number;
   val3: number;
   val4: number;
-
+  filterKeys: string[]; // Agrega esta variable para almacenar las claves de los filtros
   priceRange: FormControl = new FormControl('');  
   quote: any;
   Quote : {
@@ -47,15 +47,18 @@ export class FiltersProductsComponent implements OnInit  {
   }
   constructor(
     private formBuilder: FormBuilder,
-    private filterManagerService: ProductsService
+    private filterManagerService: ProductsService,
+    private cdr: ChangeDetectorRef
+    
   ){  
     
- 
+    this.filterKeys = Object.keys(this.checkboxOptions);
+
     this.filtrosSeleccionadosGroup = this.formBuilder.group({
       selectedRaiting:[this.selectedRaiting.value],
-        priceRange: this.rangeValues,
+      priceRange: this.rangeValues,
         valueSlide3: [this.slide3Values.value],
-          valueSlide4: [this.slide4Values.value],
+      valueSlide4: [this.slide4Values.value],
        PMO_Solo_por_Aportes: [this.PMO_Solo_por_Aportes],
       Cirugia_Estetica: [this.Cirugia_Estetica],
       Ortodoncia_Adultos: [this.Ortodoncia_Adultos],
@@ -82,17 +85,22 @@ export class FiltersProductsComponent implements OnInit  {
 
   
     
-    this.filtrosSeleccionadosGroup.valueChanges.subscribe((newValues) => {
-      console.log('Filtros seleccionados han cambiado:', newValues);})
+    this.filtrosSeleccionadosGroup.valueChanges.subscribe(() => {
+      console.log('Filtros seleccionados han cambiado:', this.filtrosSeleccionadosGroup.value);
+      this.applyFilters(this.filtrosSeleccionadosGroup);
+    });
+  
     
-      this.selectedRaiting.valueChanges.subscribe((selectedValue: number) => {
-        console.log('Valor seleccionado de la calificación:', selectedValue);
-        // Registra el cambio en el formulario
-        this.filtrosSeleccionadosGroup.get('selectedRaiting')?.setValue(selectedValue);
-        // Envía el formulario actualizado al servicio
-        this.filterManagerService.setFilterForm(this.filtrosSeleccionadosGroup.value);
-      });
-      
+    
+    this.selectedRaiting.valueChanges.subscribe((selectedValue: number) => {
+      console.log('Valor seleccionado de la calificación:', selectedValue);
+      const selectedArray = [0, 1, 2, 3, 4, 5].slice(0, selectedValue + 1);
+      // Registra el cambio en el formulario
+      this.filtrosSeleccionadosGroup.get('selectedRaiting')?.setValue(selectedArray);
+      // Envía el formulario actualizado al servicio
+      this.filterManagerService.setFilterForm(this.filtrosSeleccionadosGroup.value);
+    });
+    
       this.rangeValues.valueChanges.subscribe((newValues) => {
         console.log('Valor mínimo del rango de precios:', newValues[0]);
         console.log('Valor máximo del rango de precios:', newValues[1]);
@@ -128,6 +136,7 @@ export class FiltersProductsComponent implements OnInit  {
               this.filtrosSeleccionadosGroup.get(key)?.setValue(newValue);
               // Envía el formulario actualizado al servicio
               this.filterManagerService.setFilterForm(this.filtrosSeleccionadosGroup.value);
+              console.log(this.filtrosSeleccionadosGroup.value)
             });
           });
           
@@ -179,6 +188,47 @@ export class FiltersProductsComponent implements OnInit  {
     
     // Luego, puedes llamar a setFilterForm para actualizar los filtros en el servicio
     this.filterManagerService.setFilterForm(filtros);
+  }
+  eliminarFiltro(option: string) {
+    // Cambia el valor del FormControl correspondiente al hacer clic en la "x"
+    const checkboxControl = this.filtrosSeleccionadosGroup.get(option);
+    if (checkboxControl) {
+      checkboxControl.setValue(false);
+      
+      // Cambia el estado del checkbox al mismo tiempo
+      const checkbox = document.getElementById('subscribe') as HTMLInputElement | null;
+      if (checkbox != null) {
+        checkbox.checked = false; // Establecer el checkbox como desmarcado
+      }
+    }
+  
+    this.filterManagerService.setFilterForm(this.filtrosSeleccionadosGroup.value);
+  }
+  
+  
+
+  limpiarTodo() {
+    // Limpia todos los checkboxes
+    this.filterKeys.forEach((key) => {
+      this.filtrosSeleccionadosGroup.get(key)?.setValue(false);
+    });
+    this.filterManagerService.setFilterForm(this.filtrosSeleccionadosGroup.value);
+  }
+  cambiarEstadoDelCheckbox() {
+    const checkbox = document.getElementById('subscribe') as HTMLInputElement | null;
+
+    if (checkbox != null) {
+      // ✅ Establecer el checkbox como marcado
+      checkbox.checked = true;
+
+      // ✅ Establecer el checkbox como desmarcado
+      // checkbox.checked = false;
+    }
+  }
+
+  applyFilters(form: FormGroup): void {
+    // Llama a la función filterProducts del servicio y pasa el formulario de filtros como argumento
+    this.filterManagerService.filterProducts(form);
   }
   
 }

@@ -364,3 +364,70 @@ width: 450px !important;
   padding: 20px; /* Espacio interno del contenido principal */
 }
 
+/* Estilos para pantallas pequeñas (por ejemplo, teléfonos) */
+@media screen and (max-width: 600px) {
+  /* Estilos específicos para pantallas pequeñas aquí */
+}
+
+/* Estilos para pantallas medianas (por ejemplo, tabletas) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Estilos específicos para pantallas medianas aquí */
+}
+
+/* Estilos para pantallas grandes (por ejemplo, computadoras de escritorio) */
+@media screen and (min-width: 1025px) {
+  /* Estilos específicos para pantallas grandes aquí */
+}
+/* Estilos para pantallas grandes (por ejemplo, pantallas con ancho mínimo de 768px) */
+@media (min-width: 768px) {
+  .filters-sidebar {
+    display: block; /* Mostrar el sidebar en pantallas grandes */
+  }
+}
+
+/* Estilos para pantallas pequeñas (por ejemplo, pantallas con ancho máximo de 767px) */
+@media (max-width: 767px) {
+  .filters-sidebar {
+    display: none; /* Ocultar el sidebar en pantallas pequeñas */
+  }
+}
+@media (max-width: 767px) {
+  :host ::ng-deep .custom-ms .p-multiselect-label,
+  :host ::ng-deep .custom-ms .div {
+    width: 100% !important; /* Haz que el ancho sea del 100% en pantallas pequeñas */
+  }
+}
+/* Estilos para truncar el texto y mostrar un tooltip */
+.custom-ms .p-multiselect-token {
+  /* Truncar el texto y agregar puntos suspensivos */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px; /* Ajusta el ancho máximo según tus necesidades */
+
+  /* Habilitar el tooltip */
+  position: relative;
+}
+
+.custom-ms .p-multiselect-token:hover::after {
+  /* Mostrar el tooltip en hover */
+  content: attr(title);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  white-space: normal; /* Mostrar el texto completo */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  z-index: 999;
+}
+.custom-ms .p-multiselect-panel {
+  max-width: 300px; /* Ajusta el valor según tus necesidades */
+}
+.custom-ms .p-multiselect-item {
+  max-width: 250px; /* Ajusta el valor según tus necesidades */
+  white-space: nowrap; /* Evitar que el texto se desborde */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Agregar puntos suspensivos si el texto es demasiado largo */
+}
