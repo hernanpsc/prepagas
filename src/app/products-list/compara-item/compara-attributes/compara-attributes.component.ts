@@ -19,11 +19,11 @@ export class ComparaAttributesComponent {
   }
 
   getAttributesInGroup(group: string): any[] {
-    return this.productos[0].attributes.filter(attribute => attribute.attribute_group_name === group);
+    return this.productos[0].attributes.filter((attribute: { attribute_group_name: string; }) => attribute.attribute_group_name === group);
   }
 
   findAttributeValue(producto: any, attributeName: string): string {
-    const attribute = producto.attributes.find(attr => attr.name === attributeName);
+    const attribute = producto.attributes.find((attr: { name: string; }) => attr.name === attributeName);
     return attribute ? attribute.value_name : '';
   }
 }

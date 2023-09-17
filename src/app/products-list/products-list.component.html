@@ -62,14 +62,14 @@
                 </div>
               </ng-template>
             </p-multiSelect>
-            <select class="form-select d-inline-block w-auto me-1">
-              <option value="0">Best match</option>
-              <option value="1">Recommended</option>
-              <option value="2">High rated</option>
-              <option value="3">Randomly</option>
-            </select>
+         
           </div>
-          
+          <!-- <select class="form-select d-inline-block w-auto me-1">
+            <option value="0">Best match</option>
+            <option value="1">Recommended</option>
+            <option value="2">High rated</option>
+            <option value="3">Randomly</option>
+          </select> -->
           <div class="d-flex">
             <select class="form-select d-inline-block w-auto me-1" [formControl]="empresa" (change)="onEmpresaFilter()">
               <option>Empresa</option>
@@ -96,10 +96,10 @@
             </button>
           </div>
           <div class="btn-group" id="view">
-            <button  [class.text-primary]="view === 'list'" (click)="view = 'list';"  type="button"  class="btn btn-secondary" data-bs-toggle="tooltip" title="List view"> 
+            <button [class.text-primary]="view === 'list'" (click)="view = 'list';"  type="button"  class="btn btn-secondary custom-hidden-button" data-bs-toggle="tooltip" title="List view"> 
               <i class="fa fa-bars"></i>
             </button>
-            <button  [class.text-primary]="view === 'grid'" (click)="view = 'grid';" type="button"  type="button" class="btn btn-secondary" data-bs-toggle="tooltip" title="Grid view"> 
+            <button [class.text-primary]="view === 'grid'" (click)="view = 'grid';" type="button"  type="button" class="btn btn-secondary custom-hidden-button" data-bs-toggle="tooltip" title="Grid view"> 
               <i class="fa fa-th"></i>
             </button>
             </div>
@@ -151,7 +151,7 @@
       
     
         
-            <div *ngFor="let product of products | filter: SearchEmpresa:'empresa'  |  sort: [SortbyParam, SortDirection]" >
+            <div class="custom-hidden-button" *ngFor="let product of products | filter: SearchEmpresa:'empresa'  |  sort: [SortbyParam, SortDirection]" >
             <app-product-land *ngIf="view === 'list'" [product]="product"></app-product-land>
             
             </div>  </div>  
@@ -217,7 +217,7 @@
       </div>
     </ng-template>
 
-    <p-dialog header="Comparador de Planes" [(visible)]="displayDialog" [style]="{ 'width': '80%', 'height': '80%' }">
+    <p-dialog header="Comparador de Planes" [(visible)]="displayDialog" [style]="{ 'width': '100%', 'height': '100%' }">
       <app-compara-item
         [productos]="compareProdList()"
         [clinicasVal]="compareProdClinicas(compareProdList())"
@@ -235,9 +235,10 @@
     </p-dialog>
     
     <p-sidebar [(visible)]="sidebarVisible" styleClass="w-30rem">
-      <p>
+      
+        <app-filters-products [product]="products" ></app-filters-products>
 
-      </p>
+    
   </p-sidebar>
   <p-button (click)="sidebarVisible = true" icon="pi pi-arrow-right"></p-button>
 
@@ -249,7 +250,7 @@
           <!-- Contenido principal aquí -->
     </div>
 </p-sidebar>
-<p-button (click)="sidebarVisible = true" icon="pi pi-th-large"></p-button>
+<!-- <p-button (click)="sidebarVisible = true" icon="pi pi-th-large"></p-button> -->
          
 <button *ngIf="mostrarBotonPersonalizado" (click)="mostrarOcultarColumna()">Mostrar/Ocultar Columna</button>
 

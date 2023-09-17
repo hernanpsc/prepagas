@@ -8,7 +8,7 @@ import { ProductsService } from '../products.service';
 })
 export class FiltersProductsComponent implements OnInit  {
   @Input() product: any[];
-  filtrosSeleccionadosGroup: FormGroup | undefined; // Definición inicial
+  filtrosSeleccionadosGroup: FormGroup
   selectedRaiting : FormControl = new FormControl(0);
   formFilter: FormGroup;
   multiDefaultOption: any[] = []; 

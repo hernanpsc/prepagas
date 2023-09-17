@@ -111,10 +111,12 @@ private buildForm(){
   
 
 
-save(event){
+save(event: any){
   if(this.formCotizar.valid){
     console.log(this.formCotizar.value);
   } else {
+    console.log('formulario invalido');
+
     this.formCotizar.markAllAsTouched();
   };
 
@@ -133,15 +135,15 @@ console.log('Enviando datos...',this.formCotizar);
 
 ngOnInit()
   {
-    // this.nameField.valueChanges
-    // .subscribe(value => {
-    //   console.log(value);
+    this.nameField.valueChanges
+    .subscribe(value => {
+      console.log(value);
 
-    // }      )
-    // this.formCotizar.valueChanges
-    // .subscribe(value => {
-    //   console.log(value);
-    // });
+    }      )
+    this.formCotizar.valueChanges
+    .subscribe(value => {
+      console.log(value);
+    });
     this.onChanges();
   }
   onChanges(): void {

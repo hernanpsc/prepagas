@@ -16,14 +16,19 @@ import { Empresa } from '../interfaces/empresas'
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { MegaMenuItem, MenuItem } from 'primeng/api';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ProductsService } from './products.service'
+import { ProductsService } from './products.service';
+import {CotizacionService} from '../services/cotizacion.service';
+import { LocalStorageService } from '../services/local-storage.service';
+
 declare var addProp:any;
 declare var desectItem:any;
 declare var showandHide:any;
 interface Country {
   name: string;
 }
-
+interface ResponseData {
+  planes: any[]; // Aquí debes definir el tipo correcto de los datos de planes
+}
   
 @Component({
   selector: 'app-products-list',
@@ -93,7 +98,8 @@ selectedRaiting : FormControl = new FormControl('');
   selectedClinicaControl = new FormControl([]);
   rowsPerPageOptions = [5, 10, 20];
   tieredItems: MenuItem[] = [];
-
+  formDataInicial: FormGroup; // Formulario inicial con valores predeterminados
+  formDataLocalstorage: FormGroup; 
   constructor(
     private modalService: ModalService,
     private retornarService: ServcioRetornoPrecioService,
@@ -104,11 +110,12 @@ selectedRaiting : FormControl = new FormControl('');
     public itemsService: ItemsService,
     private ngZone: NgZone,
     private cdr: ChangeDetectorRef,
-    private productoService:ProductsService
+    private productoService:ProductsService,
+    private cotizacionService: CotizacionService,
+    private localStorageService: LocalStorageService
     ) {
       this.buildForm();
      
-    
     }
     
     SortbyParamControl = new FormControl(this.SortbyParam);
@@ -126,14 +133,14 @@ selectedRaiting : FormControl = new FormControl('');
     compareProdList() {
       // console.log(this.servicioComparar.compareList)
       this.compareLength = this.products.filter((p: { compare: any; }) => p.compare).length;
-      this.compareList = this.products.filter(p => p.compare);
+      this.compareList = this.products.filter((p: { compare: any; }) => p.compare);
       // console.log(this.compareList)
       var planesSel = this.products.filter(p => p.compare);
-      this.servicioComparar.compareList = this.products.filter(p => p.compare)
+      this.servicioComparar.compareList = this.products.filter((p: { compare: any; }) => p.compare)
       // console.log(this.servicioComparar.compareList)
       // console.log(this.compareProdClinicas(this.servicioComparar.compareList))
       this.visibleTopSidebar = this.compareList.length >= 1;
-console.log(this.visibleTopSidebar)
+// console.log(this.visibleTopSidebar)
           return this.servicioComparar.compareList
       
     }
@@ -470,23 +477,57 @@ closeButon() {
   // }
     
   ngOnInit(): void {
-    this.productoService.getProducts().subscribe(data => {});
+
+      this.formDataInicial = this.formBuilder.group({
+        grupo: ['1'],
+        empresa_prepaga: ['0'],
+        edad_1: ['18'],
+        edad_2: ['0'],
+        numkids: ['0'],  
+        tipo: ['P'],
+        agree: [true],
+        aporteOS: [''],
+        sueldo: [''],
+        aporte: [''],
+        monoadic: [false],
+        cantAport: [''],
+        afinidad: [false],
+        bonAfinidad: [''],
+        supras: [false],
+        segvida: [false],
+        segvida1: [false],
+      });
+       // Recupera los datos del formulario desde localStorage
+    const formDataJSON = localStorage.getItem('formData');
+    if (formDataJSON) {
+      // Si hay datos en localStorage, conviértelos en un objeto FormGroup
+      this.formDataLocalstorage = this.formBuilder.group(JSON.parse(formDataJSON));
+
+      // Verifica si formDataLocalstorage tiene valores
+      if (Object.keys(this.formDataLocalstorage.controls).length > 0) {
+        // Si formDataLocalstorage tiene valores, asigna esos valores a formDataInicial
+        this.formDataInicial = this.formDataLocalstorage;
+      }
+    }
+    // this.productoService.getProducts().subscribe(data => {});
     this.http.get<any>(this.serverUrl + '/clinicas').subscribe({
       next: (data) => {
         this.clinicas = data; // Asigna los datos de los productos a la variable 'products'
         this.dropdownClinica = this.clinicas
         this.selectedClinica = [];
-        this.http.get<any>(this.serverUrl + '/planes').subscribe({
-          next: (data) => {
-            this.products = data; // Asigna los datos de los productos a la variable 'products'
-            this.secureProducts = data;
+        this.cotizacionService.getCotizacion(this.formDataInicial.value).subscribe(
+          (response: ResponseData) => {
+            console.log('Respuesta del servidor:', response);
+            this.products = response.planes;
+            // this.secureProducts = response.planes;
             this.addClinicas();
-            console.log(this.products )
-          },
-          error: (error) => {
-            console.log(error); // Maneja el error si la solicitud no se realiza correctamente
+
+            // console.log(this.products )
+                          },
+                (error) => {
+                  console.error('Error en la solicitud al servidor:', error);
           }
-        });
+        );
       },
       error: (error) => {
         console.log(error); // Maneja el error si la solicitud no se realiza correctamente
@@ -537,7 +578,25 @@ closeButon() {
       // },0);
     this.retornarService.disparadorDePrecio.subscribe(data=>{
       console.log('Recibiendo data en product.list.component.ts...',data);
-     
+      console.log('Recibiendo data en product.list.component.ts...', data.value);
+      if (data && data.value) {
+        const clonedDataValue = _.cloneDeep(data.value);
+    
+        // Luego, guarda `data.value` clonado en localStorage
+        this.localStorageService.setItem('formData', clonedDataValue);
+      }
+    this.cotizacionService.getCotizacion(data.value).subscribe((response: ResponseData) => {    // Manejar la respuesta del servidor aquí si es necesario
+    console.log('Respuesta del servidor:', response);
+    console.log('this.products antes : ' + this.products)
+    this.products = response.planes;
+    this.addClinicas();
+
+    console.log('this.products despues : ' + this.products)
+
+  }, error => {
+    // Manejar errores si ocurren
+    console.error('Error en la solicitud al servidor:', error);
+  });
  
 })
 
@@ -735,7 +794,14 @@ filterProductsByRaiting(selectedRaiting: number) {
     return product.rating >= selectedRaiting;
   });
 }
-
+guardarDatosEnLocalStorage(formData: FormData): void {
+  try {
+    // Utiliza la función del servicio para guardar los datos
+    this.localStorageService.setItem('formData', formData);
+  } catch (error) {
+    console.error('Error al guardar en localStorage:', error);
+  }
+}
 
 
 }

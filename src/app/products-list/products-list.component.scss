@@ -8,13 +8,13 @@
 
 .example-sidenav-content {
   display: flex;
-  height: 100%;
+  height: 90%;
   align-items: center;
   justify-content: center;
 }
 
 .example-sidenav {
-  padding: 20px;
+  padding: 5px;
 }
 mat-button-toggle-group {
   margin-left: 12px;
@@ -430,4 +430,15 @@ width: 450px !important;
   white-space: nowrap; /* Evitar que el texto se desborde */
   overflow: hidden;
   text-overflow: ellipsis; /* Agregar puntos suspensivos si el texto es demasiado largo */
+}
+/* Estilo por defecto para pantallas grandes */
+button {
+  display: block; /* Mostrar todos los botones como bloque */
+}
+
+/* Ocultar el botón con la clase personalizada en pantallas pequeñas */
+@media (max-width: 900px) {
+  .custom-hidden-button {
+    display: none; /* Ocultar el botón con la clase personalizada en pantallas pequeñas (ancho máximo de 767px) */
+  }
 }

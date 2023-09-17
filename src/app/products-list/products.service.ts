@@ -124,7 +124,7 @@ export class ProductsService {
             this.products = data; // Asigna los datos de los productos a la variable 'products'
             this.secureProducts = data;
             this.addClinicas();
-            console.log(this.products )
+            // console.log(this.products )
           },
           error: (error) => {
             console.log(error); // Maneja el error si la solicitud no se realiza correctamente
@@ -223,7 +223,7 @@ export class ProductsService {
                 this.products = planesData;
                 this.secureProducts = planesData;
                 this.addClinicas();
-                console.log(this.products);
+                // console.log(this.products);
                 observer.next(this.products); // Emitir los productos una vez que se obtengan
                 observer.complete();
               },
