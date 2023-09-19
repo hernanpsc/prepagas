@@ -19,6 +19,14 @@ export interface Planes {
     description:string;
     caracteristicas:string[];
     servicios:string[]
+    valueSlide3?: number;
+    valueSlide4?: number;
+    PMO_Solo_por_Aportes?: boolean;
+    Cirugia_Estetica?:boolean;
+    Ortodoncia_Adultos?:boolean;
+    Habitacion_Individual?:boolean;
+    Cobertura_Nacional?:boolean;
+    Sin_Copagos?:boolean;
     
   }
   

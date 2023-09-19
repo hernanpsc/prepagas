@@ -9,8 +9,18 @@
     <strong class="price">{{product.name}}</strong>
     </div> <!-- price-wrap.// -->
     <p class="title mb-2"></p>
-    <p class="card-text">Precio: ${{ product.precio }}</p>
-
+    <ng-container *ngIf="esNumero(product.precio)">      <!-- Contenido a mostrar -->
+      <p class="card-text">Precio: ${{ product.precio }}</p> 
+    </ng-container>
+    <ng-container *ngIf="isPrecioArray(product)">
+      <p>Precios Variados:</p>
+      <ul>
+        <li *ngFor="let variante of product.precio">
+          {{ variante.name }}: {{ variante.precio }}
+        </li>
+      </ul>
+    </ng-container>
+    
     <button (click)="openDialog(product)" class="btn btn-outline-primary btn-sm mt-2" type="button">Detalles</button>
           <button (click)='toggleCompare();' class="btn btn-outline-primary btn-sm mt-2" type="button">
             {{product.compare ? "Remover" : "Comparar"}}

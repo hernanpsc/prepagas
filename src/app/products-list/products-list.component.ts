@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProductsService } from './products.service';
 import {CotizacionService} from '../services/cotizacion.service';
 import { LocalStorageService } from '../services/local-storage.service';
+import rfdc from 'rfdc';
 
 declare var addProp:any;
 declare var desectItem:any;
@@ -55,6 +56,8 @@ export class ProductsListComponent implements OnInit {
   bodyText: string;
   title = 'product-app';
   public secureProducts: any = (planes as any).default; 
+  public productosFiltrados:any[];
+
   public products: any = (planes as any).default;
   public qPlanes: number = this.products.length;
   hidden = false;
@@ -71,7 +74,7 @@ export class ProductsListComponent implements OnInit {
   layout: string = 'list';
   visibleTopSidebar: boolean = false;
   SortbyParam: string = 'empresa'; // Valor por defecto
-selectedRaiting : FormControl = new FormControl('');
+selectedRating : FormControl = new FormControl('');
   isLoaded: boolean;
   advanceSearchExpanded: boolean = false;
   planes : any = [];
@@ -86,7 +89,7 @@ selectedRaiting : FormControl = new FormControl('');
   showFiller = false;
   empresas: any ;
   
-      minRaiting: number = 0; // Valor inicial de calificación mínima
+      minRating: number = 0; // Valor inicial de calificación mínima
   disabled = false;
   ShowFilter = false;
   limitSelection = false;
@@ -98,8 +101,10 @@ selectedRaiting : FormControl = new FormControl('');
   selectedClinicaControl = new FormControl([]);
   rowsPerPageOptions = [5, 10, 20];
   tieredItems: MenuItem[] = [];
+  
   formDataInicial: FormGroup; // Formulario inicial con valores predeterminados
-  formDataLocalstorage: FormGroup; 
+  formDataLocalstorage: FormGroup;
+  formDataInicialJSON: any[];
   constructor(
     private modalService: ModalService,
     private retornarService: ServcioRetornoPrecioService,
@@ -117,7 +122,8 @@ selectedRaiting : FormControl = new FormControl('');
       this.buildForm();
      
     }
-    
+     // Ejemplo de cómo acceder al formulario desde otro componente
+  
     SortbyParamControl = new FormControl(this.SortbyParam);
     public productosActualizados:Array<any> = []
     private buildForm(){
@@ -125,7 +131,7 @@ selectedRaiting : FormControl = new FormControl('');
       this.formFilter =this.formBuilder.group({
         buscaClinica: [''],
         empresa_prepaga: ['0'],
-        selectedRaiting:0,
+        selectedRating:0,
       });
     }
    
@@ -325,29 +331,29 @@ onItemSelect(selectedClinica: any){
   let newArray = [];
   
 
-  this.products = this.secureProducts;
+  this.productosFiltrados = this.products;
 
 // console.log(this.products)
   var seleccion = this.selectedClinica
   for( let i=0;i<seleccion.length;i++){
     // console.log(seleccion[i])
   }
-  var planes = this.products;
-  this.showandHide = this.products;
+  var planes = this.productosFiltrados;
+  this.showandHide = this.productosFiltrados;
 // planes = this.tempArrayHide.concat(this.tempArrayShow);
-  var clinicas_seleccionadas = seleccion.map(function (selectas, _index, _array) {
+  var clinicas_seleccionadas = seleccion.map(function (selectas, index, array) {
     return selectas.nombre; 
 });
 if ( seleccion.length === 0 ){
   for (let j in planes  ){
-    this.products[j].validacionclinica = 'show'
+    this.productosFiltrados[j].validacionclinica = 'show'
   }
  
 
 } else {
 for (let j in planes  ) {
   var clinicas = planes[j].clinicas 
-var clinicas_del_plan = clinicas.map(function (clinicas_list: { nombre: any; }, _index: any, _array: any) {
+var clinicas_del_plan = clinicas.map(function (clinicas_list, index, array) {
   return clinicas_list.nombre; 
 });
 var validation = 0
@@ -368,13 +374,16 @@ this.tempArrayHide  = planes.filter((e:any)=> e.validacionclinica != "show");
 this.tempArrayShow  = planes.filter((e:any)=> e.validacionclinica == "show");
 // console.log(this.tempArrayShow)
 // console.log(this.tempArrayHide)
-this.products = this.tempArrayShow
+this.productosFiltrados = this.tempArrayShow;
+this.actualizarProductos(this.productosFiltrados)
+
 this.newArray = this.tempArrayShow.concat(this.tempArrayHide);
+this.productoService.activarFuncionEnComponenteB();
 
 
 }   
 
-onItemDeSelect(_item: any){
+onItemDeSelect(item: any){
   // console.log('onItemSelect', item);
   //  console.log(this.tempArrayShow);
   //  console.log(this.tempArrayHide);
@@ -384,29 +393,29 @@ onItemDeSelect(_item: any){
   let newArray = [];
   
 
-  this.products = this.secureProducts;
+  this.productosFiltrados = this.productosFiltrados;
 
 // console.log(this.products)
   var seleccion = this.selectedClinica
   for( let i=0;i<seleccion.length;i++){
     // console.log(seleccion[i])
   }
-  var planes = this.products;
-  this.showandHide = this.products;
+  var planes = this.productosFiltrados;
+  this.showandHide = this.productosFiltrados;
 // planes = this.tempArrayHide.concat(this.tempArrayShow);
-  var clinicas_seleccionadas = seleccion.map(function (selectas, _index, _array) {
+  var clinicas_seleccionadas = seleccion.map(function (selectas, index, array) {
     return selectas.nombre; 
 });
 if ( seleccion.length = 0 ){
   for (let j in planes  ){
-    this.products[j].validacionclinica = 'show'
+    this.productosFiltrados[j].validacionclinica = 'show'
   }
  
 
 } else {
 for (let j in planes  ) {
   var clinicas = planes[j].clinicas 
-var clinicas_del_plan = clinicas.map(function (clinicas_list, _index, _array) {
+var clinicas_del_plan = clinicas.map(function (clinicas_list, index, array) {
   return clinicas_list.entity; 
 });
 var validation = 0
@@ -421,9 +430,57 @@ if ( validation == clinicas_seleccionadas.length){
   planes[j].validacionclinica = 'hide'
 }};
 }
+// console.log(planes)
+this.tempArrayHide  = planes.filter((e:any)=> e.validacionclinica != "show");
+this.tempArrayShow  = planes.filter((e:any)=> e.validacionclinica == "show");
+// console.log(this.tempArrayShow)
+// console.log(this.tempArrayHide)
+this.productosFiltrados = this.tempArrayShow;
+this.actualizarProductos(this.productosFiltrados)
+
+this.newArray = this.tempArrayShow.concat(this.tempArrayHide);
+this.productoService.activarFuncionEnComponenteB();
 
 
 }   
+
+
+filtrarPorClinicasExistente(productosFiltrados: any[], seleccion: any[]): any[] {
+  let planes = productosFiltrados.slice(); // Copia de los productos filtrados existentes
+  let clinicas_seleccionadas = seleccion.map(selectas => selectas.nombre);
+
+  if (seleccion.length === 0) {
+    for (let j in planes) {
+      planes[j].validacionclinica = 'show';
+    }
+  } else {
+    for (let j in planes) {
+      let clinicas = planes[j].clinicas;
+      let clinicas_del_plan = clinicas.map((clinicas_list: { nombre: any; }) => clinicas_list.nombre);
+      let validation = 0;
+
+      clinicas_seleccionadas.forEach(item => {
+        if (clinicas_del_plan.includes(item)) {
+          validation++;
+        }
+      });
+
+      if (validation === clinicas_seleccionadas.length) {
+        planes[j].validacionclinica = 'show';
+      } else {
+        planes[j].validacionclinica = 'hide';
+      }
+    }
+  }
+
+  let tempArrayHide = planes.filter(e => e.validacionclinica !== 'show');
+  let tempArrayShow = planes.filter(e => e.validacionclinica === 'show');
+
+  return tempArrayShow;
+}
+
+
+
 
   openModal(_id: string) {
 
@@ -455,48 +512,55 @@ closeButon() {
     this.cartService.addtoCart(item);
   }
  
-   filterRaiting( raiting: number ) {
+   filterRating( rating: number ) {
     this.productsService.setFilter({
-      id: 'raiting',
-      name: `${raiting} raiting`,
-      value: raiting,
-      predicate: entity => entity.raiting === raiting
+      id: 'rating',
+      name: `${rating} rating`,
+      value: rating,
+      predicate: entity => entity.rating === rating
     });
     
   }
 
-  // filterClinicas( raiting: number ) {
+  // filterClinicas( rating: number ) {
 
   //   this.productsService.setFilter({
-  //     id: 'raiting',
-  //     name: `${raiting} raiting`,
-  //     value: raiting,
-  //     predicate: entity => entity.raiting === raiting
+  //     id: 'rating',
+  //     name: `${rating} rating`,
+  //     value: rating,
+  //     predicate: entity => entity.rating === rating
   //   });
     
   // }
-    
   ngOnInit(): void {
-
-      this.formDataInicial = this.formBuilder.group({
-        grupo: ['1'],
-        empresa_prepaga: ['0'],
-        edad_1: ['18'],
-        edad_2: ['0'],
-        numkids: ['0'],  
-        tipo: ['P'],
-        agree: [true],
-        aporteOS: [''],
-        sueldo: [''],
-        aporte: [''],
-        monoadic: [false],
-        cantAport: [''],
-        afinidad: [false],
-        bonAfinidad: [''],
-        supras: [false],
-        segvida: [false],
-        segvida1: [false],
-      });
+    
+    this.formDataInicial = this.formBuilder.group({
+      grupo: '1',
+      empresa_prepaga: '0',
+      edad_1: 18,
+      edad_2: 0,
+      numkids: 0,
+      tipo: 'P',
+      agree: true,
+      aporteOS: '',
+      sueldo: '',
+      aporte: '',
+      monoadic: false,
+      cantAport: '',
+      afinidad: false,
+      bonAfinidad: '',
+      supras: false,
+      segvida: false,
+      segvida1: false,
+      region: 'GBA',
+      personalData: this.formBuilder.group({
+        name: '',
+        email: '',
+        phone: '',
+        region: 'AMBA',
+      }),
+    });
+   
        // Recupera los datos del formulario desde localStorage
     const formDataJSON = localStorage.getItem('formData');
     if (formDataJSON) {
@@ -509,7 +573,8 @@ closeButon() {
         this.formDataInicial = this.formDataLocalstorage;
       }
     }
-    // this.productoService.getProducts().subscribe(data => {});
+    this.formDataInicialJSON = this.formDataInicial.getRawValue(); 
+    this.productoService.getProducts().subscribe(data => {});
     this.http.get<any>(this.serverUrl + '/clinicas').subscribe({
       next: (data) => {
         this.clinicas = data; // Asigna los datos de los productos a la variable 'products'
@@ -521,6 +586,9 @@ closeButon() {
             this.products = response.planes;
             // this.secureProducts = response.planes;
             this.addClinicas();
+              this.productosFiltrados = this.products
+              console.log(this.productosFiltrados)
+              // this.actualizarProductos(this.productosFiltrados)
 
             // console.log(this.products )
                           },
@@ -534,6 +602,7 @@ closeButon() {
       }
     });
 
+
     this.http.get<any>(this.serverUrl + '/empresas').subscribe({
       next: (data) => {
         this.empresas = data;
@@ -543,6 +612,11 @@ closeButon() {
         console.log(error); 
       }
     });
+
+    if ( !this.productosFiltrados){
+      this.productosFiltrados = this.products
+
+    }
     this.SortbyParamControl.valueChanges.subscribe((selectedValue: string) => {
       // Realiza acciones basadas en el valor seleccionado
       console.log('Nuevo valor seleccionado:', selectedValue);
@@ -552,14 +626,25 @@ closeButon() {
       console.log(' valor seleccionado de la empresa:', selectedValue);
       // Puedes agregar aquí la lógica para filtrar o realizar otras acciones
     });
-    this.productoService.products$.subscribe(filteredProducts => {
-      this.products = filteredProducts;
+    this.productoService.filteredProducts$.subscribe(filteredProducts => {
+      this.productosFiltrados = filteredProducts
+      // Aquí puedes usar los productos filtrados en tu componente
+      console.log('Productos filtrados:', filteredProducts);
+    });
+  
+    this.productoService.eventoFilterClinicas$.subscribe(() => {
+      this.productosFiltrados = this.filtrarPorClinicasExistente(this.productosFiltrados, this.selectedClinica);
 
+    });
+
+    this.productoService.productosFiltrados$.subscribe((productos) => {
+      this.productosFiltrados = productos;
+      // Realiza cualquier acción que necesites con los datos actualizados.
     });
 
     this.compareProdList();
         this.onItemSelect(this.selectedClinica);
-    
+       
     // setTimeout(() => {
       // this.productsService.getProduct()
       // .subscribe(res=>{
@@ -575,22 +660,26 @@ closeButon() {
       
         this.isLoaded = true;    
 
-      // },0);
-    this.retornarService.disparadorDePrecio.subscribe(data=>{
-      console.log('Recibiendo data en product.list.component.ts...',data);
-      console.log('Recibiendo data en product.list.component.ts...', data.value);
-      if (data && data.value) {
-        const clonedDataValue = _.cloneDeep(data.value);
-    
-        // Luego, guarda `data.value` clonado en localStorage
-        this.localStorageService.setItem('formData', clonedDataValue);
-      }
+        this.retornarService.disparadorDePrecio.subscribe(data => {
+          console.log('Recibiendo data en product.list.component.ts...', data.value);
+          
+          if (data && data.value) {
+            // Crear una función de clonación
+            const clone = rfdc();
+            
+            // Clonar data.value
+            const datosDeFormulario = clone(data.value);
+            
+            // Luego, guarda `data.value` clonado en localStorage
+            this.localStorageService.setItem('formData', datosDeFormulario);
+          }
+        
     this.cotizacionService.getCotizacion(data.value).subscribe((response: ResponseData) => {    // Manejar la respuesta del servidor aquí si es necesario
     console.log('Respuesta del servidor:', response);
     console.log('this.products antes : ' + this.products)
-    this.products = response.planes;
+    this.productosFiltrados = response.planes;
     this.addClinicas();
-
+    this.productoService.setOriginalProducts(this.products)
     console.log('this.products despues : ' + this.products)
 
   }, error => {
@@ -632,6 +721,7 @@ handleLimitSelection() {
  
   onClinicaFilter() {
     this.SearchClinica = 'show';
+    
   }
 
   onClincaFilterClear() {
@@ -764,7 +854,11 @@ removeSelection(item: any) {
   if (index !== -1) {
     this.selectedClinica.splice(index, 1);
   }
+  // this.productoService.activarFuncionEnComponenteB();
+
   this.onItemSelect(this.selectedClinica);
+  // this.productoService.activarFuncionEnComponenteB();
+
 }
 
 
@@ -788,10 +882,10 @@ openDialog() {
 closeDialog() {
   this.displayDialog = false;
 } 
-filterProductsByRaiting(selectedRaiting: number) {
+filterProductsByRating(selectedRating: number) {
   // Filtra los productos según la calificación seleccionada
   this.filteredProducts = this.products.filter(product => {
-    return product.rating >= selectedRaiting;
+    return product.rating >= selectedRating;
   });
 }
 guardarDatosEnLocalStorage(formData: FormData): void {
@@ -801,6 +895,9 @@ guardarDatosEnLocalStorage(formData: FormData): void {
   } catch (error) {
     console.error('Error al guardar en localStorage:', error);
   }
+}
+actualizarProductos(nuevosProductos: any): void {
+  this.productoService.setProductosFiltrados(nuevosProductos);
 }
 
 

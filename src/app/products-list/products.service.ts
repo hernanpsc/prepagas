@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 import * as clinicas from '../shared/data/clinicas.json';
 import * as planes from '../../../public/products.json';
 import { ItemsService } from '../shared/item/items.service';
-
+import { FormData } from '../interfaces/interfaces'; // Importa la interfaz aquí
 interface SearchResult {
   planes: any[]; // Ajusta el tipo de datos según tus necesidades
   total: number; // El número total de resultados
@@ -61,7 +61,13 @@ interface SearchResult {
 // }
 
 @Injectable({ providedIn: 'root' })
+
 export class ProductsService {
+  private productosFiltradosSubject: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
+  public productosFiltrados$: Observable<any[]> = this.productosFiltradosSubject.asObservable();
+  private products: any[] = []; // Copia de los productos originales
+  private filteredProductsSubject = new BehaviorSubject<any[]>([]);
+  public filteredProducts$: Observable<any[]> = this.filteredProductsSubject.asObservable();
   private filtrosSeleccionadosGroup: FormGroup;
   private productosSubject = new BehaviorSubject<any[]>([]);
   private filterFormSubject: BehaviorSubject<FormGroup> = new BehaviorSubject<FormGroup>(null);
@@ -72,7 +78,9 @@ export class ProductsService {
   private _allPLanes$ = new BehaviorSubject<Planes[]>([]);
   private _total$ = new BehaviorSubject<number>(0);
   private _datas$ = new Subject<void>();
-  // private _state: State = {
+  private datos: FormData[]; // Variable privada para almacenar los datos  // private _state: State = {
+    private eventoFiltering = new Subject<void>();
+    private eventoFilterClinicas = new Subject<void>();
   //   page: 1,
   //   pageSize: 10,
   //   searchTerm: '',
@@ -91,17 +99,19 @@ export class ProductsService {
 
   serverUrl = SERVER_URL;
   user = [];
-  products: any | undefined;
   Products$: any;
   productRating: any;
   private productsSubject = new BehaviorSubject<any[]>([]);
   products$ = this.productsSubject.asObservable();
-
+  eventoFiltering$ = this.eventoFiltering.asObservable();
+  eventoFilterClinicas$ = this.eventoFilterClinicas.asObservable();
+  private myForm: FormGroup;
   constructor(
     private http: HttpClient,
     public itemsService: ItemsService,
 
     ) {
+     
     // this._search$.pipe(
     //   tap(() => this._loading$.next(true)),
     //   debounceTime(200),
@@ -137,6 +147,19 @@ export class ProductsService {
     });
   }
 
+  setForm(form: FormGroup) {
+    this.myForm = form;
+  }
+
+  getForm() {
+    return this.myForm;
+  }
+
+    // Método para establecer los productos originales
+    setOriginalProducts(products: any[]): void {
+      this.products = [...products];
+    }
+
   // get planes$() { return this._planes$.asObservable(); }
   // // get allplanes$() { return this._allplanes$.asObservable(); }
   // get product() { return this.products; }
@@ -170,6 +193,11 @@ export class ProductsService {
   //   this._search$.next();
   // }
  // Método para establecer el formulario
+
+ public setFilteredProducts(filteredProducts: any[]): void {
+  this.filteredProductsSubject.next(filteredProducts);
+}
+
  setFilterForm(form: FormGroup) {
     this.filtrosSeleccionadosGroup = form;
     this.filterFormSubject.next(form); // Emitir el formulario a través del BehaviorSubject
@@ -240,15 +268,14 @@ export class ProductsService {
         });
       });}
 
-      filterProducts(form: FormGroup): void {
-        const filteredProducts = this.filterLogic(form); // Aplica la lógica de filtrado
-    
-        // Emite los productos filtrados a través del observable
-        this.productsSubject.next(filteredProducts);
+      filterProducts(form: FormGroup, listadoPlanes: any[]): void {
+        this.products=listadoPlanes // Copia de los productos originales
+        const filteredProducts = this.filterLogic(form); // Realiza el filtrado de productos
+        this.filteredProductsSubject.next(filteredProducts); // Actualiza la variable en el componente
       }
-      private filterLogic(form: FormGroup): any[] {
-        // Obtiene los valores de los filtros del formulario
-        const selectedRaiting = form.get('selectedRaiting')?.value;
+      
+      private filterLogic(form: FormGroup): any[] {        // Obtiene los valores de los filtros del formulario
+        const selectedRating = form.get('selectedRating')?.value;
         const priceRange = form.get('priceRange')?.value;
         const valueSlide3 = form.get('valueSlide3')?.value;
         const valueSlide4 = form.get('valueSlide4')?.value;
@@ -260,11 +287,10 @@ export class ProductsService {
         const Sin_Copagos = form.get('Sin_Copagos')?.value;
     
         // Realiza el filtrado de productos
-        const filteredProducts = this.products.filter(product => {
-          // Aplica las condiciones de filtrado
+        const filteredProducts = this.products.filter(product => {          // Aplica las condiciones de filtrado
           return (
             // Verifica cada condición de filtro aquí
-            (selectedRaiting.length === 0 ||  product.raiting >= selectedRaiting) &&
+            (selectedRating.length === 0 ||  product.rating >= selectedRating) &&
             (priceRange.length === 0 || (product.precio >= priceRange[0] && product.precio <= priceRange[1])) &&
             (valueSlide3 === null || product.valueSlide3 >= valueSlide3) &&
             (valueSlide4 === null || product.valueSlide4 >= valueSlide4) &&
@@ -278,6 +304,17 @@ export class ProductsService {
         });
     console.log(filteredProducts)
         return filteredProducts;
+      }
+   
+      activarFuncionEnComponenteB() {
+        this.eventoFiltering.next();
+      }
+      applyFiltersDespuesDeOnItemSelect() {
+        this.eventoFilterClinicas.next();
+      }
+
+      setProductosFiltrados(productos: any[]): void {
+        this.productosFiltradosSubject.next(productos);
       }
   // private _search(): Observable<SearchResult> {
 
@@ -335,4 +372,6 @@ export class ProductsService {
 //     // return of({ planes, total, allplanes });
 
   // }
+
+  
 }

@@ -25,3 +25,40 @@ export interface Imagen {
     icon?: string;
     items?: Item[][];
   }
+
+  export interface FormData {
+    grupo?: string;
+    empresa_prepaga?: string;
+    edad_1?: number;
+    edad_2?: number;
+    numkids?: number;
+    tipo?: string;
+    agree?: boolean;
+    aporteOS?: boolean;
+    sueldo?: boolean;
+    aporte?: number;
+    monoadic?: boolean;
+    cantAport?: number;
+    afinidad?: boolean;
+    bonAfinidad?: number;
+    supras?: boolean;
+    segvida?: boolean;
+    segvida1?: boolean;
+    region?: string;
+    personalData?: PersonalData; // Aquí tienes una referencia a la interfaz PersonalData
+  }
+  
+  export interface PersonalData {
+    name?: string;
+    email?: string;
+    phone?: string;
+    region?: string;
+    // Aquí puedes definir más propiedades si es necesario
+  }
+  
+  export interface Quote {
+    adultos:number;
+    menores:number;
+    region:string;
+
+  }

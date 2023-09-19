@@ -112,7 +112,7 @@
      <app-filters-products  [product]="products" ></app-filters-products>
     </aside> -->
     <div class="collapse content" *ngIf="!sidebarVisible">
-      <app-filters-products [product]="products"></app-filters-products>
+      <app-filters-products [product]="products"  [productosFiltrados]="productosFiltrados"></app-filters-products>
       <!-- Contenido principal aquí -->
     </div>
     <aside class=" col-lg-3 filters-sidebar">
@@ -145,13 +145,13 @@
         
         
         
-          <div *ngFor="let product of products | filter: SearchEmpresa:'empresa'  |  sort: [SortbyParam, SortDirection]"  class="col-lg-4 col-md-6 col-sm-6 ">
+          <div *ngFor="let product of productosFiltrados | filter: SearchEmpresa:'empresa'  |  sort: [SortbyParam, SortDirection]"  class="col-lg-4 col-md-6 col-sm-6 ">
             <app-product-card  *ngIf="view === 'grid'" [product]="product"></app-product-card>
           </div>
       
     
         
-            <div class="custom-hidden-button" *ngFor="let product of products | filter: SearchEmpresa:'empresa'  |  sort: [SortbyParam, SortDirection]" >
+            <div class="custom-hidden-button" *ngFor="let product of productosFiltrados | filter: SearchEmpresa:'empresa'  |  sort: [SortbyParam, SortDirection]" >
             <app-product-land *ngIf="view === 'list'" [product]="product"></app-product-land>
             
             </div>  </div>  

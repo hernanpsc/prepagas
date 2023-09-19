@@ -60,8 +60,7 @@
           </header>
           <div class="collapse show" id="collapse_aside2">
             <div class="card-body">
-              <p-slider [formControl]="rangeValues" [range]="true" (onChange)="onRangeChange($event)"></p-slider>
-              <div class="row mb-3">
+              <p-slider [formControl]="rangeValues" [range]="true" (onChange)="onRangeChange($event)"></p-slider>              <div class="row mb-3">
                 <p>Rango de precios seleccionado: <span>{{ val }}</span>  y 
                   <span>{{ val2 }}</span>
                   </p>
@@ -81,7 +80,8 @@
               <input class="form-control" id="max" placeholder="{{ val2 }}" type="number">
               </div>
             </div>
-            <button class="btn btn-light w-100" type="button" (click)="aplicarFiltro()">Aplicar</button>            </div> 
+            <button class="btn btn-light w-100" type="button" (click)="aplicarFiltro()">Aplicar</button>  
+                    </div> 
           </div>
           </article> 
        
@@ -174,12 +174,12 @@
       <article class="filter-group" >
         <header class="card-header">
           <a href="#" class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside3">
-          <i class="icon-control fa fa-chevron-down"></i>  Raiting
+          <i class="icon-control fa fa-chevron-down"></i>  Rating
           </a>
         </header>
         <div class="collapse show" id="collapse_aside3">
           <div class="card-body">
-      <p-rating [formControl]="selectedRaiting"></p-rating>
+      <p-rating [formControl]="selectedRating"></p-rating>
     </div>
     </div>
     </article> 

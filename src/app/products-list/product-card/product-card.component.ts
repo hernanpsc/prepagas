@@ -96,6 +96,10 @@ export class ProductCardComponent implements OnInit{
       console.log('The dialog was closed');
     });
   }
- 
-
+  esNumero(valor: any): boolean {
+    return typeof valor === 'number';
+  } 
+  isPrecioArray(product: any): boolean {
+    return Array.isArray(product.precio);
+  }
 }
