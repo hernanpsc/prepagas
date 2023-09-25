@@ -12,12 +12,13 @@
     <ng-container *ngIf="esNumero(product.precio)">      <!-- Contenido a mostrar -->
       <p class="card-text">Precio: ${{ product.precio }}</p> 
     </ng-container>
-    <ng-container *ngIf="isPrecioArray(product)">
-      <p>Precios Variados:</p>
+    <ng-container>
+      <p>Detalle</p>
       <ul>
-        <li *ngFor="let variante of product.precio">
-          {{ variante.name }}: {{ variante.precio }}
-        </li>
+       <li>Valor Plan:{{ product.valorLista }}</li> 
+       <li>Promoción - {{ product.promoPorcentaje * 100}} %: {{ product.promoDescuento }}</li> 
+        <li>Aporte Obra Social:{{ product.aporteOS }}</li> 
+       
       </ul>
     </ng-container>
     
@@ -31,3 +32,4 @@
   </p-card>
 </div> <!-- col end.// -->
 
+    

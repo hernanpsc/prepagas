@@ -48,6 +48,7 @@ import { TooltipModule } from 'primeng/tooltip';
 import {SliderModule} from 'primeng/slider';
 import { DividerModule } from 'primeng/divider';
 import { ProductsService } from './products.service';
+
 const publicApi = [
   ProductsListComponent,
   ProductLandComponent,

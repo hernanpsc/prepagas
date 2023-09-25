@@ -20,6 +20,7 @@ import { FilterPipe } from './shared/filter.pipe';
 import { FiltroPipe } from './pipes/filtro.pipe';
 import { ButtonModule } from 'primeng/button';
 import { ProductsListModule } from './products-list/products-list.module'
+import { TooltipModule } from 'primeng/tooltip';
 // import { LoadingButtonComponent } from './loading-button/loading-button.component';
 
 
@@ -51,7 +52,8 @@ import { ProductsListModule } from './products-list/products-list.module'
     CommonModule,
     MarkdownModule,
     ButtonModule,
-    ProductsListModule
+    ProductsListModule,
+    TooltipModule
   ],
   providers: [{
     provide: {

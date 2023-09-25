@@ -19,6 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProductsService } from './products.service';
 import {CotizacionService} from '../services/cotizacion.service';
 import { LocalStorageService } from '../services/local-storage.service';
+import { CoeficientesService } from '../services/coeficientes.service'; // Asegúrate de importar el servicio
+
 import rfdc from 'rfdc';
 
 declare var addProp:any;
@@ -117,7 +119,9 @@ selectedRating : FormControl = new FormControl('');
     private cdr: ChangeDetectorRef,
     private productoService:ProductsService,
     private cotizacionService: CotizacionService,
-    private localStorageService: LocalStorageService
+    private localStorageService: LocalStorageService,
+    private coeficientesService: CoeficientesService // Inyecta el servicio
+
     ) {
       this.buildForm();
      
@@ -535,24 +539,25 @@ closeButon() {
   ngOnInit(): void {
     
     this.formDataInicial = this.formBuilder.group({
-      grupo: '1',
-      empresa_prepaga: '0',
-      edad_1: 18,
-      edad_2: 0,
+      grupo: 2,
+      empresa_prepaga: 0,
+      edad_1: 19,
+      edad_2: 21,
       numkids: 0,
       tipo: 'P',
       agree: true,
       aporteOS: '',
-      sueldo: '',
-      aporte: '',
+      sueldo: 0,
+      aporte: 0,
       monoadic: false,
-      cantAport: '',
+      cantAport: 0,
       afinidad: false,
-      bonAfinidad: '',
+      bonAfinidad: 0,
       supras: false,
       segvida: false,
       segvida1: false,
-      region: 'GBA',
+      coeficientes: [this.coeficientesService.coeficientes], // Agrega la propiedad coeficientes
+
       personalData: this.formBuilder.group({
         name: '',
         email: '',
@@ -560,7 +565,9 @@ closeButon() {
         region: 'AMBA',
       }),
     });
-   
+    console.log('FORM DATA INICIAL')
+
+    console.log(this.formDataInicial.value)
        // Recupera los datos del formulario desde localStorage
     const formDataJSON = localStorage.getItem('formData');
     if (formDataJSON) {
@@ -580,6 +587,9 @@ closeButon() {
         this.clinicas = data; // Asigna los datos de los productos a la variable 'products'
         this.dropdownClinica = this.clinicas
         this.selectedClinica = [];
+        console.log('FORM DATA INICIAL')
+
+        console.log(this.formDataInicial.value)
         this.cotizacionService.getCotizacion(this.formDataInicial.value).subscribe(
           (response: ResponseData) => {
             console.log('Respuesta del servidor:', response);

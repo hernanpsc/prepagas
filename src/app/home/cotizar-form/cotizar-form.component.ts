@@ -7,8 +7,7 @@ import * as galeno from '../../shared/data/galeno.json';
 import * as omint from '../../shared/data/omint.json';
 import {ServcioRetornoPrecioService} from '../../services/servcio-retorno-precio.service';
 import * as planes from '../../../../public/products.json';
-
-
+import { CoeficientesService } from '../../services/coeficientes.service'; // Asegúrate de importar el servicio
 declare var agregarPrecio:any;
 declare var valorOmint:any;
 declare var conyuge:any;
@@ -56,7 +55,8 @@ preciosToHome=[];
 
  constructor(
   private formBuilder: FormBuilder,
-  private retornarService: ServcioRetornoPrecioService
+  private retornarService: ServcioRetornoPrecioService,
+  private coeficientesService: CoeficientesService // Inyecta el servicio
   ) { 
     this.buildForm();
 
@@ -71,7 +71,7 @@ private buildForm(){
     // edad_2: ['0', [Validators.min(18), Validators.max(64)]],
     // numkids: ['0', [Validators.min(0), Validators.max(5)]],
     
-    edad_1: ['18'],
+    edad_1: ['19'],
     edad_2: ['0'],
     numkids: ['0'],
     
@@ -90,15 +90,16 @@ private buildForm(){
     segvida: [false],
     segvida1: [false],
     region: [''],
+    coeficientes: [this.coeficientesService.coeficientes], // Agrega la propiedad coeficientes
     personalData: this.formBuilder.group({
-      name: ['',[Validators.required, Validators.maxLength(10),Validators.pattern(/^[a-zA-Z\s]*$/)]],
-      email: ['',[Validators.required,Validators.email]],
-      phone: ['',Validators.required],
-      region: [''],
-      // name: [''],
-      // email: [''],
-      // phone: [''],
+      // name: ['',[Validators.required, Validators.maxLength(10),Validators.pattern(/^[a-zA-Z/s]*$/)]],
+      // email: ['',[Validators.required,Validators.email]],
+      // phone: ['',Validators.required],
       // region: [''],
+      name: [''],
+      email: [''],
+      phone: [''],
+      region: [''],
     })
     
   });
@@ -124,7 +125,7 @@ save(event: any){
 
 this.retornarService.disparadorDePrecio.emit(this.formCotizar);
 console.log('Enviando datos...',this.formCotizar);
-
+this.formCotizar.reset();
 }
 
 
