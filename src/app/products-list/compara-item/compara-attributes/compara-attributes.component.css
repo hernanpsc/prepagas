@@ -50,7 +50,7 @@
   .features__cell--data {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Ajusta los valores según tus preferencias */
   }
-  * Fijar el encabezado de la tabla */
+  * Fijar el encabezado de la tabla *
 .sticky-header {
   position: sticky;
   top: 0; /* Fijar en la parte superior de la tabla */
