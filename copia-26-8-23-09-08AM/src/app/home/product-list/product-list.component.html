@@ -1,0 +1,245 @@
+<ll-product-hero></ll-product-hero>
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+      <div class="item">
+          <a (click)="filter('')">
+              <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+              <h6>Todos</h6>
+          </a>
+      </div>
+      <div class="item">
+          <a (click)="filter('basico')">
+              <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
+              <h6>Basico</h6>
+          </a>
+      </div>
+      <div class="item">
+          <a (click)="filter('intermedio')">
+              <img src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" alt="">
+              <h6>Intermedio</h6>
+          </a>
+      </div>
+      <div class="item">
+          <a (click)="filter('superior')">
+              <img style="width: 62px; margin-top: 5px;" src="https://rukminim1.flixcart.com/image/580/696/kkh6zrk0/jewellery-set/o/w/z/gt-ns-862-matushri-art-original-imafzt9teacakjyn.jpeg?q=50" alt="">
+              <h6>Superior</h6>
+          </a>
+      </div>
+  </div>
+</div>
+<div class="ll-search pb-6">
+  <div class="container">
+
+    <div class="border overflow-hidden sm:rounded-md p-5">
+      <div class="mb-3">
+        <div class="flex justify-between flex-wrap">
+          <h4>Encontrá lo que necesitás</h4>
+
+          <label>Ordenar por &nbsp;</label>
+          <select [(ngModel)]="SortbyParam">
+            <option value="empresa">Empresa</option>
+            <option value="price">Precio</option>
+          </select>
+          <button type="button" (click)="onSortDirection()" >
+            <i *ngIf="SortDirection === 'asc'" class="fas fa-sort-alpha-down"></i>
+            <i *ngIf="SortDirection === 'desc'" class="fas fa-sort-alpha-up"></i>
+          </button>
+          <button (click)="advanceSearchExpanded = !advanceSearchExpanded" mat-button>
+            <mat-icon>tune</mat-icon> Busqueda Avanzada
+          </button>
+          <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+           
+          
+            <mat-button-toggle [class.text-accent]="view === 'grid'" (click)="view = 'grid'" mat-icon-button class="view__btn"><mat-icon>grid_view</mat-icon></mat-button-toggle>
+            <mat-button-toggle [class.text-accent]="view === 'list'" (click)="view = 'list'" mat-icon-button class="view__btn"><mat-icon>list_alt</mat-icon></mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+        <div class="mt-3 flex">
+          <input
+            type="text"
+            placeholder="Estoy buscando ..."
+            name="filterPlan"
+            class="flex-1 w-full sm:text-sm lg:text-xl border-gray-300 rounded-l-md py-3 px-6"
+            required
+          />
+          <button class="bg-primary w-24 rounded-r-md"><mat-icon class="leading-8">buscar</mat-icon></button>
+        </div>
+      </div>
+      <mat-expansion-panel [expanded]="advanceSearchExpanded">
+        <div class="grid grid-cols-6 gap-6 mt-4">
+          <div class="col-span-6 sm:col-span-3">
+            <input
+              type="text"
+              class="
+                mt-1
+                focus:ring-indigo-500
+                focus:border-indigo-500
+                block
+                w-full
+                shadow-sm
+                sm:text-sm
+                border-gray-300
+                rounded-md
+              "
+              placeholder="Precio desde"
+            />
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <input
+              type="text"
+              class="
+                mt-1
+                focus:ring-indigo-500
+                focus:border-indigo-500
+                block
+                w-full
+                shadow-sm
+                sm:text-sm
+                border-gray-300
+                rounded-md
+              "
+              placeholder="Precio hasta"
+            />
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <select
+              name="categories"
+              class="
+                mt-1
+                block
+                w-full
+                py-2
+                px-3
+                border border-gray-300
+                bg-white
+                rounded-md
+                shadow-sm
+                focus:outline-none
+                focus:ring-indigo-500
+                focus:border-indigo-500
+                sm:text-sm
+              "
+              [(ngModel)]="empresa"
+            >
+              <option>Empresa</option>
+              <option>SanCor Salud</option>
+              <option>OMINT</option>
+              <option>Galeno</option>
+              <option>Avalian</option>
+              <option>Swiss Medical</option>
+              <option>Premedic</option>
+              <option>Medife</option>
+            </select>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <select
+              name="rating"
+              class="
+                mt-1
+                block
+                w-full
+                py-2
+                px-3
+                border border-gray-300
+                bg-white
+                rounded-md
+                shadow-sm
+                focus:outline-none
+                focus:ring-indigo-500
+                focus:border-indigo-500
+                sm:text-sm
+              "
+            >
+              <option>Rating</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="col-span-6">
+            <button mat-flat-button color="accent" (click)="onEmpresaFilter()">Aplicar Filtro</button>
+            <button mat-flat-button color="accent" (click)="onEmpresaFilterClear()">Limpiar Filtro</button>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </div>
+  </div>
+</div>
+<section class="section-content padding-y">
+  <div class="container">
+
+   
+
+    <!-- <ng-container *ngIf="!(loading$ | async); else loadingTpl"> -->
+<app-filters-form></app-filters-form>
+<main class="col-md-9">
+  <!-- <header class="border-bottom mb-4 pb-3">
+          <div class="form-inline">
+              <span class="mr-md-auto">32 Items found </span>
+              <select class="mr-2 form-control">
+                  <option>Latest items</option>
+                  <option>Trending</option>
+                  <option>Most Popular</option>
+                  <option>Cheapest</option>
+              </select>
+              <div class="btn-group">
+                  <a href="#" class="btn btn-outline-secondary" data-toggle="tooltip" title="List view"> 
+                      <i class="fa fa-bars"></i></a>
+                  <a href="#" class="btn  btn-outline-secondary active" data-toggle="tooltip" title="Grid view"> 
+                      <i class="fa fa-th"></i></a>
+              </div>
+          </div>
+  </header> -->
+  <!-- sect-heading -->
+  
+  <!-- *ngIf="view === 'grid'"  -->
+
+   
+
+
+<!-- </ng-container> -->
+
+
+
+<ng-container *ngFor="let item of filterCategory | filter:searchKey:'name'">
+            <!-- <app-filters-form></app-filters-form> -->
+            <div class="card col-md-3">
+
+
+                <div class="grid grid-cols-12 gap-4 xxl:gap-8 flex" *ngIf="isLoaded">
+
+                    <div 
+                      *ngFor="let product of products | filter: SearchEmpresa:'empresa' | sort: [SortbyParam, SortDirection  | filter:searchKey:'name']"
+                      class="col-span-12 md:col-span-4 xl:col-span-4 flex" >
+                      <ll-product-card  *ngIf="view === 'grid'" [product]="product">
+                      </ll-product-card>
+                    </div>
+                  </div>
+              
+                    <div  class="col-span-6 md:col-span-12 xl:col-span-12" >
+                      <div *ngFor="let product of products | filter: SearchEmpresa:'empresa' | sort: [SortbyParam, SortDirection  | filter:searchKey:'name']">
+                      <ll-listing-card *ngIf="view === 'list'" [product]="product"></ll-listing-card>
+                      
+                      </div>    
+                    </div> 
+              
+    </div>
+
+    </ng-container>
+    
+ 
+
+
+
+  </main>
+    
+</div>
+    
+
+</section>
+
+
+
+
