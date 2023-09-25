@@ -35,7 +35,11 @@ function grupoFamiliar(age0, age1, kids) {
 		}
 		return [num_adultos, numhijo1, numhijo2, numhijos, gen, grupoFam];
 	};
-		function tipoAsociado(tipo, grupo, cant) {
+	
+	
+	
+	
+	function tipoAsociado(tipo, grupo, cant) {
 		let tipoAsoc = '';
         if (tipo === "M" && grupo == cant) {
 			tipoAsoc = "D";

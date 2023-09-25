@@ -668,7 +668,6 @@ closeButon() {
       //   });
       // });
       
-        this.isLoaded = true;    
 
         this.retornarService.disparadorDePrecio.subscribe(data => {
           console.log('Recibiendo data en product.list.component.ts...', data.value);
@@ -699,6 +698,7 @@ closeButon() {
  
 })
 
+this.isLoaded = true;    
 
     
   }
