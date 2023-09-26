@@ -537,7 +537,8 @@ closeButon() {
     
   // }
   ngOnInit(): void {
-    
+    this.isLoaded = false;
+
     this.formDataInicial = this.formBuilder.group({
       grupo: 2,
       empresa_prepaga: 0,
@@ -605,10 +606,16 @@ closeButon() {
                 (error) => {
                   console.error('Error en la solicitud al servidor:', error);
           }
-        );
+        );              
+        setTimeout(() => {
+          this.isLoaded = true;
+        }, 4000); // Cambia a true después de 1 segundo (ajusta el tiempo según sea necesario)
+
       },
       error: (error) => {
         console.log(error); // Maneja el error si la solicitud no se realiza correctamente
+        this.isLoaded = true;
+
       }
     });
 
@@ -689,6 +696,7 @@ closeButon() {
             this.addClinicas();
             this.productoService.setOriginalProducts(this.products);
             console.log('this.products después : ' + this.products);
+
           }, error => {
             // Maneja errores si ocurren
             console.error('Error en la solicitud al servidor:', error);
@@ -696,8 +704,6 @@ closeButon() {
         }
       });
       
-
-this.isLoaded = true;    
 
     
   }
