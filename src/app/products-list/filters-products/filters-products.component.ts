@@ -96,17 +96,17 @@ export class FiltersProductsComponent implements OnInit  {
     });
   
     this.retornarService.disparadorDePrecio.subscribe(data => {
-      console.log('Recibiendo data en product.list.component.ts...', data.value);
-      if (data.value.edad_2 > 0 ) {
+      console.log('Recibiendo data en product.list.component.ts...', data);
+      if (data.edad_2 > 0 ) {
         this.quote.adultos = 2
         
       } else {
         this.quote.adultos = 1
       } 
-        this.quote.menores = data.value.numkids
+        this.quote.menores = data.numkids
 
-        if(data.value.region){
-          this.quote.region = data.value.region
+        if(data.region){
+          this.quote.region = data.region
         }else{
         this.quote.region = 'AMBA'
 
