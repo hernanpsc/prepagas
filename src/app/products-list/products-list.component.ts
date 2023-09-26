@@ -669,34 +669,33 @@ closeButon() {
       // });
       
 
-        this.retornarService.disparadorDePrecio.subscribe(data => {
-          console.log('Recibiendo data en product.list.component.ts...', data.value);
-          
-          if (data && data.value) {
-            // Crear una función de clonación
-            const clone = rfdc();
-            
-            // Clonar data.value
-            const datosDeFormulario = clone(data.value);
-            
-            // Luego, guarda `data.value` clonado en localStorage
-            this.localStorageService.setItem('formData', datosDeFormulario);
-          }
+      this.retornarService.disparadorDePrecio.subscribe(data => {
+        console.log('Recibiendo data en product.list.component.ts...', data);
         
-    this.cotizacionService.getCotizacion(data.value).subscribe((response: ResponseData) => {    // Manejar la respuesta del servidor aquí si es necesario
-    console.log('Respuesta del servidor:', response);
-    console.log('this.products antes : ' + this.products)
-    this.productosFiltrados = response.planes;
-    this.addClinicas();
-    this.productoService.setOriginalProducts(this.products)
-    console.log('this.products despues : ' + this.products)
-
-  }, error => {
-    // Manejar errores si ocurren
-    console.error('Error en la solicitud al servidor:', error);
-  });
- 
-})
+        if (data) { // Verifica si se recibieron datos
+          // Aquí puedes acceder directamente a los datos sin necesidad de .value
+          // data contiene el objeto con los valores del formulario
+          // Ejemplo: data.grupo, data.otroCampo, etc.
+      
+          // Guarda los datos en localStorage si es necesario
+          this.localStorageService.setItem('formData', data);
+      
+          // Luego, puedes utilizar los datos en tu lógica
+          this.cotizacionService.getCotizacion(data).subscribe((response: ResponseData) => {
+            // Maneja la respuesta del servidor aquí si es necesario
+            console.log('Respuesta del servidor:', response);
+            console.log('this.products antes : ' + this.products);
+            this.productosFiltrados = response.planes;
+            this.addClinicas();
+            this.productoService.setOriginalProducts(this.products);
+            console.log('this.products después : ' + this.products);
+          }, error => {
+            // Maneja errores si ocurren
+            console.error('Error en la solicitud al servidor:', error);
+          });
+        }
+      });
+      
 
 this.isLoaded = true;    
 
