@@ -114,6 +114,8 @@ private buildForm(){
 
 save(event: any){
   if(this.formCotizar.valid){
+    console.log('Formulario en metodo save');
+
     console.log(this.formCotizar.value);
   } else {
     console.log('formulario invalido');
