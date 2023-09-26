@@ -112,21 +112,22 @@ private buildForm(){
   
 
 
-save(event: any) {
-  if (this.formCotizar.valid) {
-    console.log('Formulario en método save:');
-    console.log(this.formCotizar.value);
+save(event: any){
+  if(this.formCotizar.valid){
+    console.log('Formulario en metodo save');
 
-    // Utiliza setTimeout para asegurarte de que los datos se envíen después de un pequeño retraso
-    setTimeout(() => {
-      console.log('Enviando datos...', this.formCotizar.value);
-      this.retornarService.disparadorDePrecio.emit(this.formCotizar.value);
-      this.formCotizar.reset();
-    }, 100); // Puedes ajustar la cantidad de tiempo según tus necesidades
+    console.log(this.formCotizar.value);
   } else {
-    console.log('Formulario inválido');
+    console.log('formulario invalido');
+
     this.formCotizar.markAllAsTouched();
-  }
+  };
+
+  
+
+this.retornarService.disparadorDePrecio.emit(this.formCotizar);
+console.log('Enviando datos...',this.formCotizar);
+this.formCotizar.reset();
 }
 
 
@@ -139,14 +140,19 @@ ngOnInit()
   {
     this.nameField.valueChanges
     .subscribe(value => {
+      console.log('En ngOnInit 1')
       console.log(value);
 
     }      )
     this.formCotizar.valueChanges
     .subscribe(value => {
+      console.log('En ngOnInit 2')
+
       console.log(value);
     });
     this.onChanges();
+
+
   }
   onChanges(): void {
     this.formCotizar.get('grupo').valueChanges.subscribe(val => {
