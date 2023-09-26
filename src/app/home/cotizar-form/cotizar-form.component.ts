@@ -112,22 +112,21 @@ private buildForm(){
   
 
 
-save(event: any){
-  if(this.formCotizar.valid){
-    console.log('Formulario en metodo save');
-
+save(event: any) {
+  if (this.formCotizar.valid) {
+    console.log('Formulario en método save:');
     console.log(this.formCotizar.value);
+
+    // Utiliza setTimeout para asegurarte de que los datos se envíen después de un pequeño retraso
+    setTimeout(() => {
+      console.log('Enviando datos...', this.formCotizar.value);
+      this.retornarService.disparadorDePrecio.emit(this.formCotizar.value);
+      this.formCotizar.reset();
+    }, 100); // Puedes ajustar la cantidad de tiempo según tus necesidades
   } else {
-    console.log('formulario invalido');
-
+    console.log('Formulario inválido');
     this.formCotizar.markAllAsTouched();
-  };
-
-  
-
-this.retornarService.disparadorDePrecio.emit(this.formCotizar);
-console.log('Enviando datos...',this.formCotizar);
-this.formCotizar.reset();
+  }
 }
 
 
