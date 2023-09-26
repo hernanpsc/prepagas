@@ -71,9 +71,9 @@ private buildForm(){
     // edad_2: ['0', [Validators.min(18), Validators.max(64)]],
     // numkids: ['0', [Validators.min(0), Validators.max(5)]],
     
-    edad_1: ['19'],
-    edad_2: ['0'],
-    numkids: ['0'],
+    edad_1: [19],
+    edad_2: [0],
+    numkids: [0],
     
     
     
@@ -83,9 +83,9 @@ private buildForm(){
     sueldo: [''],
     aporte: [''],
     monoadic: [''],
-    cantAport: [''],
+    cantAport: [0],
     afinidad: [''],
-    bonAfinidad: [''],
+    bonAfinidad: [0],
     supras: [false],
     segvida: [false],
     segvida1: [false],

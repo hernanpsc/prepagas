@@ -557,7 +557,7 @@ closeButon() {
       supras: false,
       segvida: false,
       segvida1: false,
-      coeficientes: [this.coeficientesService.coeficientes], // Agrega la propiedad coeficientes
+      // coeficientes: [this.coeficientesService.coeficientes], // Agrega la propiedad coeficientes
 
       personalData: this.formBuilder.group({
         name: '',
