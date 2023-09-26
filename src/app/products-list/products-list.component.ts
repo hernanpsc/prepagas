@@ -536,36 +536,52 @@ closeButon() {
   //   });
     
   // }
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.isLoaded = false;
 
-    this.formDataInicial = this.formBuilder.group({
-      grupo: 2,
-      empresa_prepaga: 0,
-      edad_1: 19,
-      edad_2: 21,
-      numkids: 0,
-      tipo: 'P',
-      agree: true,
-      aporteOS: '',
-      sueldo: 0,
-      aporte: 0,
-      monoadic: false,
-      cantAport: 0,
-      afinidad: false,
-      bonAfinidad: 0,
-      supras: false,
-      segvida: false,
-      segvida1: false,
-      // coeficientes: [this.coeficientesService.coeficientes], // Agrega la propiedad coeficientes
+    try {
+      // Llama al servicio para obtener los coeficientes como una promesa
+      const response: any = await this.coeficientesService.obtenerDatos();
+  
+    
 
-      personalData: this.formBuilder.group({
-        name: '',
-        email: '',
-        phone: '',
-        region: 'AMBA',
-      }),
-    });
+      // Inicializa tu formulario aquí y aplica los coeficientes
+      this.formDataInicial = this.formBuilder.group({
+        // Define tus campos y valores iniciales aquí, incluyendo 'coeficientes'
+        grupo: 2,
+        empresa_prepaga: 0,
+        edad_1: 19,
+        edad_2: 0,
+        numkids: 0,
+        tipo: 'P',
+        agree: true,
+        aporteOS: '',
+        sueldo: 0,
+        aporte: 0,
+        monoadic: false,
+        cantAport: 0,
+        afinidad: false,
+        bonAfinidad: 0,
+        supras: false,
+        segvida: false,
+        segvida1: false,
+        coeficientes: this.coeficientes, // Aplica los coeficientes aquí
+        personalData: this.formBuilder.group({
+          name: '',
+          email: '',
+          phone: '',
+          region: 'AMBA',
+        }),
+      });
+
+      // Continúa con otras acciones después de obtener y aplicar los coeficientes
+    } catch (error) {
+      console.error('Error al obtener los coeficientes:', error);
+      // Puedes manejar el error según tus necesidades
+    }
+  
+    // Suscribirse a la consulta de coeficientes y actualizar el formulario cuando esté disponible
+   
     console.log('FORM DATA INICIAL')
 
     console.log(this.formDataInicial.value)

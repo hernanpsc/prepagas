@@ -1,25 +1,10 @@
 import { Options } from '@angular-slider/ngx-slider';
 import { Component, OnInit, Input } from '@angular/core';
-import {Validators, FormGroup, FormBuilder } from '@angular/forms';
-import * as sancor from '../../shared/data/sancor.json';
-import * as premedic from '../../shared/data/premedic.json';
-import * as galeno from '../../shared/data/galeno.json';
-import * as omint from '../../shared/data/omint.json';
+import {FormGroup, FormBuilder } from '@angular/forms';
+
 import {ServcioRetornoPrecioService} from '../../services/servcio-retorno-precio.service';
-import * as planes from '../../../../public/products.json';
 import { CoeficientesService } from '../../services/coeficientes.service'; // Asegúrate de importar el servicio
-declare var agregarPrecio:any;
-declare var valorOmint:any;
-declare var conyuge:any;
-declare var valorSancorSalud:any;
-declare var valorPremedic:any;
-declare var tipoAsociado: any;
-declare var grupoFamiliar: any;
-declare var productID: any;
-declare var productIdGaleno: any;
-declare var productIdPremedic: any;
-declare var productIdOmint: any;
-declare var productIdOmint: any;
+
 
 
 
@@ -140,15 +125,9 @@ ngOnInit()
   {
     this.nameField.valueChanges
     .subscribe(value => {
-      console.log('En ngOnInit 1')
-      console.log(value);
-
-    }      )
+         }      )
     this.formCotizar.valueChanges
     .subscribe(value => {
-      console.log('En ngOnInit 2')
-
-      console.log(value);
     });
     this.onChanges();
 
