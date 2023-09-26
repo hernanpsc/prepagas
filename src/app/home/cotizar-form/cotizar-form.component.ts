@@ -126,7 +126,7 @@ save(event: any){
   
 
 this.retornarService.disparadorDePrecio.emit(this.formCotizar.value);
-console.log('Enviando datos...',this.formCotizar);
+console.log('Enviando datos...',this.formCotizar.value);
 this.formCotizar.reset();
 }
 
