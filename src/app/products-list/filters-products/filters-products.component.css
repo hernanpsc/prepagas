@@ -15,22 +15,21 @@
     margin-top:60px
 }
 @import '~primeicons/primeicons.css';
-
-.example-container {
+.container {
   width: 500px;
   height: 300px;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.example-sidenav-content {
+.sidenav-content {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
 }
 
-.example-sidenav {
-  padding: 20px;
+.sidenav {
+  padding: 0px;
 }
 mat-button-toggle-group {
   margin-left: 12px;
@@ -276,10 +275,10 @@ width: 450px !important;
 }
 
 .rectangulo {
-  width: 150px;
+  width: 100%;
   height: 80px; /* Establece la altura fija deseada para las tarjetas */
   background-color: #f8fbfd;
-  border: 2px solid #4e5153;
+  /* border: 2px solid #4e5153; */
   border-radius: 10px;
   display: inline-flex; /* Utilizamos inline-flex en lugar de inline-block para centrar verticalmente y horizontalmente */
   flex-direction: column; /* Para que los elementos de texto estén en una columna */
@@ -358,25 +357,33 @@ width: 450px !important;
 .common-view {
   /* Establece un tamaño fijo para el contenedor */
   width: 100%; /* Ancho del 100% del contenedor principal */
-  max-width: 1200px; /* Ancho máximo deseado del contenedor */
+  max-width: 100%; /* Ancho máximo deseado del contenedor */
   margin: 0 auto; /* Centra el contenedor horizontalmente */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 20px; /* Espacio entre elementos en ambas vistas */
+  gap: 0px; /* Espacio entre elementos en ambas vistas */
 }
 
 .left-column {
-  flex: 0 0 200px; /* Ancho fijo de la columna izquierda */
+  flex: 0 0 300px; /* Ancho fijo de la columna izquierda */
   position: sticky;
   top: 0; /* La columna se vuelve fija en la parte superior */
   height: 100%; /* Opcional: ajusta la altura de la columna según tus necesidades */
   background-color: #f0f0f0; /* Color de fondo de la columna izquierda */
-  padding: 20px; /* Espacio interno de la columna izquierda */
+  padding: 0px; /* Espacio interno de la columna izquierda */
 }
 
 .content {
   flex: 1; /* El contenido principal ocupa el espacio restante */
-  padding: 20px; /* Espacio interno del contenido principal */
+  padding: 0px; /* Espacio interno del contenido principal */
+}
+
+/* Estilos para eliminar márgenes y padding en todas las pantallas */
+/* Estilos para eliminar márgenes y padding en todas las pantallas */
+#aside_filter.left-column {
+  margin: 0; /* Elimina todos los márgenes */
+  padding: 0; /* Elimina todo el padding */
+  width: 100%; /* Ocupa todo el ancho del componente */
 }
 

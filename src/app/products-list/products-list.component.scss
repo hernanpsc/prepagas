@@ -194,12 +194,12 @@ mat-button-toggle-group {
 
 :host ::ng-deep .custom-ms 
 .p-multiselect-label {
-width: 450px !important;
+width: 100% !important;
 }
 
 :host ::ng-deep .custom-ms 
 .div {
-width: 450px !important;
+width: 100% !important;
 }
 .custom-ms .p-chip.p-highlight {
   white-space: pre-line;
@@ -448,3 +448,57 @@ button {
     margin: 0; /* Elimina los márgenes laterales en dispositivos pequeños */
   }
 }
+
+/* Estilos CSS para eliminar el margen en pantallas estrechas */
+@media (max-width: 600px) {
+  .surface-card {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* Estilos para el contenido principal */
+.main-content {
+  margin-left: 0; /* Elimina el margen izquierdo en todas las pantallas */
+  margin-right: 0; /* Elimina el margen derecho en todas las pantallas */
+  padding-right: 10px; /* Añade relleno interno para el contenido si es necesario */
+}
+
+/* Estilos para pantallas grandes (por ejemplo, pantallas con un ancho mínimo de 768px) */
+@media (min-width: 768px) {
+  :host ::ng-deep .ui-sidebar-mask {
+    display: none; /* Oculta el fondo oscuro del sidebar */
+  }
+  
+  :host ::ng-deep .ui-sidebar {
+    transform: translateX(0); /* Asegura que el sidebar esté visible */
+    visibility: visible !important; /* Asegura que el sidebar esté visible */
+  }
+
+  /* Puedes agregar estilos adicionales según tus necesidades */
+}
+/* Estilos para ocultar el botón en pantallas anchas (más de 767px de ancho) */
+@media (min-width: 768px) {
+  .mobile-filters-button {
+    display: none;
+  }
+}
+
+/* Estilos para el botón en pantallas angostas (767px o menos de ancho) */
+@media (max-width: 767px) {
+  .mobile-filters-button {
+    position: fixed; /* Fijar el botón en la pantalla */
+    bottom: 20px; /* Ajustar la posición vertical según tus preferencias */
+    left: 50%; /* Centrar horizontalmente en la mitad de la pantalla */
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    background-color: #007bff; /* Cambia el color de fondo según tus preferencias */
+    color: white; /* Cambia el color del texto según tus preferencias */
+    border: none; /* Elimina el borde */
+    border-radius: 4px; /* Agrega bordes redondeados según tus preferencias */
+    padding: 0 10px; /* Ajusta el espacio interno horizontal (izquierda y derecha) */
+    font-size: 16px; /* Ajusta el tamaño de fuente del botón */
+    height: 40px; /* Ajusta la altura deseada */
+    width: 80%; /* Ajusta el ancho deseado, en este caso, el 80% del contenedor */
+    max-width: 200px; /* Establece un ancho máximo si es necesario */
+  }
+}
+

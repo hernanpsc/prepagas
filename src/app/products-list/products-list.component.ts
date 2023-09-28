@@ -1,4 +1,4 @@
-import {Component, ChangeDetectorRef ,OnInit,HostBinding, ViewChild, ChangeDetectionStrategy , Input, ElementRef, NgZone } from '@angular/core';
+import {Component, HostListener, Renderer2, ChangeDetectorRef ,OnInit,HostBinding, ViewChild, ChangeDetectionStrategy , Input, ElementRef, NgZone } from '@angular/core';
 import {Observable} from 'rxjs';
 import {map, pairwise, filter, throttleTime } from 'rxjs/operators';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
@@ -108,6 +108,8 @@ selectedRating : FormControl = new FormControl('');
   formDataInicial: FormGroup; // Formulario inicial con valores predeterminados
   formDataLocalstorage: FormGroup;
   formDataInicialJSON: any[];
+  sidebarVisible = false; // Por defecto, el sidebar está visible
+  anchoSidebar = '80%'; // Ancho por defecto del sidebar
   constructor(
     private modalService: ModalService,
     private retornarService: ServcioRetornoPrecioService,
@@ -121,8 +123,8 @@ selectedRating : FormControl = new FormControl('');
     private productoService:ProductsService,
     private cotizacionService: CotizacionService,
     private localStorageService: LocalStorageService,
-    private coeficientesService: CoeficientesService // Inyecta el servicio
-
+    private coeficientesService: CoeficientesService, // Inyecta el servicio
+    private renderer: Renderer2
     ) {
       this.buildForm();
      
@@ -140,7 +142,22 @@ selectedRating : FormControl = new FormControl('');
       });
     }
    
-    
+// Método para detectar el ancho de la ventana y ocultar el sidebar en pantallas grandes
+@HostListener('window:resize', ['$event'])
+onResize(event: any) {
+
+  if (event.target.innerWidth >= 768) {
+    // Si el ancho de la pantalla es mayor o igual a 768px, ocultar el sidebar
+    this.sidebarVisible = false;
+  } else {
+    // Si el ancho de la pantalla es menor a 768px, mostrar el sidebar
+    this.sidebarVisible = false;
+  }
+}
+
+
+
+
     compareProdList() {
       // console.log(this.servicioComparar.compareList)
       this.compareLength = this.products.filter((p: { compare: any; }) => p.compare).length;
