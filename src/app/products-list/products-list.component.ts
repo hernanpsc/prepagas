@@ -20,6 +20,7 @@ import { ProductsService } from './products.service';
 import {CotizacionService} from '../services/cotizacion.service';
 import { LocalStorageService } from '../services/local-storage.service';
 import { CoeficientesService } from '../services/coeficientes.service'; // Asegúrate de importar el servicio
+import { GetQuoteComponent } from '../get-quote/get-quote.component';
 
 import rfdc from 'rfdc';
 
@@ -81,7 +82,7 @@ selectedRating : FormControl = new FormControl('');
   advanceSearchExpanded: boolean = false;
   planes : any = [];
   view = 'grid';
-  
+  skeletonData: any[] = Array(9).fill({}); // Genera 9 elementos ficticios para 3 filas de 3 tarjetas cada una
   validacionclinica = 'show';
   SearchClinica = '';
   empresa: FormControl = new FormControl('');
@@ -630,7 +631,9 @@ closeButon() {
       },
       error: (error) => {
         console.log(error); // Maneja el error si la solicitud no se realiza correctamente
-        this.isLoaded = true;
+        setTimeout(() => {
+          this.isLoaded = true;
+        }, 4000);
 
       }
     });

@@ -29,8 +29,7 @@ import { TooltipModule } from 'primeng/tooltip';
     AppComponent,
     PageLoaderComponent,
     FilterPipe,
-    FiltroPipe,
-    
+    FiltroPipe    
     // FiltroClinica
     // ,
     // FilterPipe

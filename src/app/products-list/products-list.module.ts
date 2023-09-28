@@ -48,6 +48,8 @@ import { TooltipModule } from 'primeng/tooltip';
 import {SliderModule} from 'primeng/slider';
 import { DividerModule } from 'primeng/divider';
 import { ProductsService } from './products.service';
+import { GetQuoteComponent } from '../get-quote/get-quote.component';
+import {SkeletonModule} from 'primeng/skeleton';
 
 const publicApi = [
   ProductsListComponent,
@@ -112,7 +114,10 @@ const routes: Routes = [
         PanelModule,
         TooltipModule,
         SliderModule,
-        DividerModule
+        DividerModule,
+        GetQuoteComponent,
+        SkeletonModule
+
         
         // NgSelectModule
         
