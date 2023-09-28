@@ -1,6 +1,6 @@
 <div>
   <p-card class="card card-product-grid ">
-  <div class="bg-image hover-zoom ripple rounded ripple-surface" [ngClass]="product.compare ? 'product compare' : 'product'"> 
+  <div [ngClass]="product.compare ? 'product compare' : 'product'"> 
     <img *ngIf="product.images && product.images.length > 0" src="{{product.images[0].url}}" alt="{{ product.name }}" class="w-100">
     <!-- <a class="btn-overlay" [routerLink]="['/products', product.id]"><i class="fa fa-search-plus"></i>{{ product.name }}</a> -->
   </div>

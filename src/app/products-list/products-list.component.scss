@@ -442,3 +442,9 @@ button {
     display: none; /* Ocultar el botón con la clase personalizada en pantallas pequeñas (ancho máximo de 767px) */
   }
 }
+/* Estilo CSS personalizado */
+@media (max-width: 100%) {
+  .col-12.col-md-6.col-lg-4 {
+    margin: 0; /* Elimina los márgenes laterales en dispositivos pequeños */
+  }
+}
