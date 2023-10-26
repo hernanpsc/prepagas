@@ -4,55 +4,47 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageLoaderComponent } from './page-loader/page-loader.component';
-import { MasDetallesModule } from './mas-detalles/mas-detalles.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule} from '@angular/common/http';
-import { HomeRoutingModule } from './home/home-routing.module';
-import {HomeModule} from './home/home.module';
 import {MarkdownModule} from 'ngx-markdown';
 import {environment} from '../environments/environment';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import {CommonModule} from '@angular/common';
-import { FilterPipe } from './shared/filter.pipe';
-import { FiltroPipe } from './pipes/filtro.pipe';
 import { ButtonModule } from 'primeng/button';
-import { ProductsListModule } from './products-list/products-list.module'
 import { TooltipModule } from 'primeng/tooltip';
 // import { LoadingButtonComponent } from './loading-button/loading-button.component';
+import { SkeletonComponent } from './layout/skeleton/skeleton.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { SaludModule } from './modules/salud/salud.module';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PageLoaderComponent,
-    FilterPipe,
-    FiltroPipe    
-    // FiltroClinica
-    // ,
-    // FilterPipe
+    SkeletonComponent,
+    FooterComponent,
+    HeaderComponent
         // LoadingButtonComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    MaterialModule,
     AppRoutingModule,
     FormsModule,
     SharedModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
     HttpClientModule,
-    MasDetallesModule,
     ReactiveFormsModule,
-    HomeModule,
-    HomeRoutingModule,
     CommonModule,
     MarkdownModule,
     ButtonModule,
-    ProductsListModule,
-    TooltipModule
+    TooltipModule,
+    SaludModule
   ],
   providers: [{
     provide: {

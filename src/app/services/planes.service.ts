@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable, Subject} from 'rxjs';
-import { Planes } from '../interfaces/planes';
+import { Planes } from '../data/interfaces/planes';
 import { SERVER_URL } from '../constants';
 
 

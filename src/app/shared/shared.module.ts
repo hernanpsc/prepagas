@@ -3,60 +3,56 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatTableModule } from '@angular/material/table';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatInputModule } from '@angular/material/input';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatBadgeModule } from '@angular/material/badge';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatStepperModule } from '@angular/material/stepper';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-
+import * as components from './components';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { ChipModule } from 'primeng/chip';
+import { CardModule } from 'primeng/card';
+import { RatingModule } from 'primeng/rating';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
+import { SplitButtonModule } from 'primeng/splitbutton';
+import { ToggleButtonModule } from 'primeng/togglebutton';
+import { PaginatorModule } from 'primeng/paginator';
+import { SidebarModule } from 'primeng/sidebar';
+import { InputTextModule} from 'primeng/inputtext';
+import { PanelModule } from 'primeng/panel';
+import { TooltipModule } from 'primeng/tooltip';
+import {SliderModule} from 'primeng/slider';
+import { DividerModule } from 'primeng/divider';
+import { MaterialModule } from '../material/material.module';
+import { SkeletonModule } from 'primeng/skeleton';
 
 const commonModules = [
   HttpClientModule,
   FormsModule,
   CommonModule,
-  MatSliderModule,
-  MatSidenavModule,
-  MatToolbarModule,
-  MatListModule,
-  MatIconModule,
-  MatButtonModule,
-  MatExpansionModule,
-  MatFormFieldModule,
-  MatTableModule,
-  MatDialogModule,
-  MatSnackBarModule,
-  MatInputModule,
-  MatProgressSpinnerModule,
-  MatCardModule,
-  MatGridListModule,
-  MatChipsModule,
-  MatBadgeModule,
-  MatMenuModule,
-  MatStepperModule,
-  MatButtonToggleModule
+  MultiSelectModule,
+  ChipModule,
+  CardModule,
+  RatingModule,
+  NgSelectModule,
+  ButtonModule,
+  RippleModule,
+  SplitButtonModule,
+  ToggleButtonModule,
+  PaginatorModule,
+  SidebarModule,
+  InputTextModule,
+  PanelModule,
+  TooltipModule,
+  SliderModule,
+  DividerModule,
+  MaterialModule,
+  SkeletonModule
 ]
 
 @NgModule({
-  declarations: [
-  ],
+  declarations: [...components.components],
+
   imports: [CommonModule, RouterModule, ...commonModules],
   exports: [
-    ...commonModules
+    ...commonModules, ...components.components
   ]
 })
 export class SharedModule {}

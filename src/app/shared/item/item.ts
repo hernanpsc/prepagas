@@ -1,4 +1,4 @@
-import { Imagen as MiImagen } from 'src/app/interfaces/interfaces';
+import { Imagen as MiImagen } from '../../data/interfaces/interfaces';
 export interface Item {
     price?: string;
     precio?: string;

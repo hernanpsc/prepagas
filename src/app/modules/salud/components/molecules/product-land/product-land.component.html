@@ -1,0 +1,103 @@
+<!-- 
+<div class="row justify-content-center surface-card shadow-2 border-round contenedor-responsivo " style="margin-right:-23px">
+  <div [ngClass]="product.compare ? 'product compare' : 'product'">
+    <div class="card shadow-0 border rounded-3">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12 col-lg-4 col-xl-4 mb-4 mb-lg-4">
+          <div style="margin:-12px;padding-top:20px">
+            <img *ngIf="product.images && product.images.length > 0" src="{{product.images[0].url}}" alt="{{ product.name }}" class="w-100">
+            <a href=""> 
+             <div class="hover-overlay">[]
+                <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 col-xl-6 border-2 border-dashed surface-border">
+          <h5>{{ product.name }}</h5>
+          <div class="d-flex flex-row">
+            <p-rating [readonly]="true" [cancel]="false"></p-rating>
+            <span>{{product.precio  | currency }}</span>
+          </div>
+          <p-divider></p-divider>
+        </div>
+        <div class="col-md-6 col-lg-2 col-xl-2 border-sm-start-none border-start">
+          <div class="d-flex flex-row align-items-center mb-1">
+            <h4 class="mb-1 me-1">{{product.precio}}</h4>
+            <span class="text-danger"><s>{{product.price}}</s></span>
+          </div>
+          <h6 class="text-success"><span>{{product.precio}}</span></h6>
+          <div class="d-flex flex-column mt-4">
+          <button (click)="openDialog(product)" class="btn btn-outline-primary btn-sm mt-2" type="button">Detalles</button>
+          <button (click)='toggleCompare()' class="btn btn-outline-primary btn-sm mt-2" type="button"> {{product.compare ? "Remover" : "Comparar"}}
+          </button>
+            <button class="btn btn-primary" >Add to cart</button>
+
+          </div>
+        </div>
+       
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div> -->
+
+<div class="row mb-5 shadow d-flex text-center justify-content-center align-items-center bg-primary" role="button">
+	<div class="col-12 col-lg-10 bg-white">
+		<div class="row">
+			<div class="col-lg-3">
+				<img  src="{{product.images[0].url}}" alt="{{ product.name }}" />
+			</div>
+			<div class="col-lg-9 pt-2">
+				<div class="row g-2 justify-content-center">
+					<div class="col-6 col-md-4">
+						<small class="d-block text-uppercase fw-bold">Nombre del Plan</small>
+						<h2 class="my-0">{{product.name}}</h2>
+						<div class="form-text text-extra-small fw-bolder text-uppercase">Dólares americanos</div>
+					</div>
+					<div class="col-6 col-md-4">
+						<small class="d-block text-uppercase fw-bold">Precio</small>
+						<h2 class="my-0">{{ product.precio }}</h2>
+						<div class="form-text text-extra-small fw-bolder text-uppercase">valor opcional</div>
+					</div>
+					<div class="col-6 col-md-4">
+						<small class="d-block text-uppercase fw-bold">Valor Plan</small>
+						<h2 class="my-0">{{ product.valorLista }}</h2>
+						<div class="form-text text-extra-small fw-bolder text-uppercase"></div>
+					</div>
+				</div>
+				<hr />
+				<div class="row g-2 pb-3 pb-lg-0">
+					<div class="col-6 col-md-3">
+						<div class="form-text text-extra-small fw-bolder text-uppercase">Promoción</div>
+						<h5 class="text-muted mb-0">{{ product.promoPorcentaje * 100}} %: {{ product.promoDescuento }}</h5>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="form-text text-extra-small fw-bolder text-uppercase">Aporte Obra Social</div>
+						<h5 class="text-muted mb-0">{{ product.aporteOS }}</h5>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="form-text text-extra-small fw-bolder text-uppercase">monto de crédito</div>
+						<h5 class="text-muted mb-0"></h5>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="form-text text-extra-small fw-bolder text-uppercase">crédito bancario</div>
+						<h5 class="text-muted mb-0"></h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 col-lg-2 text-white py-3 py-lg-0">
+		<small class="d-block text-uppercase fw-bold">Total a pagar</small>
+		<h2 class="my-0">{{ product.precio }}</h2>
+		<div class="form-text text-white text-extra-small fw-bolder text-uppercase pb-3">mensual</div>
+		<button (click)="openDialog(product)" class="fw-bolder text-white text-uppercase" type="button">Más infpormación</button>
+		<button (click)='toggleCompare();' class="btn btn-outline-primary btn-sm mt-2" type="button">
+            {{product.compare ? "Remover" : "Comparar"}}
+          </button>
+		<a routerLink="/" class="fw-bolder text-white text-uppercase">Más información</a>
+	</div>
+</div>
