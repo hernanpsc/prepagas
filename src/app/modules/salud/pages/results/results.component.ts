@@ -568,9 +568,8 @@ closeButon() {
 
     try {
       // Llama al servicio para obtener los coeficientes como una promesa
-      // const response: any = await this.coeficientesService.obtenerDatos();
-  
-    
+      const coeficientes: any = await this.coeficientesService.obtenerDatos();
+console.log('coeficientes'+coeficientes)
 
       // Inicializa tu formulario aquí y aplica los coeficientes
       this.formDataInicial = this.formBuilder.group({
@@ -592,7 +591,7 @@ closeButon() {
         supras: false,
         segvida: false,
         segvida1: false,
-        coeficientes: this.coeficientes, // Aplica los coeficientes aquí
+        coeficientes: coeficientes, // Aplica los coeficientes aquí
         personalData: this.formBuilder.group({
           name: '',
           email: '',
@@ -638,7 +637,7 @@ closeButon() {
             
             this.products = response.planes;
             // this.secureProducts = response.planes;
-            this.addClinicas();
+            // this.addClinicas();
               this.productosFiltrados = this.products
               console.log(this.productosFiltrados)
               // this.actualizarProductos(this.productosFiltrados)

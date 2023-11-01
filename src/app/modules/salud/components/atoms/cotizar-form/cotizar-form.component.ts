@@ -144,6 +144,11 @@ ngOnInit()
   get grupoField (){
     return this.formCotizar.get('grupo');
   }
+
+  get hijoField (){
+    return this.formCotizar.get('hijos');
+  } 
+
   get prepagaField(){
     return this.formCotizar.get('empresa_prepaga');
   }

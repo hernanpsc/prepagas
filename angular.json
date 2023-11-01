@@ -31,12 +31,15 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/primeng/resources/themes/saga-blue/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/js/funciones.js"
-           ]
+              "src/assets/js/funciones.js",
+              "src/assets/js/scripts/vendor.js",
+              "src/assets/js/scripts/main.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -106,12 +109,16 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "node_modules/primeng/resources/themes/saga-blue/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/js/funciones.js"
-              ]
+              "node_modules/bootstrap/dist/js/bootstrap.min.js", 
+              "src/assets/js/funciones.js",
+              "src/assets/js/scripts/vendor.js",
+              "src/assets/js/scripts/main.js"
+            ]
+            
           }
         }
       }

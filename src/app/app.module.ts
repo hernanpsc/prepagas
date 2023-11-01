@@ -29,7 +29,7 @@ import { SaludModule } from './modules/salud/salud.module';
     SkeletonComponent,
     FooterComponent,
     HeaderComponent
-        // LoadingButtonComponent,
+                // LoadingButtonComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

@@ -51,6 +51,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { TabViewModule } from 'primeng/tabview';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { EmpresasComponent } from './pages/empresas/empresas.component';
+import { FormQuoteComponent } from './components/atoms/form-quote/form-quote.component';
 
 const publicApi = [
 	ResultsComponent,
@@ -68,8 +70,9 @@ const publicApi = [
 		CompareComponent,
 		FilterPipe,
 		SortPipe,
-		...components
-	],
+		...components,
+  EmpresasComponent,
+  FormQuoteComponent	],
 	exports: [
 		publicApi
 	],

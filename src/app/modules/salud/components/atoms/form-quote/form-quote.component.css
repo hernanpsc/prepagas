@@ -1,0 +1,6 @@
+/* Estilos para pantallas de escritorio */
+@media (min-width: 768px) {
+  .section {
+    margin-top: -100px; /* Ajusta el valor según tu preferencia */
+  }
+}
