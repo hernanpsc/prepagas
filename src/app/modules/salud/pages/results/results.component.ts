@@ -631,7 +631,7 @@ console.log('coeficientes'+coeficientes)
         this.dropdownClinica = this.clinicas
         this.selectedClinica = [];
 
-        this.cotizacionService.getCotizacion(this.formDataInicial.value).subscribe(
+        this.cotizacionService.getPrecios(this.formDataInicial.value).subscribe(
           (response: ResponseData) => {
             console.log('Respuesta del servidor:', response);
             
@@ -731,7 +731,7 @@ console.log('coeficientes'+coeficientes)
           this.localStorageService.setItem('formData', data);
       
           // Luego, puedes utilizar los datos en tu lógica
-          this.cotizacionService.getCotizacion(data).subscribe((response: ResponseData) => {
+          this.cotizacionService.getPrecios(data).subscribe((response: ResponseData) => {
             // Maneja la respuesta del servidor aquí si es necesario
             console.log('Respuesta del servidor:', response);
             console.log('this.products antes : ' + this.products);

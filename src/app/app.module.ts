@@ -21,7 +21,6 @@ import { HeaderComponent } from './layout/header/header.component';
 import { SaludModule } from './modules/salud/salud.module';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

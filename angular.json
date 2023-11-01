@@ -37,8 +37,7 @@
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "src/assets/js/funciones.js",
-              "src/assets/js/scripts/vendor.js",
-              "src/assets/js/scripts/main.js"
+              "src/assets/js/scripts/vendor.js"
             ]
           },
           "configurations": {
@@ -115,9 +114,8 @@
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js", 
               "src/assets/js/funciones.js",
-              "src/assets/js/scripts/vendor.js",
-              "src/assets/js/scripts/main.js"
-            ]
+              "src/assets/js/scripts/vendor.js"
+                        ]
             
           }
         }

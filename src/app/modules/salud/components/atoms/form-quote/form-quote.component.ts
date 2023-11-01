@@ -2,7 +2,6 @@ import { Options } from '@angular-slider/ngx-slider';
 import { Router } from '@angular/router';
 import { Component, OnInit, Input, ElementRef, ViewChild  } from '@angular/core';
 import {FormGroup, FormBuilder, Validators } from '@angular/forms';
-
 import {ServcioRetornoPrecioService} from '../../../../../services/servcio-retorno-precio.service';
 import { CoeficientesService } from '../../../../../services/coeficientes.service'; // Asegúrate de importar el servicio
 
@@ -55,7 +54,7 @@ valorSueldo: number = 0;
   } 
 
 
-private buildForm(){
+private buildFormGroups(){
   this.formCotizarGrupos =this.formBuilder.group({
     fromGrupo: this.formBuilder.group({
       region: [''],
@@ -96,7 +95,7 @@ private buildForm(){
 
 }
 
-private buildFormGroups(){
+private buildForm(){
   this.formCotizar =this.formBuilder.group({
     grupo: [''],
     empresa_prepaga: ['0'],

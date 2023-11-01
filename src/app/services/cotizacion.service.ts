@@ -11,8 +11,10 @@ export class CotizacionService {
 
   constructor(private http: HttpClient) { }
 
-  getCotizacion(formCotizar: any) {
+  getPrecios(formCotizar: any) {
     const url = `${this.url}/cotizacion`; 
+    console.log('en el servicio',url);
+    console.log('en el servicio',formCotizar)
     return this.http.post(url, formCotizar);
   }
 
