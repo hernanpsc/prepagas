@@ -13,6 +13,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
+    "allowJs": true,
     "target": "ES2022",
     "module": "es2020",
     "lib": [
@@ -44,12 +45,3 @@
     
   },
 }
-
-
-
-
-  
-
-  
-   
- 

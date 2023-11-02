@@ -631,7 +631,7 @@ console.log('coeficientes'+coeficientes)
         this.dropdownClinica = this.clinicas
         this.selectedClinica = [];
 
-        this.cotizacionService.getPrecios(this.formDataInicial.value).subscribe(
+        this.cotizacionService.getPrecios( this.retornarService.getFormularioData()).subscribe(
           (response: ResponseData) => {
             console.log('Respuesta del servidor:', response);
             

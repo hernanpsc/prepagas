@@ -10,6 +10,7 @@ import * as planes from '../../../../../../public/products.json';
 import { ItemsService } from '../../../../shared/item/items.service';
 import { FormData } from '../../../../data/interfaces/interfaces';
 import { Planes } from '../../../../data/interfaces/planes';
+import {CotizacionService} from '../../../../services/cotizacion.service';
 
 interface SearchResult {
   planes: any[]; // Ajusta el tipo de datos según tus necesidades
@@ -110,6 +111,7 @@ interface SearchResult {
     constructor(
     private http: HttpClient,
     public itemsService: ItemsService,
+    private cotizacionService: CotizacionService
 
     ) {
      
@@ -125,18 +127,12 @@ interface SearchResult {
     // });
     this._search$.next();
     // Api Data
-        this.http.get<any>(this.serverUrl + '/planes').subscribe({
-          next: (data) => {
-            this.products = data; // Asigna los datos de los productos a la variable 'products'
-            this.secureProducts = data;
+   
+            this.products =this.cotizacionService.planes
+            this.secureProducts =this.cotizacionService.planes
             console.log(this.products )
-          },
-          error: (error) => {
-            console.log(error); // Maneja el error si la solicitud no se realiza correctamente
-          }
-    });
-  }
-
+       
+    }
   setForm(form: FormGroup) {
     this.myForm = form;
   }

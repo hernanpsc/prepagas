@@ -53,7 +53,6 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { EmpresasComponent } from './pages/empresas/empresas.component';
 import { FormQuoteComponent } from './components/atoms/form-quote/form-quote.component';
-
 const publicApi = [
 	ResultsComponent,
 	ProductLandComponent,
@@ -70,9 +69,11 @@ const publicApi = [
 		CompareComponent,
 		FilterPipe,
 		SortPipe,
+		EmpresasComponent,
+		FormQuoteComponent,
 		...components,
-  EmpresasComponent,
-  FormQuoteComponent	],
+ 
+	],
 	exports: [
 		publicApi
 	],

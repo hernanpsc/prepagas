@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {CotizacionService} from './../../../services/cotizacion.service';
+import { CoeficientesService } from './../../../services/coeficientes.service'; // Asegúrate de importar el servicio
 
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -26,7 +28,11 @@ export class HomeComponent {
 	// variables
 	private _option = 'credit'; // you can add a default value: credit | insurance | card | investment
 
-	constructor(private formBuilder: FormBuilder, private router: Router) {
+	constructor(
+		private formBuilder: FormBuilder,
+		private cotizacionService: CotizacionService,
+		private coeficientesService: CoeficientesService, 
+		private router: Router) {
 		// init forms
 		this.optionsForm = formBuilder.group({
 			type: [this._option],
@@ -42,6 +48,23 @@ export class HomeComponent {
 		});
 	}
 
+	async ngOnInit(): Promise<void> {
+	
+		try {
+		  // Llama al servicio para obtener los coeficientes como una promesa
+	   const coeficientes: any = await this.coeficientesService.obtenerDatos();
+	   this.cotizacionService.getCoeficientes(coeficientes)
+	   console.log('coeficientes'+coeficientes)
+	   await this.cotizacionService.getClinicas();
+	   await this.cotizacionService.getPlanes();
+		  // Inicializa tu formulario aquí y aplica los coeficientes
+		
+	
+		  // Continúa con otras acciones después de obtener y aplicar los coeficientes
+		} catch (error) {
+		  console.error('Error al obtener los coeficientes:', error);
+		  // Puedes manejar el error según tus necesidades
+		}}
 	// get methods
 	get option(): string {
 		return this.optionsForm.value.type;
