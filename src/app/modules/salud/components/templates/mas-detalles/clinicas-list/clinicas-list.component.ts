@@ -26,7 +26,6 @@ folleto: string;
   constructor(
     public dialogRef: MatDialogRef<ClinicasListComponent>,@Inject(MAT_DIALOG_DATA) public data1: DialogData1,@Inject(MAT_DIALOG_DATA)public data2: DialogData2
    ) {
-// console.log(this.Users);
 }
 
 

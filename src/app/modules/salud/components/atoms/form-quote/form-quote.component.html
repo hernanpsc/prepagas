@@ -1,4 +1,5 @@
 <section class="form section" >
+   
   <div class="background-detail left"></div>
   <div class="background-detail"></div>
   <div class="container container--half-width">
@@ -74,7 +75,7 @@
     </div>
     </div>
 </div> 
-<form [formGroup]="formCotizar"  (ngSubmit)="save($event)" >
+<form [formGroup]="formCotizar"  (ngSubmit)="save($event)" *ngIf="!formularioEnviado">
 
   <div class="container container--half-width" *ngIf="selectedGrupoType.includes('hijos') && selectedAportesType !== '' &&  selectedVolverType !== 'zona'" >
    <p>Valor en tiempo real: {{ selectedGrupoType }}</p>
@@ -141,71 +142,65 @@
      </button>
    <div>
    
-      <button class="btn back-to-home" [disabled]="formCotizar.invalid" type="submit">cotizar</button>
+      <button class="btn back-to-home"    [disabled]="formCotizar.invalid" type="submit">cotizar</button>
    </div>
  </div>
 </div>
 </div>
 </div>
 </form>
-</section>
+
      
-      
+<form [formGroup]="formPersonalData"  (ngSubmit)="salvar($event)"  *ngIf="formularioEnviado === true">
     
 
-        <!-- <div class="container container--half-width" *ngIf="selectedAportesType === 'si' &&  selectedVolverType !== 'grupo'|| selectedAportesType === 'no' &&  selectedVolverType !== 'grupo'">
+         <div class="container container--half-width" *ngIf="selectedContactoType !== 'true'">
 
-           <div class="form-group">
+           <div class="form-group" formControlName="name" >
             <label for="nombre">
                Nombre completo
             </label>
             <input #campoNombre type="text" required>
 
          </div>
-        <div class="form-group">
+        <div class="form-group" formControlName="email" >
            <label for="email">
             email
            </label>
            <input type="text"  required>
         </div>
-        <div class="form-group">
+        <div class="form-group" formControlName="phone" >
            <label for="cellphone">
             Celular
            </label>
            <input type="text" required>
         </div>
       
-      
-      </div> -->
+        <div>          
+         <div class="btn" (click)="selectContactoType('true')" type="button">ver cotizacion</div>
+
+       <!-- <button class="btn btn--ghost btn--previous">
+   
+          <img cass="icon icon--small icon--right" src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--chevron-right" alt="ícone de avançar" aria-hidden="true">
+       </button> -->
+    </div>
+      </div> 
     
-     <!-- <div class="container container--half-width">
-        <div class="btn-wrapper">
-           <button class="btn btn--ghost btn--previous">
-            <img class="icon icon--small icon--left" src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--chevron-left" alt="ícone de retroceder" aria-hidden="true">
-              voltar
-            </button>
-           <div>
-            <button class="">
-        
-               <img cass="icon icon--small icon--right" src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--chevron-right" alt="ícone de avançar" aria-hidden="true">
-            </button>
-         </div>
-       </div>
-     </div> -->
-      <!-- <div class="container container--half-width">
+   
+      <div class="container container--half-width">
         <div class="form-title" style="margin-bottom:15px">
          Pronto!
         </div>
-       <div class="form-group" style="margin-top:0">
-           <label for="preferred_contact_method">
+        <div class="form-group" style="margin-top: 0">
+         <label for="preferred_contact_method">
             Como você prefere continuar a sua cotação?
            </label>
            <div>
               <div class="btn-wrapper btn-wrapper--floating btn-wrapper--equal-sizes" name="preferred_contact_method">
-                 <button class="btn btn--vertical"><img class="icon" src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--social-chat" alt="ícone de chat" aria-hidden="true">
+                 <button class="btn btn--vertical" (click)="selectContactoType('phone')"><img class="icon" src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--social-chat" alt="ícone de chat" aria-hidden="true">
                  TELÉFONO
                 </button>
-                <button class="btn btn--vertical">
+                <button class="btn btn--vertical" (click)="selectContactoType('whatsapp')">
                   <img class="icon" src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--social-whatsapp" alt="ícone de whatsapp" aria-hidden="true">
                  Whatsapp
                 </button>
@@ -217,8 +212,10 @@
             </span>
            </div>
         </div>
-     </div> -->
+     </div>
+     <button class="btn back-to-home"  [disabled]="formPersonalData.invalid" type="submit">cotizar</button>
 
+   </form>
 
 
 
@@ -229,22 +226,27 @@
            type="submit">Continuar <img class="icon icon--small icon--right"
            src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--chevron-right" alt="ícone de avançar" aria-hidden="true"></button>
         </div>
-     </div> -->
-     <!-- <div class="thankyou-card">
+     </div>  -->
+    <div class="thankyou-card" *ngIf="selectedContactoType === 'phone' && formularioEnviado === true">
         <img class="icon"
            src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--thankyou-phone" alt="ícone de agradecimento">
         <div class="thankyou-card--title">Gracias!</div>
         <div class="thankyou-card--body">Entraremos em contato <b>em até 2 minutos!</b></div>
      </div>
-     <div class="thankyou-card" >
+
+     <!-- <div class="thankyou-card" >
         <img class="icon"
            src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--thankyou-chat" alt="ícone de agradecimento">
         <div class="thankyou-card--title">Gracias!</div>
         <div class="thankyou-card--body">Estaremos contactandole con uno de nuestros asesores.</div>
-     </div
-    <div class="thankyou-card">
+     </div> -->
+
+    <div class="thankyou-card" *ngIf="selectedContactoType === 'whatsapp' && formularioEnviado === true">
         <img class="icon"
            src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--thankyou-whatsapp" alt="ícone de agradecimento">
         <div class="thankyou-card--title">Gracias!</div>
         <div class="thankyou-card--body">Estaremos enviandole un mensaje!</div>
-     </div> -->
+     </div>
+
+
+   </section>

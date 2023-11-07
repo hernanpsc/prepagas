@@ -2,7 +2,8 @@ import { Component, Input, OnInit,ChangeDetectionStrategy, ViewChild,  ElementRe
 import { ModalService } from '../../../../../_modal';
 import { MasDetallesComponent } from '../../templates/mas-detalles/mas-detalles.component';
 import {MatDialogModule, MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import {ServicioDeCompararService} from '../../../../../services/servicio-de-comparar.service'
+import {ServicioDeCompararService} from '../../../../../services/servicio-de-comparar.service';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 
 export interface DialogData1 {
@@ -22,9 +23,10 @@ export interface DialogData1 {
 
 @Component({
   selector: 'app-product-land',
-  templateUrl: `./product-land.component.html`,
+  templateUrl: './product-land.component.html',
   styleUrls: ['./product-land.component.scss']
 })
+
 
 
 export class ProductLandComponent implements OnInit{
@@ -42,7 +44,7 @@ export class ProductLandComponent implements OnInit{
   producto: any;
   folleto:any;
   searchKey:string ="";
-
+  isLargeScreen: boolean;
   dialogRef: MatDialogRef<MasDetallesComponent>;
   public comparar:any = 'Comparar';
   public productList : any ;
@@ -53,10 +55,12 @@ export class ProductLandComponent implements OnInit{
     private modalService: ModalService,
     public dialog: MatDialog,
     private servicioComparar: ServicioDeCompararService,
+    private breakpointObserver: BreakpointObserver
     ) { 
-
+      this.isLargeScreen = breakpointObserver.isMatched(Breakpoints.Large);
   }
 
+  
   // @ViewChild("compararButon") compararButon: ElementRef;
    //https://bit.ly/Replacement_ElementRef
    toggleCompare() {
@@ -75,13 +79,17 @@ agregarcomparar(){
   }
 
   ngOnInit(): void {
+    this.breakpointObserver.observe([Breakpoints.Large])
+    .subscribe(result => {
+      this.isLargeScreen = result.matches;
+    });
   console.log(this.product)
     
   }
 
   openDialog(
     // enterAnimationDuration: string, exitAnimationDuration: string,
-    product?) : void {
+    product?: { name: any; id: any; price: any; category: any; rating: any; clinicas: any; clinicasArrayObjets: any; clinicasmap: any; entidades: any; folleto: any; }) : void {
       const dialogRef = this.dialog.open(MasDetallesComponent, {
       // enterAnimationDuration,
       // exitAnimationDuration,

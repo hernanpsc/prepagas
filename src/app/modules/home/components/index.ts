@@ -6,10 +6,14 @@ import { OptionsGroupComponent, RankingRowComponent, ServiceComponent, Calculato
 // organisms
 import {
 	BenefitsSectionComponent,
+	FeaturesSectionComponent,
 	HeroSectionComponent,
 	HowItWorksSectionComponent,
 	RankingSectionComponent,
 	ServicesSectionComponent,
+	PreFooterSectionComponent,
+	UserFeedbakSectionComponent,
+	UsersReviewsSectionComponent
 } from './organisms';
 
 // templates
@@ -23,5 +27,9 @@ export const components = [
 	RankingSectionComponent,
 	BenefitsSectionComponent,
 	HowItWorksSectionComponent,
-	HeroSectionComponent
+	HeroSectionComponent,
+	FeaturesSectionComponent,
+	PreFooterSectionComponent,
+	UserFeedbakSectionComponent,
+	UsersReviewsSectionComponent
 ];

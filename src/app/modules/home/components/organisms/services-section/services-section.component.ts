@@ -4,7 +4,7 @@ import { Service } from './../../../../../data/interfaces';
 
 @Component({
 	selector: 'app-services-section',
-	templateUrl: './services-section.component.html',
+	templateUrl: './services-section-acierto.component.html',
 	styleUrls: ['./services-section.component.scss'],
 })
 export class ServicesSectionComponent {

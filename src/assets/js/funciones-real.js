@@ -179,7 +179,7 @@ function finalizar( results,tipo_de_socio,edad_1,edad_2,numkids,empresa_prepaga,
         //     console.log(pair[0] + ', ' + pair[1]);
         // }
 
-        // console.log('input-min :' + inputmin);
+        console.log('input-min :' + inputmin);
         console.log('Check Afinidad:' + bonifAf);
 
         console.log('Edad Titular:' + edad1);
@@ -684,10 +684,10 @@ function valorPlan(resultado, tipoIngreso, sueldo, aportantes, segvida1, segvida
     // }
 
     // let result0 = isKeyExists(listas_de_precios,"premedic")
-    // console.log("Check for the non-existing key, is key exists > "+ result0)
+    console.log("Check for the non-existing key, is key exists > "+ result0)
 
     // let result1 = isKeyExists(listas_de_precios,"sancorsalud")
-    // console.log("Check for the existing key, is key exists > "+result1)
+    console.log("Check for the existing key, is key exists > "+result1)
 
 
 
@@ -1224,8 +1224,8 @@ function parseResult(precio, bonifAport, segvida1, segvida2, bonA, aficheq) {
 
         // inputmin = $('#input-min').val();
         // inputmax = $('#input-max').val();
-        // console.log(inputmin);
-        // console.log(inputmax);
+        console.log(inputmin);
+        console.log(inputmax);
         function adPlan(planName, precio) {
 
             arrPlan.push(planName);

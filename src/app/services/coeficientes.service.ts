@@ -18,7 +18,11 @@ export class CoeficientesService {
   
       response.forEach((empresa: any) => {
         const nombreEmpresa = empresa.name;
+        console.log(nombreEmpresa)
+
         this.coeficientes[nombreEmpresa] = empresa.factores.coeficiente;
+        console.log(this.coeficientes[nombreEmpresa])
+
       });
     } catch (error) {
       console.error('Error al obtener los coeficientes:', error);

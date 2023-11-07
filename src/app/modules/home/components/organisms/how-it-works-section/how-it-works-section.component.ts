@@ -3,7 +3,7 @@ import { STEPS_DATA_ITEMS } from './../../../../../data/constants/mock';
 
 @Component({
 	selector: 'app-how-it-works-section',
-	templateUrl: './how-it-works-section.component.html',
+	templateUrl: './how-it-works-section-acierto.component.html',
 	styleUrls: ['./how-it-works-section.component.scss'],
 })
 export class HowItWorksSectionComponent {

@@ -402,7 +402,7 @@ body{margin:0;padding:0; font-family: 'Noto Sans', sans-serif; background-color:
 /**/
 .lista-tipo-4{max-width: 1170px; margin: 0 auto 0; display: block; padding: 0 10px;}
 .lista-tipo-4 h4{color: #5d5d5d !important; font-size: 24px !important; line-height: 30px !important; margin: 0 0 35px 0 !important; text-align: center; font-weight: 700;}
-.lista-tipo-4 .items .item:first-child{display: none !important;}
+/* .lista-tipo-4 .items .item:first-child{display: block !important;} */
 .lista-tipo-4 .item{width: 100%; margin: 0 0 40px 0; box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3); padding: 30px; border-radius: 5px; background-color: #fff; position: relative; display: grid; grid-template-columns: 190px 1fr 230px 138px; align-items: center;}
 .lista-tipo-4 .item a{text-decoration: none;}
 .lista-tipo-4 .item .logo{width: 100%;}

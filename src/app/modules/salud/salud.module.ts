@@ -32,7 +32,7 @@ import { ProductCardComponent } from './components/molecules/product-card/produc
 
 
 import { DialogService } from 'primeng/dynamicdialog';
-import { ProductsService } from './pages/results/products.service';
+import { ProductsService } from './../../services/products.service';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { components } from './components';

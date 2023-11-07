@@ -1,6 +1,6 @@
 import { Component, OnInit,Input,ChangeDetectorRef, EventEmitter,Output  } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
-import { ProductsService } from '../../../pages/results/products.service';
+import { ProductsService } from '../../../../../services/products.service';
 import {ServcioRetornoPrecioService} from '../../../../../services/servcio-retorno-precio.service';
 import { Quote } from '../../../../../data/interfaces/interfaces';
 
@@ -174,7 +174,7 @@ console.log(this.filtrosSeleccionadosGroup)
         console.log(productos)
         // Calcula el nuevo rango de precios
   // const rangoPrecios = this.obtenerRangoDePrecios(productos);
-// console.log(this.obtenerRangoDePrecios(productos))
+console.log(this.obtenerRangoDePrecios(productos))
   // Actualiza los valores de this.val y this.val2
   // this.val = rangoPrecios.min;
   // this.val2 = rangoPrecios.max;

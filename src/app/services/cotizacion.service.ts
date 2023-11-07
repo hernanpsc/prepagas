@@ -11,6 +11,8 @@ export class CotizacionService {
   private coeficientes: any;
   public precios: any;
   public clinicas: any;
+  public empresas: any;
+
 
 
   constructor(private http: HttpClient) { }
@@ -19,7 +21,9 @@ export class CotizacionService {
     const url = `${this.url}/cotizacion`;
     console.log('en el servicio', url);
     console.log('en el servicio', formCotizar);
-    formCotizar.coeficientes = this.coeficientes;
+    console.log('en el servicio', formCotizar);
+
+    // formCotizar.coeficientes = this.coeficientes;
     return this.http.post(url, formCotizar); // Devuelve el observable directamente
   }
   
@@ -28,18 +32,22 @@ export class CotizacionService {
   getPlanes(){
     const url = `${this.url}/planes`;
     this.planes = this.http.get(url);
+
     return this.planes;
   }
+
+  
   getClinicas(){
     const url = `${this.url}/clinicas`;
     this.clinicas = this.http.get(url);
     return this.clinicas;
   }
-  getCoeficientes(type: any){
-    const url = `${this.url}/planes`;
-    this.coeficientes = type;
-    return;
-  }
 
+  getEmpresas(){
+    const url = `${this.url}/empresas`;
+    this.empresas = this.http.get(url);
+    return this.empresas;
+  }
+  
 
 }

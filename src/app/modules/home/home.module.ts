@@ -26,7 +26,7 @@ import {components} from "./components";
 @NgModule({
     declarations: [
         HomeComponent,
-        ...components
+        ...components,
     ],
     imports: [
         CommonModule,

@@ -1,5 +1,5 @@
 import {Component, HostListener, Renderer2, ChangeDetectorRef ,OnInit,HostBinding, ViewChild, ChangeDetectionStrategy , Input, ElementRef, NgZone } from '@angular/core';
-import {Observable} from 'rxjs';
+import {Observable,forkJoin} from 'rxjs';
 import {map, pairwise, filter, throttleTime } from 'rxjs/operators';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
 import * as planes from '../../../../../../public/products.json';
@@ -16,15 +16,15 @@ import { Empresa } from '../../../../data/interfaces/empresas'
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { MegaMenuItem, MenuItem } from 'primeng/api';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ProductsService } from './products.service';
+import { ProductsService } from './../../../../services/products.service';
 import {CotizacionService} from '../../../../services/cotizacion.service';
 import { LocalStorageService } from '../../../../services/local-storage.service';
-import { CoeficientesService } from '../../../../services/coeficientes.service'; // Asegúrate de importar el servicio
 import { GetQuoteComponent } from '../../components/atoms/get-quote/get-quote.component';
-
+import {combinePlansWithPrices} from '../../../../../assets/js/funciones';
 import rfdc from 'rfdc';
 import { Credit } from './../../../../data/interfaces';
 import { CREDIT_DATA_ITEMS } from './../../../../data/constants/mock';
+import { Planes } from  './../../../../data/interfaces/planes';
 declare var addProp:any;
 declare var desectItem:any;
 declare var showandHide:any;
@@ -39,7 +39,7 @@ interface ResponseData {
 
   
   selector: 'app-results',
-  templateUrl: './results.component.html',
+  templateUrl: './results1.component.html',
   styleUrls: ['./results.component.scss'],
   
  
@@ -109,7 +109,6 @@ selectedRating : FormControl = new FormControl('');
   tieredItems: MenuItem[] = [];
   
   formDataInicial: FormGroup; // Formulario inicial con valores predeterminados
-  formDataLocalstorage: FormGroup;
   formDataInicialJSON: any[];
   sidebarVisible = false; // Por defecto, el sidebar está visible
   anchoSidebar = '80%'; // Ancho por defecto del sidebar
@@ -122,7 +121,7 @@ selectedRating : FormControl = new FormControl('');
 
   constructor(
     private modalService: ModalService,
-    private retornarService: ServcioRetornoPrecioService,
+    private dataFormularios: ServcioRetornoPrecioService,
     private deselctComparar: ServcioRetornoPrecioService,
     private servicioComparar: ServicioDeCompararService,
     private formBuilder: FormBuilder,
@@ -133,11 +132,36 @@ selectedRating : FormControl = new FormControl('');
     private productoService:ProductsService,
     private cotizacionService: CotizacionService,
     private localStorageService: LocalStorageService,
-    private coeficientesService: CoeficientesService, // Inyecta el servicio
     private renderer: Renderer2
     ) {
       this.buildForm();
-     
+      this.formDataInicial = this.formBuilder.group({
+        // Define tus campos y valores iniciales aquí
+        grupo: 2,
+        empresa_prepaga: 0,
+        edad_1: 19,
+        edad_2: 0,
+        numkids: 0,
+        tipo: 'P',
+        agree: true,
+        aporteOS: '',
+        sueldo: 0,
+        aporte: 0,
+        monoadic: false,
+        cantAport: 0,
+        afinidad: false,
+        bonAfinidad: 0,
+        supras: false,
+        segvida: false,
+        segvida1: false,
+        personalData: this.formBuilder.group({
+          name: '',
+          email: '',
+          phone: '',
+          region: 'AMBA',
+        }),
+      });
+
     }
      // Ejemplo de cómo acceder al formulario desde otro componente
   
@@ -316,8 +340,8 @@ tempArrayHide:any=[];
 
 
 addClinicas(){
-//  console.log(this.products)
-//  console.log(this.clinicas)
+//  // console.log(this.products)
+//  // console.log(this.clinicas)
 
  let products = this.products;
 
@@ -353,9 +377,9 @@ hideButton() {
 }
 
 onItemSelect(selectedClinica: any){
-  console.log('onItemSelect', selectedClinica);
-  //  console.log(this.tempArrayShow);
-  //  console.log(this.tempArrayHide);
+  // console.log('onItemSelect', selectedClinica);
+  //  // console.log(this.tempArrayShow);
+  //  // console.log(this.tempArrayHide);
   
   
 
@@ -416,8 +440,8 @@ this.productoService.activarFuncionEnComponenteB();
 
 onItemDeSelect(item: any){
   // console.log('onItemSelect', item);
-  //  console.log(this.tempArrayShow);
-  //  console.log(this.tempArrayHide);
+  //  // console.log(this.tempArrayShow);
+  //  // console.log(this.tempArrayHide);
   
  
 
@@ -564,114 +588,70 @@ closeButon() {
     
   // }
   async ngOnInit(): Promise<void> {
-    this.isLoaded = false;
-
-    try {
-      // Llama al servicio para obtener los coeficientes como una promesa
-      const coeficientes: any = await this.coeficientesService.obtenerDatos();
-console.log('coeficientes'+coeficientes)
-
-      // Inicializa tu formulario aquí y aplica los coeficientes
-      this.formDataInicial = this.formBuilder.group({
-        // Define tus campos y valores iniciales aquí, incluyendo 'coeficientes'
-        grupo: 2,
-        empresa_prepaga: 0,
-        edad_1: 19,
-        edad_2: 0,
-        numkids: 0,
-        tipo: 'P',
-        agree: true,
-        aporteOS: '',
-        sueldo: 0,
-        aporte: 0,
-        monoadic: false,
-        cantAport: 0,
-        afinidad: false,
-        bonAfinidad: 0,
-        supras: false,
-        segvida: false,
-        segvida1: false,
-        coeficientes: coeficientes, // Aplica los coeficientes aquí
-        personalData: this.formBuilder.group({
-          name: '',
-          email: '',
-          phone: '',
-          region: 'AMBA',
-        }),
-      });
-
-      // Continúa con otras acciones después de obtener y aplicar los coeficientes
-    } catch (error) {
-      console.error('Error al obtener los coeficientes:', error);
-      // Puedes manejar el error según tus necesidades
-    }
-  
-    // Suscribirse a la consulta de coeficientes y actualizar el formulario cuando esté disponible
+    this.isLoaded = false; 
+    
+    forkJoin([
+      this.cotizacionService.getClinicas(),
+      this.cotizacionService.getPlanes(),
+      this.cotizacionService.getEmpresas()
+    ]).subscribe(([clinicas, planes, empresas]) => {
+      this.clinicas = clinicas;
+      this.dropdownClinica = this.clinicas;
+      this.selectedClinica = [];
+      this.secureProducts = planes;
+      this.planes = planes;
+      this.empresas = empresas;
+    });
    
-    console.log('FORM DATA INICIAL')
+         
+      const formData = this.dataFormularios.getFormularioData();
 
-    console.log(this.formDataInicial.value)
-       // Recupera los datos del formulario desde localStorage
-    const formDataJSON = localStorage.getItem('formData');
-    if (formDataJSON) {
-      // Si hay datos en localStorage, conviértelos en un objeto FormGroup
-      this.formDataLocalstorage = this.formBuilder.group(JSON.parse(formDataJSON));
-
-      // Verifica si formDataLocalstorage tiene valores
-      if (Object.keys(this.formDataLocalstorage.controls).length > 0) {
-        // Si formDataLocalstorage tiene valores, asigna esos valores a formDataInicial
-        this.formDataInicial = this.formDataLocalstorage;
-      }
-    }
-    this.formDataInicialJSON = this.formDataInicial.getRawValue(); 
-    this.productoService.getProducts().subscribe(data => {});
-    this.http.get<any>(this.serverUrl + '/clinicas').subscribe({
-      next: (data) => {
-        this.clinicas = data; // Asigna los datos de los productos a la variable 'products'
-        this.dropdownClinica = this.clinicas
-        this.selectedClinica = [];
-
-        this.cotizacionService.getPrecios( this.retornarService.getFormularioData()).subscribe(
-          (response: ResponseData) => {
-            console.log('Respuesta del servidor:', response);
+      caches.open('products').then(cache => {
+        cache.match('productos').then(response => {
+          if (!formData && response) {
+            // 'this.products' se encuentra en la caché, puedes obtener los datos
+            response.json().then(products => {
+             console.log('productos GET en cache', products);
+             this.productosFiltrados = products
+           });
+          } 
+      
+       
+  
+        this.cotizacionService.getPrecios(formData).subscribe(
+          (response: Planes) => {
             
-            this.products = response.planes;
-            // this.secureProducts = response.planes;
-            // this.addClinicas();
-              this.productosFiltrados = this.products
-              console.log(this.productosFiltrados)
-              // this.actualizarProductos(this.productosFiltrados)
 
-            // console.log(this.products )
-                          },
+           
+      
+           
+         
+            const tipo: string = formData.tipo;                       
+            // const planesConPrecios = combinePlansWithPrices(this.planes, response)
+
+            
+            this.products = response;
+              this.productosFiltrados = this.products
+         // Abre la caché (puedes darle un nombre específico)
+caches.open('products').then(cache => {
+  // Almacena 'this.products' en la caché
+  const productosResponse = new Response(JSON.stringify(this.productosFiltrados));
+  cache.put('productos', productosResponse);  
+
+  console.log('productos PUT en cache', productosResponse )
+});
+      
+                     },
                 (error) => {
                   console.error('Error en la solicitud al servidor:', error);
           }
         );              
-        setTimeout(() => {
-          this.isLoaded = true;
-        }, 4000); // Cambia a true después de 1 segundo (ajusta el tiempo según sea necesario)
+        // setTimeout(() => {
+        //   this.isLoaded = true;
+        // }, 4000);
 
-      },
-      error: (error) => {
-        console.log(error); // Maneja el error si la solicitud no se realiza correctamente
-        setTimeout(() => {
-          this.isLoaded = true;
-        }, 4000);
-
-      }
-    });
-
-
-    this.http.get<any>(this.serverUrl + '/empresas').subscribe({
-      next: (data) => {
-        this.empresas = data;
- 
-      },
-      error: (error) => {
-        console.log(error); 
-      }
-    });
+      });
+    });      
 
     if ( !this.productosFiltrados){
       this.productosFiltrados = this.products
@@ -679,17 +659,17 @@ console.log('coeficientes'+coeficientes)
     }
     this.SortbyParamControl.valueChanges.subscribe((selectedValue: string) => {
       // Realiza acciones basadas en el valor seleccionado
-      console.log('Nuevo valor seleccionado:', selectedValue);
+      // console.log('Nuevo valor seleccionado:', selectedValue);
     });
     this.empresa.valueChanges.subscribe((selectedValue: string) => {
       // Realiza accioNuevones basadas en el valor seleccionado de la empresa
-      console.log(' valor seleccionado de la empresa:', selectedValue);
+      // console.log(' valor seleccionado de la empresa:', selectedValue);
       // Puedes agregar aquí la lógica para filtrar o realizar otras acciones
     });
     this.productoService.filteredProducts$.subscribe(filteredProducts => {
       this.productosFiltrados = filteredProducts
       // Aquí puedes usar los productos filtrados en tu componente
-      console.log('Productos filtrados:', filteredProducts);
+      // console.log('Productos filtrados:', filteredProducts);
     });
   
     this.productoService.eventoFilterClinicas$.subscribe(() => {
@@ -702,7 +682,7 @@ console.log('coeficientes'+coeficientes)
       // Realiza cualquier acción que necesites con los datos actualizados.
     });
 
-    this.compareProdList();
+      this.compareProdList();
         this.onItemSelect(this.selectedClinica);
        
     // setTimeout(() => {
@@ -718,34 +698,9 @@ console.log('coeficientes'+coeficientes)
       //   });
       // });
       
-
-      this.retornarService.disparadorDePrecio.subscribe(data => {
-        console.log('Recibiendo data en product.list.component.ts...', data);
-        
-        if (data) { // Verifica si se recibieron datos
-          // Aquí puedes acceder directamente a los datos sin necesidad de .value
-          // data contiene el objeto con los valores del formulario
-          // Ejemplo: data.grupo, data.otroCampo, etc.
       
-          // Guarda los datos en localStorage si es necesario
-          this.localStorageService.setItem('formData', data);
-      
-          // Luego, puedes utilizar los datos en tu lógica
-          this.cotizacionService.getPrecios(data).subscribe((response: ResponseData) => {
-            // Maneja la respuesta del servidor aquí si es necesario
-            console.log('Respuesta del servidor:', response);
-            console.log('this.products antes : ' + this.products);
-            this.productosFiltrados = response.planes;
-            this.addClinicas();
-            this.productoService.setOriginalProducts(this.products);
-            console.log('this.products después : ' + this.products);
-
-          }, error => {
-            // Maneja errores si ocurren
-            console.error('Error en la solicitud al servidor:', error);
-          });
-        }
-      });
+ 
+ 
       
 
     
@@ -762,7 +717,7 @@ console.log('coeficientes'+coeficientes)
   }
 
 onSelectAll(items: any) {
-    console.log('onSelectAll', items);
+    // console.log('onSelectAll', items);
 }
 toogleShowFilter() {
     this.ShowFilter = !this.ShowFilter;
@@ -903,7 +858,7 @@ selectToCompare(item: any) {
 
 removeSelectedItem(item:any) {
   this.itemsService.removeSelection(item);{
-    console.log('ok')
+    // console.log('ok')
   }
 }
 
@@ -946,14 +901,7 @@ filterProductsByRating(selectedRating: number) {
     return product.rating >= selectedRating;
   });
 }
-guardarDatosEnLocalStorage(formData: FormData): void {
-  try {
-    // Utiliza la función del servicio para guardar los datos
-    this.localStorageService.setItem('formData', formData);
-  } catch (error) {
-    console.error('Error al guardar en localStorage:', error);
-  }
-}
+
 actualizarProductos(nuevosProductos: any): void {
   this.productoService.setProductosFiltrados(nuevosProductos);
 }

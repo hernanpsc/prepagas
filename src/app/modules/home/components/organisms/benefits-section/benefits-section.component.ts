@@ -4,7 +4,7 @@ import { Benefit } from './../../../../../data/interfaces';
 
 @Component({
 	selector: 'app-benefits-section',
-	templateUrl: './benefits-section.component.html',
+	templateUrl: './benefits-section-acierto.component.html',
 	styleUrls: ['./benefits-section.component.scss'],
 })
 export class BenefitsSectionComponent {

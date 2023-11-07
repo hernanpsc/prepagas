@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CotizacionService} from './../../../services/cotizacion.service';
-import { CoeficientesService } from './../../../services/coeficientes.service'; // Asegúrate de importar el servicio
+import { ProductsService } from './../../../services/products.service';
 
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { CREDITS_DATA_ITEMS, INSURANCE_DATA_ITEMS, OPTIONS_DATA_ITEMS } from './
 
 @Component({
 	selector: 'app-home',
-	templateUrl: './home.component.html',
+	templateUrl: './home.component-1.html',
 	styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
@@ -31,7 +31,7 @@ export class HomeComponent {
 	constructor(
 		private formBuilder: FormBuilder,
 		private cotizacionService: CotizacionService,
-		private coeficientesService: CoeficientesService, 
+		private productoService:ProductsService,
 		private router: Router) {
 		// init forms
 		this.optionsForm = formBuilder.group({
@@ -49,22 +49,7 @@ export class HomeComponent {
 	}
 
 	async ngOnInit(): Promise<void> {
-	
-		try {
-		  // Llama al servicio para obtener los coeficientes como una promesa
-	   const coeficientes: any = await this.coeficientesService.obtenerDatos();
-	   this.cotizacionService.getCoeficientes(coeficientes)
-	   console.log('coeficientes'+coeficientes)
-	   await this.cotizacionService.getClinicas();
-	   await this.cotizacionService.getPlanes();
-		  // Inicializa tu formulario aquí y aplica los coeficientes
-		
-	
-		  // Continúa con otras acciones después de obtener y aplicar los coeficientes
-		} catch (error) {
-		  console.error('Error al obtener los coeficientes:', error);
-		  // Puedes manejar el error según tus necesidades
-		}}
+	}
 	// get methods
 	get option(): string {
 		return this.optionsForm.value.type;
@@ -114,6 +99,6 @@ export class HomeComponent {
 				break;
 		}
 		// const { amount, income, time, entry } = this.calculatorForm.value;
-		// console.log(this.calculatorForm.value);
+		console.log(this.calculatorForm.value);
 	}
 }

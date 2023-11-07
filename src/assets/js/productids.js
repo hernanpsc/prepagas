@@ -604,10 +604,10 @@ function valorPlan(resultado, tipoIngreso, sueldo, aportantes, segvida1, segvida
     // }
 
     // let result0 = isKeyExists(listas_de_precios,"premedic")
-    // console.log("Check for the non-existing key, is key exists > "+ result0)
+    console.log("Check for the non-existing key, is key exists > "+ result0)
 
     // let result1 = isKeyExists(listas_de_precios,"sancorsalud")
-    // console.log("Check for the existing key, is key exists > "+result1)
+    console.log("Check for the existing key, is key exists > "+result1)
 
 
 

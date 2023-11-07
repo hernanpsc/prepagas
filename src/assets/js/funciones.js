@@ -585,34 +585,10 @@ function productIdOmint(anios, tipoAsoc, miembro) {
 	}
 // <!----------------------Funcion VALOR DEL PLAN OMINT end----------------------------> 
 
-function addProp(array1,array2){
-	
-for ( j in array1 ){
-
-	
-
-	for ( let i=0; i<array2.length;i++){
-		console.log('Pasada numero ' + j + 'del array1'  );
-		if ( array1[j].id == array2[i].id ){	
-			console.log('Pasada numero ' + j + ' sobre el array2');
-			console.log(array1[j]);
-			console.log(array2[i]);
-
-			  let precio = array2[i].precio;
-			 array1[j].precio = precio;
-			 array1[precio]
-					}
-				}
-			}
-			console.log(array1);
-			console.log(array1);
-return array1;
-}
 
  
 function combinePlansWithPrices(planes, precios) {
 	const combinedArray = [];
-  		console.log(planes)
 
 	planes.forEach((plan) => {
 		console.log(plan)
