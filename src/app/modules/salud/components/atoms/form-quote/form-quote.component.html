@@ -6,19 +6,19 @@
      <div class="form-title">Cotice su Plan de Salúd!</div>
      <div class="form-group" *ngIf="selectedZonaType ==='' || selectedVolverType === 'zona'">
         <label for="full_name">Zona de residencia</label>
-        <div class="btn-wrapper--main btn-wrapper btn-wrapper--floating btn-wrapper--equal-sizes sm-btn-wrapper" name="plan_type">
-         <button class="btn--main btn btn--vertical" [class.active]="selectedZonaType === 'CABA'" (click)="selectZonaType('CABA')">
+        <div class="btn-wrapper--main " name="plan_type">
+         <button class="square" [class.active]="selectedZonaType === 'CABA'" (click)="selectZonaType('CABA')">
          CABA
          </button>
-         <button class="btn--main btn btn--vertical" [class.active]="selectedZonaType === 'GBA Norte'" (click)="selectZonaType('GBA Norte')">
+         <button class="square" [class.active]="selectedZonaType === 'GBA Norte'" (click)="selectZonaType('GBA Norte')">
          GBA Norte
          </button>
-         <button class="btn--main btn btn--vertical" [class.active]="selectedZonaType === 'GBA Sur'" (click)="selectZonaType('GBA Sur')">
+         <button class="square" [class.active]="selectedZonaType === 'GBA Sur'" (click)="selectZonaType('GBA Sur')">
             GBA Sur
-            </button>
-            <button class="btn--main btn btn--vertical" [class.active]="selectedZonaType === 'GBA Oeste'" (click)="selectZonaType('GBA Oeste')">
+         </button>
+           <button class="square" [class.active]="selectedZonaType === 'GBA Oeste'" (click)="selectZonaType('GBA Oeste')">
                GBA Oeste
-            </button>
+         </button>
        </div>
      </div>
      <label class="form-group-label" for="plan_type" *ngIf="selectedGrupoType ==='' && selectedZonaType !== ''">

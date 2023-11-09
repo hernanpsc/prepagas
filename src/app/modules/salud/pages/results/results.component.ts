@@ -20,7 +20,6 @@ import { ProductsService } from './../../../../services/products.service';
 import {CotizacionService} from '../../../../services/cotizacion.service';
 import { LocalStorageService } from '../../../../services/local-storage.service';
 import { GetQuoteComponent } from '../../components/atoms/get-quote/get-quote.component';
-import {combinePlansWithPrices} from '../../../../../assets/js/funciones';
 import rfdc from 'rfdc';
 import { Credit } from './../../../../data/interfaces';
 import { CREDIT_DATA_ITEMS } from './../../../../data/constants/mock';
@@ -39,7 +38,7 @@ interface ResponseData {
 
   
   selector: 'app-results',
-  templateUrl: './results1.component.html',
+  templateUrl: './results.component.html',
   styleUrls: ['./results.component.scss'],
   
  

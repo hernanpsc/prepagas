@@ -762,3 +762,17 @@ body.theme .back-to-home:hover{
   border:1px solid rgba(91,143,203,.5);
   color:#5b8fcb!important
 }
+
+.btn-wrapper--main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.square {
+  flex: 1; /* Distribuye el espacio de manera igual entre los botones */
+  min-width: 0; /* Asegura que los botones se ajusten al espacio disponible */
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  background-color: #555;
+}
