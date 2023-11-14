@@ -1,1 +1,111 @@
-.main-container{display:flex;min-height:400px;min-width:400px;justify-content:center;background:rgba(0,0,0,0)}.inner-first-items{flex:1;display:flex;flex-direction:column;max-width:200px}.individual{background-image:url(../../../../../../assets/js/scripts/style/images/individual2.webp)}.pareja{background-image:url(../../../../../../assets/js/scripts/style/images/pareja2.webp)}.individualehijos{background-image:url(../../../../../../assets/js/scripts/style/images/individualehijos2.webp)}.parejaehijos{background-image:url(../../../../../../assets/js/scripts/style/images/parejaehijos2.webp)}.desregulado{background-image:url()}.particular{background-image:url()}.inner-square-div{flex:1}.inner-square-div img{display:inerhit}.inner-square-dos-div{flex:1;max-width:200px;max-height:50px;flex-direction:row}.inner-square-dos-div img{display:inerhit}
+.main-container{
+  display:flex;
+  min-height:400px;
+  min-width:400px;
+  justify-content:center;
+  background:rgba(0,0,0,0)
+}
+.inner-first-items{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  max-width:200px
+}
+/* .individual{
+  background-image:url(../../../../../../assets/js/scripts/style/images/individual2.webp)
+}
+.pareja{
+  background-image:url(../../../../../../assets/js/scripts/style/images/pareja2.webp)
+}
+.individualehijos{
+  background-image:url(../../../../../../assets/js/scripts/style/images/individualehijos2.webp)
+}
+.parejaehijos{
+  background-image:url(../../../../../../assets/js/scripts/style/images/parejaehijos2.webp)
+} */
+/* .desregulado{
+  background-image:url()
+}
+.particular{
+  background-image:url()
+} */
+.inner-square-div{
+  flex:1;
+  max-width:200px;
+  max-height:200px;
+}
+.inner-square-div img{
+  display:inerhit
+}
+.inner-square-dos-div{
+  flex:1;
+  max-width:200px;
+  max-height:50px;
+  flex-direction:row
+}
+.inner-square-dos-div img{
+  display:inerhit
+}
+/* app.component.css */
+.inner-square-dos-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 200px;
+  max-height: 50px;
+}
+
+/* app.component.css */
+.inner-square-dos-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 200px;
+  max-height: 50px;
+}
+
+/* incrementador.component.css */
+/* Estilos opcionales para los botones del incrementador */
+button {
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #e0e0e0;
+}
+
+span {
+  font-size: 16px;
+  margin: 0 10px;
+}
+/* Estilos para el botón */
+/* Estilos para el botón /*/
+/* Estilos para el botón */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  overflow: hidden;
+  margin: 0;  /* Elimina los márgenes */
+  padding: 0;  /* Elimina el relleno */
+}
+
+.inner-square-dos-div {
+  flex: 1;
+  max-width: 100%;
+  max-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;  /* Elimina los márgenes */
+  padding: 0;  /* Elimina el relleno */
+}
+
+/* Estilo activo */
+.inner-square-dos-div.active {
+  /* Estilos cuando está activo */
+  background-color: #3498db;
+  color: #fff;
+}
+

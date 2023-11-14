@@ -42,38 +42,65 @@
 	<div class="main-container tipo-de-plano" name="plan_type">
 
 		<div class="inner-first-items" *ngIf="this.formCotizar.get('group').value === '' || this.formCotizar.get('group').value === 1 || this.formCotizar.get('group').value === 3">
-		  <b class="btn inner-square-div img individual"  *ngIf="this.formCotizar.get('group').value === '' ||  this.formCotizar.get('group').value === 1" [class.active]="formCotizar.get('group').value === 1" (click)="selectGroup(1)">
-		  </b>
+		  <b class="btn inner-square-div img"  *ngIf="this.formCotizar.get('group').value === '' ||  this.formCotizar.get('group').value === 1" [class.active]="formCotizar.get('group').value === 1" (click)="selectGroup(1)">
+			<img src="../../../../../../assets/js/scripts/style/images/individual2.webp">
+
+		</b><div class="overlay"></div>
 	  
-		  <b class="btn inner-square-div img pareja"  *ngIf="this.formCotizar.get('group').value === '' || this.formCotizar.get('group').value === 3" [class.active]="formCotizar.get('group').value === 3" (click)="selectGroup(3)">
-		  </b>
+		  <b class="btn inner-square-div img"  *ngIf="this.formCotizar.get('group').value === '' || this.formCotizar.get('group').value === 3" [class.active]="formCotizar.get('group').value === 3" (click)="selectGroup(3)">
+			<img src="../../../../../../assets/js/scripts/style/images/pareja2.webp">
+		</b><div class="overlay"></div>
 		  <!-- <b class="btn inner-square-div img desregulado"  *ngIf="this.formCotizar.get('group').value !== '' && this.formCotizar.get('tipo').value == '' " [class.active]="formCotizar.get('tipo').value === 'D'" (click)="selectAportesType('D')">
 		</b>
 		<b class="btn inner-square-div img particular"  *ngIf="this.formCotizar.get('group').value === 2 && this.formCotizar.get('group').value === 2|| this.formCotizar.get('group').value == 4" [class.active]="formCotizar.get('tipo').value === 'P'" (click)="selectAportesType('P')">
 		</b> -->
 		<b class="btn inner-square-dos-div img desregulado"  *ngIf="showTipoFieldD ===true" 
 		[class.active]="formCotizar.get('tipo').value === 'D'" (click)="selectAportesType('D')">
-	 </b>
+	    Desregulados
+	    </b>
  
-	 <b class="btn inner-square-dos-div img particular"  *ngIf="showTipoFieldP ===true"
-	  (click)="selectAportesType('P')">
-	 </b>
+	    <b class="btn inner-square-dos-div img particular"  *ngIf="showTipoFieldP ===true"
+		[class.active]="formCotizar.get('tipo').value === 'P'" (click)="selectAportesType('P')">
+		Particular
+	    </b>
+		<button class="btn inner-square-dos-div" [class.active]="edadTitular">
+			<!-- <input aceholder="Ingrese la edad del titular" [value]="edadTitular" [class.active]="formCotizar.get('tipo').value === 'P'" type='number' style="font-color:black;border:'';"> -->
+			<app-incrementor [valor]="edadTitular" (valorCambiado)="cambiarEdadTitular($event)"></app-incrementor>
+		  </button>
+
+		  <button class="btn inner-square-dos-div" [class.active]="edadTitular">
+			<!-- <input aceholder="Ingrese la edad del titular" [value]="edadTitular" [class.active]="formCotizar.get('tipo').value === 'P'" type='number' style="font-color:black;border:'';"> -->
+			<app-incrementor [valor]="edadTitular" (valorCambiado)="cambiarEdadTitular($event)"></app-incrementor>
+		  </button>
+
+		  <button class="btn inner-square-dos-div" [class.active]="edadTitular">
+			<!-- <input aceholder="Ingrese la edad del titular" [value]="edadTitular" [class.active]="formCotizar.get('tipo').value === 'P'" type='number' style="font-color:black;border:'';"> -->
+			<app-incrementor [valor]="edadTitular" (valorCambiado)="cambiarEdadTitular($event)"></app-incrementor>
+		  </button><div class="overlay"></div>
+ 
+	    <b class="btn inner-square-dos-div img particular"  *ngIf="showTipoFieldP ===true"
+		[class.active]="formCotizar.get('tipo').value === 'P'" (click)="selectAportesType('P')">
+		Particular
+	    </b>
 		</div>
 	  
 		<div  class="inner-first-items"  *ngIf="this.formCotizar.get('group').value === '' || this.formCotizar.get('group').value === 2 || this.formCotizar.get('group').value === 4">
-		  <b class="btn inner-square-div img individualehijos" *ngIf="this.formCotizar.get('group').value === '' || this.formCotizar.get('group').value === 2" [class.active]="formCotizar.get('group').value === 2" (click)="selectGroup(2)">
-		  </b>
+		  <b class="btn inner-square-div img" *ngIf="this.formCotizar.get('group').value === '' || this.formCotizar.get('group').value === 2" [class.active]="formCotizar.get('group').value === 2" (click)="selectGroup(2)">
+		  <img src="../../../../../../assets/js/scripts/style/images/individualehijos2.webp">
+		</b><div class="overlay"></div>
 	  
-		  <b class="btn inner-square-div img parejaehijos" *ngIf="this.formCotizar.get('group').value === '' || this.formCotizar.get('group').value === 4" [class.active]="formCotizar.get('group').value === 4" (click)="selectGroup(4)">
-		  </b>
-		  <b class="btn inner-square-dos-div img desregulado"  *ngIf="showTipoFieldD ===true" 
-		  [class.active]="formCotizar.get('tipo').value === 'D'" (click)="selectAportesType('D')">
-	   </b>
-   
-	   <b class="btn inner-square-dos-div img particular"  *ngIf="showTipoFieldP ===true"
-		(click)="selectAportesType('P')">
-	   </b>
-
+		  <b class="btn inner-square-div img " *ngIf="this.formCotizar.get('group').value === '' || this.formCotizar.get('group').value === 4" [class.active]="formCotizar.get('group').value === 4" (click)="selectGroup(4)">
+			<img src="../../../../../../assets/js/scripts/style/images/parejaehijos2.webp">
+		</b><div class="overlay"></div>
+		<b class="btn inner-square-dos-div img desregulado"  *ngIf="showTipoFieldD ===true" 
+		[class.active]="formCotizar.get('tipo').value === 'D'" (click)="selectAportesType('D')">
+	    Desregulados
+	    </b>
+ 
+	    <b class="btn inner-square-dos-div img particular"  *ngIf="showTipoFieldP ===true"
+		[class.active]="formCotizar.get('tipo').value === 'P'" (click)="selectAportesType('P')">
+		Particular
+	    </b>
 		</div>
 	  </div>
 	  

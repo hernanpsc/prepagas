@@ -58,6 +58,9 @@ edadesHijos: string = '';
 edades_Hijos: string = '';
 sueldo: string = '';
 showTipo: boolean;
+edadTitular = 0;
+
+  
 
  constructor(
   private formBuilder: FormBuilder,
@@ -629,5 +632,8 @@ console.log('grupo :' + groupValue)
 
 }
 // Puedes agregar console.log para depuración si es necesario
+cambiarEdadTitular(nuevaEdad: number) {
+    this.edadTitular = nuevaEdad;
+  }
 }
 

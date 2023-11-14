@@ -1,0 +1,28 @@
+/* incrementador.component.css */
+/* Estilos opcionales para los botones del incrementador */
+
+  
+  span {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+  button {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #e0e0e0;
+  }
+  .incrementor-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px; /* ajusta el ancho según sea necesario */
+  }
+  
+  button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

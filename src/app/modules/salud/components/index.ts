@@ -10,7 +10,8 @@ import {
     FiltersProductsComponent,
     ProductCardComponent,
     ProductLandComponent,
-    ResultComponent
+    ResultComponent,
+    IncrementorComponent
 } from './molecules';
 
 // organisms
@@ -48,7 +49,8 @@ export const components = [
     ResultComponent,
     FormQueplanComponent,
     FormLeadComponent,
-    FormQuoteComponent
+    FormQuoteComponent,
+    IncrementorComponent
 ];
 
 

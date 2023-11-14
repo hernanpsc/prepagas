@@ -63,6 +63,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { EmpresasComponent } from './pages/empresas/empresas.component';
+
 const publicApi = [
 	ResultsComponent,
 	ProductLandComponent,
