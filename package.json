@@ -91,7 +91,7 @@
     "typescript-tslint-plugin": "^1.0.2"
   },
   "engines": {
-    "node": "16.15.1",
-    "npm": "8.13.x1"
+    "node": "18.18.2",
+    "npm": "9.8.1"
   }
 }
