@@ -368,3 +368,48 @@ text-align: center;
 margin: 0 auto;
 }
 
+
+  
+  .icon {
+    font-size: 24px; /* El tamaño que desees */
+  }
+  
+  .icon {
+    color: #ff0000; /* Cambia #ff0000 al color que desees en formato hexadecimal, RGB, o nombre del color */
+  }
+  .item-title[_ngcontent-dcc-c429]{
+    font-size:.75rem;
+    color:var(--color-secondary, #808080) 
+  }
+  .card-insurance {
+    padding-top: 15px; /* Ajusta el valor según tus preferencias */
+    padding-bottom: 15px; /* Ajusta el valor según tus preferencias */
+    
+    
+    /* Puedes ajustar otros lados si es necesario */
+    }
+    
+   .row {
+    margin-bottom: 5px; /* Ajusta el valor según tus preferencias */
+    margin-right: 5px; /* Ajusta el valor según tus preferencias */
+   }
+  
+     .mb-5 {
+      margin-left: 5px; /* Ajusta el valor según tus preferencias */
+      margin-right: 5px; /* Ajusta el valor según tus preferencias */
+      
+      border-radius: 10px; /* Ajusta el radio según tus preferencias */
+      overflow: hidden; /* Asegura que los bordes redondeados se apliquen correctamente */
+    }
+    
+  
+    .badge-diagonal {
+      position: absolute;
+      top: 10px; /* Ajusta la posición desde la parte superior según tus preferencias */
+      right: 10px; /* Ajusta la posición desde la parte derecha según tus preferencias */
+      transform: rotate(-45deg); /* Rota el badge -45 grados */
+      background-color: #f00; /* Color de fondo del badge */
+      color: #fff; /* Color del texto del badge */
+      padding: 5px 10px; /* Ajusta el relleno según tus preferencias */
+    }
+    

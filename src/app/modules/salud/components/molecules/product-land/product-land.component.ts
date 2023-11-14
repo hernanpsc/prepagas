@@ -49,6 +49,7 @@ export class ProductLandComponent implements OnInit{
   public comparar:any = 'Comparar';
   public productList : any ;
   public filterCategory : any
+  public iconStyles = { '--fa-secondary-opacity': 0.6 };
 
 
   constructor(

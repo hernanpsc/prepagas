@@ -1,6 +1,9 @@
 // atoms
 import { 
-    CotizarFormComponent
+    CotizarFormComponent,
+    FormQueplanComponent,
+    FormLeadComponent,
+    FormQuoteComponent
 } from './atoms';
 // molecules
 import { 
@@ -42,7 +45,10 @@ export const components = [
     ClinicasListGroupComponent,
     ClinicasListGroupPrimengComponent,
     PdfViewerComponent,
-    ResultComponent
+    ResultComponent,
+    FormQueplanComponent,
+    FormLeadComponent,
+    FormQuoteComponent
 ];
 
 

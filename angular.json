@@ -39,7 +39,8 @@
               "src/assets/css/style.min6a4d.css",
               "src/assets/css/magnific-popup.css",
               "src/assets/css/classic-themes.min68b3.css",
-              "src/assets/css/acierto-style.css"
+              "src/assets/css/acierto-style.css",
+              "src/assets/css/queplan/style-queplan.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
@@ -123,7 +124,8 @@
               "src/assets/css/style.min6a4d.css",
               "src/assets/css/magnific-popup.css",
               "src/assets/css/classic-themes.min68b3.css",
-              "src/assets/css/acierto-style.css"
+              "src/assets/css/acierto-style.css",
+              "src/assets/css/queplan/style-queplan.css"
 
             ],
             "scripts": [

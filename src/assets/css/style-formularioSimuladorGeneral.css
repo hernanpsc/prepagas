@@ -142,7 +142,7 @@
 
 .tipo-de-plano b:hover, .possui-plano b:hover, .possui-cnpj b:hover{background-color: #4caf50; border: 1px solid #047d72; color: #fff;}
 
-.tipo-de-plano b.ativa, .possui-plano b.ativa, .possui-cnpj b.ativa{background-color: #4caf50; border: 1px solid #047d72; color: #fff;}
+/* .tipo-de-plano b.ativa, .possui-plano b.ativa, .possui-cnpj b.ativa{background-color: #4caf50; border: 1px solid #047d72; color: #fff;} */
 
 .tipo-de-plano input[type="radio"], .possui-plano input[type="radio"], .possui-cnpj input[type="radio"]{position: absolute; z-index: -1; opacity: 0;}
 

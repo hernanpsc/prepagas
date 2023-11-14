@@ -26,13 +26,13 @@
   <!-- ============== SECTION PAGETOP END// ============== -->
   
   <!-- ============== SECTION CONTENT ============== -->
-  <section class="padding-y">
+  <section class="container mt-5">
     
 
+
+
+
  
-
-
-  </section>
 
         <div class="main-content ">
 
@@ -117,14 +117,14 @@
         <i *ngIf="SortDirection === 'desc'" class="fas fa-sort-alpha-up-alt  fa-2x"></i>
       </button>
     </div>
-    <!-- <div class="btn-group" id="view">
+    <div class="btn-group" id="view">
       <button [class.text-primary]="view === 'list'" (click)="view = 'list';"  type="button"  class="btn btn-secondary custom-hidden-button" data-bs-toggle="tooltip" title="List view"> 
         <i class="fa fa-bars"></i>
       </button>
       <button [class.text-primary]="view === 'grid'" (click)="view = 'grid';" type="button"  type="button" class="btn btn-secondary custom-hidden-button" data-bs-toggle="tooltip" title="Grid view"> 
         <i class="fa fa-th"></i>
       </button>
-      </div> -->
+      </div>
   </div>
 
  
@@ -138,17 +138,17 @@
     </div>
    
 
-    <div class="row justify-content-center ">
-      <div class="row ">
-<div class="d-flex flex-column justify-content-center surface-card p-2 shadow-2 border-round text-center" style="background-color: rgba(255, 215, 0, 0.6); margin: 0 5px 5px 5px; animation: shake 0.5s ease-in-out;">
-  <div class="text-lg font-medium text-600 mb-2"><strong>Paso 1:</strong> Ingresa tu <strong>edad</strong> para calcular precios exactos y obtener los mejores planes</div>
-  <!-- <app-get-quote></app-get-quote> -->
-  <button pButton pRipple type="button" label="Completar Perfil" class="p-button-raised p-button-danger" (click)="openModa('custom-modal-3')" style="animation: aura 0.5s ease-in-out;"></button>
-</div>
-
+    
+<div class="row justify-content-center ">
+  <div class="row ">
+    <div class="d-flex flex-column justify-content-center surface-card p-2 shadow-2 border-round  " style="background-color: rgba(255, 215, 0, 0.6); margin: 0 5px 5px 5px; align-items: center; animation: shake 0.5s ease-in-out;">
+      <div class="text-lg font-medium text-600 mb-2"><strong>Paso 1:</strong> Ingresa tu <strong>edad</strong> para calcular precios exactos y obtener los mejores planes</div>
+      <button pButton pRipple type="button" label="Completar Perfil" class="p-button-raised p-button-danger" (click)="openModa('custom-modal-3')" style="animation: aura 0.5s ease-in-out;"></button>
+    </div>
+  
       
       
-        <ng-container >
+        <ng-container *ngIf="isLoaded">
           
             <div *ngFor="let product of productosFiltrados | filter: SearchEmpresa:'empresa'  |  sort: [SortbyParam, SortDirection]" class="d-flex flex-column justify-content-center col-lg-4 col-md-6 col-sm-6 ">
              
@@ -158,9 +158,9 @@
           
   
       
-          <div class="custom-hidden-button" *ngFor="let product of productosFiltrados | filter: SearchEmpresa:'empresa'  |  sort: [SortbyParam, SortDirection]" >
-          <!-- <app-product-land *ngIf="view === 'list'" [product]="product"></app-product-land> -->
-          <app-product-land [product]="product"></app-product-land>
+          <div class="items" *ngFor="let product of productosFiltrados | filter: SearchEmpresa:'empresa'  |  sort: [SortbyParam, SortDirection]" >
+          <app-product-land *ngIf="view === 'list'" [product]="product"></app-product-land>
+          <!-- <app-product-land [product]="product"></app-product-land> -->
 
           </div>  
         
@@ -256,7 +256,7 @@
 
 
             <jw-modal id='custom-modal-3' >
-              <app-cotizar-form>  <button type="button" class="btn" (click)="closeModa('custom-modal-3')">Cerrar</button>
-              </app-cotizar-form>
+              <app-form-queplan>  <button type="button" class="btn" (click)="closeModa('custom-modal-3')">Cerrar</button>
+              </app-form-queplan>
               </jw-modal>
-              
+            </section>

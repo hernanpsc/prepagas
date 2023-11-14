@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { SaludRoutingModule } from './salud-routing.module';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { RouterModule } from '@angular/router';
 import { ModalModule } from './../../_modal'
 // import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { SharedModule } from '../../shared/shared.module';
+
+// atoms
+import { FormLeadComponent } from './components/atoms/form-lead/form-lead.component';
+import { FormQuoteComponent } from './components/atoms/form-quote/form-quote.component';
+import { FormQueplanComponent } from './components/atoms/form-queplan/form-queplan.component';
+import { GetQuoteComponent } from './components/atoms/get-quote/get-quote.component';
+import { CotizarFormComponent } from './components/atoms/cotizar-form/cotizar-form.component';
+
+
+
 // pages 
 import { DefaultComponent } from './pages/default/default.component';
 import { ResultsOriginalComponent } from './pages/results/results-original.component';
@@ -52,7 +63,6 @@ import { TabViewModule } from 'primeng/tabview';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { EmpresasComponent } from './pages/empresas/empresas.component';
-import { FormQuoteComponent } from './components/atoms/form-quote/form-quote.component';
 const publicApi = [
 	ResultsComponent,
 	ProductLandComponent,
@@ -70,8 +80,7 @@ const publicApi = [
 		FilterPipe,
 		SortPipe,
 		EmpresasComponent,
-		FormQuoteComponent,
-		...components,
+		...components
  
 	],
 	exports: [
@@ -97,6 +106,7 @@ const publicApi = [
 		TabViewModule,
 		ButtonModule,
 		TableModule,
+
 		...modules
 	],
 

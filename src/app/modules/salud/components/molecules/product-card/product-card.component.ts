@@ -22,7 +22,7 @@ export interface DialogData2 {
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.css']
+  styleUrls: ['./product-card.component.scss']
 })
 
   
@@ -45,6 +45,7 @@ export class ProductCardComponent implements OnInit{
   public comparar:any;
   public productList : any ;
   public filterCategory : any
+  public iconStyles = { '--fa-secondary-opacity': 0.6 };
 
   constructor(
     public dialog: MatDialog,

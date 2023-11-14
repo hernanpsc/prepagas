@@ -645,9 +645,9 @@ caches.open('products').then(cache => {
                   console.error('Error en la solicitud al servidor:', error);
           }
         );              
-        // setTimeout(() => {
-        //   this.isLoaded = true;
-        // }, 4000);
+        setTimeout(() => {
+          this.isLoaded = true;
+        }, 4000);
 
       });
     });      
