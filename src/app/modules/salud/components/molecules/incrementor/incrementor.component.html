@@ -1,6 +1,22 @@
-<div class="incrementor-container">
-    <button id="incrementButton" (click)="incrementar()">+</button>
-    <span style="font-size:8px">Titular: </span><span style="font-size:12px">{{ valor }}</span>
-    <button id="decrementButton" (click)="decrementar()">-</button>
-  </div>
+<div class="inner-first-items">
+ 
+
+   <button class="btn inner-square-dos-div menos" id="decrementButton" (click)="decrementar()">
+      <!-- <img src="../../../../../../assets/css/imagens/simbolo-menos.webp"> -->
   
+      </button>
+      <!-- <div class="overlay"></div> -->
+   
+      <!-- <div class="overlay"></div> -->
+    <button class="btn inner-square-tres-div">
+  Edad del<br>titular
+  <!-- <span style="font-size:8px">Edad </span><br>
+  <span style="font-size:8px">Titular: </span> -->
+  <span style="font-size:18px"><strong>{{ valor }}</strong></span>
+</button>
+
+<button class="btn inner-square-dos-div mas"  id="incrementButton" (click)="incrementar()">
+  <!-- <img src="../../../../../../assets/css/imagens/simbolo-mas.webp"> -->
+</button> 
+   
+    </div>

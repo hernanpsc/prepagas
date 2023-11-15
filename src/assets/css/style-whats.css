@@ -67,7 +67,7 @@
     margin: 1px 0 0 20px;
 }
 #wrapper .lista-vantagens ul{width: 50%;}
-#wrapper .lista-vantagens ul li{background-image: url(icone-lista-vantagens.svg); background-position: 0 center; background-repeat: no-repeat; background-size: 18px; padding: 5px 0 5px 23px; color: #fff;}
+/* #wrapper .lista-vantagens ul li{background-image: url(icone-lista-vantagens.svg); background-position: 0 center; background-repeat: no-repeat; background-size: 18px; padding: 5px 0 5px 23px; color: #fff;} */
 
 .form-whats{
     width: 40%;

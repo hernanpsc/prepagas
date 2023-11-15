@@ -34,12 +34,10 @@
               "src/styles.scss",
               "src/styles.css",
               "src/assets/css/style-formularioSimuladorGeneral.css",
-              "src/assets/css/style-whats.css",
               "src/assets/css/style.min1eb7.css",
               "src/assets/css/style.min6a4d.css",
               "src/assets/css/magnific-popup.css",
               "src/assets/css/classic-themes.min68b3.css",
-              "src/assets/css/acierto-style.css",
               "src/assets/css/queplan/style-queplan.css"
             ],
             "scripts": [
@@ -119,12 +117,10 @@
               "src/styles.scss",
               "src/styles.css",
               "src/assets/css/style-formularioSimuladorGeneral.css",
-              "src/assets/css/style-whats.css",
               "src/assets/css/style.min1eb7.css",
               "src/assets/css/style.min6a4d.css",
               "src/assets/css/magnific-popup.css",
               "src/assets/css/classic-themes.min68b3.css",
-              "src/assets/css/acierto-style.css",
               "src/assets/css/queplan/style-queplan.css"
 
             ],

@@ -587,31 +587,31 @@ function productIdOmint(anios, tipoAsoc, miembro) {
 
 
  
-function combinePlansWithPrices(planes, precios) {
-	const combinedArray = [];
+// function combinePlansWithPrices(planes, precios) {
+// 	const combinedArray = [];
 
-	planes.forEach((plan) => {
-		console.log(plan)
+// 	planes.forEach((plan) => {
+// 		console.log(plan)
 
-	  const matchingPrecio = precios.find((precio) => precio.item_id === plan.item_id);
-	  if (matchingPrecio) {
-		// Combina todas las propiedades de planes y precios en un nuevo objeto
-		const combinedPlan = {
-		  ...plan,
-		  ...matchingPrecio,
-		};
-		console.log(combinedPlan)
+// 	  const matchingPrecio = precios.find((precio) => precio.item_id === plan.item_id);
+// 	  if (matchingPrecio) {
+// 		// Combina todas las propiedades de planes y precios en un nuevo objeto
+// 		const combinedPlan = {
+// 		  ...plan,
+// 		  ...matchingPrecio,
+// 		};
+// 		console.log(combinedPlan)
 
-		// Agrega el objeto combinado al array resultado
-		combinedArray.push(combinedPlan);
-	  }
-	});
+// 		// Agrega el objeto combinado al array resultado
+// 		combinedArray.push(combinedPlan);
+// 	  }
+// 	});
   
-	return combinedArray;
-  }
+// 	return combinedArray;
+//   }
   
   
-export {combinePlansWithPrices}
+// export {combinePlansWithPrices}
 
   
   

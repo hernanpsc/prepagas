@@ -626,7 +626,6 @@ closeButon() {
            
          
             const tipo: string = formData.tipo;                       
-            // const planesConPrecios = combinePlansWithPrices(this.planes, response)
 
             
             this.products = response;

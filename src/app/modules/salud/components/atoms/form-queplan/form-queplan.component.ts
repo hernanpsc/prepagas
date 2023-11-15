@@ -4,7 +4,6 @@ import { NavigationEnd, Router } from '@angular/router';
 import { Component, OnInit, Input, ElementRef, Renderer2, ViewChild, Inject  } from '@angular/core';
 import {FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {ServcioRetornoPrecioService} from '../../../../../services/servcio-retorno-precio.service';
-import $ from 'jquery';
 import { filter } from 'rxjs/operators';
 
 

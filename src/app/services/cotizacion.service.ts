@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SERVER_URL } from '../constants';
-import * as functions from './../../assets/js/funciones'
 @Injectable({
   providedIn: 'root'
 })
