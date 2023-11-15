@@ -109,3 +109,26 @@ span {
   color: #fff;
 }
 
+.form-cotacao {
+  max-width: 800px; /* Ajusta el valor según tus necesidades */
+  margin: 0 auto; /* Centra el formulario en la página */
+  overflow: hidden; /* Evita que el contenido se desborde del formulario */
+
+}
+@media (max-width: 600px) {
+  .form-cotacao {
+    max-width: 100%; /* Ajusta la anchura máxima al 100% del ancho de la pantalla */
+    padding: 10px; /* Añade algún espacio alrededor del formulario */
+    /* Otros ajustes de estilo para tamaños de pantalla más pequeños */
+  }
+
+  /* Ajustes específicos para elementos dentro del formulario */
+  /* .campo-pagina,
+  .campo-operadora,
+  .plano-selecionado, */
+  /* Otros elementos dentro del formulario */
+  /* { */
+    /* Ajustes de estilo específicos para tamaños de pantalla más pequeños */
+  /* } */
+}
+
