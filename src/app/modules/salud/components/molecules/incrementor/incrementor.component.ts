@@ -8,7 +8,7 @@ import { Component, Input, Output, EventEmitter, HostListener } from '@angular/c
 })
 export class IncrementorComponent {
   @Input() valor = 18;
-  @Output() valorCambiado = new EventEmitter<number>();
+  @Output() valorTitularCambiado = new EventEmitter<number>();
 
   private intervalId: any;
   private timeoutId: any;

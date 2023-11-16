@@ -71,7 +71,7 @@
   
   .inner-square-tres-div p {
     margin: 0;
-    /* font-size: 12px; */
+    font-size: 12px;
   }
   
   .p {
@@ -106,4 +106,15 @@
 
 .mas{
   background-image:url(../../../../../../assets/css/imagens/mas.jpg)
+}
+.flex-container{
+  /* border: 1px solid black; */
+  /* background: #ccc; */
+  padding: 0px;
+  display: flex;
+  flex-flow: row wrap;
+  /* justify-content: center; */
+  align-content: center;
+  max-height: 50px;
+  justify-content:space-between;
 }
