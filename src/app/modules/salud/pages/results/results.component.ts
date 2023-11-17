@@ -1,4 +1,4 @@
-import {Component, HostListener, Renderer2, ChangeDetectorRef ,OnInit,HostBinding, ViewChild, ChangeDetectionStrategy , Input, ElementRef, NgZone } from '@angular/core';
+import {Component, HostListener, Renderer2, ChangeDetectorRef ,OnInit,HostBinding, ViewChild, ChangeDetectionStrategy , Input, ElementRef, NgZone ,Inject} from '@angular/core';
 import {Observable,forkJoin} from 'rxjs';
 import {map, pairwise, filter, throttleTime } from 'rxjs/operators';
 import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
@@ -24,6 +24,7 @@ import rfdc from 'rfdc';
 import { Credit } from './../../../../data/interfaces';
 import { CREDIT_DATA_ITEMS } from './../../../../data/constants/mock';
 import { Planes } from  './../../../../data/interfaces/planes';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 declare var addProp:any;
 declare var desectItem:any;
 declare var showandHide:any;
@@ -131,7 +132,9 @@ selectedRating : FormControl = new FormControl('');
     private productoService:ProductsService,
     private cotizacionService: CotizacionService,
     private localStorageService: LocalStorageService,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+
+    // @Inject(MAT_DIALOG_DATA) public data: DialogData
     ) {
       this.buildForm();
       this.formDataInicial = this.formBuilder.group({

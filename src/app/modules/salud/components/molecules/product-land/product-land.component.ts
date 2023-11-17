@@ -120,5 +120,14 @@ agregarcomparar(){
     });
   }
  
+  
+    getFormattedProductName(): string {
+      // Dividir la cadena por espacios o guiones bajos y omitir el primer elemento
+      const parts = this.product.name.split(/[ _]/).slice(1);
+      // Volver a unir los elementos con un espacio en blanco
+      return parts.join(' ');
+    }
+  
+  
 
 }
