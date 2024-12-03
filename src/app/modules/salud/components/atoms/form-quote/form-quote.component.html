@@ -14,11 +14,13 @@
          GBA Norte
          </button>
          <button class="square" [class.active]="selectedZonaType === 'GBA Sur'" (click)="selectZonaType('GBA Sur')">
-            GBA Sur
+         GBA Sur
          </button>
            <button class="square" [class.active]="selectedZonaType === 'GBA Oeste'" (click)="selectZonaType('GBA Oeste')">
-               GBA Oeste
+         GBA Oeste
          </button>
+         <button class="square" [class.active]="selectedZonaType === 'Interior'" (click)="selectZonaType('Interior')">
+         Interior del país            </button>         
        </div>
      </div>
      <label class="form-group-label" for="plan_type" *ngIf="selectedGrupoType ==='' && selectedZonaType !== ''">
@@ -28,16 +30,20 @@
         <div class="btn-wrapper--main btn-wrapper btn-wrapper--floating btn-wrapper--equal-sizes sm-btn-wrapper" name="plan_type">
            <button class="btn--main btn btn--vertical" [class.active]="selectedPlanType === 'adulto individual'" (click)="selectPlanType('adulto individual')">
               <img class="icon" src="../../../../../../assets/js/scripts/style/images/sprite.svg#form--individual" alt="ícone de plano Individual" aria-hidden="true">
-           Soltero/a
+           Individual
            </button>
            <button class="btn--main btn btn--vertical" [class.active]="selectedPlanType === 'adulto pareja'" (click)="selectPlanType('adulto pareja')">
               <img class="icon" src="../../../../../../assets/js/scripts/style/images/sprite.svg#form--family" alt="ícone de plano família" aria-hidden="true">
            Pareja
            </button>
-           <!-- <button class="btn--main btn btn--vertical" [class.active]="selectedPlanType === 'empresa'" (click)="selectPlanType('empresa')">
+           <button class="btn--main btn btn--vertical" [class.active]="selectedPlanType === 'empresa'" (click)="selectPlanType('empresa')">
               <img class="icon" src="../../../../../../assets/js/scripts/style/images/sprite.svg#form--business" alt="ícone de plano empresarial" aria-hidden="true">
-              empresarial
-           </button> -->
+            Individual con hijos
+           </button>
+           <button class="btn--main btn btn--vertical" [class.active]="selectedPlanType === 'empresa'" (click)="selectPlanType('empresa')">
+            <img class="icon" src="../../../../../../assets/js/scripts/style/images/sprite.svg#form--business" alt="ícone de plano empresarial" aria-hidden="true">
+            Pareja con Hijos
+         </button>
          </div>
       </div>
      <div class="container container--half-width" *ngIf="selectedGrupoType.includes('adulto') && selectedHijosType !== ' con hijos' && selectedHijosType !== ' sin hijos' && selectedVolverType !== 'zona' ">

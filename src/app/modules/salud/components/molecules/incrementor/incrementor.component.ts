@@ -1,4 +1,3 @@
-// incrementor.component.ts
 import { Component, Input, Output, EventEmitter, HostListener } from '@angular/core';
 
 @Component({
@@ -10,50 +9,58 @@ export class IncrementorComponent {
   @Input() valor = 18;
   @Output() valorTitularCambiado = new EventEmitter<number>();
 
-  private intervalId: any;
-  private timeoutId: any;
+  private intervalId: any;  // Para almacenar el ID del intervalo
+
+  // Detecta la presion de un boton para incrementar o decrementar
   @HostListener('mousedown', ['$event'])
-
-
-
   onMouseDown(event: Event) {
     if (event.target instanceof HTMLElement) {
       const clickedButtonId = event.target.id;
-  
-      if (clickedButtonId === 'incrementButton') {
-        // Botón de incremento presionado
-        this.intervalId = setInterval(() => {
-          this.incrementar();
-        }, 100);
-      } else if (clickedButtonId === 'decrementButton') {
-        // Botón de decremento presionado
-        this.intervalId = setInterval(() => {
-          this.decrementar();
-        }, 100);
+
+      // Si es el primer botón específico (solo incremento o decremento una vez)
+      if (clickedButtonId === 'incrementButtonHijos') {
+        this.incrementar();  // Ejecutar solo una vez
+      } else if (clickedButtonId === 'decrementButtonHijos') {
+        this.decrementar();  // Ejecutar solo una vez
+      } else {
+        // Si es el botón de incrementar o decrementar (comportamiento continuo)
+        if (clickedButtonId === 'incrementButton') {
+          // Solo se ejecuta si no está ya en un intervalo
+          if (this.intervalId) return;  // Evitar múltiples intervalos
+          this.intervalId = setInterval(() => {
+            this.incrementar();
+          }, 100);
+        } else if (clickedButtonId === 'decrementButton') {
+          // Solo se ejecuta si no está ya en un intervalo
+          if (this.intervalId) return;  // Evitar múltiples intervalos
+          this.intervalId = setInterval(() => {
+            this.decrementar();
+          }, 100);
+        }
       }
     }
-  } // Asegúrate de cerrar correctamente el bloque
-  
+  }
 
-@HostListener('mouseup', ['$event'])
-onMouseUp(event: Event) {
-  // Detén el incremento o decremento cuando se suelta el botón
-  clearInterval(this.intervalId);
-}
+  @HostListener('mouseup', ['$event'])
+  onMouseUp(event: Event) {
+    // Detener el intervalo cuando se suelta el botón
+    clearInterval(this.intervalId);
+    this.intervalId = null;  // Limpiar el ID del intervalo
+  }
 
   incrementar() {
     this.valor++;
-    // this.emitirNuevoValor();
+    this.emitirNuevoValor();
   }
 
   decrementar() {
-   if (this.valor > 18){
+    if (this.valor > 18) {
       this.valor--;
-      // this.emitirNuevoValor();
-   }
+      this.emitirNuevoValor();
+    }
   }
 
-  // private emitirNuevoValor() {
-  //   this.valorCambiado.emit(this.valor);
-  // }
+  private emitirNuevoValor() {
+    this.valorTitularCambiado.emit(this.valor);
+  }
 }

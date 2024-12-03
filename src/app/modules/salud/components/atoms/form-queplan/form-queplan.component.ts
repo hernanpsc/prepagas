@@ -14,13 +14,8 @@ import { filter } from 'rxjs/operators';
 })
 export class FormQueplanComponent {
   @ViewChild('campoNombre') campoNombre: ElementRef;
-    checkedmon: boolean;
-  checkedaf: boolean;
-  checkedsupras: boolean;
-  checkedseg: boolean;
-  checkedseg1: boolean;
-  checkedagree: boolean;
 
+  maxHeight: string = '300px'; // Valor inicial de max-height
   showDiv : boolean;
   showDiv2 : boolean;
   formCotizar: FormGroup;
@@ -34,6 +29,7 @@ export class FormQueplanComponent {
 };
 showTipoFieldP: boolean = false;
 showTipoFieldD: boolean  = false;
+showSueldoField: boolean  = false;
  // Define los grupos
  groups: number[] = [1, 2, 3, 4];
   
@@ -56,14 +52,22 @@ edad_2: string = '';
 edadesHijos: string = '';
 edades_Hijos: string = '';
 sueldo: string = '';
+cantAport: number = 0;
+categoriaMono: string = '';
 showTipo: boolean;
 edadTitular = 0;
 edadConyuge = 0;
 cantidadHijos = 0;
+edadHijo1 = 0;
+edadHijo2 = 0;
+edadHijo3 = 0;
+edadHijo4 = 0;
+edadHijo5 = 0;
 
 showEdadConyuge: boolean = false;
 showCantidadHijos:boolean = false;
-  
+
+
 
  constructor(
   private formBuilder: FormBuilder,
@@ -82,17 +86,36 @@ showCantidadHijos:boolean = false;
 
 
 
+  save1(event: any){
+    if(this.formCotizar.valid){
+      // console.log('Formulario en metodo save');
+      this.retornarService.setFormularioData(this.formCotizar.value)
+  
+      // console.log(this.formCotizar.value);
+    } else {
+      // console.log('formulario invalido');
+  
+      this.formCotizar.markAllAsTouched();
+    };
+  
+    
+  // this.router.navigate(['/salud/results']);
+  this.formularioEnviado = true;
+  this.formCotizar.reset();
+  }
+
+
+  cambiarMaxHeight(valorEnPixeles: number) {
+    this.maxHeight = `${valorEnPixeles}px`;  // Asigna el nuevo valor a la variable maxHeight
+  }
+
+
 
 
   
 
 
-
-
-  
-
-
-save(){
+save(event: any){
   console.log('Estado del formulario:', this.formCotizar.status);
   if(this.formCotizar.valid){
     console.log('Formulario en metodo save');
@@ -129,24 +152,36 @@ private buildForm(){
   this.formCotizar =this.formBuilder.group({
    _id: '',
    group: [''],
-   empresa_prepaga: ['0'],
+   empresa_prepaga: [0],
    edad_1: [18],
    edad_2: [0],
    numkids: [0],
-   plan_type:[''],
-   
+   zone_type:[''],
+   edadHijo1:[0],
+   edadHijo2:[0],
+   edadHijo3:[0],
+   edadHijo4:[0],
+   edadHijo5:[0],
    tipo: [''],
    agree: [true],
-   aporteOS: [''],
+   aporteOS: [0],
    sueldo: [0],
    aporte: [0],
+   categoriaMono: [''],
    monoadic: [0],
    cantAport: [0],
-   afinidad: [''],
+   afinidad: [false],
    bonAfinidad: [0],
-   supras: [false],
-   segvida: [false],
-   segvida1: [false],
+   personalData: this.formBuilder.group({
+    // name: ['',[Validators.required, Validators.maxLength(10),Validators.pattern(/^[a-zA-Z/s]*$/)]],
+    // email: ['',[Validators.required,Validators.email]],
+    // phone: ['',Validators.required],
+    // region: [''],
+    name: [''],
+    email: [''],
+    phone: [''],
+    region: [''],
+  })
     
    });
  }
@@ -165,9 +200,9 @@ ngOnInit(): void
   
   }
   
-
+  if (cantidadHijos: any ) {}
   getNameValue() {
-    // console.log(this.nameField.value);
+    console.log(this.nameField.value);
   }
 
   // Declarar una propiedad en tu componente para almacenar el tipo de plan seleccionado
@@ -178,6 +213,8 @@ selectZonaType(type: string) {
   console.log(this.selectedZonaType)
   if( this.selectedZonaType === 'CABA'){
     this.formCotizar.get('personalData').get('region').setValue("CABA");
+    this.formCotizar.get('zon').get('region').setValue("CABA");
+
   } else if (this.selectedZonaType === 'GBA Norte'){
     this.formCotizar.get('personalData').get('region').setValue("GBA Norte");
   } else if ( this.selectedZonaType === 'GBA Sur'){
@@ -250,8 +287,18 @@ selectPlanType(type: string) {
       this.valorSueldo = 0;
       this.formCotizar.get('edad_1').reset();
       this.formCotizar.get('edad_2').reset();
+      this.formCotizar.get('hijos').reset();
+
       this.formCotizar.get('numkids').reset();
       this.formCotizar.get('sueldo').reset();
+      this.formCotizar.get('categoriaMono').reset();
+
+      this.formCotizar.get('cantAport').reset();
+      this.formCotizar.get('hijo1').reset();
+      this.formCotizar.get('hijo2').reset();
+      this.formCotizar.get('hijo3').reset();
+      this.formCotizar.get('hijo4').reset();
+      this.formCotizar.get('hijo5').reset();
     }
  
     // console.log("Volver :"  + this.selectedVolverType)
@@ -263,22 +310,39 @@ selectPlanType(type: string) {
       control.markAsTouched();
     }
   }
-  selectAportesType(type: string){
-    this.selectedAportesType = type;
-    console.log(this.selectedAportesType)
-    if(this.selectedAportesType == 'P'){
-      this.showTipoFieldP = true;
-      this.showTipoFieldD = false;
-    } else if (this.selectedAportesType == 'D'){
+  selectAportesType(type: string) {
+    // Si el tipo seleccionado es el mismo que ya está seleccionado, lo "deseleccionamos"
+    if (this.selectedAportesType === type) {
+      // Si ya está seleccionado, no mostramos ningún campo y reseteamos la selección
+      this.selectedAportesType = '';  // Limpiamos la selección
       this.showTipoFieldP = false;
-      this.showTipoFieldD = true;
+      this.showTipoFieldD = false;
+      this.showSueldoField = false;
+    } else {
+      // Si no es el mismo tipo, lo seleccionamos normalmente
+      this.selectedAportesType = type;
+      if (this.selectedAportesType === 'P') {
+        this.maxHeight = '400px';  // Asigna el nuevo valor a la variable maxHeight
+
+        this.showTipoFieldP = true;
+        this.showTipoFieldD = false;
+      } else if (this.selectedAportesType === 'D') {
+        this.maxHeight = '600px';  // Asigna el nuevo valor a la variable maxHeight
+        this.showTipoFieldP = false;
+        this.showTipoFieldD = true;
+        this.showSueldoField = true;
+      }
     }
-    
-    this.formCotizar.get('tipo').setValue(type);
+  
+    // Establecemos el valor en el formulario
+    this.formCotizar.get('tipo').setValue(this.selectedAportesType);
+  
+    // Mostramos el valor del campo tipo
     const tipoValue = this.formCotizar.get('tipo').value;
     console.log('Valor de tipo:', tipoValue);
   }
-
+  
+  
   actualizarSueldo(event: Event) {
     const valor = (event.target as HTMLInputElement).value;
     this.valorSueldo = parseInt(valor); // Otra opción es utilizar parseInt para obtener un número entero
@@ -327,11 +391,34 @@ get hijosField(){
   console.log(this.formCotizar.get('numkids').value)
   return this.formCotizar.get('numkids');
 }
+get hijo1Field(){
+  console.log(this.formCotizar.get('hijo1').value)
+  return this.formCotizar.get('hijo1');
+}
+get hijo2Field(){
+  console.log(this.formCotizar.get('hijo2').value)
+  return this.formCotizar.get('hijo2');
+}
+get hijo3Field(){
+  console.log(this.formCotizar.get('hijo3').value)
+  return this.formCotizar.get('hijo3');
+}
+get hijo4Field(){
+  console.log(this.formCotizar.get('hijo4').value)
+  return this.formCotizar.get('hijo4');
+}
+get hijo5Field(){
+  console.log(this.formCotizar.get('hijo5').value)
+  return this.formCotizar.get('hijo5');
+}
 get tipoField(){
   return this.formCotizar.get('tipo');
 }
 get ingresoField(){
   return this.formCotizar.get('sueldo');
+}
+get categoriaMonoField(){
+  return this.formCotizar.get('categoriaMono');
 }
 
 get aporteosField(){
@@ -350,7 +437,7 @@ get regionField(){
 get monoadicField (){
   return this.formCotizar.get('monoadic');
 }
-get cantAport(){
+get cantAportField(){
   return this.formCotizar.get('cantAport');
 }
 get afinidadField (){
@@ -564,10 +651,29 @@ private sizeGroups(classesToSize: string[]) {
     console.log('grupo onInputChange: ' + groupValue);
 const edad1Value = this.formCotizar.get('edad_1').value;
 const edad2Value = this.formCotizar.get('edad_2').value;
+const edadHijo1Value = this.formCotizar.get('hijo1').value;
+const edadHijo2Value = this.formCotizar.get('hijo2').value;
+const edadHijo3Value = this.formCotizar.get('hijo3').value;
+const edadHijo4Value = this.formCotizar.get('hijo4').value;
+const edadHijo5Value = this.formCotizar.get('hijo5').value;
 const numKidsValue = this.formCotizar.get('numkids').value;
+const hijosValue = this.formCotizar.get('hijos').value;
+const sueldoValue = this.formCotizar.get('sueldo').value;0
+
+const cantAportValue = this.formCotizar.get('cantAport').value;
 const edad1Numero = parseInt(edad1Value, 10); // 10 es la base numérica, generalmente se usa 10 para decimal
 const edad2Numero = parseInt(edad2Value, 10); // 10 es la base numérica, generalmente se usa 10 para decimal
+const edadHijo1Numero = parseInt(edadHijo1Value, 10); // 10 es la base numérica, generalmente se usa 10 para decimal
+const edadHijo2Numero = parseInt(edadHijo2Value, 10); // 10 es la base numérica, generalmente se usa 10 para decimal
+const edadHijo3Numero = parseInt(edadHijo3Value, 10); // 10 es la base numérica, generalmente se usa 10 para decimal
+const edadHijo4Numero = parseInt(edadHijo4Value, 10); // 10 es la base numérica, generalmente se usa 10 para decimal
+const edadHijo5Numero = parseInt(edadHijo5Value, 10); // 10 es la base numérica, generalmente se usa 10 para decimal
 const numKidsNumero = parseInt(numKidsValue, 10); // 10 es la base numérica, generalmente se usa 10 para decimal
+const cantAportNumero = parseInt(cantAportValue, 10);
+const hijosNumero = parseInt(hijosValue, 10);
+const sueldoNumero = parseInt(sueldoValue, 10);
+
+
 console.log('grupo :' + groupValue)
 
 
@@ -581,9 +687,9 @@ console.log('grupo :' + groupValue)
       this.formCotizar.get('edad_2').setValue(valorCampo);
     } else if (fieldName === 'sueldo') {
       this.formCotizar.get('sueldo').setValue(valorCampo);
-  } else if(groupValue === 4 &&  fieldName === 'edades_Hijos' ){
+  } else if(groupValue === 4 &&  fieldName === 'hijos' ){
     this.formCotizar.get('numkids').setValue(valorCampo);
-  }else if(groupValue === 2 &&  fieldName === 'edadesHijos' ){
+  }else if(groupValue === 2 &&  fieldName === 'hijos' ){
     this.formCotizar.get('numkids').setValue(valorCampo);
   } else if(fieldName === 'name'){
     this.formCotizar.get('name').setValue(valorCampo);
@@ -591,26 +697,39 @@ console.log('grupo :' + groupValue)
     this.formCotizar.get('phone').setValue(valorCampo);
   }else if(fieldName === 'email'){
     this.formCotizar.get('email').setValue(valorCampo);
+  }else if(fieldName === 'hijo1'){
+    this.formCotizar.get('hijo1').setValue(valorCampo);
+  }else if(fieldName === 'hijo2'){
+    this.formCotizar.get('hijo2').setValue(valorCampo);
+  }else if(fieldName === 'hijo3'){
+    this.formCotizar.get('hijo3').setValue(valorCampo);
+  }else if(fieldName === 'hijo4'){
+    this.formCotizar.get('hijo4').setValue(valorCampo);
+  }else if(fieldName === 'hijo5'){
+    this.formCotizar.get('hijo5').setValue(valorCampo);
+  }else if(fieldName === 'categoriaMono'){
+    this.formCotizar.get('categoriaMono').setValue(valorCampo);
+  }else if(fieldName === 'cantAport'){
+    this.formCotizar.get('cantAport').setValue(valorCampo);
   }
-
+  
+  // if (groupValue === 4) {
+  //   this.showTipo = edad1Numero > 17 && edad2Numero > 17 && numKidsNumero >= 1 && edadHijo1Numero >= 0 && edadHijo2Numero >= 0 && edadHijo3Numero >= 0 && edadHijo4Numero >= 0 && edadHijo5Numero >= 0;
+  // } else if (groupValue === 1) {
+  //   this.showTipo = edad1Numero > 17;
+  // } else if (groupValue === 2) {
+  //   this.showTipo = edad1Numero > 17 && numKidsNumero >= 1; && edadHijo1Numero >= 0 && edadHijo2Numero >= 0 && edadHijo3Numero >= 0 && edadHijo4Numero >= 0 && edadHijo5Numero >= 0;
+  //   this.showTipo = edad1Numero > 17 && edad2Numero > 17;
+  // } else {
+  //   // Manejar caso else si es necesario
+  //   this.showTipo = false;
+  // }
   if (groupValue === 4) {
-    this.showTipo = edad1Numero > 17 && edad2Numero > 17 && numKidsNumero >= 1;
-  } else if (groupValue === 1) {
-    this.showTipo = edad1Numero > 17;
-  } else if (groupValue === 2) {
-    this.showTipo = edad1Numero > 17 && numKidsNumero >= 1;
-  } else if (groupValue === 3) {
-    this.showTipo = edad1Numero > 17 && edad2Numero > 17;
-  } else {
-    // Manejar caso else si es necesario
-    this.showTipo = false;
-  }
-  if (groupValue === 4) {
-    this.showTipo = edad1Numero !> 17 || edad2Numero !> 17 || numKidsNumero !>= 1;
+    this.showTipo = edad1Numero !> 17 || edad2Numero !> 17 || numKidsNumero !>= 1 && edadHijo1Numero !>= 0 && edadHijo2Numero !>= 0 && edadHijo3Numero !>= 0 && edadHijo4Numero !>= 0 && edadHijo5Numero !>= 0;
   } else if (groupValue === 1) {
     this.showTipo = edad1Numero !> 17;
   } else if (groupValue === 2) {
-    this.showTipo = edad1Numero !> 17  || numKidsNumero !>= 1;
+    this.showTipo = edad1Numero !> 17  || numKidsNumero !>= 1 && edadHijo1Numero !>= 1 && edadHijo1Numero !>= 0 && edadHijo2Numero !>= 0 && edadHijo3Numero !>= 0 && edadHijo4Numero !>= 0 && edadHijo5Numero !>= 0;
   } else if (groupValue === 3) {
     this.showTipo = edad1Numero !> 17 || edad2Numero !> 17;
   } else {
@@ -645,49 +764,86 @@ cambiarEdadTitular(nuevaEdad: number) {
   private intervalTitularId: any;
   private intervalConyugeId: any;
   private intervalHijosId: any;
+  private intervalHijos1Id: any;
+  private intervalHijos2Id: any;
+  private intervalHijos3Id: any;
+  private intervalHijos4Id: any;
+  private intervalHijos5Id: any;
 
   private timeoutId: any;
   @HostListener('mousedown', ['$event'])
 
 
 
-  onMouseDown(event: Event,) {
+  onMouseDown(event: Event) {
     if (event.target instanceof HTMLElement) {
       const clickedButtonId = event.target.id;
   
       if (clickedButtonId === 'incrementButtonTitular') {
-        // Botón de incremento presionado
         this.intervalTitularId = setInterval(() => {
           this.incrementar('titular');
         }, 100);
       } else if (clickedButtonId === 'decrementButtonTitular') {
-        // Botón de decremento presionado
         this.intervalTitularId = setInterval(() => {
           this.decrementar('titular');
         }, 100);
       } else if (clickedButtonId === 'incrementButtonConyuge') {
-        // Botón de incremento presionado
         this.intervalConyugeId = setInterval(() => {
           this.incrementar('conyuge');
         }, 100);
       } else if (clickedButtonId === 'decrementButtonConyuge') {
-        // Botón de decremento presionado
         this.intervalConyugeId = setInterval(() => {
           this.decrementar('conyuge');
         }, 100);
       } else if (clickedButtonId === 'incrementButtonHijos') {
-        // Botón de incremento presionado
-        this.intervalHijosId = setInterval(() => {
-          this.incrementar('hijos');
-        }, 100);
+        // Botón de incremento de "hijos", con incremento de a 1
+        this.incrementar('hijos');
       } else if (clickedButtonId === 'decrementButtonHijos') {
-        // Botón de decremento presionado
-        this.intervalHijosId = setInterval(() => {
-          this.decrementar('hijos');
+        // Botón de decremento de "hijos", con decremento de a 1
+        this.decrementar('hijos');
+      } else if (clickedButtonId === 'incrementButtonHijo1') {
+        this.intervalHijos1Id = setInterval(() => {
+          this.incrementar('hijo1');
+        }, 100);
+      } else if (clickedButtonId === 'decrementButtonHijo1') {
+        this.intervalHijos1Id = setInterval(() => {
+          this.decrementar('hijo1');
+        }, 100);
+      } else if (clickedButtonId === 'incrementButtonHijo2') {
+        this.intervalHijos2Id = setInterval(() => {
+          this.incrementar('hijo2');
+        }, 100);
+      } else if (clickedButtonId === 'decrementButtonHijo2') {
+        this.intervalHijos2Id = setInterval(() => {
+          this.decrementar('hijo2');
+        }, 100);
+      } else if (clickedButtonId === 'incrementButtonHijo3') {
+        this.intervalHijos3Id = setInterval(() => {
+          this.incrementar('hijo3');
+        }, 100);
+      } else if (clickedButtonId === 'decrementButtonHijo3') {
+        this.intervalHijos3Id = setInterval(() => {
+          this.decrementar('hijo3');
+        }, 100);
+      } else if (clickedButtonId === 'incrementButtonHijo4') {
+        this.intervalHijos4Id = setInterval(() => {
+          this.incrementar('hijo4');
+        }, 100);
+      } else if (clickedButtonId === 'decrementButtonHijo4') {
+        this.intervalHijos4Id = setInterval(() => {
+          this.decrementar('hijo4');
+        }, 100);
+      } else if (clickedButtonId === 'incrementButtonHijo5') {
+        this.intervalHijos5Id = setInterval(() => {
+          this.incrementar('hijo5');
+        }, 100);
+      } else if (clickedButtonId === 'decrementButtonHijo5') {
+        this.intervalHijos5Id = setInterval(() => {
+          this.decrementar('hijo5');
         }, 100);
       }
     }
-  } // Asegúrate de cerrar correctamente el bloque
+  }
   
 
 @HostListener('mouseup', ['$event'])
@@ -696,6 +852,11 @@ onMouseUp(event: Event) {
   clearInterval(this.intervalTitularId);
   clearInterval(this.intervalConyugeId);
   clearInterval(this.intervalHijosId);
+  clearInterval(this.intervalHijos1Id);
+  clearInterval(this.intervalHijos2Id);
+   clearInterval(this.intervalHijos3Id);
+   clearInterval(this.intervalHijos4Id);
+   clearInterval(this.intervalHijos5Id);
 }
 
   incrementar(beneficiario: string) {
@@ -727,10 +888,40 @@ onMouseUp(event: Event) {
         this.showCantidadHijos = true;
       }
      } else if (beneficiario === 'hijos' ){
-      if( this.cantidadHijos  <= 4)
+      if( this.cantidadHijos  <= 3)
       this.cantidadHijos++;
       console.log(this.cantidadHijos)
       this.formCotizar.get('numkids').setValue(this.cantidadHijos);
+    
+     } else if (beneficiario === 'hijo1' ){
+      if( this.edadHijo1  <= 24)
+      this.edadHijo1++;
+      console.log(this.edadHijo1)
+      this.formCotizar.get('edadHijo1').setValue(this.edadHijo1);
+    
+     } else if (beneficiario === 'hijo2' ){
+      if( this.edadHijo2  <= 24)
+      this.edadHijo2++;
+      console.log(this.edadHijo2)
+      this.formCotizar.get('edadHijo2').setValue(this.edadHijo2);
+    
+     } else if (beneficiario === 'hijo3' ){
+      if( this.edadHijo3  <= 24)
+      this.edadHijo3++;
+      console.log(this.edadHijo3)
+      this.formCotizar.get('edadHijo3').setValue(this.edadHijo3);
+    
+     } else if (beneficiario === 'hijo4' ){
+      if( this.edadHijo4  <= 24)
+      this.edadHijo4++;
+      console.log(this.edadHijo4)
+      this.formCotizar.get('edadHijo4').setValue(this.edadHijo4);
+    
+     } else if (beneficiario === 'hijo5' ){
+      if( this.edadHijo5  <= 24)
+      this.edadHijo5++;
+      console.log(this.edadHijo5)
+      this.formCotizar.get('edadHijo5').setValue(this.edadHijo5);
     
      }    
   }
@@ -738,17 +929,32 @@ onMouseUp(event: Event) {
   decrementar(beneficiario: string) {
     const groupValue = this.formCotizar.get('group').value;
 
-   if (beneficiario === 'titular' && this.edadTitular >= 18 ){
+   if (beneficiario === 'titular' && this.edadTitular > 18 ){
 
     this.edadTitular--;
 
     this.formCotizar.get('edad_1').setValue(this.edadTitular);
-   } else if (beneficiario === 'conyuge'  && this.edadConyuge >= 18){
+   } else if (beneficiario === 'conyuge'  && this.edadConyuge > 18){
     this.edadConyuge--;
     this.formCotizar.get('edad_2').setValue(this.edadConyuge);
    } else if ( beneficiario === 'hijos'  && this.cantidadHijos >0){
     this.cantidadHijos--;
     this.formCotizar.get('numkids').setValue(this.cantidadHijos);
+   }else if ( beneficiario === 'hijo1'  && this.edadHijo1 >0){
+    this.edadHijo1--;
+    this.formCotizar.get('hijo1').setValue(this.edadHijo1);
+   }else if ( beneficiario === 'hijo2'  && this.edadHijo2 >0){
+    this.edadHijo2--;
+    this.formCotizar.get('hijo2').setValue(this.edadHijo2);
+   }else if ( beneficiario === 'hijo3'  && this.edadHijo3 >0){
+    this.edadHijo3--;
+    this.formCotizar.get('hijo3').setValue(this.edadHijo3);
+   }else if ( beneficiario === 'hijo4'  && this.edadHijo4 >0){
+    this.edadHijo4--;
+    this.formCotizar.get('hijo4').setValue(this.edadHijo4);
+   }else if ( beneficiario === 'hijo5'  && this.edadHijo5 >0){
+    this.edadHijo5--;
+    this.formCotizar.get('hijo5').setValue(this.edadHijo5);
    }
     
   }

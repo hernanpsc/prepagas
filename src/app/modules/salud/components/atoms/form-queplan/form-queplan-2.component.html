@@ -1,0 +1,397 @@
+							
+
+<input class="campo-pagina" type="hidden" name="formulario-pagina" id="formulario-pagina" value="cotizar-ahora-formulario-completo">
+
+<input class="campo-operadora" type="hidden" name="Operadora" id="Operadora" value="Sin Selección">
+
+<div class="plano-selecionado">
+	<!-- <p>Plan Selecionado:</p> -->
+	<div class="recebe-img"></div>
+</div>
+
+
+   
+
+
+   
+   <div class="main-container" *ngIf="selectedGrupoType ==='' && selectedZonaType != ''">
+	   <label class="form-group-label" for="plan_type">
+		   Complete el grupo familiar:
+		  </label>
+	   <div class="flex-container">
+		 <b class="btn inner-square-div img"  *ngIf="this.formCotizar.get('group').value === '' ||  this.formCotizar.get('group').value === 1" [class.active]="formCotizar.get('group').value === 1" (click)="selectGroup(1)">
+		   <img src="../../../../../../assets/js/scripts/style/images/sprite.svg#form--individual">
+
+	   </b><div class="overlay"></div>
+	 
+		 <b class="btn inner-square-div img"  *ngIf="this.formCotizar.get('group').value === '' || this.formCotizar.get('group').value === 3" [class.active]="formCotizar.get('group').value === 3" (click)="selectGroup(3)">
+		   <img src="../../../../../../assets/js/scripts/style/images/sprite.svg#form--family">
+	   </b><div class="overlay"></div>
+	   
+   
+	   
+
+		
+	   
+
+	   
+   </div>
+
+   <div class="flex-container">
+		 <b class="btn inner-square-div img" *ngIf="this.formCotizar.get('group').value === '' || this.formCotizar.get('group').value === 2" [class.active]="formCotizar.get('group').value === 2" (click)="selectGroup(2)">
+		 <img src="../../../../../../assets/js/scripts/style/images/sprite.svg#form--individual">
+	   </b><div class="overlay"></div>
+	 
+		 <b class="btn inner-square-div img" *ngIf="this.formCotizar.get('group').value === '' || this.formCotizar.get('group').value === 4" [class.active]="formCotizar.get('group').value === 4" (click)="selectGroup(4)">
+		   <img src="../../../../../../assets/js/scripts/style/images/sprite.svg#form--family">
+	   </b><div class="overlay"></div>
+   
+	 
+   </div>
+   <div class="flex-container" *ngIf="this.formCotizar.get('group').value !== '' ">
+
+	   <b><div class="flex-contenedor">
+		   <button class="btn inner-square-cuatro-div menos" id="decrementButtonTitular" (click)="decrementar('titular')">
+		   </button>
+		   <!-- <label>titular</label> -->
+		   <button class="btn inner-square-tres-div">
+			 
+			  <span style="font-size:12px">titular&nbsp;&nbsp;<strong>{{ edadTitular }}</strong></span>
+		   </button>
+		   <button class="btn inner-square-cuatro-div mas"  id="incrementButtonTitular" (click)="incrementar('titular')">
+		   </button> 
+		 </div>
+		 </b>
+   </div>
+   <br>
+
+   <div class="flex-container" *ngIf="this.formCotizar.get('group').value === 3  && showEdadConyuge === true || this.formCotizar.get('group').value === 4 && showEdadConyuge === true ">
+
+	   <b><div class="flex-contenedor">
+		   <button class="btn inner-square-cuatro-div menos" id="decrementButtonConyuge" (click)="decrementar('conyuge')">
+		   </button>
+		   <button class="btn inner-square-tres-div">
+			   <!-- <label>pareja</label><br> -->
+			  <span style="font-size:12px">pareja&nbsp;&nbsp;<strong>{{ edadConyuge }}</strong></span>
+		   </button>
+		   <button class="btn inner-square-cuatro-div mas"  id="incrementButtonConyuge" (click)="incrementar('conyuge')">
+		   </button> 
+		 </div>
+		 </b>
+   </div>
+   <br>
+   <div class="flex-container" *ngIf="this.formCotizar.get('group').value === 2  && showCantidadHijos === true || this.formCotizar.get('group').value === 4 && showCantidadHijos === true ">
+
+	   <b><div class="flex-contenedor">
+		   <button class="btn inner-square-cuatro-div menos" id="decrementButtonHijo1" (click)="decrementar('hijo1')">
+		   </button>
+		   <button class="btn inner-square-tres-div">
+			   <!-- <label>pareja</label><br> -->
+			  <span style="font-size:12px">hijo 1&nbsp;&nbsp;<strong>{{ edadHijo1 }}</strong></span>
+		   </button>
+		   <button class="btn inner-square-cuatro-div mas"  id="incrementButtonHijo1" (click)="incrementar('hijo1')">
+		   </button> 
+		 </div>
+		 </b>
+   </div>
+   <br *ngIf="cantidadHijos >= 1">
+
+   <div class="flex-container" *ngIf="this.formCotizar.get('group').value === 2  && showCantidadHijos === true && cantidadHijos >= 1|| this.formCotizar.get('group').value === 4 && showCantidadHijos === true && cantidadHijos >= 1">
+
+	   <b><div class="flex-contenedor">
+		   <button class="btn inner-square-cuatro-div menos" id="decrementButtonHijo2" (click)="decrementar('hijo2')">
+		   </button>
+		   <button class="btn inner-square-tres-div">
+			   <!-- <label>pareja</label><br> -->
+			  <span style="font-size:12px">hijo 2&nbsp;&nbsp;<strong>{{ edadHijo2 }}</strong></span>
+		   </button>
+		   <button class="btn inner-square-cuatro-div mas"  id="incrementButtonHijo2" (click)="incrementar('hijo2')">
+		   </button> 
+		 </div>
+		 </b>
+   </div>
+   <br *ngIf="cantidadHijos >= 2">
+   <div class="flex-container" *ngIf="this.formCotizar.get('group').value === 2  && showCantidadHijos === true && cantidadHijos >= 2|| this.formCotizar.get('group').value === 4 && showCantidadHijos === true && cantidadHijos >= 2">
+
+	   <b><div class="flex-contenedor">
+		   <button class="btn inner-square-cuatro-div menos" id="decrementButtonHijo3" (click)="decrementar('hijo3')">
+		   </button>
+		   <button class="btn inner-square-tres-div">
+			   <!-- <label>pareja</label><br> -->
+			  <span style="font-size:12px">hijo 3&nbsp;&nbsp;<strong>{{ edadHijo3 }}</strong></span>
+		   </button>
+		   <button class="btn inner-square-cuatro-div mas"  id="incrementButtonHijo3" (click)="incrementar('hijo3')">
+		   </button> 
+		 </div>
+		 </b>
+   </div>
+   <br *ngIf="cantidadHijos >= 3">
+
+   <div class="flex-container" *ngIf="this.formCotizar.get('group').value === 2  && showCantidadHijos === true  && cantidadHijos >= 3|| this.formCotizar.get('group').value === 4 && showCantidadHijos === true && cantidadHijos >= 3">
+
+	   <b><div class="flex-contenedor">
+		   <button class="btn inner-square-cuatro-div menos" id="decrementButtonHijo4" (click)="decrementar('hijo4')">
+		   </button>
+		   <button class="btn inner-square-tres-div">
+			   <!-- <label>pareja</label><br> -->
+			  <span style="font-size:12px">hijo 4&nbsp;&nbsp;<strong>{{ edadHijo4 }}</strong></span>
+		   </button>
+		   <button class="btn inner-square-cuatro-div mas"  id="incrementButtonHijo4" (click)="incrementar('hijo4')">
+		   </button> 
+		 </div>
+		 </b>
+   </div>
+   <br *ngIf="cantidadHijos === 4">
+
+   <div class="flex-container" *ngIf="this.formCotizar.get('group').value === 2  && showCantidadHijos === true && cantidadHijos === 4|| this.formCotizar.get('group').value === 4 && showCantidadHijos === true  && cantidadHijos === 4 ">
+
+	   <b><div class="flex-contenedor">
+		   <button class="btn inner-square-cuatro-div menos" id="decrementButtonHijo5" (click)="decrementar('hijo5')">
+		   </button>
+		   <button class="btn inner-square-tres-div">
+			   <!-- <label>pareja</label><br> -->
+			  <span style="font-size:12px">hijo 5&nbsp;&nbsp;<strong>{{ edadHijo5 }}</strong></span>
+		   </button>
+		   <button class="btn inner-square-cuatro-div mas"  id="incrementButtonHijo5" (click)="incrementar('hijo5')">
+		   </button> 
+		 </div>
+		 </b>
+   </div>
+
+   <div class="flex-container" *ngIf="this.formCotizar.get('group').value === 2  && showCantidadHijos === true || this.formCotizar.get('group').value === 4 && showCantidadHijos === true">
+	   
+	   <button class="btn inner-square-cuatro-div mas"  id="incrementButtonHijos" (click)="incrementar('hijos')">
+	   </button> 
+	   <!-- <span style="font-size:12px">hijo 5&nbsp;&nbsp;<strong>{{ cantidadHijos }}</strong></span> -->
+
+	   <button class="btn inner-square-cuatro-div menos" id="decrementButtonHijos" (click)="decrementar('hijos')">
+		   </button>	
+
+	   </div>
+   <!-- <div class="flex-container" *ngIf="this.formCotizar.get('group').value === 2  && showCantidadHijos === true || this.formCotizar.get('group').value === 4 && showCantidadHijos === true">
+
+   <div class="hijos_num">
+	   <p><strong>Edades separadas por coma ( ej: 0,3,12 )</strong></p>
+	   <div class="col-12">
+		   <span><input class="campo-edades-hijos" type="tel" id="edad_hijo_" name="hijos_num" placeholder="edades de hijos de 0 años y mayores de 20. Ingrese 0,23"></span>
+	   </div>	</div>
+   </div> -->
+   <div class="flex-container" >
+
+	   <b class="btn inner-square-dos-div img desregulado"  *ngIf="showTipoFieldD ===true" 
+	   [class.active]="formCotizar.get('tipo').value === 'D'" (click)="selectAportesType('D')">
+	   Traspaso de aportes a obra social
+	   </b>
+
+	   <b class="btn inner-square-dos-div img particular"  *ngIf="showTipoFieldP ===true"
+	   [class.active]="formCotizar.get('tipo').value === 'P'" (click)="selectAportesType('P')">
+	   Solicito privado
+	   </b>
+
+	   </div>
+	   <!-- <div class="flex-container" *ngIf="this.formCotizar.get('group').value === 2  && showCantidadHijos === true || this.formCotizar.get('group').value === 4 && showCantidadHijos === true"> -->
+		   <form [formGroup]="formCotizar"  (ngSubmit)="save()" *ngIf="!formularioEnviado">
+
+	   <div class="flex-container">
+
+   
+	   <div class="row sueldo">
+		   <p><strong>Ingresa el importe de tu sueldo Bruto (sin descuentos)</strong></p>
+
+		   
+   <span><input class="campo-sueldo" type="tel" name="sueldo" id="sueldo" placeholder="Sueldo Bruto ( antes de los descuentos) "></span>
+   
+   </div>
+</div>
+<div class="flex-container" *ngIf="this.formCotizar.get('group').value === 2  && showCantidadHijos === true || this.formCotizar.get('group').value === 4 && showCantidadHijos === true">
+
+   <div class="row monotributo">
+	   <div class="col-6">
+   <span><input class="campo-categoria-mon" type="text" name="categoriaMono" id="categoriaMono" placeholder="Categoria Monotributo"></span>
+</div>
+<div class="col-6">
+
+   <span><input class="campo-cant-aport-mon" type="text" name="aportantesMono" id="aportantesMono" placeholder="Cantidad de Aportantes"></span>
+</div></div></div>
+
+
+
+
+	 
+	 <div class="ocultar " [class.hidden]="formCotizar.get('group').value !== null" >
+   <div class="row edades" *ngIf="formCotizar.get('group').value !== ''">
+	   <p class="edad-solo" *ngIf="formCotizar.get('group').value === 1"><strong>Edad</strong></p><p class="edad-varios" *ngIf="formCotizar.get('group').value === 4 || formCotizar.get('group').value === 3"><strong>Edades del titular y su pareja</strong></p><p class="edad-varios" *ngIf="formCotizar.get('group').value === 2"><strong>Edades del titular y las del/los hijo/s separadas por espacios</strong></p>
+
+	   <div class="col-6 edad_1">
+	   
+<span><input class="campo-edad " type="text" name="edad_1" placeholder="Su edad" [(ngModel)]="edad_1" (input)="onInputChange($event, 'edad_1')"></span>
+</div>
+<div class="col-6 edad_2" *ngIf="formCotizar.get('group').value === 3 || formCotizar.get('group').value === 4">
+   <span><input class="campo-edad-pareja" type="text" placeholder="Edad pareja" [(ngModel)]="edad_2" ></span>
+</div>
+<div class="col-6 hijos_num" *ngIf="formCotizar.get('group').value === 2">
+
+
+
+   <span><input class="campo-edades-hijos" type="text" placeholder="Edades de los hijos" [(ngModel)]="edades_Hijos" (input)="onInputChange($event, 'edades_Hijos')"></span>
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+   <div class="row sueldo"  *ngIf="this.formCotizar.get('group').value === 2  && showCantidadHijos === true || this.formCotizar.get('group').value === 4 && showCantidadHijos === true">
+	   <p><strong>Ingresa el importe de tu sueldo Bruto (sin descuentos)</strong></p>
+
+	   
+<span><input class="campo-sueldo" type="text" placeholder="Sueldo Bruto ( antes de los descuentos)" [(ngModel)]="sueldo" (input)="onInputChange($event, 'sueldo')"></span>
+
+</div>
+
+
+<!-- <div class="row monotributo">
+   <div class="col-6">
+<span><input class="campo-categoria-mon" type="text" name="categoriaMono" id="categoriaMono" placeholder="Categoria Monotributo"></span>
+</div>
+<div class="col-6">
+
+<span><input class="campo-cant-aport-mon" type="text" name="aportantesMono" id="aportantesMono" placeholder="Cantidad de Aportantes"></span>
+</div></div> -->
+   
+   <!-- <div class="alert"></div>
+   <input type="btn-submit"  value="RECIBIR COTIZACIÓN" (click)="save()">
+   <br><br><br>
+   <div class="loader" style="display: none;"></div> -->
+<!-- </div> -->
+
+
+<button class="btn back-to-home"  [disabled]="formPersonalData.invalid" type="submit">cotizar</button>
+<div class="container container--half-width"  *ngIf="selectedGrupoType.includes('hijos') && selectedAportesType !=='' &&  selectedVolverType !== 'zona'">
+<div class="btn-wrapper" >
+  <button class="btn btn--ghost btn--previous" (click)="selectVolverType('zona')">
+	 <img class="icon icon--small icon--left" src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--chevron-left" alt="ícone de retroceder" aria-hidden="true">
+	 volver
+  </button>
+<div>
+
+   <button class="btn back-to-home"    [disabled]="formCotizar.invalid" type="submit">cotizar</button>
+</div>
+</div>
+</div>
+
+		  
+
+</form>
+		   
+						 
+					   
+						 
+<form [formGroup]="formPersonalData"  (ngSubmit)="salvar($event)"  *ngIf="formularioEnviado === true">
+   
+
+   <div class="container container--half-width" *ngIf="selectedContactoType !== 'true'">
+
+	 <div class="form-group" formControlName="name" >
+	  <label for="nombre">
+		 Nombre completo
+	  </label>
+	  <input #campoNombre type="text" required>
+
+   </div>
+  <div class="form-group" formControlName="email" >
+	 <label for="email">
+	  email
+	 </label>
+	 <input type="text"  required>
+  </div>
+  <div class="form-group" formControlName="phone" >
+	 <label for="cellphone">
+	  Celular
+	 </label>
+	 <input type="text" required>
+  </div>
+
+  <div>          
+   <div class="btn" (click)="selectContactoType('true')" type="button">ver cotizacion</div>
+
+ <!-- <button class="btn btn--ghost btn--previous">
+
+	<img cass="icon icon--small icon--right" src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--chevron-right" alt="ícone de avançar" aria-hidden="true">
+ </button> -->
+</div>
+</div> 
+
+
+<div class="container container--half-width">
+  <div class="form-title" style="margin-bottom:15px">
+   Pronto!
+  </div>
+  <div class="form-group" style="margin-top: 0">
+   <label for="preferred_contact_method">
+	  Como você prefere continuar a sua cotação?
+	 </label>
+	 <div>
+		<div class="btn-wrapper btn-wrapper--floating btn-wrapper--equal-sizes" name="preferred_contact_method">
+		   <button class="btn btn--vertical" (click)="selectContactoType('phone')"><img class="icon" src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--social-chat" alt="ícone de chat" aria-hidden="true">
+		   TELÉFONO
+		  </button>
+		  <button class="btn btn--vertical" (click)="selectContactoType('whatsapp')">
+			<img class="icon" src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--social-whatsapp" alt="ícone de whatsapp" aria-hidden="true">
+		   Whatsapp
+		  </button>
+		</div>
+	 </div>
+	 <div class="error">
+	  <span>
+		 Este campo é requerido.
+	  </span>
+	 </div>
+  </div>
+</div>
+
+</form>
+
+
+<!-- <div class="container container--half-width">
+  <div class="btn-wrapper"><button class="btn btn--ghost btn--previous"><img
+	 class="icon icon--small icon--left" src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--chevron-left"
+	 alt="ícone de retroceder" aria-hidden="true"> voltar</button> <button class="btn btn--primary btn--next"
+	 type="submit">Continuar <img class="icon icon--small icon--right"
+	 src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--chevron-right" alt="ícone de avançar" aria-hidden="true"></button>
+  </div>
+</div>  -->
+<div class="thankyou-card" *ngIf="selectedContactoType === 'phone' && formularioEnviado === true">
+  <img class="icon"
+	 src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--thankyou-phone" alt="ícone de agradecimento">
+  <div class="thankyou-card--title">Gracias!</div>
+  <div class="thankyou-card--body">Entraremos em contato <b>em até 2 minutos!</b></div>
+</div>
+
+<!-- <div class="thankyou-card" >
+  <img class="icon"
+	 src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--thankyou-chat" alt="ícone de agradecimento">
+  <div class="thankyou-card--title">Gracias!</div>
+  <div class="thankyou-card--body">Estaremos contactandole con uno de nuestros asesores.</div>
+</div> -->
+
+<div class="thankyou-card" *ngIf="selectedContactoType === 'whatsapp' && formularioEnviado === true">
+  <img class="icon"
+	 src="../../../../../../assets/js/scripts/style/images/sprite.svg#theme--thankyou-whatsapp" alt="ícone de agradecimento">
+  <div class="thankyou-card--title">Gracias!</div>
+  <div class="thankyou-card--body">Estaremos enviandole un mensaje!</div>
+</div>
+
+
+	   
+			  
+			   
+								 
+
+					   
+
+
+
