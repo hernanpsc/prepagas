@@ -11,16 +11,16 @@
 
     
 
-  "npm": "10.9.0"
+  "npm": "10.9.1"
   
 
   },
   
 
-  "name": "que-plan",
+  "name": "front-prepagas",
   
 
-  "version": "0.0.0",
+  "version": "1.0.6",
   
 
   "scripts": {
