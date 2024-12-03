@@ -29,7 +29,7 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy the Angular app's build artifacts from the first stage
-COPY --from=node /app/dist/angular-compare /usr/share/nginx/html
+COPY --from=node /app/dist/angular-coamparar /usr/share/nginx/html
 
 # Change ownership of the files
 RUN chown nginx:nginx /usr/share/nginx/html/*
